@@ -1,4 +1,4 @@
-*Grupo 9 - Comisión 24 - Productos de Limpieza*
+*Grupo 9 - Comisión 24 - Eccommerce de productos de limpieza*
 
 # Proyecto "Siempre Limpio"
 ## Descripción del Proyecto
