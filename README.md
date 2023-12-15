@@ -10,7 +10,7 @@ Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la v
    * Lazaro
    * Tamara
    * Rodrigo
-   * José
+   * José Carlos Diaz
    * Luciano
 
 
