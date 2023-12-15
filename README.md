@@ -13,6 +13,4 @@ Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la v
    * José
    * Luciano
 
-## Sobre "Siempre Limpio"
 
-"Siempre Limpio" nace con la misión de simplificar la vida diaria al proporcionar productos de limpieza eficaces y confiables. Nos dirigimos al mercado residencial y empresarial. 
