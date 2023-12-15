@@ -15,4 +15,4 @@ Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la v
 
 ## Sobre "Siempre Limpio"
 
-"Siempre Limpio" nace con la misión de simplificar la vida diaria al proporcionar productos de limpieza eficaces y confiables. Nos dirigimos al mercado residencial y empresarial, ofreciendo soluciones limpiadoras para todos aquellos que buscan un entorno fresco y reluciente.
+"Siempre Limpio" nace con la misión de simplificar la vida diaria al proporcionar productos de limpieza eficaces y confiables. Nos dirigimos al mercado residencial y empresarial. 
