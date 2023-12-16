@@ -13,4 +13,9 @@ Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la v
    * José Carlos Diaz
    * **Luciano** - 19 años. De San Miguel, Buenos Aires.
 
+## Referentes del mercado
+
+**Amazon**
+ Conocido por su excelente experiencia de usuario y funcionalidades de búsqueda nos resulta útil tomarlo de inspiración para lograr una navegación fácil y una experiencia fluida al buscar y comprar artículos de limpieza en la plataforma.
+
 
