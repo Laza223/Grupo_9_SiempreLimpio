@@ -12,7 +12,7 @@ Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la v
    * Lazaro
    * Tamara
    * **Rodrigo Ruiz** - 24 años. De San Miguel, Buenos Aires.
-   * José Carlos Diaz
+   * José Carlos Diaz -  32 años. De Caucete, San Juan.
    * **Luciano** - 19 años. De San Miguel, Buenos Aires.
 
 
