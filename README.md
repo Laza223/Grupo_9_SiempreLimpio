@@ -1,6 +1,7 @@
 *Grupo 9 - Comisión 24 - Ecommerce de productos de limpieza*
 
 # Proyecto "Siempre Limpio"
+
 ## Descripción del Proyecto
 
 Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la venta de productos de limpieza a través de nuestra plataforma en línea. Nos esforzamos por ofrecer productos de alta calidad que faciliten la limpieza diaria de hogares y empresas.
@@ -9,7 +10,7 @@ Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la v
 
    * Lazaro
    * Tamara
-   * **Rodrigo** - 24 años. De San Miguel, Buenos Aires.
+   * **Rodrigo Ruiz** - 24 años. De San Miguel, Buenos Aires.
    * José Carlos Diaz
    * **Luciano** - 19 años. De San Miguel, Buenos Aires.
 
