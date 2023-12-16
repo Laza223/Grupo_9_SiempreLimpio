@@ -9,8 +9,8 @@ Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la v
 
    * Lazaro
    * Tamara
-   * Rodrigo - 24 años. De San Miguel, Buenos Aires.
+   * **Rodrigo** - 24 años. De San Miguel, Buenos Aires.
    * José Carlos Diaz
-   * Luciano - 19 años. De San Miguel, Buenos Aires.
+   * **Luciano** - 19 años. De San Miguel, Buenos Aires.
 
 
