@@ -10,15 +10,15 @@ Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la v
 **Integrantes del Equipo**
 
    * Lazaro
-   * Tamara Diaz- 23 años. De Jose C Paz, Buenos Aires.
+   * **Tamara Diaz**- 23 años. De Jose C Paz, Buenos Aires.
    * **Rodrigo Ruiz** - 24 años. De San Miguel, Buenos Aires.
-   * José Carlos Diaz -  32 años. De Caucete, San Juan.
+   * **José Carlos Diaz** -  32 años. De Caucete, San Juan.
    * **Luciano** - 19 años. De San Miguel, Buenos Aires.
 
 
 ## Referentes del mercado
 
-**Amazon**
+[Amazon](https://www.amazon.com/)
 
  Conocido por su excelente experiencia de usuario y funcionalidades de búsqueda nos resulta útil tomarlo de inspiración para lograr una navegación fácil y una experiencia fluida al buscar y comprar artículos de limpieza en la plataforma.
 
