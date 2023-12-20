@@ -11,6 +11,9 @@
 
   El sitio web de Siempre Limpio está diseñado para satisfacer las necesidades de un público diverso, que incluye amas de casa, dueños de negocios, personal de limpieza profesional y cualquier persona interesada en soluciones eficientes y productos especializados para mantener sus espacios limpios y ordenados. Nuestro objetivo es proporcionar información y productos de alta calidad, adaptados a las necesidades individuales de cada usuario.
 
+## Tipografía del proyecto
+  Nombre: Heebo
+
 
 **Integrantes del Equipo**
 
@@ -33,6 +36,11 @@
  Me resulto util la inspiracion de esta pagina debido a sus colores y la
  combinacion similar de eleccion de colores azules, blancos y celestes 
  https://duplas.com.br/
+
+
+
+[Solo-Deportes] (https://www.solodeportes.com.ar/)
+ Me inspire en la pagina de solo deportes la plataforma utiliza una estructura de navegación clara y categorización efectiva. Los menús desplegables y las opciones de filtrado permiten a los usuarios encontrar rápidamente lo que están buscando.
 
 
  
