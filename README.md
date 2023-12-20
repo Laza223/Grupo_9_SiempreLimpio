@@ -14,15 +14,15 @@ La página de "Siempre_Limpio" está dirigida a un público diverso que busca so
 **Integrantes del Equipo**
 
    * Lazaro
-   * Tamara Diaz- 23 años. De Jose C Paz, Buenos Aires.
+   * **Tamara Diaz**- 23 años. De Jose C Paz, Buenos Aires.
    * **Rodrigo Ruiz** - 24 años. De San Miguel, Buenos Aires.
-   * José Carlos Diaz -  32 años. De Caucete, San Juan.
+   * **José Carlos Diaz** -  32 años. De Caucete, San Juan.
    * **Luciano** - 19 años. De San Miguel, Buenos Aires.
 
 
 ## Referentes del mercado
 
-**Amazon**
+[Amazon](https://www.amazon.com/)
 
  Conocido por su excelente experiencia de usuario y funcionalidades de búsqueda nos resulta útil tomarlo de inspiración para lograr una navegación fácil y una experiencia fluida al buscar y comprar artículos de limpieza en la plataforma.
  https://www.amazon.com/?&tag=googleglobalp-20&ref=pd_sl_7nnedyywlk_e&adgrpid=159651196451&hvpone=&hvptwo=&hvadid=675114638367&hvpos=&hvnetw=g&hvrand=5591489640237922635&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9041015&hvtargid=kwd-10573980&hydadcr=2246_13468515
