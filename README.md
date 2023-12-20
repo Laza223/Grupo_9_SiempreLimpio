@@ -7,6 +7,10 @@
 
 Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la venta de productos de limpieza a través de nuestra plataforma en línea. Nos esforzamos por ofrecer productos de alta calidad que faciliten la limpieza diaria de hogares y empresas.
 
+## publico al que va dirigido
+La página de "Siempre_Limpio" está dirigida a un público diverso que busca soluciones efectivas y productos especializados para mantener sus espacios limpios y ordenados. Este público puede incluir amas de casa, dueños de negocios, personal de limpieza profesional, así como cualquier persona interesada en aprender sobre técnicas y productos de limpieza eficientes
+
+
 **Integrantes del Equipo**
 
    * Lazaro
@@ -21,5 +25,16 @@ Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la v
 **Amazon**
 
  Conocido por su excelente experiencia de usuario y funcionalidades de búsqueda nos resulta útil tomarlo de inspiración para lograr una navegación fácil y una experiencia fluida al buscar y comprar artículos de limpieza en la plataforma.
+ https://www.amazon.com/?&tag=googleglobalp-20&ref=pd_sl_7nnedyywlk_e&adgrpid=159651196451&hvpone=&hvptwo=&hvadid=675114638367&hvpos=&hvnetw=g&hvrand=5591489640237922635&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9041015&hvtargid=kwd-10573980&hydadcr=2246_13468515
+ 
+ **Duplas**
+ Es una empresa de Piracicaba de insdustria Brasileña ,especializada en la fabricación de escobas, cepillos y accesorios, y está capacitada para atender el mercado interno y de exportación.
+ Me resulto util la inspiracion de esta pagina debido a sus colores y la
+ combinacion similar de eleccion de colores azules, blancos y celestes 
+ https://duplas.com.br/
+
+
+ 
+
 
 
