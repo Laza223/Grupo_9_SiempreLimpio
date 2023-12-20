@@ -5,10 +5,11 @@
 
 ## Descripción del Proyecto
 
-Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la venta de productos de limpieza a través de nuestra plataforma en línea. Nos esforzamos por ofrecer productos de alta calidad que faciliten la limpieza diaria de hogares y empresas.
+  Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la venta de productos de limpieza a través de nuestra plataforma en línea. Nos esforzamos por ofrecer productos de alta calidad que faciliten la limpieza diaria de hogares y empresas.
 
-## publico al que va dirigido
-La página de "Siempre_Limpio" está dirigida a un público diverso que busca soluciones efectivas y productos especializados para mantener sus espacios limpios y ordenados. Este público puede incluir amas de casa, dueños de negocios, personal de limpieza profesional, así como cualquier persona interesada en aprender sobre técnicas y productos de limpieza eficientes
+## Público Objetivo
+
+  El sitio web de Siempre Limpio está diseñado para satisfacer las necesidades de un público diverso, que incluye amas de casa, dueños de negocios, personal de limpieza profesional y cualquier persona interesada en soluciones eficientes y productos especializados para mantener sus espacios limpios y ordenados. Nuestro objetivo es proporcionar información y productos de alta calidad, adaptados a las necesidades individuales de cada usuario.
 
 
 **Integrantes del Equipo**
