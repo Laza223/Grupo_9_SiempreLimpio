@@ -30,7 +30,7 @@
  
 [Duplas](https://duplas.com.br/)
 
- Es una empresa radicada en Piracicaba, Brasil. Especializada en la fabricación de escobas, cepillos y distintos accesorios de limpieza, nos resultó útil la inspiración de esta pagina debido a su armoniosa combinación de colores. Hemos optado por tonos azules, blancos y celestes, en sintonía con la elección cromática que encontramos en dicho referente.
+ Para reflejar nuestro compromiso con la calidad y la estética en nuestros productos, nos resultó útil la inspiración de esta pagina debido a su armoniosa combinación de colores. Hemos optado por tonos azules, blancos y celestes, en sintonía con la elección cromática que encontramos en dicho referente.
 
 
 
