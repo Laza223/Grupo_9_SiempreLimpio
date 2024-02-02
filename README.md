@@ -1,11 +1,11 @@
-*Grupo 9 - Comisión 24 - Ecommerce de productos de limpieza*
+*Comisión 24 - Grupo 9 - Ecommerce de productos de limpieza*
 
 # Proyecto "Siempre Limpio"
 
 
 ## Descripción del Proyecto
 
-  Bienvenido al repositorio de "Siempre Limpio", un emprendimiento dedicado a la venta de productos de limpieza a través de nuestra plataforma en línea. Nos esforzamos por ofrecer productos de alta calidad que faciliten la limpieza diaria de hogares y empresas.
+  ¡Bienvenido al repositorio de Siempre Limpio! Somos un emprendimiento dedicado a la venta de productos de limpieza a través de nuestra plataforma en línea. Nos esforzamos por ofrecer productos de alta calidad que faciliten la limpieza diaria de hogares y empresas.
 
 ## Público Objetivo
 
@@ -30,14 +30,14 @@
  
 [Duplas](https://duplas.com.br/)
 
- Es una empresa de Piracicaba de industria Brasileña ,especializada en la fabricación de escobas, cepillos y accesorios, y está capacitada para atender el mercado interno y de exportación. Me resulto util la inspiracion de esta pagina debido a sus colores y la combinacion similar de eleccion de colores azules, blancos y celestes.
+ Para reflejar nuestro compromiso con la calidad y la estética en nuestros productos, nos resultó útil la inspiración de esta pagina debido a su armoniosa combinación de colores. Hemos optado por tonos azules, blancos y celestes, en sintonía con la elección cromática que encontramos en dicho referente.
 
 
 
 
 [Solo-Deportes](https://www.solodeportes.com.ar/)
 
- Me inspire en la pagina de solo deportes la plataforma utiliza una estructura de navegación clara y categorización efectiva. Los menús desplegables y las opciones de filtrado permiten a los usuarios encontrar rápidamente lo que están buscando.
+Nos inspiramos de la página de Solo Deportes, destacando su estructura de navegación clara y eficaz categorización. Su implementación de menús desplegables y opciones de filtrado adecuadas nos inspiraron a diseñar una interfaz que permita otorgarle a nuestros usuarios la capacidad de encontrar rápidamente los productos que buscan.
 
 
 [limpionline](https://www.limpionline.com/)
