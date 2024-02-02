@@ -5,7 +5,7 @@
 
 ## Descripción del Proyecto
 
-  ¡Bienvenido al repositorio de Siempre Limpio!, somos un emprendimiento dedicado a la venta de productos de limpieza a través de nuestra plataforma en línea. Nos esforzamos por ofrecer productos de alta calidad que faciliten la limpieza diaria de hogares y empresas.
+  ¡Bienvenido al repositorio de Siempre Limpio! Somos un emprendimiento dedicado a la venta de productos de limpieza a través de nuestra plataforma en línea. Nos esforzamos por ofrecer productos de alta calidad que faciliten la limpieza diaria de hogares y empresas.
 
 ## Público Objetivo
 
