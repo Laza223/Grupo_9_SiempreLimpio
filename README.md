@@ -50,6 +50,4 @@ usamos esta pagina de inspiracion debido a como esta conformada su estructura y 
 "POLAR - Fábrica y distribución de productos de limpieza"
 
 
- **¡Gracias por elegir Siempre Limpio para mantener tu entorno impecable!**
-
 
