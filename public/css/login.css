@@ -28,4 +28,37 @@ padding: initial;
 }
 .contededor3{
     
+display: flex;
+    
+flex-direction: column;
+    
+/* flex-wrap: nowrap; */
+    
+padding: 25px 0px 0px 0px;
+}
+.contededor3 .boca{
+
+}
+.contededor3 .google{
+    
+border-radius: 23px;
+    
+margin: 29px 20px 10px 20px;
+    
+/* position: absolute; */
+    
+top: 401px;
+}
+
+/* va en estilos o no  */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 2,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: #4a7dd9;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
 }
