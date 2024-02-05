@@ -1,0 +1,63 @@
+.footer {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30vh; 
+    background-color: #203C58;
+    position: relative;
+    bottom: 0;
+  
+    font-size: 0.8rem;
+    font-weight: 100;
+    color:white;
+
+}
+
+.contenedor_footer{
+    display: flex;
+    width: 100%;
+}
+
+.contacto{
+    display: flex;
+    width: 100%;
+    list-style:none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.icono{
+    display: flex;
+    gap: 0.7rem;
+}
+
+
+.resaltado{
+    font-weight: 800;
+    }
+
+#contenedor_titulo_suscripcion{
+    background-color: #54bba4;
+    border-radius: 20px 0 ;
+    width:20vw;
+    height:5vh
+}
+
+#legales{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color:rgba(161, 161, 161, 0.5);
+   
+}
+
+#legales p {
+    width:100%;
+    text-align: center;
+}
+
+
+
+
