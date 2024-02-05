@@ -1,30 +1,117 @@
+.home-body{
+ background: #203c58; 
+  
+}
 .total{
-    color: #203c58;
+  
 }
 .login{
     
-
 }
 .contededorsuperior{
 
+display: flex;
+
 background-color: #3c75ad;
+
+width: 100%;
+
+height: 40px;
 
 color: white;
 
-padding: 10px 0px 3px 0px;
+padding: 5px 0px 0px 0px;
+
+font-size: 40px;
+
+line-height: 40;
+
+flex-direction: column;
+
+
+;
+
+/* align-content: center; */
+}
+.sos{
+  list-style: none;
+  padding-left: 1px;
+  animation: cambiar 12s infinite;
+   duration: 2s;
+
+overflow: hidden;
+}
+.contededorsuperior, .sos{
+  margin: 0px;
+}
+@keyframes cambiar {
+  0%{ margin-top: 0%;}
+  20%{margin-top: -40;}
+
+  25%{margin-top: -40px;}
+  50%{margin-top: -40px;}
+  55%{margin-top: -40px;}
+
+
+
+  
 }
 .contededor1{
 
+}
+.cont1{
+
+display: flex;
+
+flex-wrap: wrap;
+
+flex-direction: column;
+}
+.tomate{
+  display: flex;
+  /* padding: 9px 1px 1px 90px; */
+  border-radius: 17px;
+  margin-bottom: 0px;
+  /* justify-content: flex-start; */
+  /* text-align: left; */
+}
+
+.pers{
+
+position: absolute;
+
+top: 76px;
+
+left: 35px;
+}
+.lock{
+  
+position: absolute;
+  
+left: 29px;
+  
+top: 139px;
+  
+text-align: center;
 }
 .nombred{
 
 padding: initial;
 --bs-border-radius: 12px;
+
+margin-bottom: 15px;
 }
 .contra{padding: initial;
     --bs-border-radius: 12px;}
 .contededor2{
     
+color: white;
+    
+font-size: 16px;
+    
+display: flex;
+    
+justify-content: space-between;
 }
 .contededor3{
     
@@ -34,10 +121,11 @@ flex-direction: column;
     
 /* flex-wrap: nowrap; */
     
-padding: 25px 0px 0px 0px;
+/* border-radius: 0px; */
 }
 .contededor3 .boca{
 
+padding: 2px 0px;
 }
 .contededor3 .google{
     
@@ -49,8 +137,23 @@ margin: 29px 20px 10px 20px;
     
 top: 401px;
 }
+.pera{
+  
+display: flex;
+  
+color: white;
+  
+flex-direction: row;
+  
+padding: 34px 0px 10px 35px;
+  
+flex-wrap: nowrap;
+  
+justify-content: space-evenly;
+}
 
-/* va en estilos o no  */
+
+/* va en estilos */
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 2,
@@ -58,7 +161,9 @@ top: 401px;
   'GRAD' 0,
   'opsz' 24;
   color: #4a7dd9;
-  background-color: white;
+  background-color: #fff;
   border-radius: 15px;
-  display: flex;
+  /* display: flex; */
+  /* background: #203c58; */
 }
+b,strong {text-decoration: underline;font-weight: normal;}
