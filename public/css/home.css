@@ -1,0 +1,32 @@
+/*                                                              GENERAL                                                              */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Heebo';
+}
+
+/*                                                               BODY                                                               */
+
+.home-body{
+
+display: flex;
+flex-direction: column;
+}
+
+/*                                                              HEADER                                                              */
+.home-header{
+    background-color: #5096DA;
+    height: 10px;
+}
+/*                                                              MAIN                                                                */
+
+.home-main{
+    flex-grow: 1;
+}
+
+.home-main .div-limpiando img{
+    width: 100%;
+}
+/*                                                              FOOTER                                                              */
