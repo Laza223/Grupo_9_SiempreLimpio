@@ -3,6 +3,8 @@
     font-size: 0.8rem;
     font-weight: 100;
     color:white;
+    position: fixed;
+    bottom: 0;
 }
 
 .contenedor_footer{
@@ -75,3 +77,16 @@ text-align: center;
 
 
 
+@media (max-width:460px){
+    .contacto{
+        display: none;
+    }
+
+    .contenedor_footer{
+        justify-content: center;
+    }
+
+    #suscripcion{
+        margin-top:-10px
+    }
+}
