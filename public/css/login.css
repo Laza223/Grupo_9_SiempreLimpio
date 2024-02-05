@@ -1,169 +1,285 @@
-.home-body{
- background: #203c58; 
-  
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.total{
-  
+
+
+section{
+    display: flex;
+    width: 100%;
+    background: #203c58 no-repeat;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
 }
-.login{
+.contenedor1{
+    position: relative;
+    width: 400px;
+    height: 470px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor1 h2{
+    color: white;
+    text-align: center;
+    width: 100%;
+    background: #3C75AE;
+    top: 26px;
+    position: absolute;
+    left: 0px;
+}
+
+.input-contenedor{
+    position: relative;
+    margin: 30px 0;
+    width: 300px;
+    border-bottom: 2px solid white;
+    padding: 2px;
+}
+.input-contenedor label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .6s;
+    font-weight:  bold;
     
 }
-.contededorsuperior{
-
-display: flex;
-
-background-color: #3c75ad;
-
-width: 100%;
-
-height: 40px;
-
-color: white;
-
-padding: 5px 0px 0px 0px;
-
-font-size: 40px;
-
-line-height: 40;
-
-flex-direction: column;
-
-
-;
-
-/* align-content: center; */
-}
-.sos{
-  list-style: none;
-  padding-left: 1px;
-  animation: cambiar 12s infinite;
-   duration: 2s;
-
-overflow: hidden;
-}
-.contededorsuperior, .sos{
-  margin: 0px;
-}
-@keyframes cambiar {
-  0%{ margin-top: 0%;}
-  20%{margin-top: -40;}
-
-  25%{margin-top: -40px;}
-  50%{margin-top: -40px;}
-  55%{margin-top: -40px;}
-
-
-
-  
-}
-.contededor1{
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px
 
 }
-.cont1{
-
-display: flex;
-
-flex-wrap: wrap;
-
-flex-direction: column;
+.input-contenedor input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: -35px 0 5px;
+    color: white;
+    font-size: 1.2rem;
 }
-.tomate{
-  display: flex;
-  /* padding: 9px 1px 1px 90px; */
-  border-radius: 17px;
-  margin-bottom: 0px;
-  /* justify-content: flex-start; */
-  /* text-align: left; */
+.input-contenedor i{
+    position: absolute;
+    color: blue;
+    font-size: 1.6rem;
+    top: 10px;
+    right: 8px;
 }
-
-.pers{
-
-position: absolute;
-
-top: 76px;
-
-left: 35px;
+.olvidar{
+    margin: 18px 0 24px;
+    font-size: 0.9rem;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
-.lock{
-  
-position: absolute;
-  
-left: 29px;
-  
-top: 139px;
-  
-text-align: center;
-}
-.nombred{
+.olvidar label input{
+    margin: 3px;
+ }
 
-padding: initial;
---bs-border-radius: 12px;
+ .olvidar label a{
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+    font-size: .9rem;
 
-margin-bottom: 15px;
-}
-.contra{padding: initial;
-    --bs-border-radius: 12px;}
-.contededor2{
+ }
+
+ .olvidar label a:hover{
+    text-decoration: underline;
+ }
+ button{
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background-color: aqua;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition-property:transform, color;
+    transition-duration: 2s, 10s;
+ }
+ button:hover{
+    background-image: linear-gradient(
+        150deg,
+        #9500,
+        #09F,
+        #00DDFF,
+        #3ed36c,
+        #c23ff5
+        )
+ }
+button .registrar p{
+
     
-color: white;
-    
-font-size: 16px;
-    
-display: flex;
-    
-justify-content: space-between;
 }
-.contededor3{
-    
-display: flex;
-    
-flex-direction: column;
-    
-/* flex-wrap: nowrap; */
-    
-/* border-radius: 0px; */
-}
-.contededor3 .boca{
+ .registrar{
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+    margin: 20px 0 18px;
+ }
+ .registrar p a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+ }
+ .registrar p a:hover{
+    text-decoration: underline;
+ }
+ .iconos9{
+    color: aqua;
+    position: absolute;
+    top: 430px;
+    font-size: 1.5rem;
+ }
 
-padding: 2px 0px;
-}
-.contededor3 .google{
-    
-border-radius: 23px;
-    
-margin: 29px 20px 10px 20px;
-    
-/* position: absolute; */
-    
-top: 401px;
-}
-.pera{
-  
-display: flex;
-  
-color: white;
-  
-flex-direction: row;
-  
-padding: 34px 0px 10px 35px;
-  
-flex-wrap: nowrap;
-  
-justify-content: space-evenly;
-}
+ @media(min-width:834px) and (max-width:1439x){
 
+    *{
+        
+    }
+    
+    
+    section{
+       
+    }
+    .contenedor1{
+    }
+    .contenedor1 h2{
+       
+    }
+    
+    .input-contenedor{
+       
+    }
+    .input-contenedor label{
+        
+        
+    }
+    input:focus ~ label,
+    input:valid ~ label{
+       
+    
+    }
+    .input-contenedor input{
+    }
+        
+    .input-contenedor i{
+        
+    }
+    .olvidar{
+     
+    }
+    .olvidar label input{
+    }
+    
+     .olvidar label a{
+       
+    
+     }
+    
+     .olvidar label a:hover{
+        
+     }
+     button{
+        
+    
+     }
+     button:hover{
+        
+     }
+     .registrar{
+       
+     }
+     .registrar p a{
+        
+     }
+     .registrar p a:hover{
+        
+     }
+     .iconos9{
+       
+     }
+    
 
-/* va en estilos */
+ }
+ @media(min-width:1440px) {
+    *{
+        
+    }
+    
+    
+    section{
+       
+    }
+    .contenedor1{
+    }
+    .contenedor1 h2{
+       
+    }
+    
+    .input-contenedor{
+       
+    }
+    .input-contenedor label{
+        
+        
+    }
+    input:focus ~ label,
+    input:valid ~ label{
+       
+    
+    }
+    .input-contenedor input{
+    }
+        
+    .input-contenedor i{
+        
+    }
+    .olvidar{
+     
+    }
+    .olvidar label input{
+    }
+    
+     .olvidar label a{
+       
+    
+     }
+    
+     .olvidar label a:hover{
+        
+     }
+     button{
+        
+    
+     }
+     button:hover{
+        
+     }
+     .registrar{
+       
+     }
+     .registrar p a{
+        
+     }
+     .registrar p a:hover{
+        
+     }
+     .iconos9{
+       
+     }
+    
 
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 2,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
-  color: #4a7dd9;
-  background-color: #fff;
-  border-radius: 15px;
-  /* display: flex; */
-  /* background: #203c58; */
-}
-b,strong {text-decoration: underline;font-weight: normal;}
+ }
