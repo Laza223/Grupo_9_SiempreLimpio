@@ -55,9 +55,7 @@ section{
     font-weight:  bold;
     
 }
-input:focus ~ label,
-input:valid ~ label{
-    top: -5px}
+
 input:focus ~ label,
 input:valid ~ label{
     top: -5px
