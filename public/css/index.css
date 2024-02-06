@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    font-family: 'heebo';
+    font-family: 'Mulish', sans-serif;
 }
 
 /*                                                               BODY                                                               */
@@ -84,11 +84,16 @@
 }
 
 .home-main .section-info article p{
-    font-size: 12px;
-    font-family: system-ui;
-    font-weight: bold;
-    width: 120px;
-    text-align: center;
+    
+font-size: 12px;
+    
+font-family: system-ui;
+    
+font-weight: bold;
+    
+width: 120px;
+    
+text-align: center;
 }
 
 .home-main .section-info article img{

@@ -6,12 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/home.css">
     <link href="/css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 
 <body class="home-body">
+
+
+    <header>
+        <div class="logo-ubicacion">
+            <img src="./imagen/siempre-limpio-high-resolution-logo-transparent (1).png" alt="logo" width="
+         150px">
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <section class="seccion-nav-bar ">
+            <div class="barra-busqueda">
+                <form>
+                    <input type="text" placeholder="¿Que producto estas buscando?"><i
+                        class="fa-solid fa-magnifying-glass"></i>
+                </form>
+
+            </div>
+            <div class="iconos">
+                <i class="fa-regular fa-bell"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <li><a href="/register">Crea tu cuenta</a><i class="fa-regular fa-user"></i></li>
+            </div>
+            <div class="burguer-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+
+
+        <section class="categorias">
+            <ul class="menu-lista">
+                <li><a href="">CATEGORIAS</a></li>
+                <li><a href="">Detergentes</a></li>
+                <li><a href="">Limpiadores liquidos</a></li>
+                <li><a href="">Accesorios</a></li>
+                <li><a href="">Aerosoles</a></li>
+                <li><a href="">Geles</a></li>
+                <li><a href="">Jabones</a></li>
+                <li>
+                    <p><a href="">ecotendencias: lo mas reciente en limpieza responsable</a></p>
+                </li>
+            </ul>
+        </section>
+    </header>
 
     <main class="home-main">
         <div class="div1">
@@ -52,8 +96,8 @@
             </section>
         </div>
     </main>
+    <footer class="footer container-fluid">
 
-    <footer class="footer">
         <div class="contenedor_footer">
             <ul class="contacto">
                 <p class="resaltado">Contacto</p>
@@ -62,22 +106,27 @@
                 <li class="icono"><i class="fa-regular fa-envelope"></i> contacto@siemprelimpio.com</li>
                 <li class="icono"><i class="fa-solid fa-location-dot"></i>Emilio Frugone 4225, Bs. As.</li>
             </ul>
-            <div id="suscripción">
-                <p id="contenedor_titulo_suscripcion">¡Suscribite para recibir nuestras próximas ofertas!</p>
-                <form>
-                    <input type="email" id="email" placeholder="Ingresá tu email" name="email" required>
-                    <button type="submit">Suscribirse</button>
-                </form>
 
-            </div>
+            <section id="suscripción">
+                <h2 id="titulo_suscripcion" class="container-fluid">¡Suscribite para recibir noticias sobre nuestras
+                    próximas ofertas!</h2>
+                <form class="formulario_suscripcion">
+                    <input id="formulario_suscripcion_input" class="container-sm " type="email" id="email" name="email"
+                        placeholder="Ingresá tu email">
+                </form>
+            </section>
+        </div>
+        <div id="arrepentimiento">
+            <p>Botón de arrepentimiento</p>
+            <a href="#">Cancelar una compra</a>
         </div>
         <div id="legales">
-            <p>Copyright 2023 ©Siempre Limpio. Todos los derechos reservados. Términos y condiciones del servicio | Para
-                reclamos a Defensa de las y los Consumidores ingrese aquí</p>
+            <p>Copyright 2023 ©Siempre Limpio. Todos los derechos reservados.
+                <a href="#">Términos y condiciones del servicio </a>| Para reclamos a Defensa de las y los Consumidores
+                <a href="#">ingrese aquí.</a>
+            </p>
         </div>
     </footer>
-
-    <script src="https://kit.fontawesome.com/f141bdc188.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
