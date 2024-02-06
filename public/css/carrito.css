@@ -1,18 +1,14 @@
-.main{
-    display: flex;
-    justify-content: space-between;
-}
 
 .total_a_pagar{
-    align-self: center;
+ 
+ display: flex;
+ align-items: flex-end;
+ flex-direction: column;
+justify-content: center;
     margin-bottom: 50px;
     margin-right: 50px;
 }
 
-#total_a_pagar_numero{
-    display:flex;
-    justify-content: flex-end;
-}
 
 .total_a_pagar button{
  background-color: #0D99FF;
