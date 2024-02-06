@@ -1,5 +1,6 @@
 @import url("footer.css");
 @import url("carrito.css");
+@import url("detailProduct.css");
 
 html, body {
     height: 100%;

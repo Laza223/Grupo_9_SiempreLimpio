@@ -16,6 +16,9 @@ app.get('/', (req, res)=>{
 app.get('/home', (req, res)=>{
     res.redirect('/')
 })
+app.get('/detailProduct', (req, res)=>{
+    res.sendFile(path.join(__dirname, "./views/detailProduct.html"))
+})
 
 
 
