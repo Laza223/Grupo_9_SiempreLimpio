@@ -1,0 +1,92 @@
+.footer {
+    background-color: #203C58;
+    font-size: 0.8rem;
+    font-weight: 100;
+    color:white;
+    position: fixed;
+    bottom: 0;
+}
+
+.contenedor_footer{
+    display: flex;
+    width: 100%;
+    margin-top:15px;
+}
+
+.contacto{
+    display: flex;
+    width: 100%;
+    list-style:none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.icono{
+    display: flex;
+    gap: 0.7rem;
+}
+
+
+.resaltado{
+    font-weight: 800;
+    }
+#suscripcion{
+    display: flex;
+    flex-direction: column;
+  
+}
+#titulo_suscripcion{
+  
+    background-color: #00A538;
+    border-radius: 20px 0 ;
+    width:220px;
+    font-size: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:0px
+}
+#suscripcion{
+text-align: center;
+}
+
+ #formulario_suscripcion_input{
+    border-top-right-radius: 20px ;
+    width:220px;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+
+
+#legales{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color:rgba(161, 161, 161, 0.5);
+   
+}
+
+#legales p {
+    width:100%;
+    text-align: center;
+}
+
+
+
+
+@media (max-width:460px){
+    .contacto{
+        display: none;
+    }
+
+    .contenedor_footer{
+        justify-content: center;
+    }
+
+    #suscripcion{
+        margin-top:-10px
+    }
+}
