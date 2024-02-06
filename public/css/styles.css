@@ -1,16 +1,10 @@
 @import url("footer.css");
-
-html, body {
-    height: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    
-}
+@import url('index.css');
 
 body {
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 main {

@@ -5,28 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/home.css">
+    <link href="/css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 
 <body class="home-body">
-    <header class="home-header">
-    </header>
+
     <main class="home-main">
-        <div class="div-limpiando">
-            <img src="/images/mujer-limpiando.png"  alt="Limpiando">
+        <div class="div1">
+            <h5>¡OFERTAS DE LA SEMANA DE LA LIMPIEZA!</h5>
         </div>
         <div>
-            <section>
+            <section class="section-productos">
                 <article>
+                    <img class="esponja" src="/images/esponja.png" alt="esponja">
+                    <div>
+                        <p> Esponja para cocina </p>
+                        <h5> $200 </h5>
+                    </div>
                 </article>
                 <article>
+                    <img src="/images/zorro.png" alt="zorro">
+                    <div>
+                        <p> Jabon en polvo zorro </p>
+                        <h5> $800 </h5>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <div>
+            <section class="section-info">
+                <article>
+                    <p> Elegi los productos que vas a comprar </p>
+                    <img src="/images/tienda.png" alt="Tienda">
+                </article>
+                <article>
+                    <p> ¡Paga con el medio de pago que quieras! </p>
+                    <img src="/images/card.png" alt="Tarjeta">
+                </article>
+                <article class="paquete">
+                    <p> Recibí el producto que esperás </p>
+                    <img src="/images/paquete.png" alt="Paquete">
                 </article>
             </section>
         </div>
     </main>
-    <footer>
+
+    <footer class="footer">
+        <div class="contenedor_footer">
+            <ul class="contacto">
+                <p class="resaltado">Contacto</p>
+                <li class="icono"><i class="fa-brands fa-whatsapp"></i>+54 9 1167309300</li>
+                <li class="icono"><i class="fa-sharp fa-solid fa-phone"></i>011 67309300</li>
+                <li class="icono"><i class="fa-regular fa-envelope"></i> contacto@siemprelimpio.com</li>
+                <li class="icono"><i class="fa-solid fa-location-dot"></i>Emilio Frugone 4225, Bs. As.</li>
+            </ul>
+            <div id="suscripción">
+                <p id="contenedor_titulo_suscripcion">¡Suscribite para recibir nuestras próximas ofertas!</p>
+                <form>
+                    <input type="email" id="email" placeholder="Ingresá tu email" name="email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+
+            </div>
+        </div>
+        <div id="legales">
+            <p>Copyright 2023 ©Siempre Limpio. Todos los derechos reservados. Términos y condiciones del servicio | Para
+                reclamos a Defensa de las y los Consumidores ingrese aquí</p>
+        </div>
     </footer>
+
+    <script src="https://kit.fontawesome.com/f141bdc188.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
