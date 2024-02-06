@@ -10,13 +10,13 @@ const path = require('path')
 
 app.use(express.static('public'))
 app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, "./views/home.html"))
+    res.sendFile(path.join(__dirname, "./views/carrito.html"))
 })
 
-app.get('/home', (req, res)=>{
+app.get('/carrito', (req, res)=>{
     res.redirect('/')
 })
 
 
 
-app.listen(port, ()=> console.log(`http://localhost:${port}`))
+app.listen(port, ()=> console.log(`http://localhost:${port}/`))
