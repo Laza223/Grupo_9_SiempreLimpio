@@ -14,9 +14,23 @@
 
 /*                                                              MAIN                                                                */
 
+
+.home-main .div-img img{
+    width: 100%;
+    }
+
+
+    .carousel-control-prev{
+        
+    }
+
+    .carousel-control-next{
+    }
+
 .home-main{
     flex-grow: 1;
-
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .home-main .div1 h5{
@@ -61,12 +75,16 @@
 }
 
 .home-main .section-productos article p{
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
 .home-main .section-productos article h5{
     margin: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
 }
 
 .home-main .section-info{
