@@ -35,20 +35,14 @@
   
 }
 #titulo_suscripcion{
-  
-background-color: #00A538;
-  
-border-radius: 0px 25px 0px 0px;
-  
-width: 250px;
-  
-font-size: 11px;
-  
-padding: 5px;
-  
-text-align: center;
-  
-font-weight: normal;
+  background-color: #00A538;
+  border-radius: 0px 25px 0px 0px;
+  width: 250px;
+  font-size: 11px;
+  padding: 5px;
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
 }
 #suscripcion{
 text-align: center;
