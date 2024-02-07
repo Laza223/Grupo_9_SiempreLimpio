@@ -14,7 +14,7 @@
 
 **Integrantes del Equipo**
 
-   * **Lazaro Feijoo** - 19 años. de Lujan, Bueno Aires.
+   * **Lazaro Feijoo** - 19 años. De Luján, Buenos Aires.
    * **Tamara Diaz** - 23 años. De Jose C Paz, Buenos Aires.
    * **Rodrigo Ruiz** - 24 años. De San Miguel, Buenos Aires.
    * **José Carlos Diaz** -  32 años. De Caucete, San Juan.
