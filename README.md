@@ -14,11 +14,11 @@
 
 **Integrantes del Equipo**
 
-   * **Lazaro feijoo** - 19 años , de Lujan , Bueno Aires.
+   * **Lazaro Feijoo** - 19 años. de Lujan, Bueno Aires.
    * **Tamara Diaz** - 23 años. De Jose C Paz, Buenos Aires.
    * **Rodrigo Ruiz** - 24 años. De San Miguel, Buenos Aires.
    * **José Carlos Diaz** -  32 años. De Caucete, San Juan.
-   * **Luciano** - 19 años. De San Miguel, Buenos Aires.
+   * **Luciano Vilte** - 19 años. De San Miguel, Buenos Aires.
 
 
 ## Referentes del mercado
@@ -48,6 +48,5 @@ usamos esta pagina de inspiracion debido a como esta conformada su estructura y 
 [Polar](https://www.distribuidorapolar.com.ar) 
 
 "POLAR - Fábrica y distribución de productos de limpieza"
-
 
 
