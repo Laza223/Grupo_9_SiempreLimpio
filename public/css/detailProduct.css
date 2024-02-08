@@ -1,32 +1,38 @@
-
-
 /*HEADER*/
 .detailProduct-header{
-    width: 100%;
 }
-logo-header .img{
-    width: 100%;
-    
-}
+
 .logo-header img{
-    width: 450px;;
 }
-.favoritos-header{}
-.carrito header{}
-.botonBuscar-header{}
+.favoritos-header{
+
+}
+.carrito header{
+
+}
+.botonBuscar-header{
+
+}
+.main-detailProduct{
+    background-image: url(/public/images/img-fondo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right;
+}
 
 
 
-@media screen and (min-width: 462px){
+@media screen and (min-width: 362px){
     /*HEADER*/
     .detailProduct-header{
         width: 100%;
     }
     .logo-header{
-    width: 10;
+    width: 100%;
 }
     .logo-header img{
-        width: 370px;;
+        width: 70%;
     }
     .favoritos-header{
         display: none;
@@ -47,7 +53,8 @@ logo-header .img{
         
     }
     .barraBusqueda-main{
-    width: 65%;
+        margin-top: 30px;
+    width: 55%;
     height: 30px;
     border-radius: 5px;
     border: 1px solid gray;
@@ -56,8 +63,18 @@ logo-header .img{
     .lupa-busqueda{
         border-radius: 4px;
         border: 1px solid #666;
+        margin-top: 30px;
     }
-    .h1-main{}
+    .h2-main{
+        margin-top: 40px;
+        text-align: center;
+        color: #474140 ;
+    }
+    .h3-main{
+        text-align: center;
+        margin-bottom: 0px;
+        color: #474140 ;
+    }
     .section-catalogo{
         display: flex;
         flex-direction: column;
@@ -65,25 +82,49 @@ logo-header .img{
         flex-wrap: nowrap;
         gap: 30px;
     }
+    .h1-main{
+        margin-top: 40px;
+        color: #474140 ;
+    }
+    .imagen-producto{
+        border: 1px solid #666;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 230px;
+    }
     .img-producto{
-        width: 55%;
-        height: auto;
+        width: 230px;
+        height: 230px;
         
     }
     
     .articulo-main{
-        width: 60%;
+        width: 230px;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        border: 1px solid #666;
         border-radius: 10px;
+        margin-bottom: 60px;
+    }
+    .descripccion-completa{
+        border: 1px solid #666;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #fff;
     }
     .precio-main{
         color: red;
     }
     .descripcionProducto-main{
         text-align: center;
+    }
+    .iconos-articulo{
+        width: 100%;
+        display: flex;
+        gap: 75%;
+        justify-content: center;
+        margin-bottom: 10px;
     }
 }
