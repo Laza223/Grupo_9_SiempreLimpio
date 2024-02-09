@@ -1,6 +1,17 @@
 
 .home-header{
-    background-color: #203C58;
+    background-color: #5096DA;
+}
+
+
+.subtitulo-categorias{
+    font-size: 10px;
+    color: white;
+}
+ul.menu-lista{
+   background-color: #3C75AD;
+   font-weight: 700;
+   height: 50px;
 }
 header .logo-ubicacion{
     background-color: white;

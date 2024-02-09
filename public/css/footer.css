@@ -1,11 +1,12 @@
 .footer {
     background-color: #203C58;
-    width: 100%;
+    width: 100vw;
     font-size: 0.8rem;
     font-weight: 100;
     color: white;
     position: relative;
     bottom: 0;
+ 
 }
 
 .contenedor_footer {
@@ -76,9 +77,7 @@
 
 /*Media Desktop*/
 @media screen and (min-width: 768px){
-    #suscripcion{
-        display: none;
-    }
+   
 }
 
 
@@ -94,7 +93,7 @@
     }
 
     #suscripcion {
-        margin-top: -10px
+        margin-top: 10px
     }
 }
 

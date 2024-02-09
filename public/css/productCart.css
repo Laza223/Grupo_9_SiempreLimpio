@@ -2,8 +2,6 @@
 
 #section_formulario_pago{
     width:50%;
-
-    
 }
 
 #section_resumen_carrito{
@@ -21,8 +19,9 @@
 
 
 .titulo_pagina{
-    padding-left: 20px;
+    padding-left: 30px;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 
@@ -42,34 +41,80 @@
 
 
 #formulario_pago input {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     font-size: 16px;
     border-radius: 4px;
-    padding: 8px 16px;
+    padding: 8px 12px;
     border: 2px solid transparent;
-    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
-    background: rgb(251, 251, 251);
-    transition: all 0.1s ease 0s;
+    transition: border-color 0.3s ease;
+}
 
-    :focus {
-        border: 2px solid rgb(124, 138, 255);
+#formulario_pago input:focus {
+    border-color: rgb(124, 138, 255);
+}
+
+/* Estilos de la lista de productos en el carrito */
+#productos_en_carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#productos_en_carrito li {
+    margin-bottom: 10px;
+}
+
+#productos_en_carrito p {
+    margin: 0;
+}
+
+/* Estilos del total a pagar */
+#total_productos_en_carrito {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#total_productos_en_carrito li {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos del botón de proceder al pago */
+#section_resumen_carrito button {
+    background-color: rgb(124, 138, 255);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#section_resumen_carrito button:hover {
+    background-color: rgb(94, 104, 205);
+}
+
+
+@media(max-width:500px) {
+    #main_carrito{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+    
     }
 
-}
-
-/*Total a pagar*/
-
-#section_resumen_carrito{
-
-    background-color: rgba(0, 0, 0, 0.2);
+    #formulario_pago {
+       
+        width: 100%;
+        justify-content: center;
     
+    }
+
+    #section_formulario_pago{
+        width: 100%;
+    }
+    #contenedor_resumen_carrito{
+        width: 100%;
+    }
 }
-
-#productos_en_carrito{
-    display: flex;
-    list-style: none;
-    
-}
-
-
-@media screen and (min-width:)

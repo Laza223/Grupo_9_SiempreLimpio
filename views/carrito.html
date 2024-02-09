@@ -39,7 +39,7 @@
          
          <section class="categorias">
              <ul class="menu-lista">
-                 <li><a href="">CATEGORIAS</a></li>
+                 <li class="subtitulo-categorias">CATEGORIAS</li>
                  <li><a href="">Detergentes</a></li>
                  <li><a href="">Limpiadores liquidos</a></li>
                  <li><a href="">Accesorios</a></li>
@@ -48,13 +48,16 @@
                  <li><a href="">Jabones</a></li>
                  <li><p><a href="">ecotendencias: lo mas reciente en limpieza responsable</a></p></li>
              </ul>
+           
          </section>
      
     </header>
-         <h1 class="titulo_pagina">Tu Carrito</h1>
+         <h1 class="titulo_pagina"><i class="fa-solid fa-cart-shopping"></i>Tu Carrito </h1> 
+         
   
 
     <main id ="main_carrito">
+       
         <div id="section_formulario_pago">
             <form id="formulario_pago">
 
@@ -84,8 +87,12 @@
     </div>
 
 
+      </div>
+      <div id="contenedor_resumen_carrito" class="card text-bg-primary mb-3" ;">
+        <div class="card-header">Resumen de la compra</div>
         <div id="section_resumen_carrito">
-            <h2>Productos en carrito:</h2>
+            <h5 class="card-title">   Productos en carrito:</h5>
+            <div class="card-body">
             <ul id="productos_en_carrito">
                 <li>
                     <p>Detergente If</p>
@@ -120,7 +127,7 @@
             </ul>
             <button>Proceder al Pago</button>
         </div>
-
+    </div>
     </main>
 
 
