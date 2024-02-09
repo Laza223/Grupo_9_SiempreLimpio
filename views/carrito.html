@@ -4,22 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="/css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Carrito - Siempre Limpio </title>
-
 </head>
 
 
 <body>
+    <header class="home-header">
+            <div class="logo-ubicacion"> 
+             <img src="./imagen/siempre-limpio-high-resolution-logo-transparent (1).png" alt="logo" width="
+             150px">
+         <i  class="fa-solid fa-location-dot"></i>
+            </div>
+            
+         <section class="seccion-nav-bar"> 
+             <div class="barra-busqueda">
+                 <form>
+                     <input type="text" placeholder="¿Que producto estas buscando?"><i class="fa-solid fa-magnifying-glass"></i>
+                 </form>
+                
+             </div>
+            <div class="iconos">
+             <i class="fa-regular fa-bell"></i>
+             <i class="fa-solid fa-cart-shopping"></i>
+             <li><a href="/register">Crea tu cuenta</a><i class="fa-regular fa-user"></i></li>
+         </div>
+         <div class="burguer-menu">
+          <i class="fa-solid fa-bars"></i>
+         </div>
+         </section>
+     
+         
+         <section class="categorias">
+             <ul class="menu-lista">
+                 <li><a href="">CATEGORIAS</a></li>
+                 <li><a href="">Detergentes</a></li>
+                 <li><a href="">Limpiadores liquidos</a></li>
+                 <li><a href="">Accesorios</a></li>
+                 <li><a href="">Aerosoles</a></li>
+                 <li><a href="">Geles</a></li>
+                 <li><a href="">Jabones</a></li>
+                 <li><p><a href="">ecotendencias: lo mas reciente en limpieza responsable</a></p></li>
+             </ul>
+         </section>
+     
+    </header>
+         <h1 class="titulo_pagina">Tu Carrito</h1>
+  
 
-
-    <main class="main">
-        <h1>Tu Carrito</h1>
-        <form id="formulario_pago">
+    <main id ="main_carrito">
+        <div id="section_formulario_pago">
+            <form id="formulario_pago">
 
             <label for="numero-tarjeta">Número de la Tarjeta:</label>
             <input type="text" id="numero-tarjeta" name="numero-tarjeta" required>
@@ -44,27 +81,53 @@
 
         </form>
 
-        <div class="total_a_pagar">
-            <div id="numero_de_orden">
-                <p>N° de orden: </p>
-
-            </div>
+    </div>
 
 
-            <label>Total a Pagar:</label>
-            <p id="total_a_pagar_numero">$100.00</p>
-            <button type="submit"><i class="fa-solid fa-arrow-right"></i>Pagar</button>
+        <div id="section_resumen_carrito">
+            <h2>Productos en carrito:</h2>
+            <ul id="productos_en_carrito">
+                <li>
+                    <p>Detergente If</p>
+                    <p>Precio: 1000 <i class="fa-solid fa-dollar-sign"></i></p> 
+                </li>
+                <li>
+                    <p>Jabón Blanco Seiseme 200gramos</p>
+                    <p>Precio: 1000 <i class="fa-solid fa-dollar-sign"></i></p> 
+                </li>
+                <li>
+                    <p>Jabón Blanco Seiseme 200gramos</p>
+                    <p>Precio: 1000 <i class="fa-solid fa-dollar-sign"></i></p> 
+                </li>
+                <li>
+                    <p>Jabón Blanco Seiseme 200gramos</p>
+                    <p>Precio: 1000 <i class="fa-solid fa-dollar-sign"></i></p> 
+                </li>
+                <li>
+                    <p>Jabón Blanco Seiseme 200gramos</p>
+                    <p>Precio: 1000 <i class="fa-solid fa-dollar-sign"></i></p> 
+                </li>
+            </ul>
+            <ul id="total_productos_en_carrito">
+                <li>
+                    <span>Envío:</span>
+                    <span>$1200</span>
+                </li>
+                <li>
+                    <span>Total:</span>
+                    <span>$XX.XX</span>
+                </li>
+            </ul>
+            <button>Proceder al Pago</button>
         </div>
-
-
-
 
     </main>
 
 
+
     <!-- Footer -->
 
-    <footer class="footer container-fluid">
+    <footer class="footer">
 
         <div class="contenedor_footer">
             <ul class="contacto">
@@ -75,7 +138,7 @@
                 <li class="icono"><i class="fa-solid fa-location-dot"></i>Emilio Frugone 4225, Bs. As.</li>
             </ul>
 
-            <section id="suscripción">
+            <section id="suscripcion">
                 <h2 id="titulo_suscripcion" class="container-fluid">Suscríbete para recibir noticias sobre nuestras
                     próximas ofertas</h2>
                 <form class="formulario_suscripcion">

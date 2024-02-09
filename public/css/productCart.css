@@ -1,0 +1,75 @@
+
+
+#section_formulario_pago{
+    width:50%;
+
+    
+}
+
+#section_resumen_carrito{
+    box-sizing: border-box;
+    width: auto;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+#main_carrito{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+.titulo_pagina{
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+/*Formulario para cargar datos de pago*/
+
+#formulario_pago {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+
+}
+
+
+
+#formulario_pago input {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    background: rgb(251, 251, 251);
+    transition: all 0.1s ease 0s;
+
+    :focus {
+        border: 2px solid rgb(124, 138, 255);
+    }
+
+}
+
+/*Total a pagar*/
+
+#section_resumen_carrito{
+
+    background-color: rgba(0, 0, 0, 0.2);
+    
+}
+
+#productos_en_carrito{
+    display: flex;
+    list-style: none;
+    
+}
+
+
+@media screen and (min-width:)

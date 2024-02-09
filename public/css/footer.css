@@ -1,92 +1,100 @@
 .footer {
     background-color: #203C58;
+    width: 100%;
     font-size: 0.8rem;
     font-weight: 100;
-    color:white;
-    position: fixed;
+    color: white;
+    position: relative;
     bottom: 0;
 }
 
-.contenedor_footer{
+.contenedor_footer {
     display: flex;
     width: 100%;
-    margin-top:15px;
+    margin-top: 15px;
 }
 
-.contacto{
+.contacto {
     display: flex;
     width: 100%;
-    list-style:none;
+    list-style: none;
     flex-direction: column;
     justify-content: space-between;
 }
 
 
-.icono{
+.icono {
     display: flex;
     gap: 0.7rem;
 }
 
 
-.resaltado{
+.resaltado {
     font-weight: 800;
-    }
-#suscripcion{
+}
+
+#suscripcion {
     display: flex;
     flex-direction: column;
-  
 }
-#titulo_suscripcion{
-  
+
+#titulo_suscripcion {
     background-color: #00A538;
-    border-radius: 20px 0 ;
-    width:220px;
+    border-radius: 20px 0;
+    width: 220px;
     font-size: 0.8rem;
     justify-content: center;
     align-items: center;
-    margin-bottom:0px
-}
-#suscripcion{
-text-align: center;
+    margin-bottom: 0px
 }
 
- #formulario_suscripcion_input{
-    border-top-right-radius: 20px ;
-    width:220px;
+#suscripcion {
+    text-align: center;
+}
+
+#formulario_suscripcion_input {
+    border-top-right-radius: 20px;
+    width: 220px;
     justify-content: center;
     align-items: center;
-
- }
-
+}
 
 
-#legales{
+
+#legales {
     width: 100%;
     text-align: center;
     font-size: 0.8rem;
     font-weight: lighter;
-    color:rgba(161, 161, 161, 0.5);
-   
+    color: rgba(161, 161, 161, 0.5);
 }
 
 #legales p {
-    width:100%;
+    width: 100%;
     text-align: center;
 }
 
+/*Media Desktop*/
+@media screen and (min-width: 768px){
+    #suscripcion{
+        display: none;
+    }
+}
 
 
 
-@media (max-width:460px){
-    .contacto{
+/*Media Mobile*/
+@media screen and (max-width:460px) {
+    .contacto {
         display: none;
     }
 
-    .contenedor_footer{
+    .contenedor_footer {
         justify-content: center;
     }
 
-    #suscripcion{
-        margin-top:-10px
+    #suscripcion {
+        margin-top: -10px
     }
 }
+

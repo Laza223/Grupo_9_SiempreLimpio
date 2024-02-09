@@ -1,20 +1,7 @@
 @import url("footer.css");
-@import url("carrito.css");
-
-html, body {
-    height: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-
+@import url("productCart.css");
+@import url("body.css");
+@import url("header.css");
 
 
 
