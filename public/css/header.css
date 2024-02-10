@@ -1,12 +1,18 @@
 .home-header {
     background-color: #5096da;
-    height: 60px;
+    height: 65px;
 }
 
 .home-header .iconos2 {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+}
+
+.home-header a{
+    background-color: #5096da;
+    border: none;
+    color: white;
 }
 
 .home-header .burguer {
@@ -19,10 +25,9 @@
     margin: 15px;
     color: white;
     font-size: 30px;
+    align-items: center;
 }
 
-.home-header img{
-    
-width: 100%;
+.home-header img {
+    width: 100%;
 }
-
