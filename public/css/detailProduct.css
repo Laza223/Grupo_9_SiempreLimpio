@@ -84,7 +84,9 @@
     }
     .h1-main{
         margin-top: 40px;
-        color: #474140 ;
+        color: #474140;
+        font-size: 20px;
+        text-align: center;
     }
     .imagen-producto{
         border: 1px solid #666;
@@ -127,4 +129,77 @@
         justify-content: center;
         margin-bottom: 10px;
     }
+}
+
+@media  screen and (min-width: 768px) {
+        /*HEADER*/
+        .detailProduct-header{
+        }
+        .logo-header{
+    }
+        .logo-header img{
+        width: 40%;
+        }
+        .favoritos-header{
+        }
+        .carrito-header{
+    }
+        .botonBuscar-header{
+    }
+       .barraBusqueda-header{
+    }
+        /*MAIN*/
+        .barra-busqueda{
+            
+        }
+        .barraBusqueda-main{
+    width: 50%;
+    }
+        .lupa-busqueda{
+        }
+        .h2-main{
+        text-align: center;
+        font-size: 24px;
+        }
+        .h3-main{
+            text-align: center;
+            font-size: 24px;
+        }
+        .section-catalogo{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 70px;
+        padding: 40px;
+        }
+        .h1-main{
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 50px;
+        }
+
+
+        .imagen-producto{
+            height: 280px;
+        }
+        .img-producto{
+            width: 280px;
+            height: 280px;
+        }
+        
+        .articulo-main{
+        width: 280px;
+        }
+        .descripccion-completa{
+        background-color: #fff;
+        opacity: 0.8;
+        width: 280px;
+        }
+        .precio-main{
+        }
+        .descripcionProducto-main{
+        }
+        .iconos-articulo{
+        }
 }
