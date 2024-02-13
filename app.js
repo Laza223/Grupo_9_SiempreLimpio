@@ -19,5 +19,8 @@ app.get("/", (req, res) => {
 app.get("/producto", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/detalleProducto.html"))
 })
+app.get('/detailProduct', (req, res)=>{
+    res.sendFile(path.join(__dirname, "./views/detailProduct.html"))
+})
 
 app.listen(port, () => console.log("http://localhost:3030/"))
