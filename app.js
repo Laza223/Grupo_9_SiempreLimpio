@@ -1,22 +1,32 @@
-/* Puerto para el servidor */
-const port = 3030;
+const express = require("express")
 
+const path = require("path")
 
+<<<<<<< HEAD
 const express = require('express');
+=======
+const port = 3030
+>>>>>>> Laza
 
 const app = express()
 
-const path = require('path')
+app.use(express.static("public"))
 
-app.use(express.static('public'))
-app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, "./views/home.html"))
+app.listen(port, () => console.log("http://localhost:3030/"))
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/index.html"))
 })
 
-app.get('/home', (req, res)=>{
-    res.redirect('/')
+app.get("/producto", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/detalleProducto.html"))
 })
 
+<<<<<<< HEAD
 
 
 app.listen(port, ()=> console.log(`http://localhost:${port}`))
+=======
+app.get("/home", (req, res) => { res.redirect("/") }
+)
+>>>>>>> Laza
