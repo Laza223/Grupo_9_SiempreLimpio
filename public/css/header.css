@@ -6,71 +6,79 @@ header .logo-ubicacion{
     padding: 5px;
 }
 img{
-    width: 100px}
+    width: 130px}
 
 header .fa-location-dot{
     position: relative;
-    margin-right: 70px;
-    top: 3px;
-    color: grey;
+    margin-right: 20px;
+    color: rgb(54, 179, 91);
 }
    
 header .seccion-nav-bar{ background-color: var(--turquesa);
-    padding:8px ;
-
+    padding:7px ;
+    height: 30px;
 }
 
-header .barra-busqueda{ display: flex;
-    justify-content: space-evenly;
-    bottom: 10px;
+header .barra-busqueda{ 
+     display: flex;
     position: relative;
-    top: 15px;
-    right: 30px;}
-
-    header form input{  border-radius: 15px;
-        padding: 5px;
-        border: solid white;
-        width: 120px;
+    justify-content: center;
+    color: white;
+}
+    header form input{  
+       display: none;
     }
     .iconos .fa-user {
         display: none;
-
     }
+    .iconos li{
+        display: none;
+    }
+
     .iconos .fa-bell{
         margin-right: 5px;
 }
     .iconos p{display: none;
         
     }
-    .iconos{ display: flex;
+    .iconos{  display: flex;
         flex-direction: row;
-        justify-content: center;
-      position: relative;
-    left: 95px;
-    bottom: 30px;
-    color: white
-}
+        justify-content: flex-end;
+        position: relative;
+        bottom: 20px;
+        color: white;
+        gap: 10px;
+        margin-right: 15px;
+    }
 .burguer-menu{
+    display: flex;
+    justify-content: flex-start;
     position: relative;
-    bottom:48px;
+    bottom: 35px;
     color: white;
- }
+}
   .menu-lista{
     display:none
   } 
-  @media (min-width:425px )
+  .div-header-a{
+    display: none;
+  }
+  @media (min-width:768px )
     {
         header .logo-ubicacion{
             padding: 10px;}
 
    img{
-    width: 150px}
+    width: 200px}
 
 
  header .fa-location-dot{
-    margin-right: 90px;
+    margin-right: 40px;
  }
- 
+ header .seccion-nav-bar{
+padding: 17px;
+ }
+
  header .barra-busqueda{ display: flex;
     justify-content: flex-start;
     bottom: 1px;
@@ -80,18 +88,31 @@ header .barra-busqueda{ display: flex;
 }
 
  header form input{
-width:130px;
-right: 15%;
+    display: flex;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    width: 300px;
 
- }
+}
+.lupa{font-size: 20px;}
+
+header .barra-busqueda form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
  
-    }
-
- .iconos .fa-user{ display: flex;
-    margin-left: 12px;
     
 
-        }
+ .iconos .fa-user{ display: flex;
+    margin-left: 10px;
+    }
+.iconos li{
+    display: flex;
+}
+
 .burguer-menu{display: none;}
 
 .iconos{
@@ -99,76 +120,135 @@ right: 15%;
     bottom: 50px;
     font-size: 14px;
     bottom: 38px;}
+
 .iconos li a{
     font-size: 10px;
-    color: black;
 text-decoration: none;
-list-style: none;}
+list-style: none;
+font-weight: bold;
+    color: white;
+    cursor: pointer;
+margin-right: 4px;}
 
-
-
-@media(min-width:768px){
-    header .logo-ubicacion{
-        padding: 12px;}
-        
-   img{
-    width: 200px}
-    header .fa-location-dot{
-        margin-right: 120px;
-}
-header .fa-location-dot{
-    margin-right: 100px;
-}
-header .barra-busqueda{
-    margin-left: 80px;
-    top: 2px;
-}
-header form input{
-    width: 300px;
-
-}
-.iconos{
-    display:flex-end ;
-    justify-content: flex-end;
-    left: 1px;}
-
+ .iconos li a:hover{
+    color: rgb(200, 197, 197)
+ }
  .menu-lista{ 
     list-style: none;
-display: flex;
-align-items: center;
-justify-content: space-between;
-text-align: center;
-padding: 10px;
-background-color: var(--azulOscuro);
-margin: 0;}
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+    background-color: var(--azulOscuro);
+    margin: 0;
+    justify-content: flex-start;
+    gap: 30px;
 
 }
+.categorias{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;}
+
 .menu-lista li a{ 
     text-decoration: none;
     color: white;
     padding: 0px;
     display: block;
-    font-size: 11px;
+    font-size: 9px;}
 
-
-}
 .menu-lista li{display: inline-block;
-    text-align: center;
-
+        text-align: center;
+         color: white;
+         font-size: 10px;
 }
 .menu-lista li a:hover{
     background:rgb(173, 171, 171) ;
 
 }
-.menu-lista li p{
-    border: 1px solid green;
-    border-top-left-radius: 9px;
-    background-color: green;
-    font-size: 12px;
-    width: 80%;
-    height: 40px;
+.div-header-a{
+    border: 1px solid var(--verde);
+    border-top-left-radius: 12px;
+    background-color:var(--verde);
+    font-size: 10px;
+    width: 20%;
+    height: 25px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;}
+    
+    .div-header-a a{
+        font-weight: bold;
+        color: white;
+        font-size: 8px;
+    }
+
+
+
+
+
+
+
+}
+@media(min-width:1024px){
+    header .logo-ubicacion{
+        padding: 12px;}
+
+    header .fa-location-dot{
+        margin-right: 120px;
+}
+header .fa-location-dot{
+    font-size: 30px;
+}
+header .seccion-nav-bar{
+    padding: 35px;
+}
+
+header .barra-busqueda{
+    display: flex;
+    align-items: flex-start ;
+    
+}
+header form input{
+    width: 500px;
+    padding: 15px;
+
+}
+.lupa{font-size: 30px;
+
+}
+.iconos{
+    font-size: 25px;
+    justify-content: flex-end;
+}
+.iconos li a{
+    font-size: 18px;}
+
+
+ .menu-lista{ 
+    display: flex;
+    padding: 10px;
+    gap: 55px;
+}
+.menu-lista li a{ 
+    display: block;
+    font-size: 13px;
+
+
+}
+.div-header-a{
+    font-size: 12px;
+    width: 25%;
+    height: 50px;
+    display: flex;}
+
+    .div-header-a a{
+        font-weight: bold;
+        color: white;
+        font-size: 15px;
+    }
+}
