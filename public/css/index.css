@@ -40,7 +40,7 @@
 .home-main .section-productos {
     display: flex;
     justify-content: space-evenly;
-    align-items: baseline;
+    align-items: flex-end;
 }
 
 .home-main .section-productos article {
