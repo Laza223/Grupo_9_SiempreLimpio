@@ -2,39 +2,50 @@
     background-color: #203C58;
     font-size: 0.8rem;
     font-weight: 100;
+<<<<<<< HEAD
     color:white;
     position: fixed;
     bottom: 0;
+=======
+    color: white;
+>>>>>>> Laza
 }
 
-.contenedor_footer{
+.contenedor_footer {
     display: flex;
     width: 100%;
+<<<<<<< HEAD
     margin-top:15px;
+=======
+    margin-top: 15px;
+>>>>>>> Laza
 }
 
-.contacto{
+.contacto {
     display: flex;
     width: 100%;
-    list-style:none;
+    list-style: none;
     flex-direction: column;
     justify-content: space-between;
 }
 
 
-.icono{
+.icono {
     display: flex;
     gap: 0.7rem;
 }
 
 
-.resaltado{
+.resaltado {
     font-weight: 800;
+<<<<<<< HEAD
     }
 #suscripcion{
     display: flex;
     flex-direction: column;
   
+=======
+>>>>>>> Laza
 }
 #titulo_suscripcion{
   
@@ -60,23 +71,75 @@ text-align: center;
 
 
 
-#legales{
-    width: 100%;
+#suscripcion {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#titulo_suscripcion {
+    background-color: #00A538;
+    border-radius: 0px 25px 0px 0px;
+    width: 250px;
+    font-size: 11px;
+    padding: 5px;
     text-align: center;
-    font-size: 0.8rem;
-    font-weight: lighter;
-    color:rgba(161, 161, 161, 0.5);
-   
+    font-weight: normal;
+    margin: 0;
+}
+
+#suscripcion {
+    text-align: center;
+}
+
+#formulario_suscripcion_input {
+    width: 290px;
+    border-radius: 0px 30px;
+    border: none;
+    padding: 5px;
+    padding-left: 50px;
+}
+
+
+
+#legales {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 4px 20px;
+}
+
+#legales a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #legales p {
-    width:100%;
+    width: 100%;
+    color: white;
+    font-size: 11px;
     text-align: center;
 }
 
+#arrepentimiento {
+    padding: 30px;
+    text-align: center;
+}
 
+#arrepentimiento p {
+    font-size: 19px;
+    font-weight: 100;
+}
 
+#arrepentimiento a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
 
+<<<<<<< HEAD
 @media (max-width:460px){
     .contacto{
         display: none;
@@ -89,4 +152,8 @@ text-align: center;
     #suscripcion{
         margin-top:-10px
     }
+=======
+.contacto {
+    display: none;
+>>>>>>> Laza
 }
