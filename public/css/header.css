@@ -1,5 +1,9 @@
-header .logo-ubicacion{
-    background-color: white;
+.home-header {
+    background-color: #5096da;
+    height: 65px;
+}
+
+.home-header .iconos2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

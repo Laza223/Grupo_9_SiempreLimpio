@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+@import url("footer.css");
+@import url("carrito.css");
+=======
+@import url('header.css');
+@import url('index.css');
+@import url('footer.css');
+@import url('detalleProducto.css');
+>>>>>>> Laza
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+
+
+
