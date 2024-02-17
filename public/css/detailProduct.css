@@ -136,6 +136,7 @@
         .detailProduct-header{
         }
         .logo-header{
+    display: block;
     }
         .logo-header img{
         width: 40%;
@@ -143,10 +144,13 @@
         .favoritos-header{
         }
         .carrito-header{
+    /* display: block; */
     }
         .botonBuscar-header{
+    /* display: contents; */
     }
        .barraBusqueda-header{
+    /* display: block; */
     }
         /*MAIN*/
         .barra-busqueda{
@@ -202,4 +206,98 @@
         }
         .iconos-articulo{
         }
+}
+@media  screen and (min-width: 1040px) {
+    /*HEADER*/
+    .detailProduct-header{
+    display: flex;
+    width: 100%;
+    }
+    .logo-header{
+        display: flex;
+        gap: 10px;
+    }
+    .logo-header img{
+    width: 80%;
+    height: 130px;
+    }
+    
+    .favoritos-header{
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    }
+    .carrito-header{
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .botonBuscar-header{
+        display: flex;
+        height: 35px;
+        background-color: #47A0C9;
+        color: white;
+        border: 1px solid #666;
+        padding: 3px;
+        }
+   .barraBusqueda-header{
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    align-content: center;
+    width: 300px;
+}
+.barraBusqueda{
+    display: flex;
+    align-items: center;
+}
+    /*MAIN*/
+    .barra-busqueda{
+        display: none;
+    }
+    .barraBusqueda-main{
+}
+    .lupa-busqueda{
+    }
+    .h2-main{
+        text-align: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+    .h3-main{
+        text-align: left;
+        margin-left: 30px;
+    }
+    .section-catalogo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    }
+    .h1-main{
+        text-align: left;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+
+    .imagen-producto{
+    }
+    .img-producto{
+    }
+    
+    .articulo-main{
+    }
+    .descripccion-completa{
+    }
+    .precio-main{
+    }
+    .descripcionProducto-main{
+    }
+    .iconos-articulo{
+    }
 }
