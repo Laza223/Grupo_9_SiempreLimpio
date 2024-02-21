@@ -8,6 +8,8 @@ const app = express()
 
 app.use(express.static("public"))
 
+// EJS configurado como el motor de vistas
+app.set('view engine', 'ejs');
 
 app.get("/home", (req, res) => { res.redirect("/") }
 )

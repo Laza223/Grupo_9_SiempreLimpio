@@ -48,6 +48,3 @@ usamos esta pagina de inspiracion debido a como esta conformada su estructura y 
 [Polar](https://www.distribuidorapolar.com.ar) 
 
 "POLAR - Fábrica y distribución de productos de limpieza"
-
-
-
