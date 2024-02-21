@@ -2,23 +2,13 @@
     background-color: #203C58;
     font-size: 0.8rem;
     font-weight: 100;
-<<<<<<< HEAD
-    color:white;
-    position: fixed;
-    bottom: 0;
-=======
     color: white;
->>>>>>> Laza
 }
 
 .contenedor_footer {
     display: flex;
     width: 100%;
-<<<<<<< HEAD
     margin-top:15px;
-=======
-    margin-top: 15px;
->>>>>>> Laza
 }
 
 .contacto {
@@ -38,14 +28,11 @@
 
 .resaltado {
     font-weight: 800;
-<<<<<<< HEAD
     }
 #suscripcion{
     display: flex;
     flex-direction: column;
   
-=======
->>>>>>> Laza
 }
 #titulo_suscripcion{
   
@@ -139,7 +126,6 @@ text-align: center;
     font-size: 15px;
 }
 
-<<<<<<< HEAD
 @media (max-width:460px){
     .contacto{
         display: none;
@@ -152,8 +138,4 @@ text-align: center;
     #suscripcion{
         margin-top:-10px
     }
-=======
-.contacto {
-    display: none;
->>>>>>> Laza
 }

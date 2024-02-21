@@ -1,7 +1,12 @@
+.header-productCart{
+    background-color: #5096da;
+}
+
 .home-header {
     background-color: #5096da;
     height: 65px;
 }
+
 
 .home-header .iconos2 {
     display: flex;

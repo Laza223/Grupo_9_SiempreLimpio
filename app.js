@@ -2,7 +2,7 @@ const express = require("express")
 
 const path = require("path")
 
-const port = 3030
+const port = 3000
 
 const app = express()
 
@@ -22,5 +22,9 @@ app.get("/producto", (req, res) => {
 app.get('/detailProduct', (req, res)=>{
     res.sendFile(path.join(__dirname, "./views/detailProduct.html"))
 })
+app.get('/productCart', (req, res)=>{
+    res.sendFile(path.join(__dirname, "./views/productCart.html"))
+})
 
-app.listen(port, () => console.log("http://localhost:3030/"))
+
+app.listen(port, () => console.log(`http://localhost:${port}/`))
