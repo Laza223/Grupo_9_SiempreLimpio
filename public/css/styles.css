@@ -1,17 +1,15 @@
-@import url("footer.css");
-@import url("carrito.css");
+@import url('header.css');
+@import url('index.css');
+@import url('footer.css');
+@import url('detailProduct.css');
+@import url('productCart.css');
 
-html, body {
-    height: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    
-}
+
 
 body {
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 
