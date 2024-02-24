@@ -5,12 +5,11 @@
    
 }
 
-body{
+.bodylogin{
     
 }
-/*cual es */
 
-section{
+.section1{
     display: flex;
     width: 100%;
     background: #203c58 no-repeat;
