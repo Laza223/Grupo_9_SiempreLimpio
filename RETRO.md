@@ -1,5 +1,5 @@
-# Retrospectiva del Proyecto
-## SPRINT 1
+*Retrospectiva del Proyecto*
+        *SPRINT 1*
 
 ## ASPECTOS POSITIVOS:
 
@@ -24,43 +24,3 @@
 
 # Retroalimentación Continua:
   Implementar sesiones regulares de retroalimentación entre los miembros del equipo puede mejorar la comunicación y permitir que todos compartan sus ideas y preocupaciones. Esto puede ayudar a abordar problemas antes de que se conviertan en obstáculos significativos.
-
-
-
-
-
-# Retrospectiva del Proyecto
-## SPRINT 2
-
-### Aspectos Positivos:
-- **(en proceso)**
-  
-
-- **(en proceso)**
-
-
-- **(en proceso)**
-
-
-### Áreas de Mejora:
-- **Comunicación Interna:**
- **(en proceso)**
-
-- **Definición de Responsabilidades:**
- **(en proceso)**
-
-- **Retroalimentación Continua:**
-  **(en proceso)**
-
-## Acciones a Tomar:
-- **Implementar una Herramienta de Comunicación:**
-   **(en proceso)**
-
-- **Clarificar Roles y Responsabilidades:**
-   **(en proceso)**
-
-- **Programar Sesiones Regulares de Retroalimentación:**
-   **(en proceso)**
-
-## Conclusiones:
-  **(en proceso)**. Al implementar las acciones sugeridas, esperamos abordar estas áreas de mejora y avanzar hacia un proyecto más exitoso en el próximo sprint.
