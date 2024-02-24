@@ -5,11 +5,11 @@
    
 }
 
-.bodylogin{
+body{
     
 }
 
-.section1{
+section{
     display: flex;
     width: 100%;
     background: #203c58 no-repeat;
