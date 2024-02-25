@@ -18,13 +18,14 @@ app.use(methodOverride("_method"))
 const productCart = require("./routes/cart.routes");
 const otherRoutes = require("./routes/other.routes");
 const detalleProductRoutes = require("./routes/products.routes");
+const login = require("./routes/")
 
 
 
 
 /* ENRUTADORES */
 app.use("/", otherRoutes);
-app.use("/productCart", cartRoutes);
+app.use("/carrito", productCart);
 app.use("/detalleProductos", detalleProductRoutes);
 
 
