@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("../partials/head") %> 
+<body>
+    <img class="logoprincipal" src="../images/logo.png" width="220" height="50" alt="logo de siempre limpio">
+    <main class="main-register">
+        <div class="div-h2">
+            <h2>CREAR CUENTA</h2>
+        </div>
+        <section class="formulario-registro">
+            <form class="form-principal row justify-content-center" action="/registro" method="post">
+                <div class="col-12 row d-flex flex-column mb-3 mx-auto div-formularios">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label for="nombre">Nombre y apellido</label>
+                        <input type="text" class="form-control form-control-sm" name="nombre" id="nombre" placeholder="Nombre y apellido">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label for="email">Email</label>
+                        <input class="form-control form-control-sm" type="email" name="email" id="email" placeholder="Ingrese su email">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label for="contrasenia">Contraseña</label>
+                        <input class="form-control form-control-sm" type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label for="confirmar_contrasenia">Repetir contraseña</label>
+                        <input class="form-control form-control-sm" type="password" name="confirmar_contrasenia" id="confirmar_contrasenia" placeholder="Repetir contraseña">
+                    </div>
+                    <div class="condiciones">
+                        <input type="checkbox" name="terminos" id="terminos">
+                        <label for="terminos">He leído las condiciones y política de privacidad</label>
+                    </div>
+                    <div class="div-form-boton">
+                        <button class="boton-formularios" type="submit">Crear cuenta</button>
+                        <a href="#">¿Ya tienes cuenta? Inicia sesión</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

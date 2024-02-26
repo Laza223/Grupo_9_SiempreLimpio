@@ -9,7 +9,7 @@
 
 /*                                                               BODY                                                               */
 
-.home-body {}
+
 
 /*                                                              MAIN                                                                */
 
@@ -114,7 +114,6 @@
     margin-top: 30px;
 }
 
-.home-main .section-info .paquete p {}
 
 
 .div-anuncios {
@@ -230,7 +229,7 @@
         width: 100px;
     }
 
-    .home-main .section-info .paquete p {}
+
 
     .home-main .section-info article p {
         width: 200px;
