@@ -8,15 +8,19 @@ const app = express()
 
 app.use(express.static("public"))
 
-app.listen(port, () => console.log("http://localhost:3030/"))
-
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/index.html"))
 })
 
-app.get("/producto", (req, res) => {
+app.get("/home", (req, res) => { res.redirect("/") }
+)
+
+app.get("/detalleProducto", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/detalleProducto.html"))
 })
 
-app.get("/home", (req, res) => { res.redirect("/") }
-)
+app.get("/dashboard", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/dashboard.html"))
+})
+
+app.listen(port, () => console.log("http://localhost:3030/"))
