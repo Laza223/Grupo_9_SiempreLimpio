@@ -7,4 +7,9 @@ const adminController = require("../controllers/admin");
 
 router.get("/dashboard", adminController.home); 
 
+router.get("/editar",adminController.update);
+
+router.get("/crear",adminController.create);
+
+
 module.exports = router;
