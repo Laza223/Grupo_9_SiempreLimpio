@@ -1,0 +1,82 @@
+
+body{margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        .edicion-producto{
+            background-color:var(--azulOscuro);
+            height: 200%;
+
+       }
+
+        .form-edit{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--azulOscuro);
+            padding: 10%;
+            padding-top: 10px;
+            margin-left: 180px;
+        }
+
+        .h2-edit{
+          background-color: var(--turquesa);
+            color: white;
+            display: flex;
+            justify-content: center;
+            box-shadow: 10px 10px 5px 0px #22477d;
+            padding-top: 10px;
+        }
+    
+        .button-volver{
+            margin-right: 20px ;
+            margin-top:  10px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    
+        .form-label{
+            background-color: var(--turquesa);
+            color: white;
+            width: 150px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-switch{ 
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            color:white
+        }
+          .form-check{
+         display: flex;
+                  }
+
+    .categorias{
+        max-width: 200px;
+        margin-left: 1px ;
+        margin-bottom: 20px;
+        height: 20px;
+        bottom: 20px;
+    }
+   
+
+        .buttons{ 
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 50px;
+            margin-left: 10px;
+            padding-top: 30px;
+
+        }
+        .btn-primary{
+            width: 100px
+        }
+
+        input{max-width: 250px;}
+        
+        textarea{max-width: 200px;}
+        

@@ -1,0 +1,32 @@
+body{ padding: 0%;
+    margin: 0%;
+    background-color: var(--azulOscuro);
+}
+main{
+    padding: 0%;
+    margin: 0%;
+    background-color: var(--azulOscuro);
+    height: 100%;
+}
+.h2-product{ color:white;  
+    display: flex; 
+    justify-content: center; 
+    background-color: var(--turquesa);
+    padding-top: 10px;
+    padding-top: 10px;
+    box-shadow: 10px 10px 5px 0px #22477d;
+}
+.tabla{
+    background-color: var(--azulOscuro);
+    margin-left: 200px;
+    padding-top: 20px;
+}
+
+.button-agregar{ padding-bottom :10px; }
+
+.botones{
+   display: flex;
+   flex-direction: row-reverse;
+   gap: 10px;
+   margin-right: 20px;
+}
