@@ -6,6 +6,4 @@ const createController = require("../admin/create.controller");
 module.exports = {
   list: listController.list,
   detail: detailController.detail,
-  create: createController.create,
-  update: updateController.update
 };

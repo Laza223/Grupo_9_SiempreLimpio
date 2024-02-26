@@ -1,3 +1,5 @@
+const productos = require("../../database/products.json")
+
 module.exports = (req, res) => {
-    res.render("./products/formularioEdicionProducto.ejs")
+    return res.render("./products/formularioEdicionProducto.ejs")
   }
