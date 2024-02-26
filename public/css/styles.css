@@ -8,6 +8,8 @@
 @import url('detalleProducto.css');
 >>>>>>> Laza
 
+@import "/css/formularioEdicionProducto.css";
+@import "/css/formularioDeCarga.css";
 
 body {
     display: flex;
