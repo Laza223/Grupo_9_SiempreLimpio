@@ -42,13 +42,15 @@
         <div>
             <section class="section-productos">
                 <% productos.forEach(producto => { %>
+                    <a href="productos/detalle/<%= producto.id%>"><img class="esponja" src="/images/<%= producto.images%>" alt="Secador">
                     <article id="secador">
-                        <a href="productos/detalle/<%= producto.id%>"><img class="esponja" src="/images/<%= producto.images%>" alt="Secador"></a>
+                      
                         <div>
                             <p> <%= producto.nombre%></p>
                             <h5> $<%= producto.precio%> </h5>
                         </div>
                     </article>
+                </a>
                 <% }) %>
             </section>
         </div>
