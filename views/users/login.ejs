@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-  <html lang="Es">
+<html lang="en">
     <%- include("../partials/head") %> 
+<body>
 
-  <body>
-
-    <img class="logoprincipal" src="../images/logo.png" width="220" height="50" alt="logo de siempre limpio">
+    <%- include("../partials/logo") %>
 
     <section>
         <div class="contenedor1">
@@ -39,7 +38,7 @@
                     <button>INICIAR SESION</button>
 
                     <div class="registrar">
-                        <p>¿No tengo cuenta? <a href="#">Registrarse</a></p>
+                        <p>¿No tengo cuenta? <a href="/autenticacion/registrar">Registrarse</a></p>
                     </div>
                    
                  
@@ -62,7 +61,9 @@
 
 
 
-
+    <%- include("../partials/scripts") %> 
   </body>
 
-  </html>
+
+</html>
+   

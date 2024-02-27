@@ -2,7 +2,7 @@
 <html lang="es">
     <%- include("../partials/head") %> 
 <body>
-    <img class="logoprincipal" src="../images/logo.png" width="220" height="50" alt="logo de siempre limpio">
+    <%- include("../partials/logo") %>
     <main class="main-register">
         <div class="div-h2">
             <h2>CREAR CUENTA</h2>
@@ -32,11 +32,12 @@
                     </div>
                     <div class="div-form-boton">
                         <button class="boton-formularios" type="submit">Crear cuenta</button>
-                        <a href="#">¿Ya tienes cuenta? Inicia sesión</a>
+                        <a href="/autenticacion/iniciar">¿Ya tienes cuenta? Inicia sesión</a>
                     </div>
                 </div>
             </form>
         </section>
     </main>
+    <%- include("../partials/scripts") %> 
 </body>
 </html>
