@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar el archivo package-lock.json
+package-lock.json
+=======
+node_modules
+.vscode
+>>>>>>> Laza
