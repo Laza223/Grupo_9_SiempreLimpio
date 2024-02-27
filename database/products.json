@@ -1,163 +1,182 @@
 [
-   {
-     "id": 1,
-     "nombre": "Detergente líquido",
-     "precio": 599,
-     "categoria": "Detergentes",
-     "stock": 100,
-     "imagen": "detergente.jpg"
-   },
-   {
-     "id": 2,
-     "nombre": "Limpiador multiusos",
-     "precio": 349,
-     "categoria": "Limpiadores",
-     "stock": 80,
-     "imagen": "limpiador.jpg"
-   },
-   {
-     "id": 3,
-     "nombre": "Desinfectante de superficies",
-     "precio": 675,
-     "categoria": "Limpiadores líquidos",
-     "stock": 120,
-     "imagen": "desinfectante.jpg"
-   },
-   {
-     "id": 4,
-     "nombre": "Esponja para fregar",
-     "precio": 125,
-     "categoria": "Accesorios",
-     "stock": 200,
-     "imagen": "esponja.jpg"
-   },
-   {
-     "id": 5,
-     "nombre": "Limpiador en aerosol",
-     "precio": 499,
-     "categoria": "Aerosoles",
-     "stock": 60,
-     "imagen": "aerosol.jpg"
-   },
-   {
-     "id": 6,
-     "nombre": "Gel desinfectante de manos",
-     "precio": 299,
-     "categoria": "Geles",
-     "stock": 150,
-     "imagen": "gel.jpg"
-   },
-   {
-     "id": 7,
-     "nombre": "Jabón en barra",
-     "precio": 199,
-     "categoria": "Jabones",
-     "stock": 180,
-     "imagen": "jabon.jpg"
-   },
-   {
-     "id": 8,
-     "nombre": "Quitamanchas",
-     "precio": 425,
-     "categoria": "Detergentes",
-     "stock": 90,
-     "imagen": "quitamanchas.jpg"
-   },
-   {
-     "id": 9,
-     "nombre": "Toallitas desinfectantes",
-     "precio": 375,
-     "categoria": "Limpiadores líquidos",
-     "stock": 110,
-     "imagen": "toallitas.jpg"
-   },
-   {
-     "id": 10,
-     "nombre": "Cepillo de limpieza",
-     "precio": 249,
-     "categoria": "Accesorios",
-     "stock": 170,
-     "imagen": "cepillo.jpg"
-   },
-   {
-     "id": 11,
-     "nombre": "Ambientador en spray",
-     "precio": 399,
-     "categoria": "Aerosoles",
-     "stock": 70,
-     "imagen": "ambientador.jpg"
-   },
-   {
-     "id": 12,
-     "nombre": "Limpiador de ventanas",
-     "precio": 450,
-     "categoria": "Limpiadores",
-     "stock": 100,
-     "imagen": "limpiador_ventanas.jpg"
-   },
-   {
-     "id": 13,
-     "nombre": "Desengrasante",
-     "precio": 599,
-     "categoria": "Limpiadores líquidos",
-     "stock": 85,
-     "imagen": "desengrasante.jpg"
-   },
-   {
-     "id": 14,
-     "nombre": "Lavavajillas líquido",
-     "precio": 499,
-     "categoria": "Limpiadores líquidos",
-     "stock": 120,
-     "imagen": "lavavajillas.jpg"
-   },
-   {
-     "id": 15,
-     "nombre": "Bolsas de basura",
-     "precio": 325,
-     "categoria": "Accesorios",
-     "stock": 150,
-     "imagen": "bolsas_basura.jpg"
-   },
-   {
-     "id": 16,
-     "nombre": "Desodorante para ambientes",
-     "precio": 875,
-     "categoria": "Aerosoles",
-     "stock": 80,
-     "imagen": "desodorante.jpg"
-   },
-   {
-     "id": 17,
-     "nombre": "Limpiador de baños",
-     "precio": 550,
-     "categoria": "Limpiadores",
-     "stock": 110,
-     "imagen": "limpiador_banos.jpg"
-   },
-   {
-     "id": 18,
-     "nombre": "Jabón líquido para manos",
-     "precio": 325,
-     "categoria": "Jabones",
-     "stock": 130,
-     "imagen": "jabon_liquido.jpg"
-   },
-   {
-     "id": 19,
-     "nombre": "Desinfectante de suelos",
-     "precio": 699,
-     "categoria": "Limpiadores líquidos",
-     "stock": 95,
-     "imagen": "desinfectante_suelos.jpg"
-   },
-   {
-     "id": 20,
-     "nombre": "Paño de limpieza",
-     "precio": 199,
-     "categoria": "Accesorios",
-     "stock": 200,
-     "imagen": "pano_limpieza.jpg"
-   }
- ]
- 
+  {
+    "id": 1,
+    "nombre": "Detergente líquido",
+    "precio": 599,
+    "categoria": "Detergentes",
+    "stock": 100,
+    "imagen": "detergente.jpg",
+    "descripcion": "Detergente líquido para lavar ropa, elimina manchas y deja la ropa limpia y fresca."
+  },
+  {
+    "id": 2,
+    "nombre": "Limpiador multiusos",
+    "precio": 349,
+    "categoria": "Limpiadores",
+    "stock": 80,
+    "imagen": "limpiador.jpg",
+    "descripcion": "Limpiador multiusos para diversas superficies, elimina la suciedad y deja un agradable aroma."
+  },
+  {
+    "id": 3,
+    "nombre": "Desinfectante de superficies",
+    "precio": 675,
+    "categoria": "Limpiadores líquidos",
+    "stock": 120,
+    "imagen": "desinfectante.jpg",
+    "descripcion": "Desinfectante de superficies efectivo contra gérmenes y bacterias, ideal para mantener la higiene en el hogar."
+  },
+  {
+    "id": 4,
+    "nombre": "Esponja para fregar",
+    "precio": 125,
+    "categoria": "Accesorios",
+    "stock": 200,
+    "imagen": "esponja.jpg",
+    "descripcion": "Esponja resistente para fregar utensilios de cocina y superficies, facilita la limpieza de manera eficiente."
+  },
+  {
+    "id": 5,
+    "nombre": "Limpiador en aerosol",
+    "precio": 499,
+    "categoria": "Aerosoles",
+    "stock": 60,
+    "imagen": "aerosol.jpg",
+    "descripcion": "Limpiador en aerosol para eliminar manchas y suciedad de manera rápida y sencilla."
+  },
+  {
+    "id": 6,
+    "nombre": "Gel desinfectante de manos",
+    "precio": 299,
+    "categoria": "Geles",
+    "stock": 150,
+    "imagen": "gel.jpg",
+    "descripcion": "Gel desinfectante de manos para una limpieza efectiva en cualquier momento y lugar."
+  },
+  {
+    "id": 7,
+    "nombre": "Jabón en barra",
+    "precio": 199,
+    "categoria": "Jabones",
+    "stock": 180,
+    "imagen": "jabon.jpg",
+    "descripcion": "Jabón en barra con suave fragancia, limpia y cuida la piel dejándola suave y fresca."
+  },
+  {
+    "id": 8,
+    "nombre": "Quitamanchas",
+    "precio": 425,
+    "categoria": "Detergentes",
+    "stock": 90,
+    "imagen": "quitamanchas.jpg",
+    "descripcion": "Quitamanchas efectivo para eliminar manchas difíciles en prendas de vestir y textiles."
+  },
+  {
+    "id": 9,
+    "nombre": "Toallitas desinfectantes",
+    "precio": 375,
+    "categoria": "Limpiadores líquidos",
+    "stock": 110,
+    "imagen": "toallitas.jpg",
+    "descripcion": "Toallitas desinfectantes para una limpieza rápida y conveniente de superficies y objetos."
+  },
+  {
+    "id": 10,
+    "nombre": "Cepillo de limpieza",
+    "precio": 249,
+    "categoria": "Accesorios",
+    "stock": 170,
+    "imagen": "cepillo.jpg",
+    "descripcion": "Cepillo de limpieza con cerdas resistentes, ideal para remover la suciedad incrustada."
+  },
+  {
+    "id": 11,
+    "nombre": "Ambientador en spray",
+    "precio": 399,
+    "categoria": "Aerosoles",
+    "stock": 70,
+    "imagen": "ambientador.jpg",
+    "descripcion": "Ambientador en spray con fragancia fresca, elimina los malos olores y deja un ambiente agradable."
+  },
+  {
+    "id": 12,
+    "nombre": "Limpiador de ventanas",
+    "precio": 450,
+    "categoria": "Limpiadores",
+    "stock": 100,
+    "imagen": "limpiador_ventanas.jpg",
+    "descripcion": "Limpiador especialmente formulado para dejar cristales y ventanas relucientes y sin marcas."
+  },
+  {
+    "id": 13,
+    "nombre": "Desengrasante",
+    "precio": 599,
+    "categoria": "Limpiadores líquidos",
+    "stock": 85,
+    "imagen": "desengrasante.jpg",
+    "descripcion": "Desengrasante potente para eliminar la grasa y la suciedad difícil en cocinas y superficies."
+  },
+  {
+    "id": 14,
+    "nombre": "Lavavajillas líquido",
+    "precio": 499,
+    "categoria": "Limpiadores líquidos",
+    "stock": 120,
+    "imagen": "lavavajillas.jpg",
+    "descripcion": "Lavavajillas líquido que proporciona una limpieza impecable y un brillo duradero en la vajilla."
+  },
+  {
+    "id": 15,
+    "nombre": "Bolsas de basura",
+    "precio": 325,
+    "categoria": "Accesorios",
+    "stock": 150,
+    "imagen": "bolsas_basura.jpg",
+    "descripcion": "Bolsas resistentes para desechar los residuos de manera segura y conveniente."
+  },
+  {
+    "id": 16,
+    "nombre": "Desodorante para ambientes",
+    "precio": 875,
+    "categoria": "Aerosoles",
+    "stock": 80,
+    "imagen": "desodorante.jpg",
+    "descripcion": "Desodorante en aerosol que neutraliza los olores y refresca el ambiente."
+  },
+  {
+    "id": 17,
+    "nombre": "Limpiador de baños",
+    "precio": 550,
+    "categoria": "Limpiadores",
+    "stock": 110,
+    "imagen": "limpiador_banos.jpg",
+    "descripcion": "Limpiador especialmente formulado para eliminar la suciedad y los residuos en baños y sanitarios."
+  },
+  {
+    "id": 18,
+    "nombre": "Jabón líquido para manos",
+    "precio": 325,
+    "categoria": "Jabones",
+    "stock": 130,
+    "imagen": "jabon_liquido.jpg",
+    "descripcion": "Jabón líquido suave para manos, limpia y protege la piel dejándola suave y humectada."
+  },
+  {
+    "id": 19,
+    "nombre": "Desinfectante de suelos",
+    "precio": 699,
+    "categoria": "Limpiadores líquidos",
+    "stock": 95,
+    "imagen": "desinfectante_suelos.jpg",
+    "descripcion": "Desinfectante de suelos efectivo para eliminar gérmenes y bacterias, dejando una superficie limpia y segura."
+  },
+  {
+    "id": 20,
+    "nombre": "Paño de limpieza",
+    "precio": 199,
+    "categoria": "Accesorios",
+    "stock": 200,
+    "imagen": "pano_limpieza.jpg",
+    "descripcion": "Paño de limpieza suave y absorbente, ideal para limpiar superficies sin dejar residuos."
+  }
+]

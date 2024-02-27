@@ -14,27 +14,27 @@
            
   <div class="h2-edit"><h2 >Editar producto</h2></div>
   <div class="button-volver">
-    <a href="/views/formularioDeCarga.html" class="btn btn-primary ">volver</a>
+    <a href="/admin/dashboard/crear" class="btn btn-primary ">volver</a>
   </div>
   <form class="form-edit ">
 <div class="mb-3    col-6 ">
-  <label for="exampleInputPassword1" class="form-label">nombre</label>
+  <label for="exampleInputPassword1" class="form-label"><%= detalle.nombre %></label>
   <input type="text" class="form-control" id="exampleInputPassword1">
   <hr>
 </div>
 <div class="mb-3 col-6">
-  <label for="number" class="form-label btn-success">id</label>
+  <label for="number" class="form-label btn-success"><%= detalle.id %></label>
   <input type="number" class="form-control" id="number" aria-describedby="number">
   <hr>
 </div> 
 
 <div class="mb-3  col-6 ">
-  <label for="exampleInputEmail1" class="form-label"> Price</label>
+  <label for="exampleInputEmail1" class="form-label"> <%= detalle.precio %></label>
   <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   <hr>
 </div> 
    <div class="mb-1  col-6 ">
-    <label for="exampleInputPassword1" class="form-label">stock</label>
+    <label for="exampleInputPassword1" class="form-label"><%= detalle.stock %></label>
     <input type="number" class="form-control" id="exampleInputPassword1">
     <hr>
   </div>
@@ -42,7 +42,7 @@
 
 
   <div class="mb-3   descripcion col-6">
-    <label for="exampleFormControlTextarea1" class="form-label ">descripcion</label>
+    <label for="exampleFormControlTextarea1" class="form-label "><%= detalle.descripcion %></label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     <hr>
     </div>

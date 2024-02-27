@@ -1,7 +1,7 @@
-
+const updateController = require("./update.controller");
 module.exports = {
     home: (req,res) => res.render("./dashboard"),
     create: require("./create.controller"),
-  update: require("./update.controller")
+  update: updateController.detail
   };
   

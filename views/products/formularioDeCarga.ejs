@@ -30,19 +30,22 @@
               </tr>
             </thead>
             <tbody>
+              <% productos.forEach(producto => { %>
               <tr>
-                <th scope="row">1</th>
-                <td>jabon liquido ariel</td>
-                <td>$2250</td>
-                <td>25</td>
-                <td> Ariel penetra profundamente en las fibras de la ropa, eliminando las manchas más difíciles y proporcionando una limpieza eficaz.</td>
+                <th scope="row"><%= producto.id %></th>
+                <td><%= producto.nombre %></td>
+                <td>$<%= producto.precio %></td>
+                <td><%= producto.stock %></td>
+                <td><%= producto.descripcion %></td>
                 <td>5 litros</td>
-                <td><img src="./images/ariel jabon liquido.jpg" alt="jabon" width="50px"></td>
-                <td>jabones</td>
+                <td><img src="./images/<%= producto.imagen %>" alt="jabon" width="50px"></td>
+                <td><%= producto.categoria %></td>
                 <td>si</td>
-                <td> <a href="./formularioEdicionProducto.html" class="btn btn-warning boton">editar</a></td>
+                <td> <a href="/admin/dashboard/editar" class="btn btn-warning boton">editar</a></td>
                 <td> <button type="reset" class="btn btn-danger">Eliminar</button></td></td>
               </tr>
+              <% }) %>
+              <!--
               <tr>
                 <th scope="row">2</th>
                 <td></td>
@@ -97,11 +100,11 @@
                 <td> <a href="./formularioEdicionProducto.html" class="btn btn-warning boton">editar</a></td>
                 <td> <button type="reset" class="btn btn-danger">Eliminar</button></td></td>
               </tr>
-        
+        -->
         
             </div> 
             <div class="button-agregar">
-                <button type="button" class="btn btn-primary">agregar</button>
+               <a href="/admin/dashboard/editar"> <button type="button" class="btn btn-primary">agregar</button></a>
                 </div>
           
           
