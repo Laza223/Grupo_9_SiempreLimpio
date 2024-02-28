@@ -5,8 +5,8 @@
    
 }
 
-
-section{
+   /*Antes llamaba a todos los elementos Section*/
+   .sectionLogin{
     display: flex;
     width: 100%;
     background: #203c58 no-repeat;
@@ -171,8 +171,8 @@ input:valid ~ label{
  @media(min-width: 1440px) {
 
     
-    
-    section{
+    /*Antes llamaba a todos los elementos Section*/
+    .sectionLogin{
         position: relative;
         width: 100%;
         height: 1374px;
@@ -251,8 +251,8 @@ input:valid ~ label{
        font-size: 1.9rem;
      }
     
-     
-     button{
+     /*Antes llamaba a todos los buttons*/
+     .buttonLogin{
         font-size: 2.9rem;
         width: 100%;
         height: 91px;

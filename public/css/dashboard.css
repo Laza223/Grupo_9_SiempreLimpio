@@ -11,6 +11,13 @@
 .dash-body  {
     display: flex;
     background-color: beige;
+
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+
+    
+    
    
 }
 

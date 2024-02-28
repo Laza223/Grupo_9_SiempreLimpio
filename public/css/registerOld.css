@@ -16,20 +16,13 @@
 body{ background-color:
     var(--azulOscuro);
     margin: 0%;
-    padding: 0}
-
-    .main-register{
-        background-color: var(--azulOscuro);
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        flex-wrap: wrap;
+    padding: 0
 }
 .div-h2{
     width: 100%;
 }
 
-.edit-h2{
+h2{
     color: white;
     background-color:var(--turquesa) ;
     display: flex ;
@@ -50,7 +43,6 @@ body{ background-color:
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    padding: 30px;
 
 
 }
@@ -66,12 +58,12 @@ body{ background-color:
 
 
 
-.input-formulario{
+.form-control-sm{
 background-color: white;
 width: 250px;
 padding: 10px;
 border-radius: 10px;
-margin-bottom: 15px;
+margin-bottom: 10px;
 border: 1px solid white;
 text-decoration: underline;
 color: white;
@@ -85,7 +77,7 @@ color: white;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;   
-    width: 80%;
+    width: 85%;
     gap: 4px;
 }
 .condiciones label{
@@ -110,10 +102,7 @@ color: white;
     align-content: center;
     flex-wrap: nowrap;
     flex-direction: column;
-    margin-top: 10px;
-    margin-right: 10px;
 }
-
 .div-form-boton a{ 
     font-size: 14px;
     color: white;
@@ -121,7 +110,7 @@ color: white;
     cursor: pointer;
 }
 @media (min-width:768px){
-    .input-formulario{width: 270px;
+    .form-control-sm{width: 270px;
     }
 .formulario-registro{
     padding: 50px;
@@ -140,19 +129,13 @@ color: white;
     .div-form-boton a{
         font-size: 16px;
      }
-     .div-form-boton{  
-        margin-top: 10px;
-        margin-right: 70px;
-
-     }
 
 }
 @media (min-width:1024px){
-    .input-formulario{width: 350px;
-        margin-bottom: 30px;
+    .form-control-sm{width: 350px;
     }
 .formulario-registro{
-   padding-right: 0%;
+    padding: 100px;
 }
 .boton-formularios{
     height: 30px;
@@ -165,11 +148,5 @@ color: white;
 .div-form-boton a{ 
     font-size: 18px; }
 
-
-
-
-
-
-
-
 }
+
