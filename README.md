@@ -1,11 +1,14 @@
 *Comisión 24 - Grupo 9 - Ecommerce de productos de limpieza*
 
+
 # 🧼 Proyecto "Siempre Limpio"
 
 
 
 
  **¡Bienvenido al repositorio de Siempre Limpio!** Somos un emprendimiento dedicado a la venta de productos de limpieza a través de nuestra plataforma en línea. Nos esforzamos por ofrecer productos de alta calidad que faciliten la limpieza diaria de hogares y empresas.
+
+
 
 ## 🎯 Público Objetivo
 
@@ -38,5 +41,10 @@
 
 
 - [Polar](https://www.distribuidorapolar.com.ar) Ejemplo de un excelente servicio al cliente, que motiva a mejorar la experiencia del cliente en el proyecto.
+
+---
+
+### Tablero de trabajo en [Jira Software](https://lucianovilte.atlassian.net/jira/software/projects/LIM/boards/3)
+
 
 
