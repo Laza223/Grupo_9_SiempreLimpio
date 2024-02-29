@@ -25,28 +25,18 @@
 
 
 
-- [Amazon](https://www.amazon.com/)
-
- Conocido por su excelente experiencia de usuario y funcionalidades de búsqueda nos resulta útil tomarlo de inspiración para lograr una navegación fácil y una experiencia fluida al buscar y comprar artículos de limpieza en la plataforma.
+- [Amazon](https://www.amazon.com/) Inspiración para una experiencia de usuario fluida y fácil búsqueda de productos.
  
  
-- [Duplas](https://duplas.com.br/)
-
- Para reflejar nuestro compromiso con la calidad y la estética en nuestros productos, nos resultó útil la inspiración de esta pagina debido a su armoniosa combinación de colores. Hemos optado por tonos azules, blancos y celestes, en sintonía con la elección cromática que encontramos en dicho referente.
+- [Duplas](https://duplas.com.br/) Ejemplo de calidad y estética en la combinación de colores (azules, blancos y celestes).
 
 
-- [Solo-Deportes](https://www.solodeportes.com.ar/)
-
-Nos inspiramos de la página de Solo Deportes, destacando su estructura de navegación clara y eficaz categorización. Su implementación de menús desplegables y opciones de filtrado adecuadas nos inspiraron a diseñar una interfaz que permita otorgarle a nuestros usuarios la capacidad de encontrar rápidamente los productos que buscan.
+- [Solo-Deportes](https://www.solodeportes.com.ar/)  Destaca por su navegación clara, categorización efectiva y opciones de filtrado.
 
 
-- [limpionline](https://www.limpionline.com/)
+- [limpionline](https://www.limpionline.com/) Modelo para la estructura y el diseño del sitio, especialmente en la página de inicio.
 
-Limpionline es una tienda online que provee productos de limpieza y artículos de almacenamiento y organización para el hogar.
-usamos esta pagina de inspiracion debido a como esta conformada su estructura y el home.
 
-- [Polar](https://www.distribuidorapolar.com.ar)
-
- Reconocimos en la empresa Polar un servicio al cliente excepcional, que nos motiva como equipo a prestar atención a la experiencia del cliente y cómo podemos mejorarla en nuestro propio proyecto.
+- [Polar](https://www.distribuidorapolar.com.ar) Ejemplo de un excelente servicio al cliente, que motiva a mejorar la experiencia del cliente en el proyecto.
 
 
