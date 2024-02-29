@@ -9,7 +9,7 @@
 
 ## 🎯 Público Objetivo
 
- El sitio web de Siempre Limpio está diseñado para satisfacer las necesidades de un público diverso, que incluye amas de casa, dueños de negocios, personal de limpieza profesional y cualquier persona interesada en soluciones eficientes y productos especializados para mantener sus espacios limpios y ordenados. Nuestro objetivo es proporcionar información y productos de alta calidad, adaptados a las necesidades individuales de cada usuario.
+ El sitio web de Siempre Limpio está diseñado para satisfacer las necesidades de un público diverso, que incluyen personas responsables del cuidado del hogar, dueños de negocios, personal de limpieza profesional y cualquier persona interesada en soluciones eficientes y productos especializados para mantener sus espacios limpios y ordenados. Nuestro objetivo es proporcionar información y productos de alta calidad, adaptados a las necesidades individuales de cada usuario.
 
 
 **Integrantes del Equipo** 👨‍💼👩‍💼
