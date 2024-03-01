@@ -106,19 +106,22 @@ input:valid ~ label{
     border: none;
     cursor: pointer;
     outline: none;
+    border-radius: 20px;
     transition-property:transform, color;
     transition-duration: 5s, 10s;
+ }
+ .buttonLogin{
+    border-radius: 20px;
  }
  button:hover{
     background-image: linear-gradient(
         150deg,
        
-        #09F,
-        #00DDFF,
-        #3ed36c,
-        #f38729,
-        #c23ff5
+        #00DDFF, #09F,rgb(84, 217, 253)
+
+     
         )
+   tras
  }
 
 
