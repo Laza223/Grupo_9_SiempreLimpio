@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang= "es">
 
-<%- include("./partials/head",{title: "inicio "}) %> 
+<%-include( "../partials/head" , {title: "inicio "}) %> 
+<!-- head -->
 
 
 <body class="home-body">
-    <!-- head -->
-    <%- include("./partials/header"{title: "Home" }) 
+    <%-include("../partials/header"{title: "Home" }) %>
     <main class="home-main">
 
         <div id="carouselExample" class="carousel slide">
@@ -43,7 +43,7 @@
         <div>
             <section class="section-productos">
                 <% productos.forEach(producto => { %>
-                    <a href="productos/detalle/<%= producto.id%>"><img class="esponja" src="./images/<%= producto.imagen%>" alt="Secador">
+                    <a href="productos/detalle/<%= producto.id%>"><img class="esponja" src="./images/<%=producto.imagen%>" alt="Secador">
                     <article id="secador">
                       
                         <div>
@@ -58,10 +58,10 @@
     </main>
 
     <!-- footer -->
-        <%- include("./partials/footer") %>
+        <%-include("../partials/footer") %>
 
         <!-- scrip -->
-        <%- include("./partials/scripts") %> 
+        <%-include("../partials/scripts") %> 
 </body>
 
 </html>
