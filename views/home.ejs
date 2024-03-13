@@ -39,21 +39,20 @@
         <div class="div1">
             <h5>¡OFERTAS DE LA SEMANA DE LA LIMPIEZA!</h5>
         </div>
-        <div>
-            <section class="section-productos">
-                <% productos.forEach(producto => { %>
-                    <a href="productos/detalle/<%= producto.id%>"><img class="esponja" src="./images/<%= producto.imagen%>" alt="Secador">
-                    <article id="secador">
-                      
-                        <div>
-                            <p> <%= producto.nombre%></p>
-                            <h5> $<%= producto.precio%> </h5>
-                        </div>
-                    </article>
-                </a>
-                <% }) %>
-            </section>
-        </div>
+           <section class="section-productos">
+            <% productos.forEach(producto => { %>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="./images/<%= producto.imagen%>" alt="Secador">
+            <div class="card-body">
+              <h5 class="card-title"><%= producto.nombre%></h5>
+              <p class="card-text"><%= producto.descripcion%></p>
+              <h5> $<%= producto.precio%> </h5>
+              <a href="productos/detalle/<%= producto.id%>">
+            </div>
+          </div>
+          <% }) %>
+        </section>
+   
     </main>
 
         <%- include("./partials/footer") %>

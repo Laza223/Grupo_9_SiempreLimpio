@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nombre": "Detergente líquido",
+    "nombre": "Detergente If",
     "precio": 599,
     "categoria": "Detergentes",
     "stock": 100,
@@ -41,7 +41,7 @@
     "precio": 499,
     "categoria": "Aerosoles",
     "stock": 60,
-    "imagen": "aerosol.jpg",
+    "imagen": "limpiador_aerosol.jpg",
     "descripcion": "Limpiador en aerosol para eliminar manchas y suciedad de manera rápida y sencilla."
   },
   {
@@ -50,7 +50,7 @@
     "precio": 299,
     "categoria": "Geles",
     "stock": 150,
-    "imagen": "gel.jpg",
+    "imagen": "desinfectante_manos.jpg",
     "descripcion": "Gel desinfectante de manos para una limpieza efectiva en cualquier momento y lugar."
   },
   {
@@ -118,12 +118,12 @@
   },
   {
     "id": 14,
-    "nombre": "Lavavajillas líquido",
+    "nombre": "Esponjilla de metal",
     "precio": 499,
-    "categoria": "Limpiadores líquidos",
+    "categoria": "Accesorios",
     "stock": 120,
-    "imagen": "lavavajillas.jpg",
-    "descripcion": "Lavavajillas líquido que proporciona una limpieza impecable y un brillo duradero en la vajilla."
+    "imagen": "esponjilla.jpg",
+    "descripcion": "Esponjilla de metal para multiples usos."
   },
   {
     "id": 15,
