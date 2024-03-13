@@ -42,12 +42,12 @@
            <section class="section-productos">
             <% productos.forEach(producto => { %>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="./images/<%= producto.imagen%>" alt="Secador">
+            <img class="div-img" src="./images/<%= producto.imagen%>" alt="Secador">
             <div class="card-body">
-              <h5 class="card-title"><%= producto.nombre%></h5>
+                <a href="productos/detalle/<%= producto.id%>"> <h5 class="card-title"><%= producto.nombre%></h5> </a>
               <p class="card-text"><%= producto.descripcion%></p>
               <h5> $<%= producto.precio%> </h5>
-              <a href="productos/detalle/<%= producto.id%>">
+           
             </div>
           </div>
           <% }) %>
