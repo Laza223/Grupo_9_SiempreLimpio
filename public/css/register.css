@@ -1,175 +1,273 @@
 
-.logo-ubicacion { background-color: white;
+
+   /*Antes llamaba a todos los elementos Section*/
+   .section-register{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 5px;
+    width: 100%;
+    background: #203c58 no-repeat;
     align-items: center;
-    flex-wrap: nowrap;
     justify-content: center;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column-reverse;
 }
-.logo-ubicacion img{
-    max-width: 200px;
+.contenedor-register{
+    position: relative;
+    height: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
-body{ background-color:
-    var(--azulOscuro);
-    margin: 0%;
-    padding: 0}
-
-    .main-register{
-        background-color: var(--azulOscuro);
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        flex-wrap: wrap;
-}
-.div-h2{
-    width: 100%;
-}
-
-.edit-h2{
+.contenedor-register h2{
     color: white;
-    background-color:var(--turquesa) ;
-    display: flex ;
-    justify-content: center;
+    text-align: center;
     width: 100%;
-    height: 40px;
-    align-items: center;}
+    background: #3C75AE;
+    top: 26px;
+    position: absolute;
+    left: 0px;
+}
+
+.input-register{
+    position: relative;
+    margin: 30px 0;
+    width: 300px;
+    border-bottom: 2px solid white;
+    padding: 2px;
+}
+.input-register label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .6s;
+    font-weight:  bold;
+    
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px
+
+}
+.input-register input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: -35px 0 5px;
+    color: white;
+    font-size: 1.2rem;
+}
+.input-register i{
+    position: absolute;
+    color: blue;
+    font-size: 1.6rem;
+    top: 10px;
+    right: 8px;
+}
+.terminos{
+    margin: 18px 0 24px;
+    font-size: 0.9rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.terminos label input{
+    margin: 3px;
+ }
+
+ .terminos label a{
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+    font-size: .9rem;
+
+ }
+
+ .terminos label a:hover{
+    text-decoration: underline;
+ }
+ .button-register{
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background-color: aqua;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition-property:transform, color;
+    transition-duration: 5s, 10s;
+ }
+ .button-register:hover{
+    background-image: linear-gradient(
+        150deg,
+       
+        #09F,
+        #00DDFF,
+        #3ed36c,
+        #f38729,
+        #c23ff5
+        )
+ }
+
+
     
 
-.main-register{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-}
-.formulario-registro{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    padding: 30px;
-
-
-}
-.div-formularios{ display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    gap: 15px;
-}
-
-
-
-
-.input-formulario{
-background-color: white;
-width: 250px;
-padding: 10px;
-border-radius: 10px;
-margin-bottom: 15px;
-border: 1px solid white;
-text-decoration: underline;
-color: white;
-}
-
-.formulario-registro input{
+ .iniciar{
+    font-size: 0.8rem;
     color: white;
-}
-
-   .condiciones{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;   
-    width: 80%;
-    gap: 4px;
-}
-.condiciones label{
-    font-size: 12px;
+    text-align: center;
+    margin: 20px 0 18px;
+ }
+ .iniciar p a{
+    text-decoration: none;
     color: white;
+    font-weight: bold;
+    transition: 0.3s;
+ }
+ .iconos9{
+    color: aqua;
+    position: absolute;
+    top: 430px;
+    font-size: 1.5rem;
+ }
+/* table */
+ @media(min-width:834px) {
 
-}
-
-.div-form-boton button {
-    color: white;
-    background-color:var(--turquesa);
-    margin-left: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    height: 25px;
-    margin-bottom: 5px;
-}
-.div-form-boton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.div-form-boton a{ 
-    font-size: 14px;
-    color: white;
-    text-decoration: unset;
-    cursor: pointer;
-}
-@media (min-width:768px){
-    .input-formulario{width: 270px;
+    
+    
+   
+    .contenedor-register{
+        position: relative;
+        width: 100%;
+        height: 640px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-.formulario-registro{
-    padding: 50px;
-}
-
-    .div-formularios{ gap: 20px;
-    }
-    .condiciones label{
-        font-size: 15px;
-    }
-
-    .boton-formularios{
-        height: 20px;
-        width: 110px;}
-
-    .div-form-boton a{
-        font-size: 16px;
+    
+     .iconos9{
+       position: absolute;
+       top: 600px;
+       left: 63px;
      }
-     .div-form-boton{  
-        margin-top: 10px;
-        margin-right: 70px;
+    
 
-     }
+ }
+ @media(min-width: 1440px) {
 
-}
-@media (min-width:1024px){
-    .input-formulario{width: 350px;
-        margin-bottom: 30px;
+    .section-register{
+        position: relative;
+        width: 100%;
+        height: 1374px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-.formulario-registro{
-   padding-right: 0%;
-}
-.boton-formularios{
-    height: 30px;
-    width: 120px;
-}
-.condiciones label{
-    font-size: 20px;
-}
+    .contenedor-register{
+    position: relative;
+    width: 100%;
+    height: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .contenedor-register h2{
+       color: white;
+       text-align: center;
+       width: 100%;
+       background: #3C75AE;
+       position: absolute;
+       left: 0px;
+       font-size: 4.9rem;
+    }
+    
+    .input-register{
+       position: relative;
+       margin: 50px 0;
+       width: 570px;
+       border-bottom: 7px solid white;
+       padding: 2px;
+    }
+    .input-register label{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 2rem;
+        pointer-events: none;
+        transition: .6s;
+        font-weight: bold;
+    }
+   
+    .input-register input{
+    width: 100%;
+    height: 120px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 3rem;
+    padding: -35px 0 5px;
+    color: white;
+    overflow: hidden;
+    }
+        
+    
+    .terminos{
+     margin: 24px 0 24px;
+     font-size: 1.9rem;
+     color: white;
+     display: flex;
+     justify-content: center;
+    }
+    .terminos label input{
+    width: 40px;
+    margin: 5px;
+    height: 40px;
+    }
+    
+     .terminos label a{
+       color: white;
+       text-decoration: none;
+       transition: .3s;
+       font-size: 1.9rem;
+     }
+    
+     /*Antes llamaba a todos los buttons*/
+     .button-register{
+        font-size: 2.9rem;
+        width: 100%;
+        height: 91px;
+        border-radius: 80px;
+        background-color: aqua;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        transition-property: transform, color;
+        transition-duration: 5s, 10s;
+     }
+    
+     .iniciar{
+       font-size: 1.9rem;
+       color: white;
+       text-align: center;
+       margin: 20px 0 18px;
+     }
+    
+     
+     .iconos9{
+       position: absolute;
+       top: 1260px;
+       left: 70px;
+       font-size: 80px;
+     }
+    
 
-.div-form-boton a{ 
-    font-size: 18px; }
-
-
-
-
-
-
-
-
-}
+ }

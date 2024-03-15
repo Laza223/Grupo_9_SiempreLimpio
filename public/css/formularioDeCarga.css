@@ -15,18 +15,27 @@ main{
     padding-top: 10px;
     padding-top: 10px;
     box-shadow: 10px 10px 5px 0px #22477d;
+    width: 400px;
+    margin: auto;
 }
 .tabla{
-    background-color: var(--azulOscuro);
-    margin-left: 200px;
+    margin-left: 50px;
     padding-top: 20px;
 }
+.table-bordered{
+    overflow-y: scroll;
+    display: block;
+    height: 80vh;
+}
 
-.button-agregar{ padding-bottom :10px; }
+.button-crear{ padding-bottom :10px;
+    width: 100px;
 
-.botones{
-   display: flex;
-   flex-direction: row-reverse;
-   gap: 10px;
-   margin-right: 20px;
+ }
+.boton-editar{ width: 80px;
+
+}
+.boton-eliminar{
+    width: 80px;
+    height: auto;
 }

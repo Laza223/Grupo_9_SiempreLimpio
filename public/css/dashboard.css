@@ -10,10 +10,9 @@
 
 .dash-body  {
     display: flex;
-    background-color: beige;
-
-        display: flex;
-        flex-direction: column;
+    background-color: #dee2e6 ;
+     display: flex;
+        flex-direction: row;
         margin: 0;
 
     
@@ -74,9 +73,10 @@
     top: 0px;
     right: 0px;
     padding: 10px;
-    background-color: dimgray;
     border-radius: 0px 0px 0px 30px;
 }
+
+
 
 /*.barra-lateral ul{
 }*/

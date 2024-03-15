@@ -5,7 +5,7 @@
         }*/
 
         .edicion-producto{
-            background-color:var(--azulOscuro);
+        background-color:#dee2e6 ;
             height: 200%;
 
        }
@@ -13,11 +13,13 @@
         .form-edit{
             display: flex;
             flex-wrap: wrap;
-            background-color: var(--azulOscuro);
+            background-color: #dee2e6;
             padding: 10%;
-            padding-top: 10px;
-            margin-left: 180px;
+            padding-top: 30px;
+            padding-left: 20%;
+            
         }
+        .input-edicion{max-width: 300px;}
 
         .h2-edit{
           background-color: var(--turquesa);
@@ -26,13 +28,16 @@
             justify-content: center;
             box-shadow: 10px 10px 5px 0px #22477d;
             padding-top: 10px;
+            width: 400px;
+            margin: auto;
         }
     
-        .button-volver{
-            margin-right: 20px ;
+         .button-volver{
+            margin-right: 10px ;
             margin-top:  10px;
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: row;
+            width: 150px;
         }
     
         .form-label{
@@ -47,7 +52,7 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-            color:white
+            color:black
         }
           .form-check{
          display: flex;
@@ -70,8 +75,11 @@
             gap: 50px;
             margin-left: 10px;
             padding-top: 30px;
-
+        }  
+        a .boton-guardar{
+            width: 150px;
         }
+      
         /*.btn-primary{
             width: 100px
         }*/

@@ -4,8 +4,9 @@ module.exports =  {
     detail: (req, res) =>{
         let id = +req.params.id;
 
-       let detalle = productos.find( producto => producto.id === id);
-        return res.render ("./products/formularioEdicionProducto.ejs", {detalle});
+       let products = productos.find( producto => producto.id === id);
+        return res.render ("./admin/formularioEdicionProducto.ejs", {products});
     }
 }
+
 
