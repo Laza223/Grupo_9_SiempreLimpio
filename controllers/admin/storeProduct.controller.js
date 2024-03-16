@@ -6,7 +6,7 @@ const fs = require("fs");
 module.exports = (req, res) => {
 
 
-  const { nombre, precio, descripcion, categoria, disponible,stock } = req.body;
+  const { nombre, precio, descripcion, categoria, disponible, stock } = req.body;
 
   const newId = products[products.length - 1].id + 1;
 

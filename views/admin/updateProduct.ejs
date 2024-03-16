@@ -1,91 +1,55 @@
 <html lang="en">
-  <%- include("../partials/head") %> 
+<%- include("../partials/head") %> 
 <body>
-  
-    <%- include("../dashboard") %> 
-
-    <main class="edicion-producto">
-           
-  <h2 class="h2-edit">Editar producto</h2>
-  <div class="button-volver">
-    <a href="/admin/dashboard/crear" class="btn btn-primary ">volver</a>
-  </div>
-  <form class="form-edit ">
-<div class="mb-3    col-6 ">
-  <label for="exampleInputPassword1" class="form-label">nombre</label>
-  <input type="text" class="form-control input-edicion" id="exampleInputPassword1">
-  <hr>
-</div>
-<div class="mb-3 col-6">
-  <label for="number" class="form-label btn-success">id</label>
-  <input type="number" class="form-control input-edicion" id="number" aria-describedby="number">
-  <hr>
-</div> 
-
-<div class="mb-3  col-6 ">
-  <label for="exampleInputEmail1" class="form-label"> Price</label>
-  <input type="text" class="form-control input-edicion" id="exampleInputEmail1" aria-describedby="emailHelp">
-  <hr>
-</div> 
-   <div class="mb-1  col-6 ">
-    <label for="exampleInputPassword1" class="form-label">stock</label>
-    <input type="number" class="form-control input-edicion" id="exampleInputPassword1">
-    <hr>
-  </div>
-
-
-
-  <div class="mb-3   descripcion col-6">
-    <label for="exampleFormControlTextarea1" class="form-label ">descripcion</label>
-    <textarea class="form-control input-edicion" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <hr>
+  <%- include("./dashboard") %> 
+  <main class="edicion-producto">
+    <h2 class="h2-edit">Editar producto</h2>
+    <div class="button-volver">
+      <a href="/admin/dashboard" class="btn btn-primary">Volver</a>
     </div>
-   
-    <div class="mb-3 col-6 ">
-      <label for="number" class="form-label btn-success">formato en litros</label>
-      <input type="number" class="form-control input-edicion" id="number" aria-describedby="number">
-      <hr>
+    <form action="/admin/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-edit">
+      <div class="mb-3 col-6">
+        <label for="exampleInputPassword1" class="form-label">Nombre</label>
+        <input name="nombre" value="<%= producto.nombre %>" type="text" class="form-control input-edicion" id="exampleInputPassword1">
+        <hr>
       </div>
-
-     <div class="mb-3 col-6  "> 
-        <label for="formFileSm" class="form-label">seleciona una img </label>
-        <input class="form-control form-control-sm " id="formFileSm" type="file">
+      <div class="mb-3 col-6">
+        <label for="exampleInputEmail1" class="form-label">Precio</label>
+        <input name="precio" value="<%= producto.precio %>" type="text" class="form-control input-edicion" id="exampleInputEmail1" aria-describedby="emailHelp">
         <hr>
-         </div>
-         
-         <div class="input-group mb-3  col-6  categorias">
-          <label class="input-group-text " for="inputGroupSelect01">categorias</label>
-          <select class="form-select " id="inputGroupSelect01">
-            <option selected>elige una opcion</option>
-            <option value="1">desengrasantes</option>
-            <option value="2">desinfectantes</option>
-            <option value="4">desodoante de pisos</option>
-            <option value="5">detergentes</option>
-            <option value="6">desodorante de ambiente</option>
-            <option value="7">repelentes</option>
-            <option value="8">mopas</option>
-          </select>
-          <hr>
-        </div>
-        <div class="form-check form-switch  col-6 ">
-          <input class="form-check-input btn-success " type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-          <label class="form-check-label" for="flexSwitchCheckChecked">disponible</label>
+      </div> 
+      <div class="mb-1 col-6">
+        <label for="exampleInputPassword1" class="form-label">Stock</label>
+        <input name="stock" value="<%= producto.stock %>" type="number" class="form-control input-edicion" id="exampleInputPassword1">
         <hr>
-        </div>
-
-      <div class="buttons">
-      <a href="/admin/dashboard/crear"><button type="submit" class="btn btn-success row gap-3 col-2 boton-guardar">guardar</button></a>
-      <button type="reset" class="btn btn-danger row gap-3 col-2 boton-borrar">borrar</button>
-      <div>
-        </div>
-
-    </form>
+      </div>
+      <div class="mb-3 col-6 descripcion">
+        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+        <textarea class="form-control input-edicion" id="exampleFormControlTextarea1" rows="3"><%= producto.descripcion %></textarea>
+        <hr>
+      </div>
+      <div class="mb-3 col-6">
+        <label for="formFileSm" class="form-label">Selecciona una imagen</label>
+        <input class="form-control form-control-sm" id="formFileSm" type="file">
+        <hr>
+      </div>
+      <select class="form-select" id="inputGroupSelect01" name="categoria">
+        
+        <option <%= producto.categoria === 'desengrasantes' ? 'selected' : '' %>>Desengrasantes</option>
+        <option <%= producto.categoria === 'desinfectantes' ? 'selected' : '' %>>Desinfectantes</option>
+        <option <%= producto.categoria === 'desodoante de pisos' ? 'selected' : '' %>>Desodorante de pisos</option>
+        <option <%= producto.categoria === 'detergentes' ? 'selected' : '' %>>Detergentes</option>
+        <option <%= producto.categoria === 'desodorante de ambiente' ? 'selected' : '' %>>Desodorante de ambiente</option>
+        <option <%= producto.categoria === 'repelentes' ? 'selected' : '' %>>Repelentes</option>
+        <option <%= producto.categoria === 'mopas' ? 'selected' : '' %>>Mopas</option>
+      </select>
       
-
-
-
-
-    </main>
-    <%- include("../partials/scripts") %> 
+      <div class="buttons">
+        <button type="submit" class="btn btn-success row gap-3 col-2 boton-guardar">Guardar</button>
+        <button type="reset" class="btn btn-danger row gap-3 col-2 boton-borrar">Borrar</button>
+      </div>
+    </form>
+  </main>
+  <%- include("../partials/scripts") %> 
 </body>
 </html>

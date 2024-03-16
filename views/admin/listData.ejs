@@ -1,7 +1,7 @@
 <html lang="en">
 <%- include("../partials/head") %> 
 
-    <%- include("../dashboard") %> 
+    <%- include("./dashboard") %> 
 
     <main>
          <h2 class="h2-product" >CARGA DE PRODUCTOS</h2>
@@ -34,7 +34,7 @@
                 <td><img src="./images/<%= producto.imagen %>" alt="jabon" width="50px"></td>
                 <td><%= producto.categoria %></td>
                 <td>si</td>
-                <td> <a href="/admin/dashboard/editar" class="btn btn-warning boton-editar">editar</a></td>
+                <td> <a href="/admin/dashboard/editar/<%= producto.id %>" class="btn btn-warning boton-editar">editar</a></td>
                 <td> <button type="reset" class="btn btn-danger boton-eliminar">Eliminar</button></td></td>
               </tr>
               <% }) %>
@@ -97,7 +97,7 @@
         
             </div> 
             <div class="button-crear">
-               <a href="/admin/dashboard/createProduct"> <button type="button" class="btn btn-primary">Crear</button></a>
+               <a href="/admin/dashboard/crear"> <button type="button" class="btn btn-primary">Crear</button></a>
                 </div>
           
           

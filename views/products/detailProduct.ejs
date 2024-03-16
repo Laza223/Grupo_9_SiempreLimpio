@@ -4,6 +4,7 @@
 <%- include("../partials/head") %> 
 
 <body>
+    
     <%- include("../partials/header") %> 
 
     <main class="home-main2">
@@ -11,11 +12,11 @@
         <div class="div-fondo">
             <div class="home-div3">
                 <h2>Seleccionaste</h2>
-                <div class="div-img"><img src="/images/<%= detalle.imagen %>" alt="Esponja">
-                    <b><%= detalle.nombre %></b>
+                <div class="div-img"><img src="/images/<%= producto.imagen %>" alt="Esponja">
+                    <b><%= producto.nombre %></b>
                     <div class="div-cantidad"><p>Cantidad:</p> <button class="cantidad">0</button></div>
-                    <h5> $<%= detalle.precio%> </h5>
-                    <p> Categoría: <%= detalle.categoria%> </p>
+                    <h5> $<%= producto.precio%> </h5>
+                    <p> Categoría: <%= producto.categoria%> </p>
                     <div class="agregar"><button class="carrito"> AGREGAR AL CARRITO</button> <i class="fa-solid fa-cart-shopping"></i>
                     </div>
                 </div>

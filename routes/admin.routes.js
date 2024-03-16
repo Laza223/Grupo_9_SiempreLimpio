@@ -7,15 +7,17 @@ const adminController = require("../controllers/admin");
 
 router.get("/dashboard", adminController.home); 
 
-router.get("/dashboard/listado", adminController.list);
+/*router.get("/dashboard/listado", adminController.list);*/
 
 router.get("/dashboard/editar", adminController.update);
 
-router.get("/dashboard/editar:id", adminController.update);
+router.get("/dashboard/editar/:id", adminController.update);
 
-router.get("/dashboard/createProduct", adminController.create);
+router.post("/dashboard/editar/:id")
 
-router.post("/dashboard/createProduct", adminController.store);
+router.get("/dashboard/crear", adminController.create);
+
+router.post("/dashboard/crear", adminController.store);
 
 
 

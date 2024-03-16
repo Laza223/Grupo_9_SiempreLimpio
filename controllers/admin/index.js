@@ -4,6 +4,6 @@ module.exports = {
     update: require("./update.controller.js"),
     deleteProduct: require("./deleteProduct.controller.js"),
     create: require("./create.controller.js"),
-    store: require("./storeProduct.controller"),
+    store: require("./storeProduct.controller"), 
   };
     
