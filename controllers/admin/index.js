@@ -1,8 +1,7 @@
-const updateController = require("./update.controller");
 module.exports = {
-    home: (req,res) => res.render("./dashboard"),
-    formularioDeCarga: require("./formularioDeCarga.controller.js"),
-    update: updateController.detail,
+    home: require("./dashboard.controller.js"),
+    list: require("./listProduct.controller.js"),
+    update: require("./update.controller.js"),
     deleteProduct: require("./deleteProduct.controller.js"),
     create: require("./create.controller.js"),
     store: require("./storeProduct.controller"),

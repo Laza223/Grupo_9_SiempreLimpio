@@ -1,4 +1,4 @@
 
 module.exports = (req, res) => {
-  res.render("./users/login")
+  res.render("./authentication/login")
 };

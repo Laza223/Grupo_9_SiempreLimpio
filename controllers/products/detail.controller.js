@@ -5,6 +5,6 @@ module.exports =  {
         let id = +req.params.id;
 
        let detalle = productos.find( producto => producto.id === id);
-        return res.render ('./products/detalleProducto', {detalle});
+        return res.render ('./products/detailProduct', {detalle});
     }
 }

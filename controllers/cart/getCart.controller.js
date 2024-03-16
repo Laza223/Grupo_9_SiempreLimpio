@@ -1,3 +1,3 @@
 module.exports = (req, res) => {
-  res.render("./products/productCart.ejs")
+  res.render("./cart/productCart")
 }

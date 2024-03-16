@@ -1,13 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const productsController = require("../controllers/products");
+const homeController = require("../controllers/other");
 
 // "/"
-router.get("/", productsController.list)
+router.get("/", homeController.home)
 router.get("/home",(req,res) => res.redirect("/"))
-
-
-
 
 module.exports = router
