@@ -11,9 +11,9 @@ router.get("/dashboard", adminController.home);
 
 //router.get("/dashboard/editar", adminController.update);
 
-router.get("/dashboard/editar/:id", adminController.update);
+router.get("/dashboard/editar/:id", adminController.edit);
 
-router.put("/dashboard/editar/:id", adminController.store)
+router.put("/dashboard/editar/:id", adminController.update)
 ///admin/dashboard/editar/1?_method=PUT
 
 router.get("/dashboard/crear", adminController.create);
