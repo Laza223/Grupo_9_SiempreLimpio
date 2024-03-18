@@ -7,7 +7,7 @@
     <div class="button-volver">
       <a href="/admin/dashboard" class="btn btn-primary">Volver</a>
     </div>
-    <form action="/admin/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-edit">
+    <form action="/admin/dashboard/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-edit">
       <div class="mb-3 col-6">
         <label for="exampleInputPassword1" class="form-label">Nombre</label>
         <input name="nombre" value="<%= producto.nombre %>" type="text" class="form-control input-edicion" id="exampleInputPassword1">
@@ -19,22 +19,34 @@
         <hr>
       </div> 
       <div class="mb-1 col-6">
-        <label for="exampleInputPassword1" class="form-label">Stock</label>
-        <input name="stock" value="<%= producto.stock %>" type="number" class="form-control input-edicion" id="exampleInputPassword1">
+        <label for="exampleInputStock" class="form-label">Stock</label>
+        <input name="stock" value="<%= producto.stock %>" type="number" class="form-control input-edicion" id="exampleInputStock">
         <hr>
-      </div>
+    </div>
+    
       <div class="mb-3 col-6 descripcion">
         <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
         <textarea class="form-control input-edicion" id="exampleFormControlTextarea1" rows="3"><%= producto.descripcion %></textarea>
         <hr>
       </div>
-      <div class="mb-3 col-6">
-        <label for="formFileSm" class="form-label">Selecciona una imagen</label>
-        <input class="form-control form-control-sm" id="formFileSm" type="file">
+
+    <!--   <div class="mb-3 col-6">
+        <label for="file" class="form-label">Selecciona una imagen</label>
+        <input type="file" name="file" id="file" accept=".jpg,.png,.jpeg">
+
+        <div id="container">
+         <p>Imagen actual</p>
+          <img src="/images/<%= /* producto.imagen */ %>" alt="">
+          <p>Nueva imagen</p>
+          <div id="preview" class="styleImage"></div>
+        </div>
+  
+       
+
         <hr>
       </div>
-      <select class="form-select" id="inputGroupSelect01" name="categoria">
-        
+ -->
+      <select class="form-select" id="inputGroupSelect01" name="categoria">     
         <option <%= producto.categoria === 'desengrasantes' ? 'selected' : '' %>>Desengrasantes</option>
         <option <%= producto.categoria === 'desinfectantes' ? 'selected' : '' %>>Desinfectantes</option>
         <option <%= producto.categoria === 'desodoante de pisos' ? 'selected' : '' %>>Desodorante de pisos</option>
@@ -50,6 +62,9 @@
       </div>
     </form>
   </main>
+
+  <script src="/js/editPreview.js"></script>
+
   <%- include("../partials/scripts") %> 
 </body>
 </html>

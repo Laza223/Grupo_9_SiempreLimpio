@@ -9,11 +9,12 @@ router.get("/dashboard", adminController.home);
 
 /*router.get("/dashboard/listado", adminController.list);*/
 
-router.get("/dashboard/editar", adminController.update);
+//router.get("/dashboard/editar", adminController.update);
 
 router.get("/dashboard/editar/:id", adminController.update);
 
-router.post("/dashboard/editar/:id")
+router.put("/dashboard/editar/:id", adminController.store)
+///admin/dashboard/editar/1?_method=PUT
 
 router.get("/dashboard/crear", adminController.create);
 
