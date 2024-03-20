@@ -21,7 +21,6 @@
    * **Tamara Diaz** - 23 años. De Jose C Paz, Buenos Aires.
    * **Rodrigo Ruiz** - 24 años. De San Miguel, Buenos Aires.
    * **José Carlos Diaz** -  32 años. De Caucete, San Juan.
-   * **Luciano Vilte** - 19 años. De San Miguel, Buenos Aires.
 
 
 ## 🚀 Referentes del mercado
