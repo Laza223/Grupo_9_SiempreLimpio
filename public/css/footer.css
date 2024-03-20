@@ -4,9 +4,6 @@
     font-size: 0.8rem;
     font-weight: 100;
     color: white;
-    position: relative;
-    bottom: 0;
- 
 }
 
 .contenedor_footer {
@@ -62,29 +59,76 @@
 
 
 
+#suscripcion {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#titulo_suscripcion {
+    background-color: #00A538;
+    border-radius: 0px 25px 0px 0px;
+    width: 250px;
+    font-size: 11px;
+    padding: 5px;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+}
+
+#suscripcion {
+    text-align: center;
+}
+
+#formulario_suscripcion_input {
+    width: 290px;
+    border-radius: 0px 30px;
+    border: none;
+    padding: 5px;
+    padding-left: 50px;
+}
+
+
+
 #legales {
     width: 100%;
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: lighter;
-    color: rgba(161, 161, 161, 0.5);
+    display: flex;
+    justify-content: center;
+    padding: 0px 4px 20px;
+}
+
+#legales a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #legales p {
     width: 100%;
+    color: white;
+    font-size: 11px;
     text-align: center;
 }
 
-/*Media Desktop*/
-@media screen and (min-width: 768px){
-   
+#arrepentimiento {
+    padding: 30px;
+    text-align: center;
 }
 
+#arrepentimiento p {
+    font-size: 19px;
+    font-weight: 100;
+}
 
+#arrepentimiento a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
 
-/*Media Mobile*/
-@media screen and (max-width:460px) {
-    .contacto {
+@media (max-width:460px){
+    .contacto{
         display: none;
     }
 
