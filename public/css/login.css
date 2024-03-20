@@ -5,11 +5,8 @@
    
 }
 
-body{
-    
-}
-
-section{
+   /*Antes llamaba a todos los elementos Section*/
+   .sectionLogin{
     display: flex;
     width: 100%;
     background: #203c58 no-repeat;
@@ -123,10 +120,10 @@ input:valid ~ label{
         #c23ff5
         )
  }
-button .registrar p{
+
 
     
-}
+
  .registrar{
     font-size: 0.8rem;
     color: white;
@@ -151,14 +148,9 @@ button .registrar p{
 /* table */
  @media(min-width:834px) {
 
-    *{
-        
-    }
     
     
-    section{
-      
-    }
+   
     .contenedor1{
         position: relative;
         width: 100%;
@@ -167,58 +159,7 @@ button .registrar p{
         justify-content: center;
         align-items: center;
     }
-    .contenedor1 h2{
-       
-    }
     
-    .input-contenedor{
-       
-    }
-    .input-contenedor label{
-        
-        
-    }
-    input:focus ~ label,
-    input:valid ~ label{
-       
-    
-    }
-    .input-contenedor input{
-    }
-        
-    .input-contenedor i{
-        
-    }
-    .olvidar{
-     
-    }
-    .olvidar label input{
-    }
-    
-     .olvidar label a{
-       
-    
-     }
-    
-     .olvidar label a:hover{
-        
-     }
-     button{
-        
-    
-     }
-     button:hover{
-        
-     }
-     .registrar{
-       
-     }
-     .registrar p a{
-        
-     }
-     .registrar p a:hover{
-        
-     }
      .iconos9{
        position: absolute;
        top: 600px;
@@ -228,12 +169,10 @@ button .registrar p{
 
  }
  @media(min-width: 1440px) {
-    *{
-        
-    }
+
     
-    
-    section{
+    /*Antes llamaba a todos los elementos Section*/
+    .sectionLogin{
         position: relative;
         width: 100%;
         height: 1374px;
@@ -278,11 +217,7 @@ button .registrar p{
         transition: .6s;
         font-weight: bold;
     }
-    input:focus ~ label,
-    input:valid ~ label{
-       
-    
-    }
+   
     .input-contenedor input{
     width: 100%;
     height: 120px;
@@ -295,9 +230,7 @@ button .registrar p{
     overflow: hidden;
     }
         
-    .input-contenedor i{
-        
-    }
+    
     .olvidar{
      margin: 24px 0 24px;
      font-size: 1.9rem;
@@ -318,10 +251,8 @@ button .registrar p{
        font-size: 1.9rem;
      }
     
-     .olvidar label a:hover{
-        
-     }
-     button{
+     /*Antes llamaba a todos los buttons*/
+     .buttonLogin{
         font-size: 2.9rem;
         width: 100%;
         height: 91px;
@@ -333,21 +264,15 @@ button .registrar p{
         transition-property: transform, color;
         transition-duration: 5s, 10s;
      }
-     button:hover{
-        
-     }
+    
      .registrar{
        font-size: 1.9rem;
        color: white;
        text-align: center;
        margin: 20px 0 18px;
      }
-     .registrar p a{
-        
-     }
-     .registrar p a:hover{
-        
-     }
+    
+     
      .iconos9{
        position: absolute;
        top: 1260px;
