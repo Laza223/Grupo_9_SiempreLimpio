@@ -4,12 +4,10 @@ const adminController = require("../controllers/admin");
 
 // "/admin"
 
-
 router.get("/dashboard", adminController.home); 
 
-/*router.get("/dashboard/listado", adminController.list);*/
+router.get("/dashboard/listado", adminController.list);
 
-//router.get("/dashboard/editar", adminController.update);
 
 router.get("/dashboard/editar/:id", adminController.edit);
 
