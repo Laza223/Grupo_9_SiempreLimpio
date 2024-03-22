@@ -1,16 +1,31 @@
+@keyframes deslizar {
+    0% {
+        left: 0;
+    }
+    50%{
+        left: 600px
+    }
+    100% {
+        left: 0; 
+    }
+}
+
+
+.home-main{
+    background-color: lightgray;
+}
+
 .img-tip {
     display: none;
 }
 
-.div-offers {
-    display: none;
-}
+.div-offers {display: none;}
 
 .card-product{
     display: flex;
 }
 
-.section-products{width: 100%;display: flex;flex-wrap: wrap;}
+.section-products{width: 100%;display: flex;flex-wrap: wrap;justify-content: center;}
 
 .clean-product{justify-content: center;padding: 15px;width: 43%;display: flex;margin: 10px;flex-wrap: wrap;border-radius: 10px;text-align: center;box-shadow: 0px 0px 10px rgb(100, 100, 100);}
 
@@ -18,11 +33,63 @@
 
 .clean-product p{font-size: 12px;font-weight: bold;}
 
-.clean-product a{text-decoration: none;color: black;}
+.clean-product a{
+    display: flex;
+    justify-content: center;
+}
 
-.clean-product h5{
-    font-weight: bold;
-    font-size: 15px;
+.clean-product h4{
     margin-top: 10px;
-    border-style: double;
+    color: var(--turquesa);
+    border: 2px inset lightgray;
+}
+
+@media (min-width: 768px) {
+
+    .clean-product{width: 30%;display: flex;align-items: center;background-color: white;}
+
+    .div-offers{
+        display: flex;
+        width: 435px;
+        background-color: var(--turquesa);
+        margin-left: 15px;
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 30px;
+    }
+
+    .div-offers h5{
+        width: 435px;
+        color: white;
+    }
+
+    .div-anuncios{
+    width: 30%;
+    }
+
+    .img-tip{
+    }
+
+    .img-tip img{
+    width: 100%;
+    }
+
+    #carouselExample{}
+
+    .carusel-box{
+    }
+
+    .caja-gris{
+    }
+}
+
+@media (min-width: 1044px) {
+
+    .div-offers{
+    position: relative;
+    animation-name: deslizar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    }
 }
