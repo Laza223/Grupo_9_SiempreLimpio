@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("../partials/head") %> 
+   
 <body>
 
     <%- include("../partials/logo") %>
@@ -14,15 +15,17 @@
                 
                 
                 <form action="#" >
-                
 
+                <!-- EMAIL -->
                     <div class="input-contenedor">
-                        <input type= "email" required>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type= "email" required name="email" value="" id="email">
                         <label for="#">Email</label>
                     </div>
 
                     <div class="input-contenedor">
-                        <input type= "password" required>
+                        <i class="fa-solid fa-lock"></i>
+                        <input type= "password" required name="password" value="" id="contrasenia">
                         <label for="#">Contraseña</label>
                     </div>
 

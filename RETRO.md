@@ -73,3 +73,29 @@
 
 ### Fomentar la responsabilidad individual:
 - Promover una mayor responsabilidad individual en la gestión del tiempo y el cumplimiento de las tareas asignadas, para reducir la procrastinación y garantizar la entrega oportuna de los entregables del proyecto.
+
+
+
+# Retrospectiva del Proyecto - Sprint 5
+
+
+## ASPECTOS POSITIVOS:
+
+### Continuar fortaleciendo:
+- La comunicación frecuente, iniciativa heredada desde el Sprint 2, se ha consolidado como la columna vertebral de nuestro equipo, impulsando notablemente la colaboración y alineación entre los miembros. Este esfuerzo colectivo en mantener flujos de comunicación abiertos ha demostrado ser crucial para el avance y la cohesión del grupo.
+
+### Implementaciones exitosas que destacar:
+- La estrategia de implementar un reporte diario por mensaje de lunes a viernes, junto con una reunión semanal, ha demostrado ser un gran acierto. Este enfoque ha optimizado la gestión del trabajo y ha reforzado la importancia de mantener canales de comunicación efectivos para el progreso fluido de nuestros proyectos.
+
+## ÁREAS DE MEJORA
+
+### Enfocarse en mejorar:
+- A pesar de los avances en comunicación, la tendencia a posponer tareas persiste como un desafío. La gestión eficaz del tiempo y una mejor priorización de las actividades son esenciales para evitar la acumulación de tareas hacia el final del sprint. La clave reside en aplicar nuestra comunicación mejorada para abordar y mitigar este reto.
+
+### Optimización de procesos a considerar:
+- Continuar buscando métodos para aumentar nuestra eficiencia en la solución de problemas y en la toma de decisiones es imperativo. Una comunicación clara y directa puede desempeñar un papel fundamental en mejorar nuestra comprensión de las tareas y en la ejecución eficiente de las mismas.
+
+### Promoviendo la responsabilidad individual:
+- Es esencial fomentar un sentido más fuerte de responsabilidad individual en cuanto a la gestión del tiempo y la realización de las tareas asignadas. La comunicación no solo debe servir para coordinar, sino también para motivar la autogestión y asegurar que la procrastinación disminuya, promoviendo así la entrega puntual de los entregables.
+
+En resumen, mientras avanzamos desde el Sprint 5, la comunicación no solo ha demostrado ser fundamental para el éxito de nuestro proyecto, sino que también ha surgido como el vehículo a través del cual podemos abordar y superar nuestras áreas de mejora. La comunicación efectiva debe continuar siendo una prioridad, ya que es el pilar que sostiene nuestra colaboración, innovación y crecimiento colectivo.

@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride =  require('method-override');  //PUT Y DELETE HABILITADO
 const partials = require("express-partials")
+const session = require("express-session")
 
 /* RUTAS */
 const authRoutes = require("./routes/authentication.routes");
@@ -12,6 +13,7 @@ const cartRoutes = require("./routes/cart.routes");
 const homeRoutes = require("./routes/home.routes");
 const productRoutes = require("./routes/products.routes");
 const adminRoutes = require("./routes/admin.routes");
+
 
 var app = express();
 
@@ -21,7 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(methodOverride("_method"))
+app.use(methodOverride("_method"));
+app.use(session({ secret: "palabra secreta"}) );
 
 
 
