@@ -10,5 +10,6 @@ router.get("/iniciar", authController.login);
 
 //  /autenticacion/registrar
 router.get("/registrar", authController.register); 
+router.post("/registrar",authController.registerProcess);
 
 module.exports = router;
