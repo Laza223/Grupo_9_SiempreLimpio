@@ -1,15 +1,22 @@
 const express = require("express");
 const router = express.Router();
-const { login, procesoIniciar, logout, register, registerProcess} = require("../controllers/authentication");
 
+const { login, procesoIniciar, logout, register, registerProcess} = require("../controllers/authentication");
+const { validation } = require("../middlewares/validations");
+
+
+//Falta agregar validaciones
 
 // Login
 router.get("/iniciar", login); 
 router.post("/iniciar", procesoIniciar); 
 
-// Registro
+// Registro  
+
 router.get("/registrar", register); 
-router.post("/registrar", registerProcess)
+router.post("/registrar", registerProcess);
+
+
 
 //Cierre de sesión
 router.get("/cerrar-sesion", logout)
