@@ -4,7 +4,7 @@ const path = require("path")
 const cartController = require("../controllers/cart")
 
 // "/carrito"    
-router.get("/",cartController.getCart)  
+router.get("/carrito",cartController.getCart)  
 
 
 module.exports = router;

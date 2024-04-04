@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head") %> 
+    <%- include("../partials/head", {title: "Iniciar sesión"}) %> 
+   
 <body>
 
     <%- include("../partials/logo") %>
@@ -13,29 +14,32 @@
                  <h2>BIENVENIDO</h2>
                 
                 
-                <form action="#" >
-                
+                <form action="/autenticacion/iniciar" method="post" >
 
+                <!-- EMAIL -->
                     <div class="input-contenedor">
-                        <input type= "email" required>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type= "email" required name="email" id="email">
                         <label for="#">Email</label>
                     </div>
 
                     <div class="input-contenedor">
-                        <input type= "password" required>
+                        <i class="fa-solid fa-lock"></i>
+                        <input type= "password" required name="password" value="" id="contrasenia">
                         <label for="#">Contraseña</label>
                     </div>
-
-                    <div class="olvidar">
+                  
+                  <div class="olvidar">
                         <label for="#">
-                            <input type="checkbox">Recordar
+                            <input class="form-check-input" name="remember" type="checkbox" id="flexCheckChecked">  Recordarme
                             <a href="#">¿Olvidaste tu Contraseña?</a>
                         </label>
-                    </div>
+                    </div> 
+                    <button class="buttonLogin">INICIAR SESION</button>
                 </form>
 
                 <div>
-                    <button class="buttonLogin">INICIAR SESION</button>
+                  
 
                     <div class="registrar">
                         <p>¿No tengo cuenta? <a href="/autenticacion/registrar">Registrarse</a></p>

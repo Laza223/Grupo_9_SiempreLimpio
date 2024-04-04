@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include("../partials/head") %> 
+    <%- include("../partials/head", {title: "Registrarse"}) %> 
 <body>
     <%- include("../partials/logo") %>
     
@@ -12,25 +12,26 @@
     
             <h2>CREAR CUENTA</h2>
 
-           <form action="#" >
+           <form action="/autenticacion/registrar" method="POST" >
 
         <div class="input-register">
-            <input type= "text" required>
-            <label for="#">Nombre y apellido</label>
+            <input type= "text" name="name" required>
+            <label for="name">Nombre </label>
         </div>
         <div class="input-register">
-            <input type= "email" required>
-            <label for="#">ingrese su email</label>
+            <input type= "text" name="surname" required>
+            <label for="#">Apellido</label>
+        </div>
+        <div class="input-register">
+            <input type= "email" name="email" required>
+            <label for="email">ingrese su email</label>
         </div>
 
         <div class="input-register">
-            <input type= "password" required>
-            <label for="#">Contraseña</label>
+            <input type= "password" name="password" required>
+            <label for="password">Contraseña</label>
         </div>
-        <div class="input-register">
-            <input type= "password" required>
-            <label for="#">Repetir Contraseña</label>
-        </div>
+      <!--   <button class="btn btn-sm btn-custom-danger" type="reset"> Borrar</button> -->
 
         <div class="terminos">
             <label for="#">
@@ -38,10 +39,11 @@
                 <a href="#">¿Olvidaste tu Contraseña?</a>
             </label>
         </div>
+        <button class="button-register" type="submit">REGISTRARSE</button>
     </form>
 
     <div>
-        <button class="button-register">REGISTRARSE</button>
+   
 
         <div class="iniciar">
             <p>¿ya tienes cuenta? <a href="/autenticacion/iniciar">inicia sesion</a></p>

@@ -1,0 +1,11 @@
+[
+   {
+      "id": 1,
+      "name": "Rodrigo",
+      "surname": "Ruiz",
+      "email": "rodrigo10ruiz@hotmail.com",
+      "password": "$2a$10$CN/ZUoChybwnA17b8o8twePgkmvxEIgJNTqdkw0KlPWWDMpzjUYva",
+      "avatar": "",
+      "role": "usuario"
+   }
+]

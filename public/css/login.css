@@ -71,9 +71,9 @@ input:valid ~ label{
 }
 .input-contenedor i{
     position: absolute;
-    color: blue;
+    color: rgb(254, 254, 254);
     font-size: 1.6rem;
-    top: 10px;
+    top: 20px;
     right: 8px;
 }
 .olvidar{

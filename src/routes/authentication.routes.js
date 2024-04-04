@@ -1,14 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const authController = require("../controllers/authentication");
-
-// app.js --> "/autenticacion"
+const { login, procesoIniciar, logout, register, registerProcess} = require("../controllers/authentication");
 
 
-//  /autenticacion/iniciar
-router.get("/iniciar", authController.login); 
+// Login
+router.get("/iniciar", login); 
+router.post("/iniciar", procesoIniciar); 
 
-//  /autenticacion/registrar
-router.get("/registrar", authController.register); 
+// Registro
+router.get("/registrar", register); 
+router.post("/registrar", registerProcess)
+
+//Cierre de sesión
+router.get("/cerrar-sesion", logout)
 
 module.exports = router;
+

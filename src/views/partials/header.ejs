@@ -13,13 +13,37 @@
             </form>
            
         </div>
+
        <div class="iconos">
-    
+
+        <a href="#">
         <i class="fa-regular fa-bell"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
-        <a href="/autenticacion/registrar" class="link-user">
-            <i class="fa-regular fa-user"></i>
-        </a>
+    </a>
+    <a href="/carrito">
+        <i class="fa-solid fa-cart-shopping"></i>    </a>
+
+
+        <% if (locals.userLogin) { %>
+            <a href="/perfil/editar" class="link-user">
+                <i class="fa-regular fa-user"></i>
+            </a>
+            
+            
+          <% } else { %>
+            <a href="/autenticacion/registrar" class="link-user">
+                <i class="fa-regular fa-user"></i>
+            </a>
+            <a href="/autenticacion/iniciar" class="link-user">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </a>
+          <% } %>
+
+
+       
+
+          
+         
+         
      
     </div>
     <div class="burguer-menu">
