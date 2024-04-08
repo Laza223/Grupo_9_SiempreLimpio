@@ -7,5 +7,14 @@
       "password": "$2a$10$CN/ZUoChybwnA17b8o8twePgkmvxEIgJNTqdkw0KlPWWDMpzjUYva",
       "avatar": "",
       "role": "usuario"
+   },
+   {
+      "id": 2,
+      "name": "sad11111111111111",
+      "surname": "asd",
+      "email": "jose@gmail.com",
+      "password": "$2a$10$LO0uxJn1Lf1m.pztaNUzxOLHAjWcDMU/UUTVSORRATnmmrGdSwgxq",
+      "avatar": "",
+      "role": "usuario"
    }
 ]

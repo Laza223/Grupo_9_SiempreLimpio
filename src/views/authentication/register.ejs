@@ -12,23 +12,36 @@
     
             <h2>CREAR CUENTA</h2>
 
-           <form action="/autenticacion/registrar" method="POST" >
+            <% if (errors != 0 ) { %>
+            <div class="contenedor-error-validaciones">
 
-        <div class="input-register">
-            <input type= "text" name="name" required>
+           <% errors.forEach(e => { %>
+            
+            <small class="error-validaciones"><%= e.path %> : <%= e.msg %></small>
+
+           <% }) %>
+            </div>
+            <% } %>
+
+      
+
+            <form action="/autenticacion/registrar" method="POST" >
+                <div class="input-register">
+                    <input type= "text" name="name" >
             <label for="name">Nombre </label>
         </div>
         <div class="input-register">
-            <input type= "text" name="surname" required>
+            <input type= "text" name="surname" >
             <label for="#">Apellido</label>
+
         </div>
         <div class="input-register">
-            <input type= "email" name="email" required>
+            <input type= "text" name="email" >
             <label for="email">ingrese su email</label>
         </div>
 
         <div class="input-register">
-            <input type= "password" name="password" required>
+            <input type= "password" name="password" >
             <label for="password">Contraseña</label>
         </div>
       <!--   <button class="btn btn-sm btn-custom-danger" type="reset"> Borrar</button> -->

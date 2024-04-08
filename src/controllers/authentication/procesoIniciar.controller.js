@@ -14,7 +14,7 @@ module.exports = (req, res) => {
   if (!isPasswordValid) res.send("El password es incorrecto");
 
   req.session.userLogin = {
-    id:userFind.id,
+    id: userFind.id,
     name: userFind.name,
     surname: userFind.surname,
     avatar: userFind.avatar,

@@ -1,3 +1,4 @@
 module.exports = (req, res) => {
-  res.render("./authentication/register.ejs")
+  let errors = 0
+  res.render("./authentication/register.ejs", { errors: errors });
 };
