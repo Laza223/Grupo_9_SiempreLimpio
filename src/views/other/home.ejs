@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("../partials/head", {title: "Inicio"}) %> 
+<%- include("../partials/head", {title: "Inicio" }) %>
 
 
     <body class="home-body">
@@ -46,15 +46,14 @@
                 <section class="section-products">
                     <% productos.forEach(producto=> { %>
                         <div class="clean-product">
-                            <a href="productos/detalle/<%= producto.id%>">
+                            <div class="img-container"><a href="productos/detalle/<%= producto.id%>">
                                 <img src="./images/<%= producto.imagen%>" alt="Article">
-                            </a>
-                            <div>
-                                <p>
-                                    <%= producto.descripcion%>
-                                </p>
-                                <h4> $<%= producto.precio%>
-                                </h4>
+                            </a></div>
+                            <div class="description-container">
+                                <!-- <p><%#= producto.categoria.toUpperCase() %></p> -->
+                                <h2><%= producto.nombre%></h2>
+                                <h3> $<%= producto.precio%></h3>
+                                <a class="cart-action" href="#">Añadir al carrito</a>
                             </div>
                         </div>
                         <% }) %>

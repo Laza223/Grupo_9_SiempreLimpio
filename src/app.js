@@ -28,6 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(partials());
 
 app.use(session({ secret: "palabra secreta"}) );
 app.use(checkUser)
