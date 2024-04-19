@@ -98,6 +98,7 @@ input:valid ~ label{
  .olvidar label a:hover{
     text-decoration: underline;
  }
+ /* 
  button{
     width: 100%;
     height: 45px;
@@ -120,8 +121,7 @@ input:valid ~ label{
         #c23ff5
         )
  }
-
-
+*/
     
 
  .registrar{
@@ -146,7 +146,7 @@ input:valid ~ label{
     font-size: 1.5rem;
  }
 /* table */
- @media(min-width:834px) {
+ @media(min-width:768px) {
 
     
     

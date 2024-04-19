@@ -8,15 +8,16 @@ main{
     background-color: var(--azulOscuro);
     height: 100%;
 }*/
-.h2-product{ color:white;  
-    display: flex; 
-    justify-content: center; 
-    background-color: var(--turquesa);
-    padding-top: 10px;
-    padding-top: 10px;
+.h2-product{
+    color:white;
+    display: flex;
+    justify-content: center;
+    background-color: #2e0e36;
+    padding: 10px;
     box-shadow: 10px 10px 5px 0px #22477d;
     width: 400px;
     margin: auto;
+    margin-top: 10px;
 }
 .tabla{
     margin-left: 50px;
@@ -28,9 +29,9 @@ main{
     height: 80vh;
 }
 
-.button-crear{ padding-bottom :10px;
+.button-crear{
+    padding-bottom :10px;
     width: 100px;
-
  }
 .boton-editar{ width: 80px;
 
@@ -38,4 +39,8 @@ main{
 .boton-eliminar{
     width: 80px;
     height: auto;
+}
+
+.button-crear a button{
+    background-color: #2e0e36;
 }

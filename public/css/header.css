@@ -1,210 +1,231 @@
-#ubicacion-gps{
-    font-size: small;
+#ubicacion-gps {
+    font-size: smaller;
+    display: none;
 }
 
 
-header .logo-ubicacion{
-    background-color: white;
+header .logo-ubicacion {
+    background-color: lightgray;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 5px;
-    justify-content: space-between;
 }
-img{
-    width: 130px}
 
-header .fa-location-dot{
+img {}
+
+header .fa-location-dot {
     position: relative;
     margin-right: 20px;
     color: rgb(54, 179, 91);
 }
-   
-header .seccion-nav-bar{ background-color: var(--turquesa);
-    padding:5px ;
-    height: 50px;
-}
 
-header .barra-busqueda{ 
-     display: flex;
-    position: relative;
-    justify-content: center;
-    color: white;
-}
-    header form input{  
-       display: none;
-    }
-    .iconos .fa-user {
-        display: none;
-    }
-    .iconos li{
-        display: none;
-    }
-
-    .iconos .fa-bell{
-        margin-right: 5px;
-}
-    .iconos p{display: none;
-        
-    }
-    .iconos{  display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        position: relative;
-        bottom: 20px;
-        color: white;
-        gap: 10px;
-      margin-left: 50px;
-    }
-.burguer-menu{
+header .seccion-nav-bar {
+    background-color: var(--turquesa);
     display: flex;
-    justify-content: flex-start;
-    position: relative;
-    bottom: 35px;
-    color: white;
+    padding: 10px;
 }
-  .menu-lista{
-    display:none
-  } 
-  .div-header-a{
+
+header .barra-busqueda {
+    color: white;
+    display: flex;
+    justify-content: start;
+    padding-right: 10px;
+}
+
+header form input {
     display: none;
-  }
-  @media (min-width:768px )
-    {
-        header .logo-ubicacion{
-            padding: 10px;}
-
-   img{
-    width: 200px}
-
-
- header .fa-location-dot{
-    margin-right: 40px;
- }
- header .seccion-nav-bar{
-  padding: 17px;
-  height: 80px;
- }
-
- header .barra-busqueda{ display: flex;
-    justify-content: flex-start;
-    bottom: 1px;
-    position: relative;
-    right: 30px;
-    margin-left: 30px;
 }
 
- header form input{
+.iconos .fa-user {
+    display: none;
+}
+
+.iconos li {
+    display: none;
+}
+
+.iconos .fa-bell {
+    margin-right: 5px;
+}
+
+.iconos p {
+    display: none;
+
+}
+
+.iconos {
     display: flex;
-    border-radius: 15px;
-    border: none;
-    padding: 10px;
-    width: 300px;
-
+    justify-content: flex-end;
+    color: white;
+    display: none;
 }
-.lupa{font-size: 20px;}
 
-header .barra-busqueda form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.burguer-menu {
+    color: white;
+    width: 50%;
+    padding-left: 10px;
 }
- 
+
+.burguer-menu i{
     
-
- .iconos .fa-user{ display: flex;
-    margin-left: 10px;
-    color: white;
-
-}
-.iconos .fa-user:hover{
-    color: #18d931;
-}
-.iconos li{
-    display: flex;
+font-size: 30px;
 }
 
-.burguer-menu{display: none;}
-
-.iconos{
-    bottom: 50px;
-    font-size: 14px;
-    bottom: 50px;
-    top: auto;
+.barra-busqueda i{
+    
+font-size: 25px;
 }
 
-.iconos li a{
-    font-size: 10px;
-text-decoration: none;
-list-style: none;
-font-weight: bold;
-    color: #18d931;
-    cursor: pointer;
-margin-right: 4px;}
-
- .iconos li a:hover{
-    color: rgb(60, 199, 58);
-    text-decoration: dotted;
-   
- }
- .menu-lista{ 
-    list-style: none;
-    display: flex;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-    justify-content: flex-start;
-    gap: 40px;
-
+.menu-lista {
+    display: none
 }
-.categorias{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--azulOscuro);}
 
-.menu-lista li a{ 
-    text-decoration: none;
-    color: white;
-    padding: 0px;
-    display: block;
-    font-size: 12px;}
+.div-header-a {
+    display: none;
+}
 
-.menu-lista li{display: inline-block;
+@media (min-width:768px) {
+    header .logo-ubicacion {
+        padding: 10px;
+    }
+
+    img {
+        width: 200px;
+        display: block;
+    }
+
+
+    header .fa-location-dot {
+        margin-right: 40px;
+    }
+
+    header .seccion-nav-bar {
+        padding: 17px;
+        height: 80px;
+    }
+
+    header .barra-busqueda {
+    }
+
+    header form input {
+        display: flex;
+        border-radius: 15px;
+        border: none;
+        padding: 10px;
+        width: 300px;
+
+    }
+
+    .lupa {
+        font-size: 20px;
+    }
+
+    header .barra-busqueda form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+
+    .iconos .fa-user {
+        display: flex;
+        margin-left: 10px;
+        color: white;
+
+    }
+
+    .iconos .fa-user:hover {
+        color: #18d931;
+    }
+
+    .iconos li {
+        display: flex;
+    }
+
+    .burguer-menu {
+        display: none;
+    }
+
+    .iconos {
+        bottom: 50px;
+        font-size: 14px;
+        bottom: 50px;
+        top: auto;
+    }
+
+    .iconos li a {
+        font-size: 10px;
+        text-decoration: none;
+        list-style: none;
+        font-weight: bold;
+        color: #18d931;
+        cursor: pointer;
+        margin-right: 4px;
+    }
+
+    .iconos li a:hover {
+        color: rgb(60, 199, 58);
+        text-decoration: dotted;
+
+    }
+
+    .menu-lista {
+        list-style: none;
+        display: flex;
         text-align: center;
-         color: white;
-         font-size: 14px;
-}
-.menu-lista li a:hover{
-    background-image: linear-gradient(
-        150deg,
-       
-        #09F,
-        #00DDFF,
-        #3ed36c,
-        #f38729,
-        #c23ff5
-        );
-        border-radius: 5px;
-}
+        padding: 10px;
+        margin: 0;
+        justify-content: flex-start;
+        gap: 40px;
 
-.div-header-a{
-    border: 1px solid var(--verde);
-    border-top-left-radius: 12px;
-    background-color:var(--verde);
-    font-size: 10px;
-    width: 20%;
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;}
-    
-    .div-header-a a{
+    }
+
+    .categorias {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--azulOscuro);
+    }
+
+    .menu-lista li a {
+        text-decoration: none;
+        padding: 0px;
+        color: white;
+        display: block;
+        font-size: 14px;
+    }
+
+    .menu-lista li {
+        text-align: center;
+        color: white;
+        font-size: 14px;
+    }
+
+    .menu-lista li a:hover {
+        background-color:rgba(50, 50, 50, 1);
+        padding: 10px;
+        transition: 0.5s;
+        border-radius: 5px;
+    }
+
+    .div-header-a {
+        border: 1px solid var(--verde);
+        border-top-left-radius: 12px;
+        background-color: var(--verde);
+        font-size: 10px;
+        width: 20%;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div-header-a a {
         font-weight: bold;
         color: white;
         font-size: 8px;
@@ -217,63 +238,91 @@ margin-right: 4px;}
 
 
 }
-@media(min-width:1024px){
-    header .logo-ubicacion{
-        padding: 12px;}
 
-    header .fa-location-dot{
+@media(min-width:1024px) {
+    header .logo-ubicacion {
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightgray;
+    }
+
+    header .fa-location-dot {
         margin-right: 120px;
-}
-header .fa-location-dot{
-    font-size: 30px;
-}
-header .seccion-nav-bar{
-    padding: 20px;
-    height: 100px;
-}
+    }
 
-header .barra-busqueda{
-    display: flex;
-    align-items: flex-start ;
-    top: 12px;
-    
-}
-header form input{
-    width: 500px;
-    padding: 15px;
+    header .fa-location-dot {
+        font-size: 30px;
+    }
 
-}
-.lupa{font-size: 30px;
+    header .seccion-nav-bar {
+    }
 
-}
-.iconos{
-    font-size: 20px;
-    justify-content: flex-end;
-}
-.iconos li a{
-    font-size: 16px;}
+    header .barra-busqueda {
+        display: flex;
+    }
 
+    header form input {
+        width: 265px;
+        padding: 10px;
+    }
 
- .menu-lista{ 
-    display: flex;
-    padding: 20px;
-    gap: 55px;
-}
-.menu-lista li a{ 
-    display: block;
-    font-size: 15px;
+    .lupa {
+        font-size: 30px;
+
+    }
+
+    .iconos {
+        font-size: 20px;
+        justify-content: flex-end;
+    }
+
+    .iconos li a {
+        font-size: 16px;
+    }
 
 
-}
-.div-header-a{
-    font-size: 12px;
-    width: 25%;
-    height: 50px;
-    display: flex;}
+    .menu-lista {
+        display: flex;
+        padding: 20px;
+        gap: 55px;
+    }
 
-    .div-header-a a{
+    .menu-lista li a {
+        display: block;
+        font-size: 15px;
+
+
+    }
+
+    .div-header-a {
+        font-size: 12px;
+        width: 25%;
+        height: 50px;
+        display: flex;
+    }
+
+    .div-header-a a {
         font-weight: bold;
         color: white;
         font-size: 15px;
+    }
+
+    #ubicacion-gps{
+        
+display: flex;
+        
+margin-right: 10px;
+    }
+
+
+    header .barra-busqueda{
+        
+width: 100%;
+        
+display: flex;
+        
+justify-content: start;
     }
 }
