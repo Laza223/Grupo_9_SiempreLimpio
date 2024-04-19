@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<<<<<<< HEAD:src/views/other/home.ejs
 <%- include("../partials/head", {title: "Inicio"}) %> 
+=======
+<%- include("../partials/head") %>
+>>>>>>> b6555a6f80b55ecda32c10032b517061c8c30e78:views/other/home.ejs
 
 
-<body class="home-body">
-    <%- include("../partials/header") %> 
-    <main class="home-main">
+    <body class="home-body">
+        <%- include("../partials/header") %>
+            <main class="home-main">
 
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/images/mujer-limpiando.png" class="d-block w-100" alt="...">
+                <div class="carusel-box">
+
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/images/mujer-limpiando.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/img-carou-limp.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/img-carou-limp2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="div-anuncios">
+                        <div class="img-tip"> <img src="/images/tips.png" alt="Tips"></div>
+                        <div class="caja-gris"></div>
+
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="/images/mujer-limpiando.png" class="d-block w-100" alt="...">
+
+                <div class="div-offers">
+                    <h5>¡OFERTAS DE LA SEMANA DE LA LIMPIEZA!</h5>
                 </div>
-                <div class="carousel-item">
-                    <img src="/images/mujer-limpiando.png" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+                <section class="section-products">
+                    <% productos.forEach(producto=> { %>
+                        <div class="clean-product">
+                            <a href="productos/detalle/<%= producto.id%>">
+                                <img src="./images/<%= producto.imagen%>" alt="Article">
+                            </a>
+                            <div>
+                                <p>
+                                    <%= producto.descripcion%>
+                                </p>
+                                <h4> $<%= producto.precio%>
+                                </h4>
+                            </div>
+                        </div>
+                        <% }) %>
+                </section>
+            </main>
 
-        <div class="div-anuncios">
-            <div class="img-tip"> <img src="/images/tips.png" alt="Tips"></div>
-            <div class="caja-gris"></div>
-
-        </div>
-
-        <div class="div1">
-            <h5>¡OFERTAS DE LA SEMANA DE LA LIMPIEZA!</h5>
-        </div>
-           <section class="section-productos">
-            <% productos.forEach(producto => { %>
-        <div class="card" style="width: 18rem;">
-            <img class="div-img" src="./images/<%= producto.imagen%>" alt="Secador">
-            <div class="card-body">
-                <a href="productos/detalle/<%= producto.id%>"> <h5 class="card-title"><%= producto.nombre%></h5> </a>
-              <p class="card-text"><%= producto.descripcion%></p>
-              <h5> $<%= producto.precio%> </h5>
-           
-            </div>
-          </div>
-          <% }) %>
-        </section>
-   
-    </main>
-
-        <%- include("../partials/footer") %>
-        <%- include("../partials/scripts") %> 
-</body>
+            <%- include("../partials/footer") %>
+                <%- include("../partials/scripts") %>
+    </body>
 
 </html>

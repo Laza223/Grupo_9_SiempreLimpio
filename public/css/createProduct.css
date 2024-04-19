@@ -52,16 +52,7 @@
       .form-check{
      display: flex;
               }
-
-/*.categorias{
-    max-width: 200px;
-    margin-left: 1px ;
-    margin-bottom: 20px;
-    height: 20px;
-    bottom: 20px;
-}*/
-
-
+            
     .botones{ 
         display: flex;
         width: 100%;
