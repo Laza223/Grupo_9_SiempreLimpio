@@ -17,10 +17,11 @@
 
 **Integrantes del Equipo** 👨‍💼👩‍💼
 
-   * **Lazaro feijoo** - 19 años , de Lujan , Bueno Aires.
+   * **Lazaro Feijoo** - 19 años. De Luján, Buenos Aires.
    * **Tamara Diaz** - 23 años. De Jose C Paz, Buenos Aires.
    * **Rodrigo Ruiz** - 24 años. De San Miguel, Buenos Aires.
    * **José Carlos Diaz** -  32 años. De Caucete, San Juan.
+   * **Lucas Maciel** - 22 años. De Florencio Varela, Buenos Aires.
 
 
 ## 🚀 Referentes del mercado
@@ -44,6 +45,5 @@
 ---
 
 ### Tablero de trabajo en [Jira Software](https://lucianovilte.atlassian.net/jira/software/projects/LIM/boards/3)
-
 
 
