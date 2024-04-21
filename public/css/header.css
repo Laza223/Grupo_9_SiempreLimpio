@@ -7,10 +7,39 @@
 header .logo-ubicacion {
     background-color: lightgray;
     display: flex;
+    justify-content: space-between;
     padding: 5px;
+    height: 60px;
 }
 
-img {}
+.user-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-a {
+    text-decoration: none;
+}
+
+.user-button {
+    background-color: var(--azulOscuro);
+    width: 40px;
+    height: 40px;
+    color: lightgray;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    margin: 0px 5px;
+}
+
+.user-button i {
+    text-decoration: none;
+}
+
+.div-button h3 {
+    display: none;
+}
 
 header .fa-location-dot {
     position: relative;
@@ -18,20 +47,136 @@ header .fa-location-dot {
     color: rgb(54, 179, 91);
 }
 
-header .seccion-nav-bar {
+.seccion-nav-bar {
     background-color: var(--turquesa);
     display: flex;
-    padding: 10px;
+    padding: 5px;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
-header .barra-busqueda {
-    color: white;
+.barra-busqueda {
+    width: 80%;
+    height: 100%;
+    margin-right: 10px;
+    background-color: white;
     display: flex;
-    justify-content: start;
-    padding-right: 10px;
+    align-items: center;
+    position: relative;
+    border: solid 2px var(--azulOscuro);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.barra-busqueda form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-busqueda button {
+    font-size: 20px;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    border: none;
+    height: 100%;
+    background-color: transparent;
+    color: var(--azulOscuro);
+}
+
+header form {
+    width: 100%;
 }
 
 header form input {
+    width: 100%;
+    border: none;
+    padding: 4px;
+}
+
+
+.burguer-menu {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.burguer-menu i {
+    font-size: 28px;
+}
+
+.burguer-activate {
+    display: none;
+}
+
+.burguer-activate:checked+.movile-nav {
+    height: max-content;
+    width: max-content;
+    z-index: 2;
+}
+
+.movile-nav {
+    background-color: var(--azulOscuro);
+    height: 0px;
+    overflow: hidden;
+    width: 0px;
+    position: absolute;
+    top: 44px;
+    left: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-radius: 0px 0px 10px 10px;
+    padding: initial;
+    padding-top: 10px;
+}
+
+.movile-nav h2 {
+    border-bottom: solid 2px var(--turquesa);
+    width: 100%;
+    text-align: start;
+    font-family: sans-serif;
+    padding-left: 5px;
+}
+
+.movile-nav li {
+    padding: 2px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: solid 2px var(--turquesa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movile-nav li:hover {
+    background-color: var(--turquesa);
+}
+
+
+.movile-nav li a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+
+.menu-lista {
+    display: none
+}
+
+.div-header-a {
     display: none;
 }
 
@@ -59,185 +204,34 @@ header form input {
     display: none;
 }
 
-.burguer-menu {
-    color: white;
-    width: 50%;
-    padding-left: 10px;
-}
-
-.burguer-menu i{
-    
-font-size: 30px;
-}
-
-.barra-busqueda i{
-    
-font-size: 25px;
-}
-
-.menu-lista {
-    display: none
-}
-
-.div-header-a {
-    display: none;
-}
-
 @media (min-width:768px) {
-    header .logo-ubicacion {
-        padding: 10px;
+
+    .seccion-nav-bar {
+        height: 55px;
     }
 
-    img {
-        width: 200px;
-        display: block;
+    .user-actions {
+        width: max-content;
     }
 
-
-    header .fa-location-dot {
-        margin-right: 40px;
-    }
-
-    header .seccion-nav-bar {
-        padding: 17px;
-        height: 80px;
-    }
-
-    header .barra-busqueda {
-    }
-
-    header form input {
-        display: flex;
-        border-radius: 15px;
-        border: none;
-        padding: 10px;
-        width: 300px;
-
-    }
-
-    .lupa {
-        font-size: 20px;
-    }
-
-    header .barra-busqueda form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-
-
-
-    .iconos .fa-user {
-        display: flex;
-        margin-left: 10px;
-        color: white;
-
-    }
-
-    .iconos .fa-user:hover {
-        color: #18d931;
-    }
-
-    .iconos li {
-        display: flex;
-    }
-
-    .burguer-menu {
-        display: none;
-    }
-
-    .iconos {
-        bottom: 50px;
-        font-size: 14px;
-        bottom: 50px;
-        top: auto;
-    }
-
-    .iconos li a {
-        font-size: 10px;
-        text-decoration: none;
-        list-style: none;
-        font-weight: bold;
-        color: #18d931;
-        cursor: pointer;
-        margin-right: 4px;
-    }
-
-    .iconos li a:hover {
-        color: rgb(60, 199, 58);
-        text-decoration: dotted;
-
-    }
-
-    .menu-lista {
-        list-style: none;
-        display: flex;
-        text-align: center;
-        padding: 10px;
-        margin: 0;
-        justify-content: flex-start;
-        gap: 40px;
-
-    }
-
-    .categorias {
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        align-items: center;
-        justify-content: space-around;
+    .div-button {
         background-color: var(--azulOscuro);
-    }
-
-    .menu-lista li a {
-        text-decoration: none;
-        padding: 0px;
-        color: white;
-        display: block;
-        font-size: 14px;
-    }
-
-    .menu-lista li {
-        text-align: center;
-        color: white;
-        font-size: 14px;
-    }
-
-    .menu-lista li a:hover {
-        background-color:rgba(50, 50, 50, 1);
-        padding: 10px;
-        transition: 0.5s;
-        border-radius: 5px;
-    }
-
-    .div-header-a {
-        border: 1px solid var(--verde);
-        border-top-left-radius: 12px;
-        background-color: var(--verde);
-        font-size: 10px;
-        width: 20%;
-        height: 25px;
         display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
+        border-radius: 8px;
+        margin-right: 10px;
     }
 
-    .div-header-a a {
-        font-weight: bold;
-        color: white;
-        font-size: 8px;
+    .div-button h3 {
+        color: aliceblue;
+        display: flex;
+        margin-bottom: 0px;
+        padding-left: 8px;
+        font-size: 22px;
     }
-
-
-
-
-
-
-
 }
+
 
 @media(min-width:1024px) {
     header .logo-ubicacion {
@@ -246,21 +240,29 @@ font-size: 25px;
         justify-content: space-between;
         align-items: center;
         background-color: lightgray;
+        height: 80px;
     }
 
-    header .fa-location-dot {
-        margin-right: 120px;
+    .seccion-nav-bar {
+        height: 0px;
+        padding: 0px;
     }
 
-    header .fa-location-dot {
-        font-size: 30px;
-    }
-
-    header .seccion-nav-bar {
+    .burguer-menu {
+        display: none;
     }
 
     header .barra-busqueda {
-        display: flex;
+        width: 45%;
+        height: 35px;
+        position: absolute;
+        top: -57px;
+        left: 25%;
+        margin: initial;
+    }
+
+    .barra-busqueda button i {
+        font-size: 22px;
     }
 
     header form input {
@@ -284,17 +286,21 @@ font-size: 25px;
 
 
     .menu-lista {
+        background-color: var(--turquesa);
         display: flex;
-        padding: 20px;
-        gap: 55px;
+        justify-content: space-evenly;
+        padding: 10px;
+        margin-bottom: 0px;
+        list-style: none;
+        border-bottom: solid 2px var(--azulOscuro);
     }
 
     .menu-lista li a {
-        display: block;
-        font-size: 15px;
-
-
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
     }
+
 
     .div-header-a {
         font-size: 12px;
@@ -309,20 +315,11 @@ font-size: 25px;
         font-size: 15px;
     }
 
-    #ubicacion-gps{
-        
-display: flex;
-        
-margin-right: 10px;
+    #ubicacion-gps {
+
+        display: flex;
+
+        margin-right: 10px;
     }
 
-
-    header .barra-busqueda{
-        
-width: 100%;
-        
-display: flex;
-        
-justify-content: start;
-    }
 }
