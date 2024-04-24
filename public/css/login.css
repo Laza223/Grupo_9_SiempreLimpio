@@ -98,8 +98,8 @@ input:valid ~ label{
  .olvidar label a:hover{
     text-decoration: underline;
  }
- /* 
- button{
+
+ .buttonLogin{
     width: 100%;
     height: 45px;
     border-radius: 40px;
@@ -110,7 +110,7 @@ input:valid ~ label{
     transition-property:transform, color;
     transition-duration: 5s, 10s;
  }
- button:hover{
+.buttonLogin:hover{
     background-image: linear-gradient(
         150deg,
        
