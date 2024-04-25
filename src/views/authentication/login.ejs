@@ -6,8 +6,8 @@
 
     <%- include("../partials/header") %>
 
-    <section class="sectionLogin">
-        <div class="contenedor1">
+    <section class="section-register">
+        <div class="contenedor-register">
 
             <div class="formulario">
             
@@ -15,41 +15,34 @@
                 
                 
                 <form action="/autenticacion/iniciar" method="post" >
-
-                <!-- EMAIL -->
-                    <div class="input-contenedor">
-                        <i class="fa-solid fa-envelope"></i>
+                    <div class="input-register">
+                        <label for="email">Email</label>
                         <input type= "email" required name="email" id="email">
-                        <label for="#">Email</label>
                     </div>
 
-                    <div class="input-contenedor">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type= "password" required name="password" value="" id="contrasenia">
+                    <div class="input-register">
                         <label for="#">Contraseña</label>
+                        <input type= "password" required name="password" value="" id="contrasenia">
                     </div>
                   
-                  <div class="olvidar">
+                  <div class="terminos">
                         <label for="#">
                             <input class="form-check-input" name="remember" type="checkbox" id="flexCheckChecked">  Recordarme
+                            <br>
                             <a href="#">¿Olvidaste tu Contraseña?</a>
                         </label>
                     </div> 
-                    <button class="buttonLogin">INICIAR SESION</button>
+                    <button class="button-register" type="submit">INICIAR SESION</button>
                 </form>
 
                 <div>
                   
 
-                    <div class="registrar">
+                    <div class="iniciar">
                         <p>¿No tengo cuenta? <a href="/autenticacion/registrar">Registrarse</a></p>
                     </div>
                    
                  
-                </div>
-                <div class ="iconos9">
-                    
-                    <i class="fa-solid fa-rotate-left"></i>
                 </div>
 
             </div>

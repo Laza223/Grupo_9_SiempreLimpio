@@ -12,22 +12,6 @@
                     <div class="formulario">
 
                         <h2>CREAR CUENTA</h2>
-
-                        <% if (errors !=0 ) { %>
-                            <div class="contenedor-error-validaciones">
-
-                                <% errors.forEach(e=> { %>
-
-                                    <small class="error-validaciones">
-                                        <%= e.path %> : <%= e.msg %>
-                                    </small>
-
-                                    <% }) %>
-                            </div>
-                            <% } %>
-
-
-
                                 <form action="/autenticacion/registrar" method="POST">
                                     <div class="input-register">
                                         <label for="name">Nombre </label>
@@ -47,8 +31,6 @@
                                         <label for="password">Contraseña</label>
                                         <input type="password" name="password">
                                     </div>
-                                    <!--   <button class="btn btn-sm btn-custom-danger" type="reset"> Borrar</button> -->
-
                                     <div class="terminos">
                                         <label for="#">
                                             <input type="checkbox"> acepto terminos y condiciones
