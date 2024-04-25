@@ -23,13 +23,15 @@
             </div>
             <% } %>
 
-      
+
 
             <form action="/autenticacion/registrar" method="POST" >
                 <div class="input-register">
                     <input type= "text" name="name" >
             <label for="name">Nombre </label>
-        </div>
+            <p class="error-alert">
+                <%= locals.errors?.password?.msg%>
+            </p>
         <div class="input-register">
             <input type= "text" name="surname" >
             <label for="#">Apellido</label>

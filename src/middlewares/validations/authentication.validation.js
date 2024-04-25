@@ -3,6 +3,9 @@ const { loadData } = require("../../database");
 const regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
 module.exports = [
+    body("name")
+    .notEmpty().withMessage("Campo requerido").bail(),
+    
     body("email")
         .notEmpty().withMessage("Campo requerido").bail()
         .isEmail().withMessage("Formato invalido").bail()
@@ -25,10 +28,9 @@ module.exports = [
       
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.status(400).json({ errors: errors.array() });
+            return res.render("./authentication/register", {caca: errors})
         }
-   
+
         next();
     }
-];
-
+]
