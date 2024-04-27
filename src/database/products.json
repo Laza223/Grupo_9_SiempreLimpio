@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "nombre": "Desinfectante de superficies",
+    "nombre": "Cloro",
     "precio": 675,
     "categoria": "Limpiadores líquidos",
     "stock": 120,
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "nombre": "Esponja para fregar",
+    "nombre": "Esponja de acero",
     "precio": 125,
     "categoria": "Accesorios",
     "stock": 200,
@@ -55,7 +55,7 @@
   },
   {
     "id": 7,
-    "nombre": "Jabón en barra",
+    "nombre": "Jabón blanco en barra",
     "precio": 199,
     "categoria": "Jabones",
     "stock": 180,
@@ -64,7 +64,7 @@
   },
   {
     "id": 8,
-    "nombre": "Quitamanchas",
+    "nombre": "Jabón líquido para ropa",
     "precio": 425,
     "categoria": "Detergentes",
     "stock": 90,
@@ -82,7 +82,7 @@
   },
   {
     "id": 10,
-    "nombre": "Cepillo de limpieza",
+    "nombre": "Cepillo para pelo",
     "precio": 249,
     "categoria": "Accesorios",
     "stock": 170,
