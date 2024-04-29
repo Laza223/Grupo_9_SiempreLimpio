@@ -16,5 +16,14 @@
       "password": "$2a$10$LO0uxJn1Lf1m.pztaNUzxOLHAjWcDMU/UUTVSORRATnmmrGdSwgxq",
       "avatar": "",
       "role": "usuario"
+   },
+   {
+      "id": 3,
+      "name": "asdasdasd",
+      "surname": "asdasd",
+      "email": "lazarofeijoo2004@gmail.com",
+      "password": "$2a$10$aS/ZpDImWt8.mvtPTnXhcuhPbd/9ddjQw5LzWHlsjwY.BSyLONJkW",
+      "avatar": "",
+      "role": "usuario"
    }
 ]

@@ -3,7 +3,8 @@ const router = express.Router();
 const { validationResult } = require("express-validator");
 
 const { login, procesoIniciar, logout, register, registerProcess} = require("../controllers/authentication");
-const registerValidation = require('../middlewares/validations/authentication.validation');
+const { registerValidation } = require("../middlewares/validations");
+
 
 
 //Falta agregar validaciones

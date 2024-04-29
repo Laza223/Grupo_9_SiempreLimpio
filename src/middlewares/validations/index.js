@@ -1,4 +1,3 @@
 module.exports = {
-    register: require("./authentication.validation"),
-    
+    ...require("./authentication.validation")
   }
