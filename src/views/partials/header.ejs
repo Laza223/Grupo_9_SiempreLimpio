@@ -5,11 +5,12 @@
     <div class="user-actions">
       <% if (!locals.userLogin) { %>
         <div class="div-button">
+          <a href="/autenticacion/registrar">
           <h3>Ingresar</h3>
           <a href="/autenticacion/registrar" class="button-a">
             <button class="user-button"><i class="fa-solid fa-user-large"></i>
             </button>
-          </a>
+          </a></a>
         </div>
         <% } else { %>
           <a href="/autenticacion/registrar" class="button-a">
