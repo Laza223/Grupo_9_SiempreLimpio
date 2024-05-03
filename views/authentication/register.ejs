@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("../partials/head") %> 
+<body>
+    <%- include("../partials/logo") %>
+    
+    <section class="section-register">
+        
+        <div class="contenedor-register">
+
+        <div class="formulario">
+    
+            <h2>CREAR CUENTA</h2>
+
+           <form action="#" >
+
+        <div class="input-register">
+            <input type= "text" required>
+            <label for="#">Nombre y apellido</label>
+        </div>
+        <div class="input-register">
+            <input type= "email" required>
+            <label for="#">ingrese su email</label>
+        </div>
+
+        <div class="input-register">
+            <input type= "password" required>
+            <label for="#">Contraseña</label>
+        </div>
+        <div class="input-register">
+            <input type= "password" required>
+            <label for="#">Repetir Contraseña</label>
+        </div>
+
+        <div class="terminos">
+            <label for="#">
+                <input type="checkbox"> acepto terminos y condiciones
+                <a href="#">¿Olvidaste tu Contraseña?</a>
+            </label>
+        </div>
+    </form>
+
+    <div>
+        <button class="button-register">REGISTRARSE</button>
+
+        <div class="iniciar">
+            <p>¿ya tienes cuenta? <a href="/autenticacion/iniciar">inicia sesion</a></p>
+        </div>
+    </div>
+       
+    <div class ="iconos9">
+        
+        <i class="fa-solid fa-rotate-left"></i>
+    </div>
+
+</div>
+        </div>
+</section>
+    <%- include("../partials/scripts") %> 
+</body>
+</html>
