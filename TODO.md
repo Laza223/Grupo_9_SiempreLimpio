@@ -34,5 +34,3 @@ Lista de Pendientes y Mejoras
 
 
 ### Investigación
-
-
