@@ -1,15 +1,10 @@
 'use strict';
 
 const rolesJSON = require("../../database/roles.json")
+
 const rolesDBMapped = rolesJSON.map((r) => {
   return { name: r.name };
 });
-
-const rolesDBMapped2 = rolesJSON.map((r) => {
-  return {
-    name: r.name
-  }
-})
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {

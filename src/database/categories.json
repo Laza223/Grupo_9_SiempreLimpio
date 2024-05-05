@@ -1,26 +1,30 @@
 [
     {
         "id": 1,
-        "name": "detergentes"
+        "name": "Detergentes"
     },
     {
         "id": 2,
-        "name": "limpiadores liquidos"
+        "name": "Limpiadores líquidos"
     },
     {
         "id": 3,
-        "name": "accesorios"
+        "name": "Accesorios"
     },
     {
         "id": 4,
-        "name": "aerosoles"
+        "name": "Aerosoles"
     },
     {
         "id": 5,
-        "name": "geles"
+        "name": "Geles"
     },
     {
         "id": 6,
-        "name": "jabones"
+        "name": "Jabones"
+    },
+    {
+        "id": 7,
+        "name": "Limpiadores"
     }
 ]

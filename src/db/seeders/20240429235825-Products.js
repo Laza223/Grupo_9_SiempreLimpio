@@ -1,10 +1,10 @@
 'use strict';
 
 const productsJSON = require("../../database/products.json")
-const categoriasJSON = require("../../database/")
+const categoriasJSON = require("../../database/categories.json")
 
 const productsDBMapped = productsJSON.map(p => {
-  const category = categoriasJSON.find(c => c.name === p.category)
+  const category = categoriasJSON.find(c => c.name === p.categoria)
   return {
     name: p.name,
     description: p.description,
@@ -17,7 +17,7 @@ const productsDBMapped = productsJSON.map(p => {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Products', productsJSON, {});
+    await queryInterface.bulkInsert('Products', productsDBMapped, {});
   },
 
   async down (queryInterface, Sequelize) {

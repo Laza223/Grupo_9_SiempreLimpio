@@ -11,8 +11,7 @@ const statusesDBMapped = statusesJSON.map((s) => {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-     await queryInterface.bulkInsert('statuses', [{
-     }], {});
+     await queryInterface.bulkInsert('statuses', statusesDBMapped, {});
     
   },
 

@@ -9,8 +9,11 @@ const ordersDBMapped = ordersJSON.map(o => {
   const user = usersJSON.find(u => u.id === o.userId)
   const product = productsJSON.find(p => p.id === o.productId)
   return {
-    userId: user.id,
-    productId: product.id
+    user_id: o.user,
+    date: o.date,
+    status_id: o.status,
+    shipping_address: o.shipping_address,
+    payment_method: o.payment_method,
   }
 })
 
