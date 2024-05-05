@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "active": true,
+        "street": "Calle falsa 123",
+        "street_number": 123,
+        "city": "Ciudad falsa",
+        "province": "Provincia falsa",
+        "zip_code": 12345,
+        "country": "Pais falso",
+        "user_id": 1
+    }
+]

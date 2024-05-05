@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "detergentes"
+    },
+    {
+        "id": 2,
+        "name": "limpiadores liquidos"
+    },
+    {
+        "id": 3,
+        "name": "accesorios"
+    },
+    {
+        "id": 4,
+        "name": "aerosoles"
+    },
+    {
+        "id": 5,
+        "name": "geles"
+    },
+    {
+        "id": 6,
+        "name": "jabones"
+    }
+]

@@ -1,6 +1,5 @@
 'use strict';
 
-
 const usersJSON = require("../../database/users.json")
 const rolesJSON = require("../../database/roles.json")
 
