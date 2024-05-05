@@ -10,9 +10,8 @@ const orderItemsDBMapped = orderItemsJSON.map(o => {
   const product = productsJSON.find(p => p.id === o.productId)
   const user = usersJSON.find(u => u.id === o.userId)
   return {
-    orderId: order.id,
-    productId: product.id,
-    userId: user.id
+    order_id: o.id,
+    product_id: o.product_id,
   }
 })
 
@@ -20,10 +19,10 @@ const orderItemsDBMapped = orderItemsJSON.map(o => {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert("OrderItems", orderItemsDBMapped, {});
+    await queryInterface.bulkInsert("order_items", orderItemsDBMapped, {});
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete("OrderItems", null, {});
+    await queryInterface.bulkDelete("order_items", null, {});
   }
 };
