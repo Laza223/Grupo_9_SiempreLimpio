@@ -170,9 +170,7 @@
     .div-offers {
         display: flex;
         width: 100%;
-        margin-left: 15px;
         padding: 10px;
-        margin-top: 15px;
         border-radius: 30px;
     }
 
@@ -202,6 +200,11 @@
 @media (min-width: 1044px) {
 
     .div-offers {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .div-offers h5 {
         position: relative;
         animation-name: deslizar;
         animation-duration: 12s;
