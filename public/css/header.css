@@ -37,6 +37,10 @@ header .logo-ubicacion {
     text-decoration: none;
 }
 
+.div-button a {
+    text-decoration: none;
+}
+
 .div-button h3 {
     display: none;
 }

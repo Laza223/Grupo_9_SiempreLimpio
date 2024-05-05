@@ -4,7 +4,7 @@
     }
 
     50% {
-        left: 600px
+        left: calc(100vw - 500px)
     }
 
     100% {
@@ -14,7 +14,7 @@
 
 
 .home-main {
-    background-color: rgb(231, 229, 229);
+    background-color: white;
 }
 
 .img-tip {
@@ -129,11 +129,11 @@
         margin: initial;
         margin: 10px 0px;
         box-shadow: none;
-
+        border: solid lightgray 3px;
     }
 
     .clean-product:hover {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        box-shadow: 0px 0px 10px var(--azulFont);
     }
 
     .clean-product:hover img {
@@ -169,8 +169,7 @@
 
     .div-offers {
         display: flex;
-        width: 435px;
-        background-color: var(--turquesa);
+        width: 100%;
         margin-left: 15px;
         padding: 10px;
         margin-top: 15px;
@@ -178,8 +177,9 @@
     }
 
     .div-offers h5 {
-        width: 435px;
-        color: white;
+        width: 500px;
+        color: var(--azulFont);
+        text-shadow: var(--turquesa) 1px 1px;
     }
 
     .div-anuncios {
@@ -204,7 +204,7 @@
     .div-offers {
         position: relative;
         animation-name: deslizar;
-        animation-duration: 10s;
+        animation-duration: 12s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
