@@ -2,9 +2,9 @@
     {
         "id": 1,
         "user" : 1,
-        "status" : "completada",
+        "status" : 2,
         "shipping_adress" : "Calle falsa 123",
-        "payment_method" : "efectivo",
+        "payment_method" : 1,
         "date" : "2022-01-01 00:00:00",
         "total" : 1000,
         "products" : [{ "name" : "detergentes", "quantity" : 2 }, { "name" : "limpiadores liquidos", "quantity" : 1 }]
