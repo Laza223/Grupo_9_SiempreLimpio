@@ -1,4 +1,7 @@
 'use strict';
+
+const { toDefaultValue } = require('sequelize/lib/utils');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -9,31 +12,33 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nombre: {
+      name: {
         type: Sequelize.STRING
       },
-      precio: {
+      price: {
         type: Sequelize.DECIMAL
       },
-      categoria: {
-        type: Sequelize.TEXT
+      categoryId: {
+        type: Sequelize.INTEGER
       },
       stock: {
         type: Sequelize.INTEGER
       },
-      imagen: {
+      image: {
         type: Sequelize.STRING
       },
-      descripcion: {
+      description: {
         type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       }
     });
   },

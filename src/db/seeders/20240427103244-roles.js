@@ -1,6 +1,7 @@
 'use strict';
 
 const rolesJSON = require("../../database/roles.json")
+
 const rolesDBMapped = rolesJSON.map((r) => {
   return { name: r.name };
 });

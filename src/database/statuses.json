@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "status": "pendiente"
+    },
+    {
+        "id": 2,
+        "status": "completada"
+    },
+    {
+        "id": 3,
+        "status": "cancelada"
+    }
+]
