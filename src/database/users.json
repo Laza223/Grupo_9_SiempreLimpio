@@ -26,5 +26,14 @@
       "password": "$2a$10$aS/ZpDImWt8.mvtPTnXhcuhPbd/9ddjQw5LzWHlsjwY.BSyLONJkW",
       "avatar": "",
       "role": "usuario"
+   },
+   {
+      "id": 4,
+      "name": "Luke",
+      "surname": "Maciel",
+      "email": "lucasmaciel17ynine@gmail.com",
+      "password": "$2a$10$VcjVPqvMQl/zRvp561BM.ecxXh1YGCw2InudFBHXNZncHoQ.yyYCC",
+      "avatar": "",
+      "role": "usuario"
    }
 ]

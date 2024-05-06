@@ -1,52 +1,28 @@
-const { loadData, saveData } = require("../../database");
+const db = require("../../db/models")
 const bcrypt = require("bcryptjs");
-const { validationResult, fileValidationError} = require("express-validator")
+const { validationResult, fileValidationError } = require("express-validator")
 
-module.exports = (req, res) => {
-/*   let errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    console.log(errors);
-    res.render("/autenticacion/registrar", {errors: errors.mapped()})
-  }
-  const { name, surname, email, password } = req.body;
-  const users = loadData("users");
-  const newUser = {
-    id: !users.length ? 1 : users[users.length - 1].id + 1,
-    name: name?.trim(),
-    surname: surname?.trim(),
-    email: email?.trim(),
-    password: bcrypt.hashSync(password?.trim(), 10),
-    avatar: "",
-    role: "usuario",
-  };
+module.exports = async (req, res) => {
 
-  users.push(newUser);
+  const errors = validationResult(req);
 
-  saveData(users, "users");
-
-  res.redirect("/") */
-  let errors = validationResult(req);
   if (errors.isEmpty()) {
+
     const { name, surname, email, password } = req.body;
-  const users = loadData("users");
-  const newUser = {
-    id: !users.length ? 1 : users[users.length - 1].id + 1,
-    name: name?.trim(),
-    surname: surname?.trim(),
-    email: email?.trim(),
-    password: bcrypt.hashSync(password?.trim(), 10),
-    avatar: "",
-    role: "usuario",
-  };
 
-  users.push(newUser);
+    await db.User.create({
+      name: name.trim(),
+      surname: surname.trim(),
+      email: email.trim(),
+      password: bcrypt.hashSync(password.trim(), 12),
+      avatar: "default-avatar",
+      roleId: 1
+    })
 
-  saveData(users, "users");
-
-  return res.redirect("/")
+    return res.redirect("/autenticacion/iniciar")
   } else {
     console.log(errors);
-    return  res.render("./authentication/register",  {errors: errors.mapped()})
+    return res.render("./authentication/register", { errors: errors.mapped() })
   }
 
 };

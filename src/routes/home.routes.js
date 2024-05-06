@@ -5,6 +5,9 @@ const homeController = require("../controllers/other");
 
 // "/"
 router.get("/", homeController.home)
+
 router.get("/home",(req,res) => res.redirect("/"))
+
+router.get("/buscar",homeController.search )
 
 module.exports = router
