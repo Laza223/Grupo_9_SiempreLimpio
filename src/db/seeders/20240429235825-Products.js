@@ -6,10 +6,10 @@ const categoriasJSON = require("../../database/categories.json")
 const productsDBMapped = productsJSON.map(p => {
   const category = categoriasJSON.find(c => c.name === p.categoria)
   return {
-    name: p.name,
-    description: p.description,
-    price: p.price,
-    image: p.image,
+    name: p.nombre,
+    description: p.descripcion,
+    price: p.precio,
+    image: p.imagen,
     categoryId: category.id
   }
 })

@@ -19,7 +19,13 @@ module.exports = {
         type: Sequelize.DECIMAL
       },
       categoryId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Categories"
+          },
+          key: "id"
+        }
       },
       stock: {
         type: Sequelize.INTEGER
