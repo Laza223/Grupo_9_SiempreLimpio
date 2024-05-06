@@ -1,5 +1,13 @@
-const productos = require("../../database/products.json")
+const db = require('../../db/models');
 
 module.exports = (req, res) => {
-  res.render("./other/home", {productos})
+
+  db.Product.findAll()
+  .then((products) => {
+    return res.render("./other/home", {productos: products})
+  })
+
+
+
+
 }

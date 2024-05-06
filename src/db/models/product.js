@@ -13,14 +13,14 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Product.hasMany(
         models.Order, {
-          as: "orders",
-          foreignKeys: "product_id"
-        }
+        as: "orders",
+        foreignKeys: "product_id"
+      }
       )
-      Product.belongsTo(models.Category,{
-        foreignKeys:"category_id",
-        as: "categorias"
-    })
+      Product.belongsTo(models.Category, {
+        foreignKeys: "categoryid",
+        as: "category"
+      })
     }
   }
   Product.init({

@@ -4,7 +4,7 @@ const statusesJSON = require("../../database/statuses.json")
 
 const statusesDBMapped = statusesJSON.map((s) => {
   return {
-    name: s.name
+    name: s.status
   }
 })
 

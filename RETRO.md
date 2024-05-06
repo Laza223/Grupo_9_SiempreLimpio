@@ -99,3 +99,26 @@
 - Es esencial fomentar un sentido más fuerte de responsabilidad individual en cuanto a la gestión del tiempo y la realización de las tareas asignadas. La comunicación no solo debe servir para coordinar, sino también para motivar la autogestión y asegurar que la procrastinación disminuya, promoviendo así la entrega puntual de los entregables.
 
 En resumen, mientras avanzamos desde el Sprint 5, la comunicación no solo ha demostrado ser fundamental para el éxito de nuestro proyecto, sino que también ha surgido como el vehículo a través del cual podemos abordar y superar nuestras áreas de mejora. La comunicación efectiva debe continuar siendo una prioridad, ya que es el pilar que sostiene nuestra colaboración, innovación y crecimiento colectivo.
+
+
+# Retrospectiva del Proyecto - Sprint 6
+
+## Seguir haciendo
+- Reuniones para el trabajo en equipo
+- Comunicación vía mensajes
+- Dedicación de tiempo al sitio
+
+## Hacer mas
+- Intercambio de ideas
+- Propuestas e innovaciones para el sitio
+
+## Empezar a hacer
+- Definir día y hora de Daylies
+- Optimizar tiempo en Daylies 
+
+## Hacer menos
+- Entregas grupales fuera de fecha
+
+ ## Dejar de hacer
+- No consideramos que tengamos una actividad para incluir acá
+
