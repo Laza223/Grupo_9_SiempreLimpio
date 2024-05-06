@@ -55,14 +55,14 @@
          <div class="input-group mb-3  col-6  categorias">
           <label class="input-group-text " for="inputGroupSelect01">categorias</label>
           <select class="form-select " id="inputGroupSelect01">
-        
-            <option value="1">Desengrasantes</option>
-            <option value="2">Desinfectantes</option>
-            <option value="4">Desodorante de pisos</option>
-            <option value="5">Detergentes</option>
-            <option value="6">Desodorante de ambiente</option>
-            <option value="7">Repelentes</option>
-            <option value="8">Mopas</option>
+            <option value="">seleccione categoria</option>
+            <% categoria.array.forEach(c=> { %>
+              <option value="<%= c.id %>"><%=c.name %></option>
+              
+    
+            
+    
+            <% }) %>
           </select>
           <hr>
         </div>
