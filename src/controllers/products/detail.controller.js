@@ -1,8 +1,13 @@
-const productos = require("../../database/products.json")
+const db = require('../../db/models');
+
 
 module.exports =  (req, res) =>{
         let id = +req.params.id;
 
-       let producto = productos.find( producto => producto.id === id);
-        return res.render ('./products/detailProduct.ejs', {producto});
+        db.Product.findByPk(id,{
+            include: "category"
+        })
+        .then((product) => {
+            return res.render ('./products/detailProduct.ejs', {producto: product});
+        })
     }
