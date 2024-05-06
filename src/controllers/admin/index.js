@@ -1,5 +1,4 @@
 module.exports = {
-    home: require("./dashboard.controller.js"),
     list: require("./listProduct.controller.js"),
     update: require("./update.controller.js"),
     deleteProduct: require("./deleteProduct.controller.js"),

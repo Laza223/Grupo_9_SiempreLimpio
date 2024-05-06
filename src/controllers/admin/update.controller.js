@@ -1,37 +1,26 @@
-const path = require("path");
-const fs = require("fs");
-
-const pathProducts = path.join(__dirname, "../../database/products.json");
-const productos = JSON.parse(fs.readFileSync(pathProducts, 'utf8'));
+const db = require("../../db/models");
 
 module.exports = (req, res) => {
-  const { nombre, precio, descripcion, categoria, disponible, stock } = req.body;
-  const { id } = req.params;
+const {name, price, category, stock, description} = req.body
 
-  // Actualizar productos
-  let productsEdit = productos.map((producto) => {
-    console.log("Producto actualizado1:", id);
-    if (producto.id === +id) {
-      const productEdit = {
-        ...producto, 
-        nombre: nombre.trim(),
-        precio: +precio,
-        descripcion: descripcion.trim(),
-        categoria: categoria.trim(),
-        stock: +stock,
-      };
-      console.log("Producto actualizado2:", id);
-      return productEdit; 
-    }
-    console.log("Producto actualizado3:", id);
-    return producto; 
-  });
-
-  // Convertir a JSON y escribir en el archivo
-  const pathProducts = path.join(__dirname, "../../database/products.json");
-  fs.writeFileSync(pathProducts, JSON.stringify(productsEdit, null, 3), "utf-8");
-  console.log("Producto actualizado4:", id);
-  return res.redirect("/admin/dashboard");
-
-
-};
+    db.Product.update(
+        {
+        
+            name: req.body.name,
+            price: price,
+            categoryId: category, 
+            stock: stock,
+            //image: 
+            description: description
+        },
+        {
+            where: { id: req.params.id } 
+        }
+    )
+    .then(() => {
+        res.redirect("/admin/dashboard/productos");
+    })
+    .catch(error => {
+        console.error("Error al actualizar el producto:", error);
+    });
+}

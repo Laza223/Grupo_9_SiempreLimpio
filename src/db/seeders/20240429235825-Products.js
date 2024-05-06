@@ -9,6 +9,7 @@ const productsDBMapped = productsJSON.map(p => {
     name: p.nombre,
     description: p.descripcion,
     price: p.precio,
+    stock: p.stock,
     image: p.imagen,
     categoryId: category.id
   }

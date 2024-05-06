@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-    .dash-body {
+    .dashboard-body{
         display: flex;
         background-color: #dee2e6;
+    }
+
+    .dash-navBar {
         display: flex;
+        background-color: #dee2e6;
         flex-direction: row;
         margin: 0;
     }

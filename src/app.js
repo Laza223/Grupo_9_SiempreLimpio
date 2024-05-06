@@ -6,6 +6,10 @@ var logger = require('morgan');
 const methodOverride = require('method-override');  //PUT Y DELETE HABILITADO
 const partials = require("express-partials")
 const session = require("express-session")
+const bodyParser = require('body-parser')
+
+
+
 
 const checkUser = require("./middlewares/checkUser")
 const checkUserCookies  = require('./middlewares/checkUserCookies');
@@ -25,10 +29,11 @@ var app = express();
 app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(partials());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(session({ secret: "palabra secreta"}) );
 app.use(checkUser)

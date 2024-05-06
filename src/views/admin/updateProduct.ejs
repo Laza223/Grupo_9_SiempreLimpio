@@ -1,70 +1,57 @@
 <html lang="en">
-  <%- include("../partials/head", {title: "Editar producto"}) %> 
-<body>
-  <%- include("./dashboard") %> 
-  <main class="edicion-producto">
+<%- include("../partials/head", {title: "Editar producto"}) %>
+<body class="dashboard-body">
+<%- include("./navBar") %>
+<main class="edicion-producto">
     <h2 class="h2-edit">Editar producto</h2>
-    <div class="button-volver">
-      <a href="/admin/dashboard" class="btn btn-primary">Volver</a>
-    </div>
-    <form action="/admin/dashboard/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form-edit">
-      <div class="mb-3 col-6">
-        <label for="exampleInputPassword1" class="form-label">Nombre</label>
-        <input name="nombre" value="<%= producto.nombre %>" type="text" class="form-control input-edicion" id="exampleInputPassword1">
-        <hr>
-      </div>
-      <div class="mb-3 col-6">
-        <label for="exampleInputEmail1" class="form-label">Precio</label>
-        <input name="precio" value="<%= producto.precio %>" type="text" class="form-control input-edicion" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <hr>
-      </div> 
-      <div class="mb-1 col-6">
-        <label for="exampleInputStock" class="form-label">Stock</label>
-        <input name="stock" value="<%= producto.stock %>" type="number" class="form-control input-edicion" id="exampleInputStock">
-        <hr>
-    </div>
-    
-      <div class="mb-3 col-6 descripcion">
-        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-        <textarea class="form-control input-edicion" id="exampleFormControlTextarea1" rows="3"><%= producto.descripcion %></textarea>
-        <hr>
-      </div>
 
-    <!--   <div class="mb-3 col-6">
-        <label for="file" class="form-label">Selecciona una imagen</label>
-        <input type="file" name="file" id="file" accept=".jpg,.png,.jpeg">
-
-        <div id="container">
-         <p>Imagen actual</p>
-          <img src="/images/<%= /* producto.imagen */ %>" alt="">
-          <p>Nueva imagen</p>
-          <div id="preview" class="styleImage"></div>
+    <form action="/admin/dashboard/editar/<%= producto.id %>?_method=PUT" method="POST" class="form-edit">
+        <div class="mb-3 col-6">
+            <label for="exampleInputPassword1" class="form-label">Nombre</label>
+            <input name="name" value="<%= producto.name %>" type="text" class="form-control input-edicion" id="exampleInputPassword1">
+            <hr>
         </div>
-  
-       
 
-        <hr>
-      </div>
- -->
-      <select class="form-select" id="inputGroupSelect01" name="categoria">     
-        <option <%= producto.categoria === 'desengrasantes' ? 'selected' : '' %>>Desengrasantes</option>
-        <option <%= producto.categoria === 'desinfectantes' ? 'selected' : '' %>>Desinfectantes</option>
-        <option <%= producto.categoria === 'desodoante de pisos' ? 'selected' : '' %>>Desodorante de pisos</option>
-        <option <%= producto.categoria === 'detergentes' ? 'selected' : '' %>>Detergentes</option>
-        <option <%= producto.categoria === 'desodorante de ambiente' ? 'selected' : '' %>>Desodorante de ambiente</option>
-        <option <%= producto.categoria === 'repelentes' ? 'selected' : '' %>>Repelentes</option>
-        <option <%= producto.categoria === 'mopas' ? 'selected' : '' %>>Mopas</option>
-      </select>
-      
-      <div class="buttons">
-        <button type="submit" class="btn btn-success row gap-3 col-2 boton-guardar">Guardar</button>
-        <button type="reset" class="btn btn-danger row gap-3 col-2 boton-borrar">Borrar</button>
-      </div>
+        <div class="mb-3 col-6">
+            <label for="exampleInputEmail1" class="form-label">Precio</label>
+            <input name="price" value="<%= producto.price %>" type="text" class="form-control input-edicion" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <hr>
+        </div>
+        <div class="mb-1 col-6">
+            <label for="exampleInputStock" class="form-label">Stock</label>
+            <input name="stock" value="<%= producto.stock %>" type="number" class="form-control input-edicion" id="exampleInputStock">
+            <hr>
+        </div>
+
+        <div class="mb-3 col-6 descripcion">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+            <textarea class="form-control input-edicion" name="description" id="exampleFormControlTextarea1" rows="3"><%= producto.description %></textarea>
+            <hr>
+        </div>
+
+        <div class="mb-3 col-6">
+            <label for="inputGroupSelect01" class="form-label">Categoría</label>
+            <select class="form-select" id="inputGroupSelect01" name="category">
+              <% categorias.forEach(c => { %>
+                  <option <%= producto.category && producto.category.name === c.name ? 'selected' : '' %> value="<%= c.id %>"> <%= c.name %> </option>
+              <% }) %>
+          </select>
+          
+          
+        </div>
+
+        <div class="buttons">
+            <button type="reset" class="btn btn-danger row gap-3 col-2 boton-borrar">Deshacer cambios</button>
+            <button type="submit" class="btn btn-success row gap-3 col-2 boton-guardar">Guardar</button>
+        </div>
     </form>
-  </main>
+    <div class="button-volver">
+        <a href="/admin/dashboard/productos" class="btn btn-primary">Volver</a>
+    </div>
+</main>
 
-  <script src="/js/editPreview.js"></script>
+<script src="/js/editPreview.js"></script>
 
-  <%- include("../partials/scripts") %> 
+<%- include("../partials/scripts") %>
 </body>
 </html>

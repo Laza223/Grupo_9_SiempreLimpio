@@ -1,0 +1,56 @@
+<html lang="en">
+  <%- include("../partials/head", { title: "Productos en database"}) %> 
+
+    <%- include("./navBar") %> 
+    <body class="dashboard-body">
+    <main>
+         <h2 class="h2-product" >PRODUCTOS</h2>
+       <div class="tabla">
+        <table class="table table-bordered border-primary">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Disponible</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Borrar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% productos.forEach(producto => { %>
+              <tr>
+                <th scope="row"><%= producto.id %></th>
+                <td><%= producto.name %></td>
+                <td>$<%= producto.price %></td>
+                <td><%= producto.stock %></td>
+                <td><%= producto.description %></td>
+                <td><img src="/images/<%= producto.image %>" alt="jabon" width="50px"></td>
+                <td><%= producto.category.name %></td>
+                <td><%= producto.stock >= 1 ? "Si" : "No" %></td>
+                <td> <a href="/admin/dashboard/editar/<%= producto.id %>" class="btn btn-warning boton-editar">editar</a></td>
+                <td> <button type="reset" class="btn btn-danger boton-eliminar">Eliminar</button></td></td>
+              </tr>
+              <% }) %>
+             
+         
+            </div> 
+            <div class="button-crear">
+               <a href="/admin/dashboard/crear"> <button type="button" class="btn btn-primary">Crear</button></a>
+                </div>
+          
+          
+            </tbody>
+          </table>
+
+          </main>
+         
+      
+          <%- include("../partials/scripts") %> 
+            
+          </body>
+          </html>
