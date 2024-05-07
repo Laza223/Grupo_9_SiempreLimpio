@@ -21,8 +21,12 @@ module.exports = async (req, res) => {
 
     return res.redirect("/autenticacion/iniciar")
   } else {
+    //return res.send(errors)
     console.log(errors);
-    return res.render("./authentication/register", { errors: errors.mapped() })
+    return res.render("./authentication/register", { 
+      old: req.body,
+      errors: errors.mapped() 
+    })
   }
 
 };
