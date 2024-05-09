@@ -63,10 +63,9 @@ const loginEmail = body("email")
     });
 
 const loginPassword = body("password")
-    .notEmpty().withMessage("Campo requerido").bail()
-    .withMessage("El campo contraseña es requerido!").bail()
+    .notEmpty().withMessage("Campo requerido").withMessage("El campo contraseña es requerido!").bail()
     .isLength({ min: 8, max: 16 }).withMessage("Longitud invalida!").bail()
-    .matches(regExPass).withMessage("Dato invalido").bail()
+    .matches(regExPass).withMessage("Credenciales invalidas").bail()
     .custom(async (value, { req }) => {
         try {
             const { email } = req.body;

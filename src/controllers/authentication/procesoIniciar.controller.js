@@ -31,7 +31,10 @@ module.exports = async (req, res) => {
 
   } else {
     const errorsMap = errors.mapped()
-    res.send(errorsMap)
+    return res.render("./authentication/login", { 
+      old: req.body,
+      errors: errors.mapped() 
+    })
   }
 //  const { email, password, remember} = req.body;
 //  const users = loadData ("users");
