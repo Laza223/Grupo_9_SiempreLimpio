@@ -36,6 +36,23 @@ module.exports = {
         },
         defaultValue: 1
       },
+      addressId: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+        references: {
+          model:{
+            tableName: "Addresses"
+          },
+          key: "id"
+        },
+        defaultValue: 1
+      },
+      dni: {
+        type: Sequelize.INTEGER
+      },
+      phoneNumber: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

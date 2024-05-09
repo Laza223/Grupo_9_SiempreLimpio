@@ -11,7 +11,10 @@ const usersDBMapped = usersJSON.map(u => {
     email: u.email,
     password: u.password,
     avatar: u.avatar,
-    roleId: role.id
+    roleId: role.id,
+    addressId: u.addressID,
+    dni: u.dni,
+    phoneNumber: u.phoneNumber
   }
 })
 

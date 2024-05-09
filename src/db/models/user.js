@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
       User.belongsTo(models.Role, {
         foreignKey: "roleId",
         as: "role"
+      }),
+      User.belongsTo(models.Address,{
+        foreignKey: 'addressId',
+        as: 'address'
       })
     }
   }
@@ -23,7 +27,10 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     avatar: DataTypes.STRING,
-    roleId: DataTypes.INTEGER
+    roleId: DataTypes.INTEGER,
+    addressId: DataTypes.INTEGER,
+    dni: DataTypes.INTEGER,
+    phoneNumber: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',

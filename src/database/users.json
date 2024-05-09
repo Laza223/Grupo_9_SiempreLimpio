@@ -7,7 +7,10 @@
       "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
       "avatar": "",
       "address": "",
-      "role": "usuario"
+      "role": "usuario",
+      "addressID": 1,
+      "dni": 40111222,
+      "phoneNumber": "11-43219876"
    },
    {
       "id": 2,
@@ -16,7 +19,10 @@
       "email": "jose@gmail.com",
       "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
       "avatar": "",
-      "role": "usuario"
+      "role": "usuario",
+      "addressID": 2,
+      "dni": 40111222,
+      "phoneNumber": "11-43219876"
    },
    {
       "id": 3,
@@ -25,7 +31,10 @@
       "email": "lazarofeijoo2004@gmail.com",
       "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
       "avatar": "",
-      "role": "usuario"
+      "role": "usuario",
+      "addressID": 3,
+      "dni": 40111222,
+      "phoneNumber": "11-43219876"
    },
    {
       "id": 4,
@@ -34,6 +43,33 @@
       "email": "lucasmaciel17ynine@gmail.com",
       "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
       "avatar": "",
-      "role": "usuario"
+      "role": "usuario",
+      "addressID": 4,
+      "dni": 40111222,
+      "phoneNumber": "11-43219876"
+   },
+   {
+      "id": 5,
+      "name": "Tamara",
+      "surname": "Diaz",
+      "email": "tamaradiaz@gmail.com",
+      "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
+      "avatar": "",
+      "role": "usuario",
+      "addressID": 5,
+      "dni": 40111222,
+      "phoneNumber": "11-43219876"
+   }, 
+   {
+      "id": 6,
+      "name": "Perfil",
+      "surname": "Admin",
+      "email": "admin.acount@gmail.com",
+      "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
+      "avatar": "",
+      "role": "ADMIN",
+      "addressID": 4,
+      "dni": 40111222,
+      "phoneNumber": "11-43219876"
    }
 ]

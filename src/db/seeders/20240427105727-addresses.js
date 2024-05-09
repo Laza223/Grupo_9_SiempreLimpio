@@ -13,8 +13,7 @@ const addressesDBMapped = addressesJSON.map(a => {
     city: a.city,
     province: a.province,
     zipCode: a.zip_code,
-    country: a.country,
-    userId: a.user_id
+    country: a.country
   }
 }).flat(1)
 

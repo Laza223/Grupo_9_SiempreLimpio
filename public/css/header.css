@@ -210,7 +210,7 @@ header form input {
 
 .action-buttons a {
     background-color: var(--turquesa);
-    width: 35%;
+    width: 60%;
     height: 80%;
     color: white;
     display: flex;
@@ -219,6 +219,7 @@ header form input {
     border-radius: 5px;
     font-size: 18px;
 }
+
 
 
 
