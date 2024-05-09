@@ -4,26 +4,26 @@
       "name": "Rodrigo",
       "surname": "Ruiz",
       "email": "rodrigo10ruiz@hotmail.com",
-      "password": "$2a$10$CN/ZUoChybwnA17b8o8twePgkmvxEIgJNTqdkw0KlPWWDMpzjUYva",
+      "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
       "avatar": "",
       "address": "",
       "role": "usuario"
    },
    {
       "id": 2,
-      "name": "sad11111111111111",
-      "surname": "asd",
+      "name": "Jose",
+      "surname": "Diaz",
       "email": "jose@gmail.com",
-      "password": "$2a$10$LO0uxJn1Lf1m.pztaNUzxOLHAjWcDMU/UUTVSORRATnmmrGdSwgxq",
+      "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
       "avatar": "",
       "role": "usuario"
    },
    {
       "id": 3,
-      "name": "asdasdasd",
-      "surname": "asdasd",
+      "name": "Lazaro",
+      "surname": "Feijoo",
       "email": "lazarofeijoo2004@gmail.com",
-      "password": "$2a$10$aS/ZpDImWt8.mvtPTnXhcuhPbd/9ddjQw5LzWHlsjwY.BSyLONJkW",
+      "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
       "avatar": "",
       "role": "usuario"
    },
@@ -32,7 +32,7 @@
       "name": "Luke",
       "surname": "Maciel",
       "email": "lucasmaciel17ynine@gmail.com",
-      "password": "$2a$10$VcjVPqvMQl/zRvp561BM.ecxXh1YGCw2InudFBHXNZncHoQ.yyYCC",
+      "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
       "avatar": "",
       "role": "usuario"
    }
