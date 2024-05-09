@@ -5,7 +5,7 @@
 
 
 header .logo-ubicacion {
-    background-color: lightgray;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     padding: 5px;
@@ -31,6 +31,8 @@ header .logo-ubicacion {
     border: none;
     border-radius: 8px;
     margin: 0px 5px;
+    display: flex;
+    justify-content: center;
 }
 
 .user-button i {
@@ -39,11 +41,18 @@ header .logo-ubicacion {
 
 .div-button a {
     text-decoration: none;
+    text-align: center;
 }
 
 .div-button h3 {
     display: none;
 }
+.apt {
+    display: none;
+}
+
+
+
 
 header .fa-location-dot {
     position: relative;
@@ -102,6 +111,124 @@ header form input {
     border: none;
     padding: 4px;
 }
+
+
+
+
+
+
+
+.div-button {
+    cursor: pointer;
+}
+
+
+.user-button {
+    display: flex;
+    align-items: center;
+}
+
+#label-text {
+    display: none;
+}
+
+.div-button label {
+    color: aliceblue;
+    display: flex;
+    margin-bottom: 0px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+.perfil-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: white;
+    z-index: 3;
+    top: 60px;
+    right: 0px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    box-shadow: 8px 8px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.apt:checked + .perfil-box-container{
+    height: 400px;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(to top, white 50%, var(--azulOscuro) 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-img img {
+    width: auto;
+    height: 95%;
+    border: solid white 8px;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-name-info {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+#user-email-info {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--azulOscuro);
+}
+
+.addres-info {
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.action-buttons a {
+    background-color: var(--turquesa);
+    width: 35%;
+    height: 80%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .burguer-menu {
@@ -198,8 +325,9 @@ header form input {
 
 .iconos p {
     display: none;
-
 }
+
+
 
 .iconos {
     display: flex;
@@ -218,13 +346,38 @@ header form input {
         width: max-content;
     }
 
+    #label-text {
+        display: flex;
+        margin: 0px 5px;
+    }
+
+    .perfil-box-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        position: absolute;
+        width: 300px;
+        height: 0px;
+        background-color: white;
+        z-index: 3;
+        top: 42px;
+        right: -100px;
+        overflow: hidden;
+        transition: height 0.5s ease;
+        border-radius: 18px;
+        box-shadow: 8px 8px 6px 0px rgba(0, 0, 0, 0.5);
+    }
+    
+
     .div-button {
         background-color: var(--azulOscuro);
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         border-radius: 8px;
         margin-right: 10px;
+        position: relative;
     }
 
     .div-button h3 {
@@ -243,7 +396,6 @@ header form input {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: lightgray;
         height: 80px;
     }
 
@@ -288,6 +440,115 @@ header form input {
         font-size: 16px;
     }
 
+
+    .div-button {
+        position: relative;
+        cursor: pointer;
+    }
+
+    #label-text {
+        display: flex;
+    }
+
+    .user-button {
+        display: flex;
+        align-items: center;
+    }
+
+    .div-button label {
+        color: aliceblue;
+        display: flex;
+        margin-bottom: 0px;
+        padding-left: 8px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    
+    .perfil-box-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        position: absolute;
+        width: 350px;
+        height: 0px;
+        background-color: white;
+        z-index: 3;
+        top: 42px;
+        right: -100px;
+        overflow: hidden;
+        transition: height 0.5s ease;
+        border-radius: 18px;
+        box-shadow: 8px 8px 6px 0px rgba(0, 0, 0, 0.5);
+    }
+    
+    .apt:checked + .perfil-box-container{
+        height: 450px;
+    }
+
+    .avatar-img {
+        width: 100%;
+        height: 140px;
+        background: linear-gradient(to top, white 50%, var(--azulOscuro) 50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .avatar-img img {
+        width: auto;
+        height: 95%;
+        border: solid white 8px;
+        border-radius: 50%;
+    }
+    
+    .user-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .user-name-info {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+    }
+
+    #user-email-info {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: var(--azulOscuro);
+    }
+    
+    .addres-info {
+        text-align: center;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: space-around;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .action-buttons a {
+        background-color: var(--turquesa);
+        width: 35%;
+        height: 80%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    .action-buttons a:hover {
+        background-color: var(--azulOscuro);
+        transition: background-color 0.3s;
+    }
 
     .menu-lista {
         background-color: var(--turquesa);

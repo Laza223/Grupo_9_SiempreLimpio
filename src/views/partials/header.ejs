@@ -13,11 +13,29 @@
           </a></a>
         </div>
         <% } else { %>
-          <a href="/autenticacion/registrar" class="button-a">
-            <button class="user-button"><i class="fa-solid fa-user-large"></i>
-              <h3>Perfil</h3>
-            </button>
-          </a>
+          <div class="div-button">
+            <label for="active-perfil-tarjet" id="label-text">Perfil</label>
+            <input type="checkbox" id="active-perfil-tarjet" class="apt">
+            <div class="perfil-box-container">
+              <div class="avatar-img"> <img src="images/avatar-default.png" alt=""></div>
+              <div class="user-info">
+                <h2 class="user-name-info"><%= locals.userLogin.name + " " + locals.userLogin.surname %></h2>
+                <h3 id="user-email-info"><%= locals.userLogin.email %></h3>
+                <p class="addres-info"> CP: 1888 <br>
+                    Florencio Varela <br>
+                    Av. San juan 2001
+                </p>
+              </div>
+              <div class="action-buttons">
+                <a href="#">Ver Perfil</a>
+                <a href="#">Modificar</a>
+
+              </div>
+            </div>
+            <label for="active-perfil-tarjet" class="user-button">
+<i class="fa-solid fa-user-large"></i>
+            </label>
+          </div>
           <% } %>
             <div class="div-button">
               <h3>Carrito</h3>

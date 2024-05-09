@@ -1,3 +1,4 @@
 module.exports = {
-    ...require("./authentication.validation")
+    ...require("./authentication.validation"),
+  
   }

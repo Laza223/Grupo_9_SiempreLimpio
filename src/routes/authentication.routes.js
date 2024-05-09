@@ -3,7 +3,7 @@ const router = express.Router();
 const { validationResult } = require("express-validator");
 
 const { login, procesoIniciar, logout, register, registerProcess} = require("../controllers/authentication");
-const { registerValidation } = require("../middlewares/validations");
+const { registerValidation, loginValidation } = require("../middlewares/validations");
 
 
 
@@ -11,7 +11,7 @@ const { registerValidation } = require("../middlewares/validations");
 
 // Login
 router.get("/iniciar", login); 
-router.post("/iniciar", procesoIniciar); 
+router.post("/iniciar", loginValidation ,procesoIniciar); 
 
 // Registro  
 

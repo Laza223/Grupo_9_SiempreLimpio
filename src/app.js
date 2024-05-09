@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override');  //PUT Y DELETE HABILITADO
+const insertDataLocals = require('./middlewares/insertDataLocals');
 const partials = require("express-partials")
 const session = require("express-session")
 const bodyParser = require('body-parser')
@@ -34,10 +35,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(partials());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(session({ secret: "palabra secreta"}) );
 app.use(checkUser)
 app.use(checkUserCookies)
+app.use(insertDataLocals)
 
 
 /* CONFIGS */
