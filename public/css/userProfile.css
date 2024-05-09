@@ -1,3 +1,8 @@
+.bg-user-perfil {
+    border-top: solid white 2px;
+    background-image: linear-gradient(to bottom, #3b7ec0, #3772ac, #336698, #305a85, #2c4f72);
+}
+
 .perfil-container {
     width: 100%;
     max-width: 700px;
@@ -6,6 +11,8 @@
     justify-content: center;
     align-items: center;
     margin: auto;
+    background-color: white;
+    box-shadow: 0px 0px 15px white;
 }
 
 
@@ -33,6 +40,8 @@
     justify-content: center;
     align-items: start;
     margin: auto;
+    background-color: white;
+    box-shadow: 0px 0px 15px white;
 }
 
 .user-dates ul {
@@ -45,13 +54,14 @@
 .user-dates ul h2 {
     width: 100%;
     background-color: var(--azulOscuro);
-    padding: 5px;
+    padding: 4px;
     color: white;
+    margin: 10px 0px;
 }
 
 .user-dates ul li {
-    padding: 2px;
-    padding-left: 5px;
+    padding: 8px;
+    padding-left: 10px;
 }
 
 .update-user-info {
@@ -61,6 +71,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: solid var(--turquesa) 2px;
+    margin-top: 10px;
 }
 
 .update-user-info a {
@@ -73,6 +85,15 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+    border: solid 2px var(--azulOscuro);
+
+}
+
+.update-user-info a:hover {
+    background-color: #3b6a99;
+    border: solid 2px var(--turquesa);
+    transition: background-color 0.3s;
+    transition: border 0.3s;
 }
 
 .update-user-info a i {
@@ -81,7 +102,8 @@
 }
 
 @media (min-width:768px) {
-    .perfil-container {
-        margin-top: 15px;
+    .bg-user-perfil {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }

@@ -555,10 +555,24 @@ header form input {
         background-color: var(--turquesa);
         display: flex;
         justify-content: space-evenly;
-        padding: 10px;
+        padding: 6px;
         margin-bottom: 0px;
         list-style: none;
         border-bottom: solid 2px var(--azulOscuro);
+    }
+
+    .menu-lista li {
+        padding: 4px;
+        width: 12%;
+        height: 35px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .menu-lista li:hover {
+        border-radius: 8px;
+        background-color: var(--azulOscuro);
+        transition: background-color 0.3s;
     }
 
     .menu-lista li a {

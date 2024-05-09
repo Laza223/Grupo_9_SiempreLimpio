@@ -11,10 +11,11 @@ module.exports = async (req, res) => {
       where: { email: req.body.email.toLowerCase() },
       attributes: {
         exclude: ['password']
-     }
+     },
+     include: "address"
     })
 
-    const { id, name, surname, email, avatar } = userFind
+    const { id, name, surname, email, avatar, address } = userFind
 
 
     req.session.userLogin = {
@@ -22,7 +23,8 @@ module.exports = async (req, res) => {
       name,
       surname,
       email,
-      avatar
+      avatar,
+      address
     }
 
     return res.redirect("/")
@@ -36,26 +38,5 @@ module.exports = async (req, res) => {
       errors: errors.mapped() 
     })
   }
-//  const { email, password, remember} = req.body;
-//  const users = loadData ("users");
-//
-//  const userFind = users.find((u) => u.email === email);
-//
-//  if (!userFind) res.send("El usuario no existe");
-//
-//  const isPasswordValid = bcrypt.compareSync(password, userFind.password);
-//
-//  if (!isPasswordValid) res.send("El password es incorrecto");
-//
-//  req.session.userLogin = {
-//    id: userFind.id,
-//    name: userFind.name,
-//    surname: userFind.surname,
-//    avatar: userFind.avatar,
-//    role: userFind.role,
-//  };
-//
-//  if(remember) res.cookie("userLogin", req.session.userLogin, {maxAge: 6000 * 30});
-//
-//  res.redirect("/")
+
 };

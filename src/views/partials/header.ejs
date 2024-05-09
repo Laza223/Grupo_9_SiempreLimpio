@@ -6,11 +6,12 @@
       <% if (!locals.userLogin) { %>
         <div class="div-button">
           <a href="/autenticacion/registrar">
-          <h3>Ingresar</h3>
-          <a href="/autenticacion/registrar" class="button-a">
-            <button class="user-button"><i class="fa-solid fa-user-large"></i>
-            </button>
-          </a></a>
+            <h3>Ingresar</h3>
+            <a href="/autenticacion/registrar" class="button-a">
+              <button class="user-button"><i class="fa-solid fa-user-large"></i>
+              </button>
+            </a>
+          </a>
         </div>
         <% } else { %>
           <div class="div-button">
@@ -19,11 +20,16 @@
             <div class="perfil-box-container">
               <div class="avatar-img"> <img src="images/avatar-default.png" alt=""></div>
               <div class="user-info">
-                <h2 class="user-name-info"><%= locals.userLogin.name + " " + locals.userLogin.surname %></h2>
-                <h3 id="user-email-info"><%= locals.userLogin.email %></h3>
-                <p class="addres-info"> CP: 1888 <br>
-                    Florencio Varela <br>
-                    Av. San juan 2001
+                <h2 class="user-name-info">
+                  <%= locals.userLogin.name + " " + locals.userLogin.surname %>
+                </h2>
+                <h3 id="user-email-info">
+                  <%= locals.userLogin.email %>
+                </h3>
+                <p class="addres-info">
+                   CP: <%= locals.userLogin.address.zipCode %> <br>
+                   <%= locals.userLogin.address.city %> <br>
+                   <%= locals.userLogin.address.street + " " + locals.userLogin.address.streetNo %>
                 </p>
               </div>
               <div class="action-buttons">
@@ -31,7 +37,7 @@
               </div>
             </div>
             <label for="active-perfil-tarjet" class="user-button">
-<i class="fa-solid fa-user-large"></i>
+              <i class="fa-solid fa-user-large"></i>
             </label>
           </div>
           <% } %>
