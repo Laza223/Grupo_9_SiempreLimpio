@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("../partials/head", {title: "Inicio" }) %>
+
+
+    <body class="home-body">
+        <%- include("../partials/header") %>
+            <main class="bg-user-perfil">
+                <div class="perfil-container">
+                    <div class="user-img"> <img src="images/avatar-default.png" alt=""></div>
+                    <div class="user-info">
+                        <h2 class="user-name-info">
+                            <%= locals.userLogin.name + " " + locals.userLogin.surname %>
+                        </h2>
+                    </div>
+                </div>
+                <div class="user-dates">
+                    <ul>
+                        <h2>Informacion Personal</h2>
+                        <li>Nombre: <%= user.name + " " + user.surname %></li>
+                        <li>DNI: <%= user.dni %></li>
+                        <li>Email: <%= user.email %></li>
+                        <li>Teléfono: <%= user.phoneNumber %></li>
+                    </ul>
+                    
+                    <ul>
+                        <h2>Datos de domicilio</h2>
+                        <li>Calle: <%= user.address.street + " " + user.address.streetNo %> </li>
+                        <li>Ciudad: <%= user.address.city %></li>
+                        <li>Código postal: <%= user.address.zipCode %> </li>
+                        <li>Provincia: <%= user.address.province %></li>
+                        <li>País: <%= user.address.country %></li>
+                    </ul>
+                    <div class="update-user-info">
+                        <a href="#">Modificar Datos<i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                </div>
+            </main>
+
+            <%- include("../partials/footer") %>
+                <%- include("../partials/scripts") %>
+    </body>
+
+</html>

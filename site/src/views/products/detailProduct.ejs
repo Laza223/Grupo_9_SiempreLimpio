@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("../partials/head", {title: producto.nombre}) %>
+
+    <body>
+        <%- include("../partials/header") %>
+
+
+            <main class="home-main">
+                <div class="div-fondo">
+                    <div class="card-container">
+                        <h2>Seleccionaste</h2>
+                        <div class="div-img"><img src="/images/<%= producto.image %>" alt="Esponja">
+                        </div>
+                        <b>
+                            <%= producto.name %>
+                        </b>
+                        <h5> $<%= producto.price%>
+                        </h5>
+                        <p> Categoría: <%= producto.category.name%>
+                        </p>
+                        <!--<div class="div-cantidad">
+                            <p>Cantidad:</p>
+                            <button class="cantidad">0</button>
+                        </div> -->
+                        <div class="cart-button">
+                            <div class="agregar"><button class="carrito"> AGREGAR AL CARRITO</button> 
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <%- include("../partials/footer") %>
+                <%- include("../partials/scripts") %>
+    </body>
+
+</html>
