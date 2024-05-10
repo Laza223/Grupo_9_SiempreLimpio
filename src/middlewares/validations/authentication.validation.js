@@ -30,11 +30,12 @@ const fieldEmail = body("email")
                 if (userFind[0].email === value) {
                     throw new Error("Ya existe un usuario registrado con ese email!!!")
                 }
+                }
+            }catch (error) {
+                throw error
             }
-        } catch (error) {
-            throw error
         }
-    })
+    )
 
 const fieldPassword = body("password")
     .notEmpty().withMessage("Campo requerido").bail()
