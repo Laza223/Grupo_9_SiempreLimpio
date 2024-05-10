@@ -35,7 +35,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(partials());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(session({ secret: "palabra secreta"}) );
+app.use(session({
+  secret: "Palabra Secreta",
+  resave: false, 
+  saveUninitialized: false 
+}));
 app.use(checkUser)
 app.use(checkUserCookies)
 app.use(insertDataLocals)
@@ -54,7 +58,7 @@ app.use("/productos", productRoutes);
 app.use("/admin", adminRoutes);
 
 app.use((req,res, next) => {
-  res.status(404).render("notFound")
+  res.status(404).render("error")
 })
 
 // catch 404 and forward to error handler

@@ -1,11 +1,12 @@
-const db=require("../../db/models")
+const db = require("../../db/models")
 
-module.exports = (req, res) => {
-    db.Category.findAll()
-    .then((categoria) => {
-      res.render("admin/createProduct",{ categoria,title:"crear" },(err, contentView) => {
-        err && res.send(err.message)
-        res.render("partials/dashboard", { contentView })
-      })
-    })
-  };
+module.exports = async (req, res) => {
+  try {
+    const categories = await db.Category.findAll()
+
+    return res.render("admin/createProduct", { categories }) 
+  } catch (error) {
+      return res.render(error)
+
+    }
+  }

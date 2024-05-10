@@ -20,5 +20,5 @@ module.exports = (req, res) => {
     .then((products => {
         return res.render("./other/search", {products: products})
     }))
-    return
+  
 }

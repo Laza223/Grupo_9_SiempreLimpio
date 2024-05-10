@@ -1,18 +1,25 @@
 const db = require("../../db/models");
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
+    try {
+        const { verEliminados } = req.query;
 
-    Promise.all([
-        db.Product.findAll( {
+        const queryOptions = {
             include: [{
                 model: db.Category,
                 as: "category",
-            }]
-        }),
-        db.Category.findAll()
-    ])
-        .then(([productos, categorias]) => {
-            res.render("admin/listProduct", { productos, categorias });
-        })
-        .catch(error => { console.error("Error al obtener producto y categorías:", error); });
-}
+            }],
+            paranoid: verEliminados === "true" ? false : true
+        };
+
+        const [productos, categorias] = await Promise.all([
+            db.Product.findAll(queryOptions),
+            db.Category.findAll()
+        ]);
+
+        res.render("admin/listProduct", { productos, categorias, verEliminados }); 
+    } catch (error) {
+        console.error("Error al obtener producto y categorías:", error);
+        res.status(500).send("Error interno del servidor.");
+    }
+};

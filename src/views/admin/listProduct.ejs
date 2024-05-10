@@ -1,56 +1,99 @@
+<!DOCTYPE html>
 <html lang="en">
-  <%- include("../partials/head", { title: "Productos en database"}) %> 
+<%- include("../partials/head", { title: "Productos en database" }) %>
 
-    <%- include("./navBar") %> 
+
+
     <body class="dashboard-body">
-    <main>
-         <h2 class="h2-product" >PRODUCTOS</h2>
-       <div class="tabla">
-        <table class="table table-bordered border-primary">
+      <%- include("./navBar") %>
+      <main class="admin-main-list">
+        <div class="admin-header-list">
+          <div >
+          
+           <h2 >Productos</h2>
+          </div>
+          <div class="button-crear">
+            <% if (verEliminados === "true") { %>
+              <a href="/admin/dashboard/productos?verEliminados=false">
+                <button type="button" class="btn btn-outline-secondary">Excluir productos eliminados</button>
+              </a>
+            <% } else { %>
+              <a href="/admin/dashboard/productos?verEliminados=true">
+                <button type="button" class="btn btn-outline-secondary">Ver productos eliminados</button>
+              </a>
+          <% } %>
+            
+            <a href="/admin/dashboard/crear"> <button type="button" class="btn btn-outline-secondary"class="btn btn-primary">Crear producto</button></a>
+          </div>
+          </div>
+          <table class="admin-table-list">
             <thead>
               <tr>
                 <th scope="col">id</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Stock</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Imagen</th>
                 <th scope="col">Categoría</th>
-                <th scope="col">Disponible</th>
-                <th scope="col">Editar</th>
-                <th scope="col">Borrar</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              
               </tr>
             </thead>
             <tbody>
-              <% productos.forEach(producto => { %>
-              <tr>
-                <th scope="row"><%= producto.id %></th>
-                <td><%= producto.name %></td>
-                <td>$<%= producto.price %></td>
-                <td><%= producto.stock %></td>
-                <td><%= producto.description %></td>
-                <td><img src="/images/<%= producto.image %>" alt="jabon" width="50px"></td>
-                <td><%= producto.category.name %></td>
-                <td><%= producto.stock >= 1 ? "Si" : "No" %></td>
-                <td> <a href="/admin/dashboard/editar/<%= producto.id %>" class="btn btn-warning boton-editar">editar</a></td>
-                <td> <button type="reset" class="btn btn-danger boton-eliminar">Eliminar</button></td></td>
-              </tr>
-              <% }) %>
-             
-         
-            </div> 
-            <div class="button-crear">
-               <a href="/admin/dashboard/crear"> <button type="button" class="btn btn-primary">Crear</button></a>
-                </div>
-          
-          
-            </tbody>
-          </table>
+              <% productos.forEach(producto=> { %>
+                <tr class="records">
+                  <th scope="row">
+                    <%= producto.id %>
+                  </th>
+                  <td>
+                    <%= producto.name %>
+                  </td>
+                  <td>$<%= producto.price %>
+                  </td>
+                  <td>
+                    <%= producto.stock %>
+                  </td>
+                  <td>
+                    <%= producto.category.name %>
+                  </td>
+                  <% if (producto.deletedAt === null) { %>
+                  <td> <a href="/admin/dashboard/editar/<%= producto.id %>"
+                    class="btn btn-outline-warning">Editar</a>
+                  </td>
 
-          </main>
-         
-      
-          <%- include("../partials/scripts") %> 
-            
-          </body>
-          </html>
+                      <td>
+                          <a href="/admin/dashboard/eliminar/<%= producto.id %>" class="btn btn-outline-danger">Eliminar</a>
+                        
+                      <% } else { %>
+                        <td>
+                          <button class="btn btn-secondary" disabled>Eliminado el <%= producto.deletedAt ? producto.deletedAt.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : '' %></button>
+                      </td>
+                      
+                        <td><form action="/admin/dashboard/restaurar/<%= producto.id %>?_method=PUT" method="post">
+                          <button type="submit" href="/admin/dashboard/restaurar/<%= producto.id %>" class="btn btn-success" >Restaurar</a>
+                          </form>
+                        </td>
+                         
+                      <% } %>
+                  </td>
+
+                </tr>
+                <% }) %>
+
+        
+
+
+
+        </tbody>
+
+
+        </table>
+
+      </main>
+
+
+      <%- include("../partials/scripts") %>
+
+    </body>
+
+</html>

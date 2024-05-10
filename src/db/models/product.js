@@ -33,8 +33,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Product',
-    onDelete: "CASCADE",
-    onUpdate: "CASCADE",
+   /*  onDelete: "CASCADE",
+    onUpdate: "CASCADE", */
+    paranoid: true
   });
   return Product;
 };

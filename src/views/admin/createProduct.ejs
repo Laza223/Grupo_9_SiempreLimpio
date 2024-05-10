@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="en">
   <%- include("../partials/head", {title: "Crear producto"}) %> 
   <body class="dashboard-body">
@@ -7,39 +9,27 @@
     <main class="create-product">
            
   <h2 class="h2-create">crear producto</h2>
-  <form action="/views/admin/createProduct.ejs" method="post" class="crear-form"></form>">
+  <form action="/admin/dashboard/crear" method="POST"  class="crear-form">
 <div class="mb-3    col-6 ">
-  <label for="exampleInputPassword1" class="form-label label-create">nombre</label>
-  <input type="text" class="form-control input-create" id="exampleInputPassword1">
+  <label for="inputName" class="form-label label-create">nombre</label>
+  <input type="text" class="form-control input-create" id="inputName" name="name">
   <hr>
 </div>
-<div class="mb-3 col-6">
-  <label for="number" class="form-label btn-success">id</label>
-  <input type="number" class="form-control input-create" id="number" aria-describedby="number">
-  <hr>
-</div> 
 
 <div class="mb-3  col-6 ">
-  <label for="exampleInputEmail1" class="form-label"> Precio</label>
-  <input type="text" class="form-control input-create" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <label for="inputPrice" class="form-label"> Precio</label>
+  <input type="number" name="price" class="form-control input-create" id="inputPrice" aria-describedby="emailHelp">
   <hr>
 </div> 
    <div class="mb-1  col-6 ">
-    <label for="exampleInputPassword1" class="form-label">stock</label>
-    <input type="number" class="form-control input-create" id="exampleInputPassword1">
+    <label for="inputStock" class="form-label">Stock</label>
+    <input type="number" name="stock" class="form-control input-create" id="inputStock">
     <hr>
   </div>
-  <div class="mb-3    col-6 ">
-    <label for="exampleInputPassword1" class="form-label label-create">cantidad</label>
-    <input type="text" class="form-control input-create" id="exampleInputPassword1">
-    <hr>
-  </div>
-
-
 
   <div class="mb-3   descripcion col-6">
-    <label for="exampleFormControlTextarea1" class="form-label ">descripcion</label>
-    <textarea class="form-control input-create" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="inputDescripcion" class="form-label ">descripcion</label>
+    <textarea name="description" class="form-control input-create" id="inputDescripcion" rows="3"></textarea>
     <hr>
     </div>
    
@@ -54,16 +44,11 @@
          
          <div class="input-group mb-3  col-6  categorias">
           <label class="input-group-text " for="inputGroupSelect01">categorias</label>
-          <select class="form-select " id="inputGroupSelect01">
-            <option value="">seleccione categoria</option>
-            <% categoria.array.forEach(c=> { %>
-              <option value="<%= c.id %>"><%=c.name %></option>
-              
-    
-            
-    
+          <select class="form-select" id="inputGroupSelect01" name="category">
+            <% categories.forEach(c => { %>
+                <option value="<%= c.id %>" > <%= c.name %> </option>
             <% }) %>
-          </select>
+        </select>
           <hr>
         </div>
         

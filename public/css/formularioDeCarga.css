@@ -1,13 +1,4 @@
-/*body{ padding: 0%;
-    margin: 0%;
-    background-color: var(--azulOscuro);
-}
-main{
-    padding: 0%;
-    margin: 0%;
-    background-color: var(--azulOscuro);
-    height: 100%;
-}*/
+
 .h2-product{
     color:white;
     display: flex;
@@ -31,16 +22,15 @@ main{
 
 .button-crear{
     padding-bottom :10px;
-    width: 100px;
+    margin-top: 12px;
+    margin-right: 20px;
+ 
  }
 .boton-editar{ width: 80px;
 
 }
 .boton-eliminar{
-    width: 80px;
-    height: auto;
+ margin-left: 50px;
 }
 
-.button-crear a button{
-    background-color: #2e0e36;
-}
+

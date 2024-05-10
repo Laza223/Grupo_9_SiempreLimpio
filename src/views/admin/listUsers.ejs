@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head", { title: "Usuarios en database" }) %>
+
+
+
+    <body class="dashboard-body">
+      <%- include("./navBar") %>
+      <main class="admin-main-list">
+        <div class="admin-header-list">
+        <h2>Usuarios</h2>
+      </div >
+          <table class="admin-table-list">
+            <thead>
+              <tr >
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Email</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Imagen</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% users.forEach(user=> { %>
+                <tr class="records">
+                  <th scope="row">
+                    <%= user.id %>
+                  </th>
+                  <td>
+                    <%= user.name %>
+                  </td>
+                  <td>
+                    <%= user.surname %>
+                  </td>
+                  <td>
+                    <%= user.email %>
+                  </td>
+                  <td>
+                    <%= user.role.name %>
+                  </td>
+                  <td><img src="/images/avatar-default.png" alt="jabon" width="30px" ></td>
+                  <td><a href="/admin/dashboard/usuarios" class="btn btn-success">Detalles</a></td>
+               
+              
+               
+                <% }) %>
+            </tr>
+    
+        </tbody>
+        </table>
+    </div></div>
+      </main>
+
+
+      <%- include("../partials/scripts") %>
+
+    </body>
+
+</html>
