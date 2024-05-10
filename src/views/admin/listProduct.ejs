@@ -8,9 +8,10 @@
       <%- include("./navBar") %>
       <main class="admin-main-list">
         <div class="admin-header-list">
-          <div >
+          <div class="admin-header-list-title">
           
            <h2 >Productos</h2>
+          
           </div>
           <div class="button-crear">
             <% if (verEliminados === "true") { %>
@@ -62,7 +63,7 @@
                   </td>
 
                       <td>
-                          <a href="/admin/dashboard/eliminar/<%= producto.id %>" class="btn btn-outline-danger">Eliminar</a>
+                        <a href="/admin/dashboard/eliminar/<%= producto.id %>" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i> </a>
                         
                       <% } else { %>
                         <td>

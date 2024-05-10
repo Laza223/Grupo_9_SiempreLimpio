@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.admin-navBar-user{
+    font-size: 10px;
+    color: white;
+}
     .dashboard-body{
         display: flex;
         background-color: #dee2e6;

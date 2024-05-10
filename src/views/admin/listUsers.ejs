@@ -7,9 +7,16 @@
     <body class="dashboard-body">
       <%- include("./navBar") %>
       <main class="admin-main-list">
+
         <div class="admin-header-list">
-        <h2>Usuarios</h2>
-      </div >
+          <div class="admin-header-list-title">
+      
+           <h2 >Usuarios</h2>
+          
+          </div>
+          </div>
+
+
           <table class="admin-table-list">
             <thead>
               <tr >
@@ -41,7 +48,7 @@
                     <%= user.role.name %>
                   </td>
                   <td><img src="/images/avatar-default.png" alt="jabon" width="30px" ></td>
-                  <td><a href="/admin/dashboard/usuarios" class="btn btn-success">Detalles</a></td>
+                  <td><a href="/admin/dashboard/usuarios/detalle/<%= user.id %>" class="btn btn-success">Detalles</a></td>
                
               
                
@@ -50,7 +57,7 @@
     
         </tbody>
         </table>
-    </div></div>
+   
       </main>
 
 

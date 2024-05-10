@@ -1,6 +1,7 @@
 module.exports = {
-    list: require("./listProduct.controller.js"),
-    listUsers: require("./listUsers.controller.js"),
+    list: require("./productList.controller.js"),
+    userList: require("./userList.controller.js"),
+    userDetail: require("./userDetail.controller.js"),
     create: require("./create.controller.js"),
     store: require("./storeProduct.controller"), 
     edit: require("./edit.controller.js"),

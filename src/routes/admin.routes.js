@@ -6,7 +6,9 @@ const admin = require("../controllers/admin");
 // "/admin"
 
 router.get("/dashboard/productos", adminController.list); 
-router.get("/dashboard/usuarios", adminController.listUsers);
+
+router.get("/dashboard/usuarios", adminController.userList);
+router.get("/dashboard/usuarios/detalle/:id", adminController.userDetail)
 
 
 router.get("/dashboard/editar/:id", adminController.edit);

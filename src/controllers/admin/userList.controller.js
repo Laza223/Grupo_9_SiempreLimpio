@@ -10,5 +10,5 @@ module.exports = async (req, res) => {
         })
 
         return res.render("admin/listUsers", {users})
-    }    catch (error)  { console.log("Error al obtener producto:", error); }
+    }    catch (error)  { console.log("Error al obtener los usuarios:", error); }
 }
