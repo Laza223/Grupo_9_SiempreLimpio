@@ -5,8 +5,8 @@
     background: #203c58 no-repeat;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 105px);
     overflow: hidden;
+    min-height: calc(100vh - 129px);
 }
 .contenedor-register{
     margin-top: 20px;
