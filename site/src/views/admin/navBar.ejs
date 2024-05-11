@@ -1,27 +1,46 @@
 <div class="dash-navBar">
-<a href="/admin/dashboard/productos"><img class="img-logo" src="/images/logo.png" alt=""></a>
+    
+    <a href="/" class="img-logo"><img src="/images/logo.png" alt=""></a>
+    
     <div class="barra-lateral">
-       
-        <div class="lupa-busqueda">
+        <!--<div class="lupa-busqueda">
             <input type="text" name="" id="barra-busqueda">
             <button><i id="lupa" class="fa-solid fa-magnifying-glass"></i></button>
+        </div > -->
+        <h2><i class="fa-solid fa-user-gear"></i>   Panel Administrador</h2>
+        <div class="a-desp">
+            <a href="/admin/dashboard/usuarios">
+                <i class="fa-solid fa-users"></i>
+                <span> Usuarios</span>
+            </a>
+            <a href="/admin/dashboard/productos">
+                <i class="fa-solid fa-shop"></i>
+                <span>Lista de productos</span>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Analíticas</span>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-message"></i>
+                <span>Mensajes</span>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-file"></i>
+                <span>Archivos</span>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-truck"></i>
+                <span>Pedidos</span>
+            </a>
+            <a href="#">
+                <i class="fa-regular fa-heart"></i>
+                <span>Favoritos</span>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configuración</span>
+            </a>
         </div>
-              
-                    <h4 class="admin-navBar-user">
-                        <%=locals.userLogin? locals.userLogin.name + " " + locals.userLogin.surname : ""%>
-                    </h4>
-          
-       
-        <ul>
-            <a href="/admin/dashboard/usuarios"><li><i class="fa-solid fa-users"></i><span> Usuarios</span></li></a>
-            <a href="/admin/dashboard/productos"> <li><i class="fa-solid fa-shop"></i><span> Lista de productos</span></li></a>
-            <li><i class="fa-solid fa-chart-simple"></i><span> Analíticas</span></li>
-            <li><i class="fa-solid fa-message"></i><span> Mensajes</span></li>
-            <li><i class="fa-solid fa-file"></i><span> Archivos</span></li>
-            <li><i class="fa-solid fa-truck"></i><span> Pedidos</span></li>
-            <li><i class="fa-regular fa-heart"></i><span> Favoritos</span></li>
-            <li><i class="fa-solid fa-gear"></i><span> Configuración</span></li>
-        </ul>
     </div>
 </div>
-

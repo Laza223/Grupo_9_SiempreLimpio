@@ -4,100 +4,201 @@
     box-sizing: border-box;
 }
 
-.admin-navBar-user{
+.dash-navBar {
+    display: flex;
+    background-color: #dee2e6;
+    flex-direction: column;
+    margin: 0;
+}
+
+.img-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.img-logo img {
+    width: auto;
+    height: 100px;
+}
+
+.barra-lateral {
+    background-color: #2e0e36;
+    width: 88px;
+    height: 100%;
+    transition: width 0.3s;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+}
+
+.barra-lateral:hover {
+    width: 350px;
+}
+
+.barra-lateral h2 {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    margin-top: 10px;
+    width: 350px;
+    height: 110px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-bottom: solid 5px #dee2e6;
+}
+
+.barra-lateral h2 i {
+    width: 72px;
+    font-size: 20px;
+    margin-right: 20px;
+    padding-left: 8px;
+}
+
+.a-desp {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.a-desp a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    width: 350px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 8px;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.a-desp a i {
+    width: 72px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+
+.a-desp a span { 
+    width: 270px;
+    text-align: start;
+    padding-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.a-desp a:hover {
+    background-color: white;
+ }
+
+.a-desp a:hover i {
+    color: #2e0e36
+}
+
+.a-desp a:hover span {
+    color: #2e0e36
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.barra-lateral ul li:hover {
+    color: #2e0e36;
+    background-color: white;
+    margin-right: 0;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.admin-navBar-user {
     font-size: 10px;
     color: white;
 }
-    .dashboard-body{
-        display: flex;
-        background-color: #dee2e6;
-    }
 
-    .dashboard-body a{
-        text-decoration: none;
-    }
+.dashboard-body {
+    display: flex;
+    background-color: #dee2e6;
+}
 
-    .dash-navBar {
-        display: flex;
-        background-color: #dee2e6;
-        flex-direction: row;
-        margin: 0;
-    }
+.dashboard-body a {
+    text-decoration: none;
+}
 
-    .barra-lateral {
-      
-        width: 225px;
-        background-color: #2e0e36;
-        width: 100px;
-        transition: width 0.3s;
-        overflow-x: hidden;
-    }
 
-    .barra-lateral:hover {
-        width: 350px;
-    }
 
-    .barra-lateral:hover ul li span {
-        display: inline;
-    }
 
-    .barra-lateral ul li span {
-        display: none;
-    }
 
-    .barra-lateral ul li:hover span {
-        display: inline;
-    }
 
-    .lupa-busqueda {
-        position: relative;
-    }
+.barra-lateral:hover ul li span {
+    display: inline;
+}
 
-    #barra-busqueda {
-        height: 40px;
-        margin: 25px 25px 10px;
-        width: 175px;
-        border-radius: 10px;
-        border: none;
-        padding-left: 10px;
-        font-weight: bold;
-    }
+.barra-lateral ul li span {
+    display: none;
+}
 
-    #lupa {
-        position: absolute;
-        right: 13px;
-        color: black;
-        font-size: 20px;
-        top: 35px;
-    }
+.barra-lateral ul li:hover span {
+    display: inline;
+}
 
-    .img-logo {
-        width: 203px;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        padding: 10px;
-        border-radius: 0px 0px 0px 30px;
-    }
+.lupa-busqueda {
+    height: 80px;
+}
 
-    .barra-lateral ul {
-        padding-left: 10px;
-    }
+#barra-busqueda {
+    height: 40px;
+    margin: 25px 25px 10px;
+    width: 175px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    font-weight: bold;
+}
 
-    .barra-lateral ul li {
-        padding: 15px;
-        border-radius: 20px;
-        margin-bottom: 10px;
-        font-family: "Roboto", sans-serif;
-        color: white;
-        list-style-type: none;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
+#lupa {
+    position: absolute;
+    right: 13px;
+    color: black;
+    font-size: 20px;
+    top: 35px;
+}
 
-    .barra-lateral ul li:hover {
-        color: #2e0e36;
-        background-color: white;
-        margin-right: 0;
-        border-radius: 30px 0px 0px 30px;
-    }
+
+
+.barra-lateral ul {
+    padding-left: 10px;
+}
+
+.barra-lateral ul li {
+    padding: 15px;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+
+
+
