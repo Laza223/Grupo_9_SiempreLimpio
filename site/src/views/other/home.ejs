@@ -57,6 +57,10 @@
                 </section>
             </main>
 
+            <% if (locals.userLogin?.roleAdmin === true) { %>   
+                <a href="/admin/dashboard/productos" class="access-dashboard"><i class="fa-solid fa-user-gear"></i></a>
+            <% } %>
+
             <%- include("../partials/footer") %>
                 <%- include("../partials/scripts") %>
     </body>

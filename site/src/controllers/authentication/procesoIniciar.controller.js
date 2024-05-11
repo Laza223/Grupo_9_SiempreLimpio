@@ -15,8 +15,13 @@ module.exports = async (req, res) => {
      include: "address"
     })
 
-    const { id, name, surname, email, avatar, address } = userFind
+    const { id, name, surname, email, avatar, address, roleId } = userFind
+    
+    let roleAdmin = false
 
+    if(roleId === 2) {
+      roleAdmin = true
+    }
 
     req.session.userLogin = {
       id,
@@ -24,12 +29,11 @@ module.exports = async (req, res) => {
       surname,
       email,
       avatar,
-      address
+      address,
+      roleAdmin
     }
 
     return res.redirect("/")
-
-    res.send(req.session.userLogin)
 
   } else {
     const errorsMap = errors.mapped()

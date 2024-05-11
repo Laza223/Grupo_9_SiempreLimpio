@@ -117,6 +117,27 @@
     font-family: sans-serif;
 }
 
+
+.access-dashboard {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azulOscuro);
+    border-radius: 50%;
+    border: solid 3px var(--turquesa);
+}
+
+.access-dashboard i {
+    color: white;
+    font-size: 40px;
+}
+
+
 @media (min-width: 426px) {
 
     .section-products {
@@ -211,4 +232,24 @@
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
+
+    .access-dashboard {
+        text-decoration: none;
+        width: 100px;
+        height: 100px;
+        bottom: 40px;
+        right: 40px;
+    }
+
+    .access-dashboard:hover {
+        background-color: var(--turquesa);
+        border: solid 3px var(--azulFont);
+        transition: background-color 1s;
+        transition: border 0.6s;
+    }
+
+    .access-dashboard i {
+        font-size: 50px;
+    }
+        
 }

@@ -32,6 +32,7 @@
     position: absolute;
     top: 0px;
     z-index: 3;
+    border-right: solid 5px #dee2e6;
 }
 
 .barra-lateral:hover {

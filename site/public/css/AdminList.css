@@ -1,13 +1,14 @@
 .admin-main-list {
     font-family: "roboto, sans-serif";
-    padding-left: 100px;
+    padding: 30px;
+    padding-left: 108px;
 }
 
 .admin-header-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 .admin-header-list svg {
@@ -36,13 +37,13 @@
 }
 
 .admin-table-list {
-    width: 95%;
+    width: 100%;
     margin: auto;
     border-collapse: collapse;
     text-align: center;
     overflow-y: scroll;
     display: block;
-    height: calc( 100vh - 250px)
+    height: calc( 100vh - 270px);
 }
 
 .admin-table-list thead th {

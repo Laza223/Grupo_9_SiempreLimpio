@@ -6,7 +6,7 @@ const { login, procesoIniciar, logout, register, registerProcess} = require("../
 const { registerValidation, loginValidation } = require("../middlewares/validations");
 
 
-
+// "/autenticacion"
 //Falta agregar validaciones
 
 // Login

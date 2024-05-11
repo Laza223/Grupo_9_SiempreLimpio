@@ -33,7 +33,12 @@
                 </p>
               </div>
               <div class="action-buttons">
-                <a href="/perfil">Ver Perfil</a>
+                <% if (locals.userLogin?.roleAdmin === true) { %>
+                <a href="/admin/dashboard/productos">Panel Admin</a>
+                <% } else { %>
+                  <a href="/perfil">Ver Perfil</a>
+                  <% } %>
+                <a href="/autenticacion/cerrar-sesion">Cerrar Sesion</a>
               </div>
             </div>
             <label for="active-perfil-tarjet" class="user-button">
