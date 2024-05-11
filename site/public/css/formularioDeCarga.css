@@ -1,0 +1,36 @@
+
+.h2-product{
+    color:white;
+    display: flex;
+    justify-content: center;
+    background-color: #2e0e36;
+    padding: 10px;
+    box-shadow: 10px 10px 5px 0px #22477d;
+    width: 400px;
+    margin: auto;
+    margin-top: 10px;
+}
+.tabla{
+    margin-left: 50px;
+    padding-top: 20px;
+}
+.table-bordered{
+    overflow-y: scroll;
+    display: block;
+    height: 80vh;
+}
+
+.button-crear{
+    padding-bottom :10px;
+    margin-top: 12px;
+    margin-right: 20px;
+ 
+ }
+.boton-editar{ width: 80px;
+
+}
+.boton-eliminar{
+ margin-left: 50px;
+}
+
+
