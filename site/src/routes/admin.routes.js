@@ -2,10 +2,11 @@ const express = require("express");
 const router = express.Router();
 const adminController = require("../controllers/admin");
 const admin = require("../controllers/admin");
+const checkAdmin = require("../middlewares/checkAdmin")
 
 // "/admin"
 
-router.get("/dashboard/productos", adminController.list); 
+router.get("/dashboard/productos", checkAdmin, adminController.list); 
 
 router.get("/dashboard/usuarios", adminController.userList);
 router.get("/dashboard/usuarios/detalle/:id", adminController.userDetail)

@@ -2,11 +2,11 @@
    .section-register{
     display: flex;
     width: 100%;
-    background: #203c58 no-repeat;
+    background: #203c58;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    min-height: calc(100vh - 129px);
+    min-height: calc(100vh - 105px);
 }
 .contenedor-register{
     margin-top: 20px;
@@ -39,6 +39,11 @@
     flex-direction: column;
     margin-top: 20px;
 }
+
+.input-register input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #203c58 inset !important;
+    -webkit-text-fill-color: white !important;
+}
 .input-register label{
     color: white;
     font-size: 20px;
@@ -52,16 +57,32 @@
     font-size: 22px;
 }
 
+#ipe-c {
+    display: flex;
+}
+
+#contrasenia {
+    width: 90%;
+    height: 30px;
+}
+
+#input-pass-eye {
+    width: 10%;
+    color: var(--turquesa);
+    border-bottom: solid 2px var(--turquesa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 .input-register input:focus{
     outline: none;
 }
 
 .input-register i{
-    position: absolute;
-    color: blue;
-    font-size: 1.6rem;
-    top: 10px;
-    right: 8px;
+font-size: 18px;
 }
 
 .text-danger-error {

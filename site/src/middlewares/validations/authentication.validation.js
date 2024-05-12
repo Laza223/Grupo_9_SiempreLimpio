@@ -74,10 +74,13 @@ const loginPassword = body("password")
                 where: { email }
             })
             
-            const isValidPassword = compareSync(value, userFind[0].password)
-            if (!isValidPassword) {
-                throw new Error("Credenciales inválidas");
+            if(userFind.length > 0) {
+                const isValidPassword = compareSync(value, userFind[0].password)
+                if (!isValidPassword) {
+                    throw new Error("Credenciales inválidas");
+                }
             }
+
         } catch (error) {
             throw error
         }

@@ -27,12 +27,18 @@
 
                     <div class="input-register">
                         <label for="#">Contraseña</label>
-                        <input type= "password" required name="password" value="" id="contrasenia">
+                        <div id="ipe-c">
+                            <input type= "password" required name="password" value="" id="contrasenia">
+                            <span id="input-pass-eye">
+                                <i class="fa-solid fa-eye" id="icon-eye"></i>
+                            </span>
+                        </div>
                         <% if (locals.errors) { %>
                             <p class="text-danger-error">
                                 <%= locals.errors?.password?.msg %>
                             </p>
                             <% } %>
+                        
                     </div>
                   
                   <div class="terminos">
@@ -51,26 +57,11 @@
                     <div class="iniciar">
                         <p>¿No tengo cuenta? <a href="/autenticacion/registrar">Registrarse</a></p>
                     </div>
-                   
-                 
                 </div>
-
             </div>
-
-
         </div>
-
-
     </section>
-
-
-
-
-
-
-    <%- include("../partials/scripts") %> 
+    <script src="../js/mostrarContrasenia.js"></script>
   </body>
-
-
 </html>
    
