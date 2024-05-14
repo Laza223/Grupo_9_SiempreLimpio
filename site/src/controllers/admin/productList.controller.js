@@ -13,8 +13,7 @@ module.exports = async (req, res) => {
                 }],
                 paranoid: paranoidOptions
             })
-       
-
+            
         res.render("admin/listProduct", { products, eliminados }); 
     } catch (error) {
         console.error("Error al obtener producto y categorías:", error);
