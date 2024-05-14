@@ -36,8 +36,8 @@ module.exports = async (req, res) => {
     return res.redirect("/")
 
   } else {
-    const errorsMap = errors.mapped()
-    return res.render("./authentication/login", { 
+
+    return res.render("authentication/login", { 
       old: req.body,
       errors: errors.mapped() 
     })

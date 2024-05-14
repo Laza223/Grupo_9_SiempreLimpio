@@ -6,7 +6,7 @@ const regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 const expReg = /.png|.jpg|.jpeg|.webp|.gif/i;
 
 
-// VALIDACION REGISTER //
+
 
 const fieldName = body("name")
     .notEmpty().withMessage("Campo requerido").bail()

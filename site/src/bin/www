@@ -6,7 +6,14 @@
 
 var app = require('../app');
 var debug = require('debug')('siemprelimpio:server');
-var http = require('http');
+//var https = require('https');
+var http = require('http')
+var fs = require('fs');
+/* var serverOptions = {
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+}; */
+
 
 /**
  * Get port from environment and store in Express.
@@ -16,10 +23,10 @@ var port = normalizePort(process.env.PORT || '3030');
 app.set('port', port);
 
 /**
- * Create HTTP server.
+ * Create HTTPS server.
  */
 
-var server = http.createServer(app);
+var server = http.createServer( app); //serverOptions
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -78,7 +85,7 @@ function onError(error) {
 }
 
 /**
- * Event listener for HTTP server "listening" event.
+ * Event listener for HTTPS server "listening" event.
  */
 
 function onListening() {

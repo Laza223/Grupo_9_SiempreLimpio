@@ -1,0 +1,28 @@
+.container-file-old-new{
+    display: flex;
+    gap: 20px;
+}
+
+.form-userEdit{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-userEdit{
+    padding: 30px;
+}
+
+.container-input-userEdit{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .container-file-old-new {
+        flex-direction: column;
+    }
+}

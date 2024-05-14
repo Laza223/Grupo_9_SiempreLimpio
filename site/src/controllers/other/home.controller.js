@@ -1,13 +1,19 @@
-const db = require('../../db/models');
+const db = require("../../db/models")
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
+  try {
+    const products = await db.Product.findAll();
 
-  db.Product.findAll()
-  .then((products) => {
-    return res.render("./other/home", {productos: products})
-  })
+    let user = null;
+    if (req.session.userLogin) {
+      const { id } = req.session.userLogin;
+      user = await db.User.findByPk(id, { include: "address" });
+    }
 
+    res.render("other/home", { user, products });
 
-
-
+  } catch (error) {
+    console.error("Error al cargar el home:", error);
+    res.status(500).send("Error interno del servidor");
+  }
 }

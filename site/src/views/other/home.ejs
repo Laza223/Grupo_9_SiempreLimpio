@@ -41,15 +41,15 @@
                     <h5>¡OFERTAS DE LA SEMANA DE LA LIMPIEZA!</h5>
                 </div>
                 <section class="section-products">
-                    <% productos.forEach(producto=> { %>
+                    <% products.forEach(product=> { %>
                         <div class="clean-product">
-                            <div class="img-container"><a href="productos/detalle/<%= producto.id%>">
-                                <img src="./images/<%= producto.image%>" alt="Article">
+                            <div class="img-container"><a href="productos/detalle/<%= product.id%>">
+                                <img src="/images/products/<%= product.image%>" alt="Article">
                             </a></div>
                             <div class="description-container">
                                 <!-- <p><%#= producto.categoria.toUpperCase() %></p> -->
-                                <h2><%= producto.name%></h2>
-                                <h3> $<%= producto.price%></h3>
+                                <h2><%= product.name%></h2>
+                                <h3> $<%= product.price%></h3>
                                 <a id="cart-action" href="#">Añadir al carrito</a>
                             </div>
                         </div>

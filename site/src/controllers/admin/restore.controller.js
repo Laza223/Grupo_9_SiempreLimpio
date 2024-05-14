@@ -8,9 +8,7 @@ module.exports = async (req, res) => {
 
         await db.Product
             .restore({
-                where: {
-                    id
-                }
+                where: { id }
             })
 
         return res.redirect("/admin/dashboard/productos")

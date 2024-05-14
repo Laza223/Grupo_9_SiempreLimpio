@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
   } else {
     //return res.send(errors)
     console.log(errors);
-    return res.render("./authentication/register", { 
+    return res.render("authentication/register", { 
       old: req.body,
       errors: errors.mapped() 
     })

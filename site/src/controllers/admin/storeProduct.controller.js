@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
 
     if (errors.isEmpty()) {
       const { name, price, description, category, stock } = req.body;
-      console.log(errors);
+
 
       await db.Product
         .create({
@@ -16,9 +16,10 @@ module.exports = async (req, res) => {
           price: +price,
           categoryId: +category,
           stock: +stock,
+          image:  req.file.filename,
           description: description.trim()
         })
-
+    
       return res.redirect("/admin/dashboard/productos")
 
     }
@@ -26,6 +27,8 @@ module.exports = async (req, res) => {
 
   catch (error) {
     res.send(error.message)
+    console.log("error al intentar crear");
+ 
   }
 
 }

@@ -8,6 +8,6 @@ module.exports =  (req, res) =>{
             include: "category"
         })
         .then((product) => {
-            return res.render ('./products/detailProduct.ejs', {producto: product});
+            return res.render ('./products/detailProduct.ejs', {product});
         })
     }

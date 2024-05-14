@@ -15,7 +15,7 @@
           
           </div>
           </div>
-
+          <a href="/api/usuarios" class="btn btn-success">Listado de usuarios (JSON)</a>
 
           <table class="admin-table-list">
             <thead>
@@ -47,7 +47,7 @@
                   <td>
                     <%= user.role.name %>
                   </td>
-                  <td><img src="/images/avatar-default.png" alt="jabon" width="30px" ></td>
+                  <td><img src="/images/users/<%= user.avatar %>" alt="jabon" width="30px" ></td>
                   <td><a href="/admin/dashboard/usuarios/detalle/<%= user.id %>" class="btn btn-success">Detalles</a></td>
                
               

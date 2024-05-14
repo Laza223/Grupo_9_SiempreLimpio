@@ -1,6 +1,6 @@
 module.exports = {
-    user: require("./user.controller"),
-    edit: require("./editUser.controller"),
-    userProfile: require("./userProfile.controller")
+    update: require("./update.controller"),
+    edit: require("./edit.controller"),
+    profile: require("./profile.controller")
   };
   

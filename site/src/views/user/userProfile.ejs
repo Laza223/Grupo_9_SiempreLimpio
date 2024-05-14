@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("../partials/head", {title: "Inicio" }) %>
+<%- include("../partials/head", {title: "Mi perfil" }) %>
 
 
     <body class="home-body">
@@ -9,10 +9,10 @@
             <main class="bg-user-perfil">
                 <div class="perfil">
                     <div class="perfil-container">
-                        <div class="user-img"> <img src="images/avatar-default.png" alt=""></div>
+                        <div class="user-img"> <img src="/images/users/<%=user.avatar %>" alt=""></div>
                         <div class="user-info">
                             <h2 class="user-name-info">
-                                <%= locals.userLogin.name + " " + locals.userLogin.surname %>
+                                <%= user.name + " " + user.surname %>
                             </h2>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             </li>
                         </ul>
                         <div class="update-user-info">
-                            <a href="#">Modificar Datos<i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="/perfil/editar">Modificar Datos<i class="fa-solid fa-pen-to-square"></i></a>
                         </div>
                     </div>
                 </div>

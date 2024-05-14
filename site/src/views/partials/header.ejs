@@ -18,18 +18,18 @@
             <label for="active-perfil-tarjet" id="label-text">Perfil</label>
             <input type="checkbox" id="active-perfil-tarjet" class="apt">
             <div class="perfil-box-container">
-              <div class="avatar-img"> <img src="images/avatar-default.png" alt=""></div>
+              <div class="avatar-img"> <img src="/images/users/<%= user.avatar %>" alt=""></div>
               <div class="user-info">
                 <h2 class="user-name-info">
-                  <%= locals.userLogin.name + " " + locals.userLogin.surname %>
+                  <%= user.name + " " + user.surname %>
                 </h2>
                 <h3 id="user-email-info">
-                  <%= locals.userLogin.email %>
+                  <%= user.email %>
                 </h3>
                 <p class="addres-info">
-                   CP: <%= locals.userLogin.address.zipCode %> <br>
-                   <%= locals.userLogin.address.city %> <br>
-                   <%= locals.userLogin.address.street + " " + locals.userLogin.address.streetNo %>
+                   CP: <%= user.address.zipCode %> <br>
+                   <%= user.address.city %> <br>
+                   <%= user.address.street + " " + user.address.streetNo %>
                 </p>
               </div>
               <div class="action-buttons">
@@ -82,44 +82,7 @@
       </form>
 
     </div>
-    <!--<div class="iconos">
-
-            <i class="fa-regular fa-bell"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <a href="/autenticacion/registrar" class="link-user">
-                <i class="fa-regular fa-user"></i>
-            </a>
-
-        </div>
-
-       <div class="iconos">
-
-        <a href="#">
-        <i class="fa-regular fa-bell"></i>
-    </a>
-    <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-
-
-        <% if (locals.userLogin) { %>
-            <a href="/perfil/editar" class="link-user">
-                <i class="fa-regular fa-user"></i>
-            </a>
-            <a href="/autenticacion/cerrar-sesion" class="link-user">
-                <i class="fa-light fa-right-from-bracket"></i>
-            </a>
-            
-            
-            
-          <%} else { %>
-            <a href="/autenticacion/registrar" class="link-user">
-                <i class="fa-regular fa-user"></i>
-            </a>
-            <a href="/autenticacion/iniciar" class="link-user">
-                <i class="fa-solid fa-right-to-bracket"></i>
-            </a>
-          <% } %>
-
-    </div> -->
+  
   </section>
 
 
@@ -132,17 +95,7 @@
         <li><a href="">Aerosoles</a></li>
         <li><a href="">Geles</a></li>
         <li><a href="">Jabones</a></li>
-        <!--<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/admin/dashboard" id="navbarDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            admin
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>  -->
+        
 
     </nav>
 

@@ -14,12 +14,12 @@
           
           </div>
           <div class="button-crear">
-            <% if (verEliminados === "true") { %>
-              <a href="/admin/dashboard/productos?verEliminados=false">
+            <% if (eliminados === "true") { %>
+              <a href="/admin/dashboard/productos?eliminados=false">
                 <button type="button" class="btn btn-outline-secondary">Excluir productos eliminados</button>
               </a>
             <% } else { %>
-              <a href="/admin/dashboard/productos?verEliminados=true">
+              <a href="/admin/dashboard/productos?eliminados=true">
                 <button type="button" class="btn btn-outline-secondary">Ver productos eliminados</button>
               </a>
           <% } %>
@@ -41,7 +41,7 @@
               </tr>
             </thead>
             <tbody>
-              <% productos.forEach(producto=> { %>
+              <% products.forEach(producto=> { %>
                 <tr class="records">
                   <th scope="row">
                     <%= producto.id %>
