@@ -2,7 +2,10 @@ const db = require("../../db/models")
 
 module.exports = async (req, res) => {
   try {
-    const products = await db.Product.findAll();
+    const id = +req.params.id;
+    const products = await db.Product.findAll({
+      where: { categoryId: id }
+    });
     const categories = await db.Category.findAll();
 
     let user = null;
@@ -11,7 +14,7 @@ module.exports = async (req, res) => {
       user = await db.User.findByPk(id, { include: "address" });
     }
 
-    res.render("other/home", { user, products, categories });
+    res.render("products/productsByCategory", { user, products, categories });
 
   } catch (error) {
     console.error("Error al cargar el home:", error);
