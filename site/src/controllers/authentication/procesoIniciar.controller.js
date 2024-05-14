@@ -6,7 +6,6 @@ module.exports = async (req, res) => {
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
-
     const userFind = await db.User.findOne({
       where: { email: req.body.email.toLowerCase() },
       attributes: {

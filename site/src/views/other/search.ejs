@@ -11,8 +11,8 @@
                 <section class="section-products">
                     <% products.forEach(producto=> { %>
                         <div class="clean-product">
-                            <div class="img-container"><a href="productos/detalle/<%= producto.id%>">
-                                <img src="./images/<%= producto.image%>" alt="Article">
+                            <div class="img-container"><a href="/productos/detalle/<%= producto.id%>">
+                                <img src="./images/products/<%= producto.image%>" alt="Article">
                             </a></div>
                             <div class="description-container">
                                 <h2><%= producto.name%></h2>

@@ -7,6 +7,8 @@ module.exports = async (req, res) => {
 
     const id = req.session.userLogin.id;
     
+    const categories = await db.Category.findAll();
+
     const user = await db.User.findByPk(id, { 
       include:[{ model: db.Address, as: "address" },
                { model: db.Role, as: "role" }],
@@ -17,7 +19,7 @@ module.exports = async (req, res) => {
 
     if (!user) { return res.status(404).send("Usuario no encontrado") }
 
-    return res.render("user/userEdit2", { user });
+    return res.render("user/userEdit2", { user, categories });
 
   } catch (error) {
     console.error("Error al obtener el usuario:", error);

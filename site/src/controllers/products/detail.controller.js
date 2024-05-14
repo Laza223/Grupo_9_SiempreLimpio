@@ -6,13 +6,15 @@ module.exports = async (req, res) => {
 
         let product = await db.Product.findByPk(id, { include: "category" })
 
+        const categories = await db.Category.findAll();
+
         let user = null;
         if (req.session.userLogin) {
             const { id } = req.session.userLogin;
             user = await db.User.findByPk(id, { include: "address" });
         }
 
-        res.render('./products/detailProduct.ejs', { user, product });
+        res.render('./products/detailProduct.ejs', { user, product, categories });
 
     } catch (error) {
         console.error("Error al cargar el home:", error);
