@@ -63,12 +63,9 @@
       <input type="checkbox" class="burguer-activate" id="burgcheck">
       <ul class="movile-nav">
         <h2>CATEGORIAS</h2>
-        <li><a href="#">Detergentes</a></li>
-        <li><a href="#">Limpiadores liquidos</a></li>
-        <li><a href="#">Accesorios</a></li>
-        <li><a href="#">Aerosoles</a></li>
-        <li><a href="#">Geles</a></li>
-        <li><a href="#">Jabones</a></li>
+        <% categories.forEach(category => {%>
+          <li><a href="/productos/categoria/<%= category.id%>"><%= category.name %></a></li>
+        <% })%>; 
       </ul>
     </div>
 
@@ -89,14 +86,9 @@
   <section class="categorias">
     <nav>
       <ul class="menu-lista">
-        <li><a href="">Detergentes</a></li>
-        <li><a href="">Limpiadores liquidos</a></li>
-        <li><a href="">Accesorios</a></li>
-        <li><a href="">Aerosoles</a></li>
-        <li><a href="">Geles</a></li>
-        <li><a href="">Jabones</a></li>
-        
-
+        <% categories.forEach(category => {%>
+          <li><a href="/productos/categoria/<%= category.id%>"><%= category.name %></a></li>
+        <% })%>;
     </nav>
 
     </li>
