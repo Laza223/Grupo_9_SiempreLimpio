@@ -1,5 +1,11 @@
+.main-userEdit h1 {
+    text-align: center;
+    width: 100%;
+}
+
 .container-file-old-new{
     display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -11,7 +17,9 @@
 }
 
 .main-userEdit{
-    padding: 30px;
+    border-top: solid white 2px;
+    padding: 15px 0px;
+    background-image: linear-gradient(to bottom, #3b7ec0, #3772ac, #336698, #305a85, #2c4f72);
 }
 
 .container-input-userEdit{
@@ -21,8 +29,43 @@
     gap: 20px;
 }
 
-@media (max-width: 768px) {
-    .container-file-old-new {
-        flex-direction: column;
-    }
+.mb-3 {
+    display: flex;
+    flex-direction: column;
 }
+
+.mb-3 label {
+    width: calc( 100% - 20px);
+    margin: 10px;
+}
+
+.mb-3 img {
+    margin: auto;
+    width: auto;
+    height: 300px
+}
+
+.mb-3 input{
+    width: calc( 100% - 20px);
+    margin: 10px;
+    font-size: 20px;
+}
+
+.container-buttons-userEdit {
+    width: 100%;
+    padding: 10px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-buttons-userEdit a, button{
+    width: 30%;
+    height: 50px;
+}
+
+
+.container-buttons-userEdit a button {
+    width: 100%;
+}
+

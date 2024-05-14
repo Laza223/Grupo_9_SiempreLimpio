@@ -71,6 +71,24 @@
     padding-left: 10px;
 }
 
+.user-dates div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.user-dates div label {
+    width: calc( 100% - 20px);
+    margin: 10px;
+    font-size: 20px;
+}
+
+.user-dates div input {
+    width: calc( 100% - 20px);
+    margin: 10px;
+    font-size: 20px;
+}
+
 .update-user-info {
     width: 100%;
     height: 50px;
@@ -107,6 +125,8 @@
     padding-left: 10px;
     font-size: 20px;
 }
+
+
 
 @media (min-width:768px) {
     .bg-user-perfil {

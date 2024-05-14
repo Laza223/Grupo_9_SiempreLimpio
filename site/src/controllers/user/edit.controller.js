@@ -17,11 +17,10 @@ module.exports = async (req, res) => {
 
     if (!user) { return res.status(404).send("Usuario no encontrado") }
 
-    return res.render("user/userEdit", { user });
+    return res.render("user/userEdit2", { user });
 
   } catch (error) {
     console.error("Error al obtener el usuario:", error);
     res.status(500).send("Error interno del servidor");
   }
-
 }
