@@ -20,11 +20,15 @@ module.exports = async (req, res) => {
             users: docs,
             page: offset ? offset : 1,
             next: offset < pages ? `http://localhost:3030/api/users?offset=${offset + 1}` : (pages === 1 ? "-" : "Last page"),
-            previous: offset > 1 ? `http://localhost:3030/api/users?offset=${offset - 1}` : (pages === 1 ? "-" : "First page")})
+            previous: offset > 1 ? `http://localhost:3030/api/users?offset=${offset - 1}` : (pages === 1 ? "-" : "First page")
+        })
 
     } catch (error) {
         console.error("Error al obtener los usuarios:", error);
-        res.status(500).json({ error: "Error interno del servidor" });
+        res.status(500).json({
+            error: "Error interno del servidor",
+            message: error.message
+        });
     }
 };
 

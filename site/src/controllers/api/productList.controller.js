@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
                 paginate: 10
             },)
 
-        //Una consulta
+        //Una consulta. Usar reduce?
         const categoryCounts = {};
         docs.forEach(product => {
 
@@ -67,7 +67,10 @@ module.exports = async (req, res) => {
 
     } catch (error) {
         console.error("Error al obtener los productos:", error);
-        res.status(500).json({ error: "Error interno del servidor" });
+        res.status(500).json({
+            error: "Error interno del servidor",
+            message: error.message
+        });
     }
 
 
