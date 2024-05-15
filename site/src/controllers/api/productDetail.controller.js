@@ -2,15 +2,15 @@ const db = require("../../db/models");
 
 module.exports = async (req, res) => {
     try {
+        
         const id = +req.params.id;
-        const product = await db.Product.findByPk(id, {
-            include: ["categsory"]
-        });
+        const product =
+            await db.Product
+                .findByPk(id, {
+                    include: ["category"]
+                })
 
-        if (!product) {
-            return res.status(404).json({ error: "Producto no encontrado" });
-        }
-
+        if (!product) { return res.status(404).json({ error: "Producto no encontrado" }) }
 
         const imageURL = `http://localhost:3030/images/products/${product.image}`;
 
@@ -19,8 +19,9 @@ module.exports = async (req, res) => {
             image: imageURL,
         });
 
+
     } catch (error) {
-        console.error("Error al obtener el producto:", error);
+
         res.status(500).json({
             error: "Error interno del servidor",
             message: error.message

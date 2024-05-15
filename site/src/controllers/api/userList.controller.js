@@ -7,12 +7,17 @@ module.exports = async (req, res) => {
 
         let offset = req.query.offset ? +req.query.offset : 1
 
-        const { docs, pages, total } = await
-            db.User.paginate({
-                attributes: ["id", "name", "surname", [sequelize.fn("CONCAT", "http://localhost:3030/api/users/", sequelize.col("id")), "detail"]],
-                page: offset,
-                paginate: 10
-            })
+        const { docs, pages, total } =
+            await db.User
+                .paginate({
+                    attributes: [
+                        "id",
+                        "name",
+                        "surname",
+                        [sequelize.fn("CONCAT", "http://localhost:3030/api/users/", sequelize.col("id")), "detail"] ],
+                    page: offset,
+                    paginate: 10
+                })
 
         return res.status(200).send({
             ok: true,
@@ -23,8 +28,9 @@ module.exports = async (req, res) => {
             previous: offset > 1 ? `http://localhost:3030/api/users?offset=${offset - 1}` : (pages === 1 ? "-" : "First page")
         })
 
+
     } catch (error) {
-        console.error("Error al obtener los usuarios:", error);
+
         res.status(500).json({
             error: "Error interno del servidor",
             message: error.message

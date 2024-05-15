@@ -25,17 +25,17 @@ module.exports = async (req, res) => {
         }); */
 
         const { docs, total, pages } =
-            await db.Product.paginate({
-                attributes: [
-                    "id",
-                    "name",
-                    "description",
-                    [sequelize.fn("CONCAT", "http://localhost:3030/api/products/", sequelize.col("product.id")), "detail"]
-                ],
-                include: "category",
-                page: offset,
-                paginate: 10
-            },)
+            await db.Product
+                .paginate({
+                    attributes: [
+                        "id",
+                        "name",
+                        "description",
+                        [sequelize.fn("CONCAT", "http://localhost:3030/api/products/", sequelize.col("product.id")), "detail"]],
+                    include: "category",
+                    page: offset,
+                    paginate: 10
+                },)
 
         //Una consulta. Usar reduce?
         const categoryCounts = {};
@@ -65,8 +65,9 @@ module.exports = async (req, res) => {
             previous: offset > 1 ? `http://localhost:3030/api/products?offset=${offset - 1}` : (pages === 1 ? "-" : "First page")
         })
 
+
     } catch (error) {
-        console.error("Error al obtener los productos:", error);
+
         res.status(500).json({
             error: "Error interno del servidor",
             message: error.message
