@@ -12,9 +12,66 @@
           <div class="admin-header-list-title">
       
            <h2 >Detalle de usuario</h2>
+           </div>
+          </div>
           
-          </div>
-          </div>
+         
+          <form class="admin-form-detail">
+            <div><img src="/images/users/<%= user.avatar %>" alt=""></div>
+            <div class="row">
+              <div class="col">
+                <label for="name" class="col-form-label">Nombre:</label>
+                <input type="text" class="form-control" name="name" value="<%= user.name %>">
+              </div>
+              <div class="col">
+                <label for="surname" class="col-form-label">Apellido:</label>
+                <input type="text" class="form-control" name="surname" value="<%= user.surname %>">
+              </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                  <label for="phoneNumber" class="col-form-label">Número de telefono:</label>
+                  <input type="text" class="form-control" name="phoneNumber" value="<%= user.phoneNumber %>">
+                </div>
+              <div class="col">
+                <label for="email" class="col-form-label">Correo electrónico:</label>
+                <input type="text" class="form-control" name="email" value=<%= user.email %>>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label for="dni" class="col-form-label">Número de documento:</label>
+                <input type="text" class="form-control" name="dni" value=<%= user.dni %>>
+              </div>
+              <div class="col">
+                <label for="role" class="col-form-label">Rol:</label>
+                <input type="text" class="form-control" name="role" value=<%= user.role.name %>>
+              </div>
+            </div>
+          </form>
+      <div class="admin-header-detail">
+      <div class="admin-header-detail-subtitle">
+        <h4>Direcciones asociadas</h4>
+      </div>
+    </div>
+          <ul>
+            <li>Calle: <%= user.address.street + " " + user.address.streetNo %>
+            </li>
+            <li>Ciudad: <%= user.address.city %>
+            </li>
+            <li>Código postal: <%= user.address.zipCode %>
+            </li>
+            <li>Provincia: <%= user.address.province %>
+            </li>
+            <li>País: <%= user.address.country %>
+            </li>
+        </ul>
+       
+                  
+          
+        
 
           
      

@@ -59,13 +59,13 @@
     justify-content: space-between;
 }
 
-.container-buttons-userEdit a, button{
+.container-buttons-userEdit  button{  
     width: 30%;
     height: 50px;
 }
 
 
 .container-buttons-userEdit a button {
-    width: 100%;
+   width: 195px;
 }
 

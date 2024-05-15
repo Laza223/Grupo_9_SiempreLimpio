@@ -2,8 +2,8 @@ const db = require("../../db/models")
 
 module.exports = async (req, res) => {
     try {
-        const {id} = +req.params
-        const user = await db.User.findByPk( 2, {
+        const {id} = req.params
+        const user = await db.User.findByPk( id, {
 
             include : [{
                 model : db.Role,

@@ -11,7 +11,7 @@ const checkAdmin = require("../middlewares/checkAdmin")
 router.get("/dashboard/productos", checkAdmin, adminController.list); 
 
 router.get("/dashboard/usuarios", adminController.userList);
-router.get("/dashboard/usuarios/detalle/:id", adminController.userDetail)
+router.get("/dashboard/usuarios/:id", adminController.userDetail)
 
 
 router.get("/dashboard/editar/:id", adminController.edit);

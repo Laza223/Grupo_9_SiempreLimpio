@@ -1,0 +1,31 @@
+.admin-container-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-header-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 70px;
+}
+
+.admin-form-detail{
+    width: 500px;
+    
+}
+
+
+
+.admin-header-detail-subtitle{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 11px solid rgb(136, 136, 136);
+    padding-left: 16px;
+    height: 25px;
+}
