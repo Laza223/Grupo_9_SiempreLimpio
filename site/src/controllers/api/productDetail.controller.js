@@ -18,7 +18,6 @@ module.exports = async (req, res) => {
             ok: true,
             data: {
              product,
-             
              image: imageURL,
             }
         });
