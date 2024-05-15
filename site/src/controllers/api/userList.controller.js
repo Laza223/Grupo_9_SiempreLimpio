@@ -9,18 +9,18 @@ module.exports = async (req, res) => {
 
         const { docs, pages, total } = await
             db.User.paginate({
-                attributes: ["id", "name", "surname", [sequelize.fn("CONCAT", "http://localhost:3030/api/usuarios/", sequelize.col('id')), 'detail']],
+                attributes: ["id", "name", "surname", [sequelize.fn("CONCAT", "http://localhost:3030/api/users/", sequelize.col("id")), "detail"]],
                 page: offset,
                 paginate: 10
             })
 
         return res.status(200).send({
+            ok: true,
             count: total,
             users: docs,
             page: offset ? offset : 1,
-            next: offset < pages ? `http://localhost:3030/api/usuarios?offset=${offset + 1}` : "Last page",
-            previous: offset > 1 ? `http://localhost:3030/api/usuarios?offset=${offset - 1}` : "First page"
-        })
+            next: offset < pages ? `http://localhost:3030/api/users?offset=${offset + 1}` : (pages === 1 ? "-" : "Last page"),
+            previous: offset > 1 ? `http://localhost:3030/api/users?offset=${offset - 1}` : (pages === 1 ? "-" : "First page")})
 
     } catch (error) {
         console.error("Error al obtener los usuarios:", error);

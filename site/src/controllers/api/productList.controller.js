@@ -1,40 +1,74 @@
 const db = require('../../db/models')
-const {QueryTypes} = require("sequelize") 
+const sequelize = require("sequelize")
+
+
 
 module.exports = async (req, res) => {
 
     try {
-        const categories = 
-        await db.sequelize
-        .query(`
-        SELECT categories.name as "category", count(products.categoryId) as "count"
-        FROM categories
-        inner join products on products.categoryId = categories.id
-        group by categories.name`, { type: QueryTypes.SELECT })
 
-        const products = 
-        await db.Product.findAll(
-           { include:["category"]}
-        )
+        let offset = req.query.offset ? +req.query.offset : 1
 
-        const productsMapped = products.map(product => ({
-            id: product.id,
-            name: product.name,
-            description: product.description,
-            detail: `http://localhost:3030/api/productos/${product.id}`
-        }))
 
-        const response = {
-            count: productsMapped.length,
-            countByCategory: categories,
-            products: productsMapped,
-        };
+        /*  //Dos consultas 
+        const countByCategory = await db.Category.findAll({
+            attributes: [
+                'name',
+                [sequelize.fn('COUNT', sequelize.col('products.id')), 'count']
+            ],
+            include: [{
+                model: db.Product,
+                as: 'products',
+                attributes: []
+            }],
+            group: ['Category.id', 'Category.name']
+        }); */
 
-        return res.status(200).json(response)
+        const { docs, total, pages } =
+            await db.Product.paginate({
+                attributes: [
+                    "id",
+                    "name",
+                    "description",
+                    [sequelize.fn("CONCAT", "http://localhost:3030/api/products/", sequelize.col("product.id")), "detail"]
+                ],
+                include: "category",
+                page: offset,
+                paginate: 10
+            },)
+
+        //Una consulta
+        const categoryCounts = {};
+        docs.forEach(product => {
+
+            const categoryName = product.category.name
+
+            if (!categoryCounts[categoryName]) {
+                categoryCounts[categoryName] = 1
+            } else {
+                categoryCounts[categoryName]++
+            }
+        })
+
+        const countByCategory = Object.keys(categoryCounts).map(categoryName => ({
+            category: {
+                name: categoryName,
+                count: categoryCounts[categoryName]
+            }
+        }));
+
+        return res.status(200).json({
+            count: total,
+            countByCategory,
+            products: docs,
+            next: offset < pages ? `http://localhost:3030/api/products?offset=${offset + 1}` : (pages === 1 ? "-" : "Last page"),
+            previous: offset > 1 ? `http://localhost:3030/api/products?offset=${offset - 1}` : (pages === 1 ? "-" : "First page")
+        })
 
     } catch (error) {
         console.error("Error al obtener los productos:", error);
         res.status(500).json({ error: "Error interno del servidor" });
     }
-}
 
+
+}
