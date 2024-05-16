@@ -125,6 +125,13 @@ text-align: center;
     color: white;
     font-weight: 600;
     font-size: 15px;
+    transition:all 0.3s ease;
+}
+
+#arrepentimiento a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 @media (max-width:460px){

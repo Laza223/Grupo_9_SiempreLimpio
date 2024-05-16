@@ -112,12 +112,6 @@ header form input {
     padding: 4px;
 }
 
-
-
-
-
-
-
 .div-button {
     cursor: pointer;
 }
@@ -372,13 +366,18 @@ header form input {
     
 
     .div-button {
-        background-color: var(--azulOscuro);
+        background-color: var(--turquesa);
         display: flex;
         justify-content: space-around;
         align-items: center;
-        border-radius: 8px;
+        border-radius: 30px;
         margin-right: 10px;
         position: relative;
+        transition:all 0.3s ease;
+    }
+
+    .div-button:hover{
+        background-color: var(--azulOscuro);
     }
 
     .div-button h3 {
@@ -454,6 +453,7 @@ header form input {
     .user-button {
         display: flex;
         align-items: center;
+        background-color: rgba(1,1,1,0);
     }
 
     .div-button label {
