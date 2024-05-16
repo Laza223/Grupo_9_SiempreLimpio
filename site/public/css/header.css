@@ -84,9 +84,6 @@ header .fa-location-dot {
 }
 
 .barra-busqueda form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .barra-busqueda button {
@@ -105,9 +102,9 @@ header form {
 }
 
 header form input {
-    width: 100%;
+    width: 98%;
     border: none;
-    padding: 4px;
+    margin-left: 2%;
 }
 
 .div-button {
@@ -357,6 +354,7 @@ header form input {
         border-radius: 30px;
         margin-right: 10px;
         position: relative;
+        padding: 4px;
         transition: all 0.3s ease;
     }
 
@@ -406,13 +404,11 @@ header form input {
     }
 
     header form input {
-        width: 100%;
-        padding: 10px;
+    outline: none;
     }
 
     .lupa {
         font-size: 30px;
-
     }
 
     .iconos {
@@ -580,9 +576,7 @@ header form input {
     }
 
     #ubicacion-gps {
-
         display: flex;
-
         margin-right: 10px;
     }
 }
