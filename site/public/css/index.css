@@ -12,7 +12,6 @@
     }
 }
 
-
 .home-main {
     background-color: white;
 }
@@ -166,19 +165,6 @@
         transition: 400ms;
         transform: scale(1.1);
     }
-
-    .description-container {}
-
-    .clean-product p {}
-
-    .clean-product a {}
-
-    .clean-product h2 {}
-
-    .clean-product h3 {}
-
-    .cart-action {}
-
 }
 
 @media (min-width: 768px) {
@@ -210,17 +196,9 @@
         width: 30%;
     }
 
-    .img-tip {}
-
     .img-tip img {
         width: 100%;
     }
-
-    #carouselExample {}
-
-    .carusel-box {}
-
-    .caja-gris {}
 }
 
 @media (min-width: 1024px) {

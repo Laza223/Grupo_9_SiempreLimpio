@@ -1,12 +1,11 @@
-*{
+* {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-   
+
 }
 
-   /*Antes llamaba a todos los elementos Section*/
-   .sectionLogin{
+.sectionLogin {
     display: flex;
     width: 100%;
     background: #203c58 no-repeat;
@@ -15,7 +14,8 @@
     background-position: center;
     background-size: cover;
 }
-.contenedor1{
+
+.contenedor1 {
     position: relative;
     width: 400px;
     height: 470px;
@@ -23,7 +23,8 @@
     justify-content: center;
     align-items: center;
 }
-.contenedor1 h2{
+
+.contenedor1 h2 {
     color: white;
     text-align: center;
     width: 100%;
@@ -33,14 +34,15 @@
     left: 0px;
 }
 
-.input-contenedor{
+.input-contenedor {
     position: relative;
     margin: 30px 0;
     width: 300px;
     border-bottom: 2px solid white;
     padding: 2px;
 }
-.input-contenedor label{
+
+.input-contenedor label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -49,16 +51,16 @@
     font-size: 1rem;
     pointer-events: none;
     transition: .6s;
-    font-weight:  bold;
-    
+    font-weight: bold;
+
 }
 
-input:focus ~ label,
-input:valid ~ label{
+input:focus~label,
+input:valid~label {
     top: -5px
-
 }
-.input-contenedor input{
+
+.input-contenedor input {
     width: 100%;
     height: 50px;
     background-color: transparent;
@@ -69,37 +71,40 @@ input:valid ~ label{
     color: white;
     font-size: 1.2rem;
 }
-.input-contenedor i{
+
+.input-contenedor i {
     position: absolute;
     color: rgb(254, 254, 254);
     font-size: 1.6rem;
     top: 20px;
     right: 8px;
 }
-.olvidar{
+
+.olvidar {
     margin: 18px 0 24px;
     font-size: 0.9rem;
     color: white;
     display: flex;
     justify-content: center;
 }
-.olvidar label input{
-    margin: 3px;
- }
 
- .olvidar label a{
+.olvidar label input {
+    margin: 3px;
+}
+
+.olvidar label a {
     color: white;
     text-decoration: none;
     transition: .3s;
     font-size: .9rem;
 
- }
+}
 
- .olvidar label a:hover{
+.olvidar label a:hover {
     text-decoration: underline;
- }
+}
 
- .buttonLogin{
+.buttonLogin {
     width: 100%;
     height: 45px;
     border-radius: 40px;
@@ -107,51 +112,52 @@ input:valid ~ label{
     border: none;
     cursor: pointer;
     outline: none;
-    transition-property:transform, color;
+    transition-property: transform, color;
     transition-duration: 5s, 10s;
- }
-.buttonLogin:hover{
-    background-image: linear-gradient(
-        150deg,
-       
-        #09F,
-        #00DDFF,
-        #3ed36c,
-        #f38729,
-        #c23ff5
-        )
- }
-*/
-    
+}
 
- .registrar{
+.buttonLogin:hover {
+    background-image: linear-gradient(150deg,
+
+            #09F,
+            #00DDFF,
+            #3ed36c,
+            #f38729,
+            #c23ff5)
+}
+
+*/ .registrar {
     font-size: 0.8rem;
     color: white;
     text-align: center;
     margin: 20px 0 18px;
- }
- .registrar p a{
+}
+
+.registrar p a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     transition: 0.3s;
- }
- .registrar p a:hover{
+}
+
+.registrar p a:hover {
     text-decoration: underline;
- }
- .iconos9{
+}
+
+.iconos9 {
     color: aqua;
     position: absolute;
     top: 430px;
     font-size: 1.5rem;
- }
-/* table */
- @media(min-width:768px) {
+}
 
-    
-    
-   
-    .contenedor1{
+/* table */
+@media(min-width:768px) {
+
+
+
+
+    .contenedor1 {
         position: relative;
         width: 100%;
         height: 1120px;
@@ -159,20 +165,17 @@ input:valid ~ label{
         justify-content: center;
         align-items: center;
     }
-    
-     .iconos9{
-       position: absolute;
-       top: 600px;
-       left: 63px;
-     }
-    
 
- }
- @media(min-width: 1440px) {
+    .iconos9 {
+        position: absolute;
+        top: 600px;
+        left: 63px;
+    }
+}
 
-    
-    /*Antes llamaba a todos los elementos Section*/
-    .sectionLogin{
+@media(min-width: 1440px) {
+
+    .sectionLogin {
         position: relative;
         width: 100%;
         height: 1374px;
@@ -180,33 +183,36 @@ input:valid ~ label{
         justify-content: center;
         align-items: center;
     }
-    .contenedor1{
-    position: relative;
-    width: 100%;
-    height: 1440px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    .contenedor1 {
+        position: relative;
+        width: 100%;
+        height: 1440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .contenedor1 h2{
-       color: white;
-       text-align: center;
-       width: 100%;
-       background: #3C75AE;
-       top: 160px;
-       position: absolute;
-       left: 0px;
-       font-size: 4.9rem;
+
+    .contenedor1 h2 {
+        color: white;
+        text-align: center;
+        width: 100%;
+        background: #3C75AE;
+        top: 160px;
+        position: absolute;
+        left: 0px;
+        font-size: 4.9rem;
     }
-    
-    .input-contenedor{
-       position: relative;
-       margin: 50px 0;
-       width: 570px;
-       border-bottom: 7px solid white;
-       padding: 2px;
+
+    .input-contenedor {
+        position: relative;
+        margin: 50px 0;
+        width: 570px;
+        border-bottom: 7px solid white;
+        padding: 2px;
     }
-    .input-contenedor label{
+
+    .input-contenedor label {
         position: absolute;
         top: 50%;
         left: 10px;
@@ -217,42 +223,42 @@ input:valid ~ label{
         transition: .6s;
         font-weight: bold;
     }
-   
-    .input-contenedor input{
-    width: 100%;
-    height: 120px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 3rem;
-    padding: -35px 0 5px;
-    color: white;
-    overflow: hidden;
+
+    .input-contenedor input {
+        width: 100%;
+        height: 120px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 3rem;
+        padding: -35px 0 5px;
+        color: white;
+        overflow: hidden;
     }
-        
-    
-    .olvidar{
-     margin: 24px 0 24px;
-     font-size: 1.9rem;
-     color: white;
-     display: flex;
-     justify-content: center;
+
+
+    .olvidar {
+        margin: 24px 0 24px;
+        font-size: 1.9rem;
+        color: white;
+        display: flex;
+        justify-content: center;
     }
-    .olvidar label input{
-    width: 40px;
-    margin: 5px;
-    height: 40px;
+
+    .olvidar label input {
+        width: 40px;
+        margin: 5px;
+        height: 40px;
     }
-    
-     .olvidar label a{
-       color: white;
-       text-decoration: none;
-       transition: .3s;
-       font-size: 1.9rem;
-     }
-    
-     /*Antes llamaba a todos los buttons*/
-     .buttonLogin{
+
+    .olvidar label a {
+        color: white;
+        text-decoration: none;
+        transition: .3s;
+        font-size: 1.9rem;
+    }
+
+    .buttonLogin {
         font-size: 2.9rem;
         width: 100%;
         height: 91px;
@@ -263,22 +269,20 @@ input:valid ~ label{
         outline: none;
         transition-property: transform, color;
         transition-duration: 5s, 10s;
-     }
-    
-     .registrar{
-       font-size: 1.9rem;
-       color: white;
-       text-align: center;
-       margin: 20px 0 18px;
-     }
-    
-     
-     .iconos9{
-       position: absolute;
-       top: 1260px;
-       left: 70px;
-       font-size: 80px;
-     }
-    
+    }
 
- }
+    .registrar {
+        font-size: 1.9rem;
+        color: white;
+        text-align: center;
+        margin: 20px 0 18px;
+    }
+
+
+    .iconos9 {
+        position: absolute;
+        top: 1260px;
+        left: 70px;
+        font-size: 80px;
+    }
+}

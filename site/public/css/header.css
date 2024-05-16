@@ -47,12 +47,10 @@ header .logo-ubicacion {
 .div-button h3 {
     display: none;
 }
+
 .apt {
     display: none;
 }
-
-
-
 
 header .fa-location-dot {
     position: relative;
@@ -152,7 +150,7 @@ header form input {
     box-shadow: 8px 8px 6px 0px rgba(0, 0, 0, 0.5);
 }
 
-.apt:checked + .perfil-box-container{
+.apt:checked+.perfil-box-container {
     height: 400px;
 }
 
@@ -213,18 +211,6 @@ header form input {
     border-radius: 5px;
     font-size: 18px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .burguer-menu {
     color: white;
@@ -322,8 +308,6 @@ header form input {
     display: none;
 }
 
-
-
 .iconos {
     display: flex;
     justify-content: flex-end;
@@ -363,7 +347,7 @@ header form input {
         border-radius: 18px;
         box-shadow: 8px 8px 6px 0px rgba(0, 0, 0, 0.5);
     }
-    
+
 
     .div-button {
         background-color: var(--turquesa);
@@ -373,10 +357,10 @@ header form input {
         border-radius: 30px;
         margin-right: 10px;
         position: relative;
-        transition:all 0.3s ease;
+        transition: all 0.3s ease;
     }
 
-    .div-button:hover{
+    .div-button:hover {
         background-color: var(--azulOscuro);
     }
 
@@ -453,7 +437,7 @@ header form input {
     .user-button {
         display: flex;
         align-items: center;
-        background-color: rgba(1,1,1,0);
+        background-color: rgba(1, 1, 1, 0);
     }
 
     .div-button label {
@@ -465,7 +449,7 @@ header form input {
         cursor: pointer;
     }
 
-    
+
     .perfil-box-container {
         display: flex;
         flex-direction: column;
@@ -483,8 +467,8 @@ header form input {
         border-radius: 18px;
         box-shadow: 8px 8px 6px 0px rgba(0, 0, 0, 0.5);
     }
-    
-    .apt:checked + .perfil-box-container{
+
+    .apt:checked+.perfil-box-container {
         height: 450px;
     }
 
@@ -503,7 +487,7 @@ header form input {
         border: solid white 8px;
         border-radius: 50%;
     }
-    
+
     .user-info {
         display: flex;
         justify-content: center;
@@ -520,7 +504,7 @@ header form input {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: var(--azulOscuro);
     }
-    
+
     .addres-info {
         text-align: center;
     }
@@ -601,5 +585,4 @@ header form input {
 
         margin-right: 10px;
     }
-
 }

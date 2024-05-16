@@ -1,5 +1,6 @@
 :root {
-    /*paleta de colores*/
+    /*--paleta de colores--*/
+
     --turquesa: #3b7ec0;
     --azulOscuro: #2c4f72;
     --celeste: #9CCFF3;
@@ -8,20 +9,16 @@
     --naranja: #FF8541;
     --azulFont: #0032a0;
 
-    /*Tamaños tipográficos*/
+    /*--Tamaños tipográficos--*/
+
     --bodyTextSize: 12px;
     --titleTextSize: 24px;
 
-
-
-
-
 }
 
-/*tipografias*/
+/*--tipografias--*/
 * {
     font-family: var(--familyRoboto);
     --familyRoboto:
         "Roboto", sans-serif;
 }
-
