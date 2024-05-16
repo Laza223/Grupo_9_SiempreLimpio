@@ -1,4 +1,6 @@
+const db = require("../../db/models")
 
-module.exports = (req, res) => {
-  res.render("authentication/login")
+module.exports = async (req, res) => {
+  const categories = await db.Category.findAll();
+  res.render("authentication/login", {categories})
 };

@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
 
         if (!req.session.userLogin) { return res.redirect("/") }
         const id = req.session.userLogin.id;
-       
+
         const { name, surname, phoneNumber } = req.body
 
          await db.User.update({
