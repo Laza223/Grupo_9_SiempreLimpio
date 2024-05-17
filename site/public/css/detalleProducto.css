@@ -1,13 +1,3 @@
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 body {
     animation: fadeIn 1s ease-in-out;
 }
@@ -117,10 +107,3 @@ body {
     font-size: 30px;
     color: lightgrey;
 }
-
-
-
-.home-main2 {
-    /* background-color: lightgray; */
-}
-

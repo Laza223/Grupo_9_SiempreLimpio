@@ -30,8 +30,8 @@
       "surname": "Feijoo",
       "email": "lazarofeijoo2004@gmail.com",
       "password": "$2a$12$ozNwn3ErV/sl7bcoo0p.zeI3vBJWJ1dAyqWAmwBvPK0M4tjjCDOMC",
-      "avatar": "1715661206787- user -531611961.png",
-      "role": "usuario",
+      "avatar": "avatar-default.png",
+      "role": "ADMIN",
       "addressID": 3,
       "dni": 40111222,
       "phoneNumber": "11-43219876"

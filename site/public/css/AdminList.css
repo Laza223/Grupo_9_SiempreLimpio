@@ -15,7 +15,6 @@
 
     width: 50px;
     height: 30px;
-
 }
 
 .admin-header-list-title {
@@ -32,8 +31,6 @@
     margin-top: 8px;
     font-weight: 900;
     font-size: 35px;
-
-
 }
 
 .admin-table-list {
@@ -43,7 +40,7 @@
     text-align: center;
     overflow-y: scroll;
     display: block;
-    height: calc( 100vh - 270px);
+    height: calc(100vh - 270px);
 }
 
 .admin-table-list thead th {

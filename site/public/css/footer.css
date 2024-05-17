@@ -8,7 +8,7 @@
 .contenedor_footer {
     display: flex;
     width: 100%;
-    padding-top:15px;
+    padding-top: 15px;
     border-top: solid white 2px;
 }
 
@@ -29,35 +29,36 @@
 
 .resaltado {
     font-weight: 800;
-    }
-#suscripcion{
+}
+
+#suscripcion {
     display: flex;
     flex-direction: column;
-  
+
 }
-#titulo_suscripcion{
-  
+
+#titulo_suscripcion {
+
     background-color: #00A538;
-    border-radius: 20px 0 ;
-    width:220px;
+    border-radius: 20px 0;
+    width: 220px;
     font-size: 0.8rem;
     justify-content: center;
     align-items: center;
-    margin-bottom:0px
-}
-#suscripcion{
-text-align: center;
+    margin-bottom: 0px
 }
 
- #formulario_suscripcion_input{
-    border-top-right-radius: 20px ;
-    width:220px;
+#suscripcion {
+    text-align: center;
+}
+
+#formulario_suscripcion_input {
+    border-top-right-radius: 20px;
+    width: 220px;
     justify-content: center;
     align-items: center;
 
- }
-
-
+}
 
 #suscripcion {
     display: flex;
@@ -125,18 +126,25 @@ text-align: center;
     color: white;
     font-weight: 600;
     font-size: 15px;
+    transition: all 0.3s ease;
 }
 
-@media (max-width:460px){
-    .contacto{
+#arrepentimiento a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+@media (max-width:460px) {
+    .contacto {
         display: none;
     }
 
-    .contenedor_footer{
+    .contenedor_footer {
         justify-content: center;
     }
 
-    #suscripcion{
-        margin-top:-10px
+    #suscripcion {
+        margin-top: -10px
     }
 }

@@ -3,26 +3,26 @@
     width: 100%;
 }
 
-.container-file-old-new{
+.container-file-old-new {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.form-userEdit{
+.form-userEdit {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.main-userEdit{
+.main-userEdit {
     border-top: solid white 2px;
     padding: 15px 0px;
     background-image: linear-gradient(to bottom, #3b7ec0, #3772ac, #336698, #305a85, #2c4f72);
 }
 
-.container-input-userEdit{
+.container-input-userEdit {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
@@ -35,7 +35,7 @@
 }
 
 .mb-3 label {
-    width: calc( 100% - 20px);
+    width: calc(100% - 20px);
     margin: 10px;
 }
 
@@ -45,8 +45,8 @@
     height: 300px
 }
 
-.mb-3 input{
-    width: calc( 100% - 20px);
+.mb-3 input {
+    width: calc(100% - 20px);
     margin: 10px;
     font-size: 20px;
 }
@@ -59,13 +59,450 @@
     justify-content: space-between;
 }
 
-.container-buttons-userEdit  button{  
+.container-buttons-userEdit a,
+button {
     width: 30%;
     height: 50px;
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+}
 
 .container-buttons-userEdit a button {
-   width: 195px;
+    width: 100%;
 }
-
