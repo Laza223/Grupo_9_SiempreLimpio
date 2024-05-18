@@ -65,7 +65,7 @@
         <h2>CATEGORIAS</h2>
         <% categories.forEach(category => {%>
           <li><a href="/productos/categoria/<%= category.id%>"><%= category.name %></a></li>
-        <% })%>; 
+        <% })%>
       </ul>
     </div>
 
@@ -73,11 +73,7 @@
       <form action="/buscar" method="get">
         <input type="text" name="productSearch" placeholder="¿Que producto estas buscando?">
         <button type="submit"><i class="fa-solid fa-magnifying-glass lupa"></i></button>
-        <ul>
-
-        </ul>
       </form>
-
     </div>
   
   </section>
@@ -88,7 +84,7 @@
       <ul class="menu-lista">
         <% categories.forEach(category => {%>
           <li><a href="/productos/categoria/<%= category.id%>"><%= category.name %></a></li>
-        <% })%>;
+        <% })%>
     </nav>
 
     </li>

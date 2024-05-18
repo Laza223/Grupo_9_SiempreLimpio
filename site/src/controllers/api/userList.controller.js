@@ -1,31 +1,40 @@
-const { literal } = require('sequelize');
 const db = require('../../db/models')
+const sequelize = require("sequelize")
 
 module.exports = async (req, res) => {
 
     try {
-        const users =
-            await db.User.
-                findAll({  attributes: ["id", "name", "surname", "email" ]  })
 
-        const usersMapped = users.map(user => ({
-            id: user.id,
-            name: user.name,
-            surname: user.surname,
-            email: user.email,
-            detail: `http://localhost:3030/api/usuarios/${user.id}`
+        let offset = req.query.offset ? +req.query.offset : 1
+
+        const { docs, pages, total } =
+            await db.User
+                .paginate({
+                    attributes: [
+                        "id",
+                        "name",
+                        "surname",
+                        [sequelize.fn("CONCAT", "http://localhost:3030/api/users/", sequelize.col("id")), "detail"] ],
+                    page: offset,
+                    paginate: 10
+                })
+
+        return res.status(200).send({
+            ok: true,
+            count: total,
+            users: docs,
+            page: offset ? offset : 1,
+            next: offset < pages ? `http://localhost:3030/api/users?offset=${offset + 1}` : (pages === 1 ? "-" : "Last page"),
+            previous: offset > 1 ? `http://localhost:3030/api/users?offset=${offset - 1}` : (pages === 1 ? "-" : "First page")
         })
-        )
 
-        const response = {
-            count: usersMapped.length,
-            users: usersMapped
-        };
-        return res.status(200).json(response)
 
     } catch (error) {
-        console.error("Error al obtener los usuarios:", error);
-        res.status(500).json({ error: "Error interno del servidor" });
+
+        res.status(500).json({
+            error: "Error interno del servidor",
+            message: error.message
+        });
     }
 };
 

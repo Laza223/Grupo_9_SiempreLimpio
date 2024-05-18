@@ -5,10 +5,10 @@ const router = express.Router();
 const apiController = require("../controllers/api");
 
 
-router.get("/usuarios", apiController.userList)
+router.get("/users", apiController.userList)
 router.get("/usuarios/:id", apiController.userDetail)
 
-router.get('/productos', apiController.productList);
-router.get('/productos/:id', apiController.productDetail);
+router.get('/products', apiController.productList);
+router.get('/products/:id', apiController.productDetail);
 
 module.exports = router;
