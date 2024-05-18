@@ -6,6 +6,9 @@ module.exports = async (req, res) => {
 
   const errors = validationResult(req);
 
+  const categories = await db.Category.findAll();
+
+
   if (errors.isEmpty()) {
 
     const { name, surname, email, password } = req.body;
@@ -24,6 +27,7 @@ module.exports = async (req, res) => {
     //return res.send(errors)
     console.log(errors);
     return res.render("authentication/register", { 
+      categories,
       old: req.body,
       errors: errors.mapped() 
     })

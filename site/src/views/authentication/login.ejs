@@ -17,7 +17,7 @@
                 <form action="/autenticacion/iniciar" method="post" >
                     <div class="input-register">
                         <label for="email">Email</label>
-                        <input type= "email" required name="email" id="email">
+                        <input type= "email"  name="email" id="email">
                         <% if (locals.errors) { %>
                             <p class="text-danger-error">
                                 <%= locals.errors?.email?.msg %>
@@ -26,9 +26,9 @@
                     </div>
 
                     <div class="input-register">
-                        <label for="#">Contraseña</label>
+                        <label for="contrasenia">Contraseña</label>
                         <div id="ipe-c">
-                            <input type= "password" required name="password" value="" id="contrasenia">
+                            <input type= "password"  name="password" id="contrasenia">
                             <span id="input-pass-eye">
                                 <i class="fa-solid fa-eye" id="icon-eye"></i>
                             </span>
