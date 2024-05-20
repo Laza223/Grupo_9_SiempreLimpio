@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override');  //PUT Y DELETE HABILITADO
 const insertDataLocals = require('./middlewares/insertDataLocals');
+const insertDataLocalsMsgRegister = require('./middlewares/insertDataLocalsMsgRegister');
 const partials = require("express-partials")
 const session = require("express-session")
 const bodyParser = require('body-parser')
@@ -43,6 +44,7 @@ app.use(session({
 app.use(checkUser)
 app.use(checkUserCookies)
 app.use(insertDataLocals)
+app.use(insertDataLocalsMsgRegister)
 
 
 /* CONFIGS */
@@ -51,7 +53,7 @@ app.set('view engine', 'ejs');
 
 /* ENRUTADORES */
 app.use("/", homeRoutes);
-app.use("/autenticacion", authRoutes);
+app.use("/authentication", authRoutes);
 app.use("/perfil", userRoutes);
 app.use("/carrito", cartRoutes);
 app.use("/productos", productRoutes);

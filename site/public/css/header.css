@@ -337,7 +337,7 @@ header form input {
         height: 0px;
         background-color: white;
         z-index: 3;
-        top: 42px;
+        top: 54px;
         right: -100px;
         overflow: hidden;
         transition: height 0.5s ease;

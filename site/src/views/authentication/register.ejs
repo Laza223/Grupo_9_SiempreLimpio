@@ -12,16 +12,13 @@
                     <div class="formulario">
 
                         <h2>CREAR CUENTA</h2>
-                        <form action="/autenticacion/registrar" method="POST" id="form-register">
+                        <form action="/authentication/registrar" method="POST" id="form-register">
                             <div class="input-register">
                                 <label for="name">Nombre </label>
                                 <input type="text" name='name'>
-                                <p class="text-danger-error errName">
-                                </p>
+                                <p class="text-danger-error errName"></p>
                                 <% if (locals.errors) { %>
-                                    <p class="text-danger-error">
-                                        <%= locals.errors?.name?.msg %>
-                                    </p>
+                                    <p class="text-danger-error"><%= locals.errors?.name?.msg %></p>
                                     <% }%>
 
                             </div>
@@ -29,12 +26,9 @@
                                 <label for="#">Apellido</label>
                                 <input type="text" name='surname'>
                                 <% if (locals.errors) { %>
-                                    <p class="text-danger-error">
-                                        <%= locals.errors?.surname?.msg %>
-                                    </p>
+                                    <p class="text-danger-error"><%= locals.errors?.surname?.msg %></p>
                                     <% } else {%>
-                                        <p class="text-danger-error errSurName">
-                                        </p>
+                                        <p class="text-danger-error errSurName"></p>
                                         <% } %>
                             </div>
                             <div class="input-register">
@@ -80,7 +74,7 @@
 
 
                             <div class="iniciar">
-                                <p>¿ya tienes cuenta? <a href="/autenticacion/iniciar">inicia sesion</a></p>
+                                <p>¿ya tienes cuenta? <a href="/authentication/iniciar">inicia sesion</a></p>
                                 <a href="#">¿Olvidaste tu Contraseña?</a>
                             </div>
                         </div>

@@ -1,16 +1,19 @@
-window.addEventListener("load", () => {
-  const inputPass2 = document.querySelector("#contrasenia");
-  const btnEye = document.querySelector("#input-pass-eye");
-  const iconEye = document.querySelector("#icon-eye");
+ window.addEventListener("load", () => {
+  const inputPass2 = document.querySelectorAll(".passTroggle");
+  const btnEye = document.querySelectorAll(".input-pass-eye");
+  const iconEye = document.querySelectorAll(".icon-eye");
 
-  btnEye.addEventListener("click", (event) => {
-    const isActive = iconEye.classList.contains("fa-eye-slash");
-    if (isActive) {
-      inputPass2.type = "password";
-    } else {
-      inputPass2.type = "text";
-    }
-    iconEye.classList.toggle("fa-eye");
-    iconEye.classList.toggle("fa-eye-slash");
-  });
+
+for (let i = 0; i < btnEye.length; i++) {
+  btnEye[i].addEventListener("click", (event) => {
+  const isActive = iconEye[i].classList.contains("fa-eye-slash");
+
+  if (isActive) {
+    inputPass2[i].type = "password";
+  } else {
+    inputPass2[i].type = "text";
+  }
+  iconEye[i].classList.toggle("fa-eye");
+  iconEye[i].classList.toggle("fa-eye-slash");
 });
+}})

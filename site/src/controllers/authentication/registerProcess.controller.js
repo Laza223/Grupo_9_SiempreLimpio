@@ -10,7 +10,6 @@ module.exports = async (req, res) => {
 
 
   if (errors.isEmpty()) {
-
     const { name, surname, email, password } = req.body;
 
     await db.User.create({
@@ -22,7 +21,10 @@ module.exports = async (req, res) => {
       roleId: 1
     })
 
-    return res.redirect("/autenticacion/iniciar")
+    const registerMsg = "Registrado Exitoso!"
+    console.log(registerMsg);
+    
+    return res.render("authentication/authentication.ejs", {registerMsg})
   } else {
     //return res.send(errors)
     console.log(errors);

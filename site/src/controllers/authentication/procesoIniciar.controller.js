@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const { validationResult, fileValidationError } = require("express-validator");
 
 module.exports = async (req, res) => {
+  
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
