@@ -93,6 +93,7 @@ header .fa-location-dot {
     top: 0px;
     border: none;
     height: 100%;
+    width: 40px;
     background-color: transparent;
     color: var(--azulOscuro);
 }

@@ -23,13 +23,16 @@ module.exports = async (req, res) => {
 
     const registerMsg = "Registrado Exitoso!"
     console.log(registerMsg);
+
+    const successRegister = {
+      msg: "true"
+    }
+
     
-    return res.render("authentication/authentication.ejs", {registerMsg})
+    return res.render("authentication/authentication", {registerMsg, successRegister})
   } else {
-    //return res.send(errors)
-    console.log(errors);
-    return res.render("authentication/register", { 
-      categories,
+    console.log(req.body);
+    return res.render("authentication/authentication", { 
       old: req.body,
       errors: errors.mapped() 
     })

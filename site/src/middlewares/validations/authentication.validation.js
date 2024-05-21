@@ -47,7 +47,7 @@ const fieldPassword = body("password")
 
 // VALIDACION LOGIN //
 
-const loginEmail = body("email")
+const loginEmail = body("emailLogin")
     .notEmpty().withMessage("Campo requerido").bail()
     .isEmail().withMessage("Formato invalido").bail()
     .custom(async (value, { req }) => {
@@ -63,15 +63,15 @@ const loginEmail = body("email")
         }
     });
 
-const loginPassword = body("password")
+const loginPassword = body("passwordLogin")
     .notEmpty().withMessage("Campo requerido").withMessage("El campo contraseña es requerido!").bail()
     .isLength({ min: 8, max: 16 }).withMessage("Longitud invalida!").bail()
     .matches(regExPass).withMessage("Credenciales invalidas").bail()
     .custom(async (value, { req }) => {
         try {
-            const { email } = req.body;
+            const { emailLogin } = req.body;
             const userFind = await db.User.findAll({
-                where: { email }
+                where: { email: emailLogin }
             })
             
             if(userFind.length > 0) {

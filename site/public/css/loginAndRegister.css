@@ -161,6 +161,14 @@
   background-color: #3737ec;
 }
 
+#successRegister {
+  display: none;
+}
+
+#errorLogin {
+  display: none;
+}
+
 .check-icon {
   position: absolute;
   right: -36px;

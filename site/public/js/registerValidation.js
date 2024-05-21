@@ -15,23 +15,35 @@ window.addEventListener("load", () => {
     const labelInput = document.querySelectorAll(".label-input")
     const allInputs = document.querySelectorAll(".inputRegister")
     const checkIcon = document.querySelectorAll(".check-icon")
+    const containerFormRegister = document.querySelector(".register")
+    const containerFormLogin = document.querySelector(".login");
+    const errorLogin = document.querySelector("#errorLogin")
+    const successRegister = document.querySelector("#successRegister")
+    const emailLoginValue = document.querySelector("[name='emailLogin']")
+    const errEmailLogin = document.querySelector(".errEmailLogin")
+    const passwordLoginValue = document.querySelector("[name='passwordLogin']")
+    const errPasswordLogin = document.querySelector(".errPasswordLogin")
+
 
 
     let errors = [];
+
+    if (errorLogin.textContent == "true" || successRegister.textContent == "true") {
+        containerFormRegister.classList.add("hide");
+        containerFormLogin.classList.remove("hide")
+    }
 
     for (let i = 0; i < checkIcon.length; i++) {
         checkIcon[i].style.color = "transparent"
     }
 
-
     for (let i = 0; i < allInputs.length; i++) {
         allInputs[i].addEventListener("focus", function (e) {
-            if(allInputs[i].value.length == 0) {   
+            if (allInputs[i].value.length == 0) {
                 labelInput[i].style.border = "1px solid red"
                 labelInput[i].style.boxShadow = "0 2px 5px rgba(255, 0, 0, .3)"
             }
         })
-
     }
 
 
@@ -226,10 +238,65 @@ window.addEventListener("load", () => {
             emailValue.value.length < 3) {
             event.preventDefault()
             errForm.innerHTML = "Todos los campos son requeridos!"
-            console.log(errors);
             errors = []
         }
     })
+
+    emailLoginValue.addEventListener("keyup", function (event) {
+
+        const value = this.value.trim()
+        const expregEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}$/
+
+        switch (true) {
+
+            case value.length === 0:
+                errEmailLogin.innerHTML = "Campo requerido."
+                errors.push("El campo nombre es Requerido.")
+                labelInput[5].style.border = "1px solid red"
+                labelInput[5].style.boxShadow = "0 2px 5px rgba(255, 0, 0, .3)"
+                checkIcon[5].style.color = "transparent"
+                break;
+            case !expregEmail.test(value):
+                errEmailLogin.innerHTML = "Formato invalido"
+                errors.push("El campo email tiene un formato invalido")
+                labelInput[5].style.border = "1px solid red"
+                labelInput[5].style.boxShadow = "0 2px 5px rgba(255, 0, 0, .3)"
+                checkIcon[5].style.color = "transparent"
+                break;
+
+            default:
+                labelInput[5].style.border = "1px solid green"
+                labelInput[5].style.boxShadow = "0 2px 5px rgba(0, 255, 0, .3)"
+                checkIcon[5].style.color = "green"
+                errEmailLogin.innerHTML = null
+                errors = [];
+                break
+        }
+
+    })
+
+    passwordLoginValue.addEventListener("keyup", function (e) {
+        const value = this.value
+        const length = new RegExp('(?=.{8,30})');
+
+
+        switch (true) {
+
+        case !length.test(value):
+            errPasswordLogin.innerHTML = "Longitud invalidou"
+            errors.push("Longitud de contraseña invalida")
+            labelInput[6].style.border = "1px solid red"
+            labelInput[6].style.boxShadow = "0 2px 5px rgba(255, 0, 0, .3)"
+            checkIcon[6].style.color = "transparent"
+            break;
+        default:
+            labelInput[6].style.border = "1px solid green"
+            labelInput[6].style.boxShadow = "0 2px 5px rgba(0, 255, 0, .3)"
+            checkIcon[6].style.color = "green"
+            errPasswordLogin.innerHTML = null
+            errors = [];
+            break;
+    }})
 
 
 });
