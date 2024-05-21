@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/e867552bb5.js" crossorigin="anonymous"></script>
+    <title>FORMULARIO DE REGISTRO E INICIO SESIÓN</title>
+</head>
+
+<body class="loginyregist">
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>Para unirte a nuestra comunidad por favor Inicia Sesión con tus datos</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una Cuenta</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook'>
+                        <a href="https://www.facebook.com/r.php" target="_blank">
+                    </i> </a>
+                    <i class='bx bxl-linkedin'></i>
+                </div><br>
+                <p>o usa tu email para registrarte</p>
+                <!-- FORMULARIO REGISTRO  -->
+                <form action="/authentication/registrar" method="POST" class="form form-register" id="form-register"
+                    novalidate>
+                    <div>
+                        <label class="label-input">
+                            <i class='bx bx-user'></i>
+                            <input type="text" placeholder="Nombre" name='name' class="inputRegister" value="<%= locals?.old?.name %>">
+                            <i class="check-icon fa-solid fa-circle-check"></i>
+                            <% if (locals.errors) { %>
+                                <p class="text-danger-error">
+                                    <%= locals?.errors?.name?.msg %>
+                                </p>
+                                <% } else {%>
+                                    <p class="text-danger-error errName"></p>
+                                    <% } %>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="label-input">
+                            <i class='bx bx-user'></i>
+                            <input type="text" placeholder="Apellido" name='surname' class="inputRegister" value="<%= locals?.old?.surname %>">
+                            <i class="check-icon fa-solid fa-circle-check"></i>
+                            <% if (locals.errors) { %>
+                                <p class="text-danger-error">
+                                    <%= locals?.errors?.surname?.msg %>
+                                </p>
+                                <% } else {%>
+                                    <p class="text-danger-error errSurName"></p>
+                                    <% } %>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="label-input">
+                            <i class='bx bx-envelope'></i>
+                            <input type="email" placeholder="Correo Electronico" name='email' class="inputRegister" value="<%= locals?.old?.email %>">
+                            <i class="check-icon fa-solid fa-circle-check"></i>
+                            <% if (locals.errors) { %>
+                                <p class="text-danger-error">
+                                    <%= locals?.errors?.email?.msg %>
+                                </p>
+                                <% } else {%>
+                                    <p class="text-danger-error errEmail"></p>
+                                    <% } %>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="label-input">
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Contraseña" name="password" value="<%= locals?.old?.password %>"
+                                class="passTroggle passwordInput inputRegister">
+                            <i class="check-icon fa-solid fa-circle-check"></i>
+                            <span class="input-pass-eye">
+                                <i class="fa-solid fa-eye icon-eye"></i>
+                            </span>
+                            <% if (locals.errors) { %>
+                                <p class="text-danger-error">
+                                    <%= locals?.errors?.password?.msg %>
+                                </p>
+                                <% } else {%>
+                                    <p class="text-danger-error errPassword"></p>
+                                    <% } %>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="label-input">
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Repita Contraseña" name="passwordRepeat" value="<%= locals?.old?.passwordRepeat %>"
+                                class="passwordRepeatInput passTroggle inputRegister">
+                            <i class="check-icon fa-solid fa-circle-check"></i>
+                            <span class="input-pass-eye">
+                                <i class="fa-solid fa-eye icon-eye"></i>
+                            </span>
+                            <% if (locals.errors) { %>
+                                <p class="text-danger-error">
+                                    <%= locals?.errors?.passwordRepeat?.msg %>
+                                </p>
+                                <% } else {%>
+                                    <p class="text-danger-error errPasswordRepeat"></p>
+                                    <% } %>
+                        </label>
+                    </div>
+
+                    <input type="submit" value="Registrarse">
+                    <p class="text-danger-errorForm errForm"></p>
+                    <% if (locals.registerMsg) { %>
+                        <p class="text-Success">
+                            <%= locals.registerMsg%>
+                        </p>
+                        <% } %>
+                        <h1 id="successRegister"><%= locals.successRegister?.msg %></h1>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡¡Bienvenido nuevamente!!</h2>
+                <p>Para unirte a nuestra comunidad por favor Inicia Sesión con tus datos</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesión</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-github'></i>
+                    <i class='bx bxl-facebook'></i>
+                </div>
+                <br>
+                <p>o Iniciar Sesión con una cuenta</p>
+
+                <!-- FORMULARIO LOGIN  -->
+
+                <form class="form form-login" action="/authentication/iniciar" method="post" novalidate>
+                    <div>
+                        <label class="label-input">
+                            <i class='bx bx-envelope'></i>
+                            <input type="email" placeholder="Correo Electronico" name='emailLogin'>
+                            <i class="check-icon fa-solid fa-circle-check"></i>
+                            <% if (locals.errorsLogin) { %>
+                                <p class="text-danger-error">
+                                    <%= locals.errorsLogin?.emailLogin?.msg %>
+                                </p>
+                                <% } else {%>
+                                    <p class="text-danger-error errEmailLogin"></p>
+                                    <% } %>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="label-input">
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Contraseña" name='passwordLogin' class="passTroggle">
+                            <i class="check-icon fa-solid fa-circle-check"></i>
+                            <span class="input-pass-eye">
+                                <i class="fa-solid fa-eye icon-eye"></i>
+                            </span>
+                            <p class="text-danger-error errPasswordLogin"></p>
+                            <% if (locals.errorsLogin) { %>
+                                <p class="text-danger-error">
+                                    <%= locals.errorsLogin?.passwordLogin?.msg %>
+                                </p>
+                                <% } %>
+                                    
+                        </label>
+                    </div>
+                    <h1 id="errorLogin"><%= locals.errorLogin?.msg %></h1>
+                    <input type="submit" value="Iniciar Sesión">
+                    <div class="alerta-error">Todos los campos son obligatorios</div>
+                    <div class="alerta-exito">Iniciaste sesión correctamente</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/registerValidation.js"></script>
+    <script src="../js/mostrarContrasenia.js"></script>
+    <script src="../js/scriptsLoginRegister/script.js"></script>
+</body>
+
+</html>

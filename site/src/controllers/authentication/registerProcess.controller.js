@@ -6,8 +6,10 @@ module.exports = async (req, res) => {
 
   const errors = validationResult(req);
 
-  if (errors.isEmpty()) {
+  const categories = await db.Category.findAll();
 
+
+  if (errors.isEmpty()) {
     const { name, surname, email, password } = req.body;
 
     await db.User.create({
@@ -19,11 +21,18 @@ module.exports = async (req, res) => {
       roleId: 1
     })
 
-    return res.redirect("/autenticacion/iniciar")
+    const registerMsg = "Registrado Exitoso!"
+    console.log(registerMsg);
+
+    const successRegister = {
+      msg: "true"
+    }
+
+    
+    return res.render("authentication/authentication", {registerMsg, successRegister})
   } else {
-    //return res.send(errors)
-    console.log(errors);
-    return res.render("authentication/register", { 
+    console.log(req.body);
+    return res.render("authentication/authentication", { 
       old: req.body,
       errors: errors.mapped() 
     })

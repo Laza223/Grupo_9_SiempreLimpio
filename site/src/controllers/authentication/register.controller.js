@@ -1,3 +1,5 @@
-module.exports = (req, res) => {
-  res.render("authentication/register.ejs");
+const db = require("../../db/models")
+module.exports = async (req, res) => {
+  const categories = await db.Category.findAll();
+  res.render("authentication/register.ejs", {categories});
 };

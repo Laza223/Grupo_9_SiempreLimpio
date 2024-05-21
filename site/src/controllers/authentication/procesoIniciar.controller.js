@@ -3,15 +3,17 @@ const bcrypt = require("bcryptjs");
 const { validationResult, fileValidationError } = require("express-validator");
 
 module.exports = async (req, res) => {
+  
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
+    
     const userFind = await db.User.findOne({
-      where: { email: req.body.email.toLowerCase() },
+      where: { email: req.body.emailLogin.toLowerCase() },
       attributes: {
         exclude: ['password']
-     },
-     include: "address"
+      },
+      include: "address"
     })
 
     const { id, name, surname, email, avatar, address, roleId } = userFind
@@ -35,10 +37,17 @@ module.exports = async (req, res) => {
     return res.redirect("/")
 
   } else {
+    
+    const errorLogin = {
+      msg: "true"
+    }
 
-    return res.render("authentication/login", { 
+    console.log(errorLogin);
+
+    return res.render("authentication/authentication", { 
       old: req.body,
-      errors: errors.mapped() 
+      errorsLogin: errors.mapped() ,
+      errorLogin
     })
   }
 

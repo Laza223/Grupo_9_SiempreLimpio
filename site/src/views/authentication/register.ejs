@@ -12,43 +12,54 @@
                     <div class="formulario">
 
                         <h2>CREAR CUENTA</h2>
-                        <form action="/autenticacion/registrar" method="POST">
+                        <form action="/authentication/registrar" method="POST" id="form-register">
                             <div class="input-register">
                                 <label for="name">Nombre </label>
-                                <input type="text" name="name">
+                                <input type="text" name='name'>
+                                <p class="text-danger-error errName"></p>
                                 <% if (locals.errors) { %>
-                                    <p class="text-danger-error">
-                                        <%= locals.errors?.name?.msg %>
-                                    </p>
-                                    <% } %>
+                                    <p class="text-danger-error"><%= locals.errors?.name?.msg %></p>
+                                    <% }%>
+
                             </div>
                             <div class="input-register">
                                 <label for="#">Apellido</label>
-                                <input type="text" name="surname">
+                                <input type="text" name='surname'>
                                 <% if (locals.errors) { %>
-                                    <p class="text-danger-error">
-                                        <%= locals.errors?.surname?.msg %>
-                                    </p>
-                                    <% } %>
+                                    <p class="text-danger-error"><%= locals.errors?.surname?.msg %></p>
+                                    <% } else {%>
+                                        <p class="text-danger-error errSurName"></p>
+                                        <% } %>
                             </div>
                             <div class="input-register">
                                 <label for="email">ingrese su email</label>
-                                <input type="text" name="email">
+                                <input type="text" name='email'>
                                 <% if (locals.errors) { %>
                                     <p class="text-danger-error">
                                         <%= locals.errors?.email?.msg %>
                                     </p>
-                                    <% } %>
+                                    <% } else {%>
+                                        <p class="text-danger-error errEmail">
+                                        </p>
+                                        <% } %>
                             </div>
 
                             <div class="input-register">
-                                <label for="password">Contraseña</label>
-                                <input type="password" name="password">
+                                <label for="contrasenia">Contraseña</label>
+                                <div id="ipe-c">
+                                    <input type="password" name="password" id="contrasenia">
+                                    <span id="input-pass-eye">
+                                        <i class="fa-solid fa-eye" id="icon-eye"></i>
+                                    </span>
+                                </div>
                                 <% if (locals.errors) { %>
                                     <p class="text-danger-error">
                                         <%= locals.errors?.password?.msg %>
                                     </p>
-                                    <% } %>
+                                    <% } else {%>
+                                        <p class="text-danger-error errPassword">
+                                        </p>
+                                        <% } %>
                             </div>
                             <div class="terminos">
                                 <label for="#">
@@ -56,13 +67,14 @@
                                 </label>
                             </div>
                             <button class="button-register" type="submit">REGISTRARSE</button>
+                            <p class="text-danger-error errForm"></p>
                         </form>
 
                         <div>
 
 
                             <div class="iniciar">
-                                <p>¿ya tienes cuenta? <a href="/autenticacion/iniciar">inicia sesion</a></p>
+                                <p>¿ya tienes cuenta? <a href="/authentication/iniciar">inicia sesion</a></p>
                                 <a href="#">¿Olvidaste tu Contraseña?</a>
                             </div>
                         </div>
@@ -71,6 +83,8 @@
                 </div>
             </section>
             <%- include("../partials/scripts") %>
+                <script src="../js/registerValidation.js"></script>
+                <script src="../js/mostrarContrasenia.js"></script>
     </body>
 
 </html>

@@ -68,9 +68,9 @@
    }
 
    #input-pass-eye {
-       width: 10%;
+       width: 20px;
+       height: 20px;
        color: var(--turquesa);
-       border-bottom: solid 2px var(--turquesa);
        display: flex;
        align-items: center;
        justify-content: center;
@@ -89,7 +89,31 @@
        width: 100%;
        margin: initial;
        padding: 5px 0px;
-       font-size: 18px;
+       padding-left: 32px;
+       font-size: 14px;
+       position: absolute;
+       bottom: -28px;
+       right: 0px;
+       text-align: start;
+       white-space: nowrap;
+   }
+
+   .text-danger-errorForm {
+    color: red;
+    width: 100%;
+    margin: initial;
+    padding: 5px 0px;
+    font-size: 16px;
+    text-align: center;
+   }
+
+   .text-Success {
+    color: green;
+    width: 100%;
+    margin: initial;
+    padding: 5px 0px;
+    font-size: 16px;
+    text-align: center;
    }
 
    .terminos {

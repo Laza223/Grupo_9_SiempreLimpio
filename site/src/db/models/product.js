@@ -1,5 +1,5 @@
 'use strict';
-const sequelizePaginate = require('sequelize-paginate')
+const sequelizePaginate = require("sequelize-paginate")
 const {
   Model
 } = require('sequelize');

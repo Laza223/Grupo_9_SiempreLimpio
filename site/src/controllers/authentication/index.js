@@ -4,6 +4,6 @@ module.exports = {
   procesoIniciar: require("./procesoIniciar.controller"),
   logout: require("./logout.controller"),
   register: require("./register.controller"),
-  registerProcess: require("./registerProcess.controller")
-
+  registerProcess: require("./registerProcess.controller"),
+  loginAndRegister: require("./loginAndRegister.controller")
 };
