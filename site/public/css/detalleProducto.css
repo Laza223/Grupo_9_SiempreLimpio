@@ -77,12 +77,7 @@ body {
     font-family: sans-serif;
 }
 
-.cart-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
+
 
 .agregar {
     background-color: #FF8541;
