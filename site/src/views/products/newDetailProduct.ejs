@@ -8,34 +8,54 @@
 
 
             <main class="detail-main">
-                <nav class="nav-categories">
-                    <a id="backButton"><i class="fa-solid fa-arrow-left"></i> Volver</a>
-                    <div>
-                        <a href="/">Home <i class="fa-solid fa-chevron-right"></i></a>
-                        <a href="/productos/categoria/<%=product.categoryId %>">
-                            <%= product.category.name %> <i class="fa-solid fa-chevron-right"></i>
-                        </a>
+                <div class="detail-container">
+                    <nav class="nav-categories">
+                        <a id="backButton"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+                        <div>
+                            <a href="/">Home <i class="fa-solid fa-chevron-right"></i></a>
+                            <a href="/productos/categoria/<%=product.categoryId %>">
+                                <%= product.category.name %> <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="product-img-container">
+                        <div class="images-gallery">
+                            <img id="galeria" src="/images/products/<%= product.image %>" alt="">
+                            <nav class="nav-gallery">
+                                <ul>
+                                    <li><a onclick="cargarfoto('/images/products/<%= product.image %>')"><img
+                                                src="/images/products/<%= product.image %>" alt=""></a></li>
+                                    <!-- <li><a onclick="cargarfoto('/images/products/cif-trasero.jpg',0)"><img
+                                                src="/images/products/cif-trasero.jpg" alt=""></a></li> -->
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="info-product">
+                            <h2>
+                                <%= product.name %>
+                            </h2>
+                            <h2>$ <%= product.price %>
+                            </h2>
+                            <button class="cart-button">Agregar al carrito <i
+                                    class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                        <span class="product-description">
+                            <h2>Descripcion del producto</h2>
+                            <p>
+                                <%= product.description %>
+                            </p>
+                        </span>
                     </div>
-                </nav>
-                <div class="product-container">
-                    <div class="images-gallery">
-                        <img id="galeria" src="/images/products/<%= product.image %>" alt="">
-                        <nav class="nav-gallery">
-                            <ul>
-                                <li><a onclick="cargarfoto('/images/products/<%= product.image %>')"><img
-                                            src="/images/products/<%= product.image %>" alt=""></a></li>
-                                <li><a onclick="cargarfoto('/images/products/cif-trasero.jpg',0)"><img
-                                            src="/images/products/cif-trasero.jpg" alt=""></a></li>
-                            </ul>
-                        </nav>
+                    <div class="carouselBottom">
                     </div>
                 </div>
-                <h2>
-                    <%= product.name %>
-                </h2>
-                <h2>$ <%= product.price %>
-                </h2>
-                <button class="cart-button">Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></button>
+
+
+
+
+
+
+
                 <!-- <div class="div-fondo">
                     <div class="card-container">
                         <h2>Seleccionaste</h2>
@@ -56,6 +76,47 @@
                         </div>
                     </div>
                 </div> -->
+
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="clean-product">
+                                <div class="img-container"><a href="productos/detalle/<%= product.id%>">
+                                        <img src="/images/products/<%= product.image%>" alt="Article">
+                                    </a></div>
+                                <div class="description-container">
+                                    <h2>
+                                        <%= product.name%>
+                                    </h2>
+                                    <h3> $<%= product.price%>
+                                    </h3>
+                                    <a id="cart-action" href="#">Añadir al carrito</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"><img src="/images/products/<%= product.image %>" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/products/<%= product.image %>" alt=""></div>
+                        <div class="swiper-slide"><img src="/images/products/<%= product.image %>" alt=""></div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- Swiper JS -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                    });
+                </script>
                 <script>
                     document.getElementById('backButton').addEventListener('click', function () {
                         window.history.back()
