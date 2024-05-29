@@ -51,56 +51,31 @@
                 </div>
 
 
-
-
-
-
-
-                <!-- <div class="div-fondo">
-                    <div class="card-container">
-                        <h2>Seleccionaste</h2>
-                        <div class="div-img"><img src="/images/products/<%#= product.image %>" alt="Esponja">
-                        </div>
-                        <b>
-                            <%#= product.name %>
-                        </b>
-                        <h5> $<%#= product.price%>
-                        </h5>
-                        <p> Categoría: <%#= product.category.name%>
-                        </p>
-                    
-                        <div class="cart-button">
-                            <div class="agregar"><button class="carrito"> AGREGAR AL CARRITO</button> 
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="clean-product">
-                                <div class="img-container"><a href="productos/detalle/<%= product.id%>">
-                                        <img src="/images/products/<%= product.image%>" alt="Article">
-                                    </a></div>
-                                <div class="description-container">
-                                    <h2>
-                                        <%= product.name%>
-                                    </h2>
-                                    <h3> $<%= product.price%>
-                                    </h3>
-                                    <a id="cart-action" href="#">Añadir al carrito</a>
+                <div class="carousel-container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <% productsBotBar.forEach(prodBotBar=> { %>
+                                <div class="swiper-slide">
+                                    <div class="clean-product-swiper">
+                                        <div class="img-container-swiper">
+                                            <a href="/productos/detalle/<%= prodBotBar.id%>">
+                                                <img src="/images/products/<%= prodBotBar.image%>" alt="Article">
+                                            </a>
+                                        </div>
+                                        <div class="description-container-swiper">
+                                            <h2>
+                                                <%= prodBotBar.name%>
+                                            </h2>
+                                            <h3> $<%= prodBotBar.price%>
+                                            </h3>
+                                            <a id="cart-action-swiper" href="/productos/detalle/<%= prodBotBar.id%>">Ver Producto</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <% }) %>
                         </div>
-                        <div class="swiper-slide"><img src="/images/products/<%= product.image %>" alt=""></div>
-                        <div class="swiper-slide"><img src="/images/products/<%= product.image %>" alt=""></div>
-                        <div class="swiper-slide"><img src="/images/products/<%= product.image %>" alt=""></div>
-
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="swiper-pagination"></div>
                 </div>
 
                 <!-- Swiper JS -->
@@ -109,12 +84,26 @@
                 <!-- Initialize Swiper -->
                 <script>
                     var swiper = new Swiper(".mySwiper", {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
+                        slidesPerView: 1,
+                        spaceBetween: 10,
                         pagination: {
                             el: ".swiper-pagination",
                             clickable: true,
                         },
+                        breakpoints: {
+                            426: {
+                                slidesPerView: 1,
+                                spaceBetween: 0,
+                            },
+                            769: {
+                                slidesPerView: 2,
+                                spaceBetween: 0,
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                                spaceBetween: 0,
+                            }
+                        }
                     });
                 </script>
                 <script>
