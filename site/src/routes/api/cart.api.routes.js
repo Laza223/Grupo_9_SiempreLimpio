@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const { getOrder, addProductToOrder, removeProductToOrder, moreQuantity, lessQuantity, cancelOrder, completeOrder } = require('../../controllers/api/cart');
 
-
+// /api/cart
 router.get('/', getOrder);
 router.patch('/add/:id', addProductToOrder);
 router.patch('/remove/:id', removeProductToOrder);
