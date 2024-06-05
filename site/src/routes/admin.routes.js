@@ -9,22 +9,22 @@ const {productsValidation} = require("../middlewares/validations")
 
 // "/admin"
 
-router.get("/dashboard/productos",  adminController.list); 
+router.get("/dashboard/productos", checkAdmin, adminController.list); 
 
-router.get("/dashboard/usuarios", adminController.userList);
-router.get("/dashboard/usuarios/:id", adminController.userDetail)
-router.put("/dashboard/usuarios/:id", adminController.userEdit)
+router.get("/dashboard/usuarios", checkAdmin, adminController.userList);
+router.get("/dashboard/usuarios/:id", checkAdmin, adminController.userDetail)
+router.put("/dashboard/usuarios/:id", checkAdmin, adminController.userEdit)
 
-router.get("/dashboard/editar/:id",  adminController.edit);
-router.put("/dashboard/editar/:id", uploadProducts.single( "imageProduct"), productsValidation,  adminController.update)
+router.get("/dashboard/editar/:id", checkAdmin, adminController.edit);
+router.put("/dashboard/editar/:id", checkAdmin, uploadProducts.single( "imageProduct"), productsValidation,  adminController.update)
 
-router.get("/dashboard/crear", adminController.create);
-router.post("/dashboard/crear",uploadProducts.single( "imageProduct"), productsValidation,   adminController.store);
+router.get("/dashboard/crear", checkAdmin, adminController.create);
+router.post("/dashboard/crear", checkAdmin, uploadProducts.single( "imageProduct"), productsValidation,   adminController.store);
 
-router.get("/dashboard/eliminar/:id", adminController.delete);
-router.delete("/dashboard/eliminar/:id", adminController.destroy);
+router.get("/dashboard/eliminar/:id", checkAdmin, adminController.delete);
+router.delete("/dashboard/eliminar/:id", checkAdmin, adminController.destroy);
 
-router.put("/dashboard/restaurar/:id", adminController.restore)
+router.put("/dashboard/restaurar/:id", checkAdmin, adminController.restore)
 
 
 
