@@ -7,7 +7,7 @@
 <main class="edicion-producto">
     <h2 class="h2-edit">Editar producto</h2>
 
-    <form action="/admin/dashboard/editar/<%= producto.id %>?_method=PUT" method="POST" class="form-edit">
+    <form action="/admin/dashboard/editar/<%= producto.id %>?_method=PUT" enctype="multipart/form-data" method="POST" class="form-edit">
         <div class="mb-3 col-6">
             <label for="exampleInputPassword1" class="form-label">Nombre</label>
             <input name="name" value="<%= producto.name %>" type="text" class="form-control input-edicion" id="exampleInputPassword1">
@@ -39,7 +39,10 @@
               <% }) %>
           </select>
           
-          
+          <div class="mb-3">
+            <label for="file" class="form-label">Nueva imagen</label>
+            <input class="form-control" type="file" id="file" accept="image/*" name="imageProduct" >
+        </div>
         </div>
 
         <div class="buttons">

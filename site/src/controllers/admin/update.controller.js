@@ -2,7 +2,7 @@ const db = require("../../db/models");
 
 module.exports = (req, res) => {
 const {name, price, category, stock, description} = req.body
-
+const image = req.file.filename ? req.file.filename : "product-default"
     db.Product.update(
         {
         
@@ -10,7 +10,7 @@ const {name, price, category, stock, description} = req.body
             price: price,
             categoryId: category, 
             stock: stock,
-            //image: 
+            image: image,
             description: description
         },
         {
