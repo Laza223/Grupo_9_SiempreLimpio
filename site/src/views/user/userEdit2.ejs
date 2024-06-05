@@ -25,6 +25,9 @@
                             <label for="phoneNumber" class="form-label">Teléfono:</label>
                             <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control"
                                 value="<%= user.phoneNumber %>">
+                                <% if (locals.errors) { %>
+                                    <p class="text-danger-error"><%= locals.errors?.phoneNumber?.msg %></p>
+                                <% }  %>
                         </div>
                     </div>
                     <div class="container-file-old-new">
