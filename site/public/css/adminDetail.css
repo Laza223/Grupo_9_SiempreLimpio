@@ -1,31 +1,33 @@
-.admin-container-detail{
+.admin-user-details h3{
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+#admin-user-info{
     display: flex;
+    margin-bottom: 140px;
     align-items: center;
     justify-content: center;
+    gap:200px;
 }
 
-.admin-header-detail{
+#admin-user-info form{
+    width: 30%;
+}
+
+.container-admin-user-address{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    margin-left: 70px;
+    padding: 25px;
+    gap: 100px;
 }
 
-.admin-form-detail{
-    width: 500px;
+#admin-form-edit-product{
+    width: 700px;
     
 }
 
-
-
-.admin-header-detail-subtitle{
-    box-sizing: border-box;
+#container-admin-form-edit-product{
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-left: 11px solid rgb(136, 136, 136);
-    padding-left: 16px;
-    height: 25px;
+    margin-top: 40px;
 }

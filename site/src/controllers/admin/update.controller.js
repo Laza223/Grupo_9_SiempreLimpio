@@ -2,6 +2,7 @@ const db = require("../../db/models");
 
 module.exports = (req, res) => {
 const {name, price, category, stock, description} = req.body
+const {id} = req.params
 const image = req.file.filename ? req.file.filename : "product-default"
     db.Product.update(
         {
@@ -14,7 +15,7 @@ const image = req.file.filename ? req.file.filename : "product-default"
             description: description
         },
         {
-            where: { id: req.params.id } 
+            where: { id: id} 
         }
     )
     .then(() => {

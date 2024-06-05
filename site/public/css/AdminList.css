@@ -4,11 +4,50 @@
     padding-left: 108px;
 }
 
+#table-search-admin th,
+#table-search-admin td {
+    width: 300px;
+}
+
+
+
+#table-search-admin tr {
+    height: 50px;
+    
+}
+
+#table-search-admin {
+    table-layout: fixed;
+    width: 100%;
+}
+
+#input-search-admin {
+    background-image: url('/images/lupa.png'); 
+    background-size: 26px;
+    background-position: 4px, 20px;
+    background-repeat: no-repeat; 
+    width: 300px; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd; 
+    margin-bottom: 12px; 
+    margin-right: 20px;
+    margin-top:5px;
+    border-radius: 13px;
+  }
+#table-search-admin td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .admin-header-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    height:84px;
+    border-radius: 9px
 }
 
 .admin-header-list svg {
@@ -22,15 +61,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 11px solid rgb(136, 136, 136);
-    padding-left: 16px;
+    border-left: 11px solid rgb(136, 136, 136); 
+    padding-left: 12px;
     height: 40px;
+    margin-left: 20px;
 }
 
 .admin-header-list h2 {
     margin-top: 8px;
     font-weight: 900;
-    font-size: 35px;
+    font-size:40px;
+    
+    
 }
 
 .admin-table-list {
