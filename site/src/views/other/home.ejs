@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include("../partials/head", {title: "Inicio" }) %>
-    
+<%- include("../partials/head", {title: "Inicio" }) %>
+
     <body class="home-body">
         <%- include("../partials/header") %>
             <main class="home-main">
@@ -61,14 +61,14 @@
             <% if (locals.userLogin?.roleAdmin===true) { %>
                 <a href="/admin/dashboard/productos" class="access-dashboard"><i class="fa-solid fa-user-gear"></i></a>
                 <% } else{ %>
-                    <div class= "burguer-icon-fixed">
+                    <div class="burguer-icon-fixed">
                         <i class="fa-solid fa-list"></i>
                     </div>
                     <% } %>
 
-                    <%- include("../partials/footer") %>
-                        <%- include("../partials/scripts") %>
-                            <script src="./js/togglePassword.js"></script>
+                        <%- include("../partials/footer") %>
+                            <%- include("../partials/scripts") %>
+                                <script src="./js/togglePassword.js"></script>
     </body>
 
 </html>

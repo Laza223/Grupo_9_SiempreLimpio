@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head", { title: `${user.name}  ${user.surname}` }) %>
+<%- include("../partials/head", { title: `${user.name} ${user.surname}` }) %>
 
 
 
-    <body class="dashboard-body">
-      <%- include("./navBar") %>
+  <body class="dashboard-body">
+    <%- include("./navBar") %>
       <main class="admin-main-list">
 
         <div class="admin-header-list">
           <div class="admin-header-list-title">
-      
-           <h2 >Detalle de usuario</h2>
-          
-          </div>
-          </div>
 
-          
-     
-   
+            <h2>Detalle de usuario</h2>
+
+          </div>
+        </div>
       </main>
-     
+
       <%- include("../partials/scripts") %>
 
-    </body>
+  </body>
 
 </html>

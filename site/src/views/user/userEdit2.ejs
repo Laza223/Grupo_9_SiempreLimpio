@@ -7,7 +7,7 @@
         <%- include("../partials/header") %>
             <main class="main-userEdit">
                 <form method="POST" action="/perfil/editar?_method=PUT" enctype="multipart/form-data" class="perfil">
-                <h1>Editar usuario</h1>
+                    <h1>Editar usuario</h1>
 
                     <div class="user-dates">
                         <div>
@@ -35,7 +35,8 @@
 
                         <div class="mb-3">
                             <label for="avatar" class="form-label">Nueva foto de perfil</label>
-                            <input class="form-control" type="file" id="file" accept="image/*" name="avatar" value="<%= user.avatar %>">
+                            <input class="form-control" type="file" id="file" accept="image/*" name="avatar"
+                                value="<%= user.avatar %>">
                         </div>
                     </div>
                     <div class="container-buttons-userEdit">
