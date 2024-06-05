@@ -15,7 +15,8 @@ module.exports = async (req, res) => {
             }
         ]
         })
+        const roles = await db.Role.findAll()
 
-        return  res.render("admin/userDetail", {user})
+        return  res.render("admin/userDetail", {user, roles})
     }    catch (error)  { console.log("Error al obtener los detalles del usuario:", error); }
 }

@@ -31,6 +31,6 @@ module.exports = async (req, res) => {
         console.log("Error al editar el usuario:", error)
 
 
-        return res.redirect(`/admin/dashboard/usuarios/detalle/${req.params.id}`)
+        return res.redirect(`/admin/dashboard/usuarios/${req.params.id}`)
     }
 }

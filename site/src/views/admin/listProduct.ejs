@@ -10,27 +10,35 @@
         <div class="admin-header-list">
           <div class="admin-header-list-title">
           
-           <h2 >Productos</h2>
+           <h3></h3><h2 >Productos</h2>
           
           </div>
-          <div class="button-crear">
-            <% if (eliminados === "true") { %>
-              <a href="/admin/dashboard/productos?eliminados=false">
-                <button type="button" class="btn btn-outline-secondary">Excluir productos eliminados</button>
-              </a>
-            <% } else { %>
-              <a href="/admin/dashboard/productos?eliminados=true">
-                <button type="button" class="btn btn-outline-secondary">Ver productos eliminados</button>
-              </a>
-          <% } %>
-            
-            <a href="/admin/dashboard/crear"> <button type="button" class="btn btn-outline-secondary"class="btn btn-primary">Crear producto</button></a>
+          
+         
+          <div class="admin-container-inputs"> 
+  
+          
+         
+         
+          <% if (eliminados === "true") { %>
+            <a href="/admin/dashboard/productos?eliminados=false">
+              <button type="button" class="btn btn-outline-secondary" id="exclude-button-admin">Excluir productos eliminados</button>
+            </a>
+          <% } else { %>
+            <a href="/admin/dashboard/productos?eliminados=true">
+              <button type="button" class="btn btn-outline-secondary" id="exclude-button-admin">Ver productos eliminados</button>
+            </a>
+        <% } %>
+        <a href="/admin/dashboard/crear"> <button type="button" class="btn btn-outline-success">Crear producto</button></a>
+          <input type="text" id="input-search-admin" placeholder="Buscar" >
+          
+      </div>
           </div>
-          </div>
-          <table class="admin-table-list">
-            <thead>
+        
+          <table class="table table-borderless table-hover" id="table-search-admin">
+            <thead class=" table-dark">
               <tr>
-                <th scope="col">id</th>
+                <th scope="col"></th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Stock</th>
@@ -40,11 +48,11 @@
               
               </tr>
             </thead>
-            <tbody>
+            <tbody >
               <% products.forEach(producto=> { %>
-                <tr class="records">
+                <tr class="clickable-row" data-url="/admin/dashboard/editar/<%= producto.id %>">
                   <th scope="row">
-                   <img src="/images/products/<%= producto.image %>" alt="" width="100px"> 
+                    <img src="/images/products/<%= producto.image %>" alt="" width="30px">
                   </th>
                   <td>
                     <%= producto.name %>
@@ -67,7 +75,7 @@
                         
                       <% } else { %>
                         <td>
-                          <button class="btn btn-secondary" disabled>Eliminado el <%= producto.deletedAt ? producto.deletedAt.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : '' %></button>
+                          Eliminado el <%= producto.deletedAt ? producto.deletedAt.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : '' %>
                       </td>
                       
                         <td><form action="/admin/dashboard/restaurar/<%= producto.id %>?_method=PUT" method="post">
@@ -77,10 +85,11 @@
                          
                       <% } %>
                   </td>
-
+               
                 </tr>
+           
                 <% }) %>
-
+            
         
 
 

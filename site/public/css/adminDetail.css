@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
     gap:200px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
 }
 
 #admin-user-info form{
@@ -19,6 +22,9 @@
     display: flex;
     padding: 25px;
     gap: 100px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
 }
 
 #admin-form-edit-product{
@@ -31,3 +37,4 @@
     justify-content: center;
     margin-top: 40px;
 }
+

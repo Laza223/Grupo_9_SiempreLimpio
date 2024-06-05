@@ -5,7 +5,7 @@
 }
 
 .dashboard-body{
-    background-color: whitesmoke;
+    background-color: #dee2e6;
 }
 .dash-navBar {
     display: flex;
@@ -21,6 +21,7 @@
     display: flex;
     justify-content: center;
     padding: 10px;
+    background-color: #dee2e6;
 }
 
 .img-logo img {
