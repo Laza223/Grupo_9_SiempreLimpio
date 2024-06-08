@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "root",
-    "database": "siempre_limpio_db",
+    "database": "siempre_limpio_db2",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "timezone": "-03:00",

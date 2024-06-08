@@ -31,6 +31,7 @@
             <thead>
               <tr>
                 <th scope="col">id</th>
+                <th scope="col">Img</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Stock</th>
@@ -43,6 +44,9 @@
             <tbody>
               <% products.forEach(producto=> { %>
                 <tr class="records">
+                  <td>
+                    <img height="55px" object-fit="contain" src="/images/products/<%= producto.image %>" alt="">
+                  </td>
                   <th scope="row">
                     <%= producto.id %>
                   </th>
