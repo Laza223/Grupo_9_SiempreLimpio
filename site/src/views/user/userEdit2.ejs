@@ -13,27 +13,21 @@
                         <div>
                             <label for="name" class="form-label">Nombre:</label>
                             <input type="text" id="name" name="name" class="form-control" value="<%= user.name %>">
-                            <% if (locals.errors) { %>
                                 <p class="text-danger"><%= locals.errors?.name?.msg %></p>
-                            <% } %>
                         </div>
 
                         <div>
                             <label for="surname" class="form-label">Apellido:</label>
                             <input type="text" id="surname" name="surname" class="form-control"
                                 value="<%= user.surname %>">
-                            <% if (locals.errors) { %>
                                 <p class="text-danger"><%= locals.errors?.surname?.msg %></p>
-                            <% } %>
                         </div>
 
                         <div>
                             <label for="phoneNumber" class="form-label">Teléfono:</label>
                             <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control"
                                 value="<%= user.phoneNumber %>">
-                            <% if (locals.errors) { %>
                                 <p class="text-danger"><%= locals.errors?.phoneNumber?.msg %></p>
-                            <% } %>
                         </div>
                     </div>
                     <div class="container-file-old-new">
@@ -60,6 +54,7 @@
             </main>
             <%- include("../partials/footer") %>
                 <%- include("../partials/scripts") %>
+                <script src="/js/modifyProfile.js"></script>
     </body>
 
 </html>

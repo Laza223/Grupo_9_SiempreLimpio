@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
             await db.User.update({
                 name: name,
                 surname: surname,
-                avatar: req.file.filename,
+                avatar: req.file?.filename,
                 phoneNumber: phoneNumber
             }, { where: { id } });
 
