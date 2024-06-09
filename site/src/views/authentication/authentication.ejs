@@ -42,7 +42,8 @@
                     <div>
                         <label class="label-input">
                             <i class='bx bx-user'></i>
-                            <input type="text" placeholder="Nombre" name='name' class="inputRegister" value="<%= locals?.old?.name %>">
+                            <input type="text" placeholder="Nombre" name='name' class="inputRegister"
+                                value="<%= locals?.old?.name %>">
                             <i class="check-icon fa-solid fa-circle-check"></i>
                             <% if (locals.errors) { %>
                                 <p class="text-danger-error">
@@ -56,7 +57,8 @@
                     <div>
                         <label class="label-input">
                             <i class='bx bx-user'></i>
-                            <input type="text" placeholder="Apellido" name='surname' class="inputRegister" value="<%= locals?.old?.surname %>">
+                            <input type="text" placeholder="Apellido" name='surname' class="inputRegister"
+                                value="<%= locals?.old?.surname %>">
                             <i class="check-icon fa-solid fa-circle-check"></i>
                             <% if (locals.errors) { %>
                                 <p class="text-danger-error">
@@ -70,7 +72,8 @@
                     <div>
                         <label class="label-input">
                             <i class='bx bx-envelope'></i>
-                            <input type="email" placeholder="Correo Electronico" name='email' class="inputRegister" value="<%= locals?.old?.email %>">
+                            <input type="email" placeholder="Correo Electronico" name='email' class="inputRegister"
+                                value="<%= locals?.old?.email %>">
                             <i class="check-icon fa-solid fa-circle-check"></i>
                             <% if (locals.errors) { %>
                                 <p class="text-danger-error">
@@ -84,8 +87,8 @@
                     <div>
                         <label class="label-input">
                             <i class='bx bx-lock-alt'></i>
-                            <input type="password" placeholder="Contraseña" name="password" value="<%= locals?.old?.password %>"
-                                class="passTroggle passwordInput inputRegister">
+                            <input type="password" placeholder="Contraseña" name="password"
+                                value="<%= locals?.old?.password %>" class="passTroggle passwordInput inputRegister">
                             <i class="check-icon fa-solid fa-circle-check"></i>
                             <span class="input-pass-eye">
                                 <i class="fa-solid fa-eye icon-eye"></i>
@@ -102,7 +105,8 @@
                     <div>
                         <label class="label-input">
                             <i class='bx bx-lock-alt'></i>
-                            <input type="password" placeholder="Repita Contraseña" name="passwordRepeat" value="<%= locals?.old?.passwordRepeat %>"
+                            <input type="password" placeholder="Repita Contraseña" name="passwordRepeat"
+                                value="<%= locals?.old?.passwordRepeat %>"
                                 class="passwordRepeatInput passTroggle inputRegister">
                             <i class="check-icon fa-solid fa-circle-check"></i>
                             <span class="input-pass-eye">
@@ -125,7 +129,9 @@
                             <%= locals.registerMsg%>
                         </p>
                         <% } %>
-                        <h1 id="successRegister"><%= locals.successRegister?.msg %></h1>
+                            <h1 id="successRegister">
+                                <%= locals.successRegister?.msg %>
+                            </h1>
                 </form>
             </div>
         </div>
@@ -182,10 +188,12 @@
                                     <%= locals.errorsLogin?.passwordLogin?.msg %>
                                 </p>
                                 <% } %>
-                                    
+
                         </label>
                     </div>
-                    <h1 id="errorLogin"><%= locals.errorLogin?.msg %></h1>
+                    <h1 id="errorLogin">
+                        <%= locals.errorLogin?.msg %>
+                    </h1>
                     <input type="submit" value="Iniciar Sesión">
                     <div class="alerta-error">Todos los campos son obligatorios</div>
                     <div class="alerta-exito">Iniciaste sesión correctamente</div>
@@ -193,7 +201,7 @@
             </div>
         </div>
     </div>
-    <script src="../js/registerValidation.js"></script>
+     <script src="../js/registerValidation.js"></script> 
     <script src="../js/mostrarContrasenia.js"></script>
     <script src="../js/scriptsLoginRegister/script.js"></script>
 </body>

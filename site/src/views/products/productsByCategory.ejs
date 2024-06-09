@@ -11,33 +11,36 @@
                 <div class="div-offers">
                     <h5>¡OFERTAS DE LA SEMANA DE LA LIMPIEZA!</h5>
                 </div>
-                <% if(locals.products.length > 0){ %>
-                <section class="section-products">
-                    <% products.forEach(product=> { %>
-                        <div class="clean-product">
-                            <div class="img-container"><a href="/productos/detalle/<%= product.id%>">
-                                <img src="/images/products/<%= product.image%>" alt="Article">
-                            </a></div>
-                            <div class="description-container">
-                                <h2><%= product.name%></h2>
-                                <h3> $<%= product.price%></h3>
-                                <a id="cart-action" href="#">Añadir al carrito</a>
+                <% if(locals.products.length> 0){ %>
+                    <section class="section-products">
+                        <% products.forEach(product=> { %>
+                            <div class="clean-product">
+                                <div class="img-container"><a href="/productos/detalle/<%= product.id%>">
+                                        <img src="/images/products/<%= product.image%>" alt="Article">
+                                    </a></div>
+                                <div class="description-container">
+                                    <h2>
+                                        <%= product.name%>
+                                    </h2>
+                                    <h3> $<%= product.price%>
+                                    </h3>
+                                    <a id="cart-action" href="#">Añadir al carrito</a>
+                                </div>
                             </div>
-                        </div>
-                        <% }) %>
-                        <% }else{%>
-                            <h1>No hay productos con la categoria seleccionada</h1>
-                        <%} %>
-                </section>
+                            <% }) %>
+                                <% }else{%>
+                                    <h1>No hay productos con la categoria seleccionada</h1>
+                                    <%} %>
+                    </section>
             </main>
 
-            <% if (locals.userLogin?.roleAdmin === true) { %>   
+            <% if (locals.userLogin?.roleAdmin===true) { %>
                 <a href="/admin/dashboard/productos" class="access-dashboard"><i class="fa-solid fa-user-gear"></i></a>
-            <% } %>
+                <% } %>
 
-            <%- include("../partials/footer") %>
-                <%- include("../partials/scripts") %>
-                <script src="./js/togglePassword.js"></script>
+                    <%- include("../partials/footer") %>
+                        <%- include("../partials/scripts") %>
+                            <script src="./js/togglePassword.js"></script>
     </body>
 
 </html>
