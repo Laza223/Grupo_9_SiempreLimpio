@@ -1,6 +1,5 @@
 import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
-import img from '../assets/images/esponja.png'
 import { useEffect, useState } from 'react';
 import '../assets/css/products.css'
 import { Button } from '@mui/material';
@@ -9,7 +8,8 @@ function Products() {
 
     let [products, setProducts] = useState([])
 
-    let urlApiProducts = 'http://localhost:3030/api/products'
+    const urlApiProducts = 'http://localhost:3030/api/products'
+    const urlApiImage = 'http://localhost:3030/api/products/image/'
 
     useEffect(() => {
         fetch(urlApiProducts)
@@ -19,7 +19,16 @@ function Products() {
 
     const prods = products.products || []
 
-    console.log(prods);
+    const handleButtonDetail = (id) => {
+        const url = 'http://localhost:3030/productos/detalle/' + id
+        window.open(url, '_blank')
+    }
+
+    const handleButtonEdit = (id) => {
+        const url = 'http://localhost:3030/admin/dashboard/editar/' + id
+        window.open(url, '_blank')
+    }
+
 
     let rows = prods.map(p => ({
         id: p.id,
@@ -27,54 +36,76 @@ function Products() {
         price: `$ ${p.price}`,
         stock: p.stock,
         category: p.category.name,
-        photo: img
+        photo: urlApiImage + p.image
     }))
-
-
-    console.log(rows);
-
-
 
     const columns = [
         { field: 'id', headerName: 'ID', width: 80 },
         { field: 'name', headerName: 'Nombre', flex: 1 },
-        { field: 'price', headerName: 'Precio', flex: 1},
-        { field: 'stock', headerName: 'Stock', flex: 1},
+        {
+            field: 'price', headerName: 'Precio', width: 100,
+            renderCell: (params) => (
+                <div style={{ width: '100%', textAlign: 'center' }}>
+                    {params.value}
+                </div>
+            ),
+        },
+        { field: 'stock', headerName: 'Stock', width: 100 },
         { field: 'category', headerName: 'Categoria', flex: 1 },
         {
             field: 'photo',
             headerName: 'Imagen',
-            flex: 1,
+            width: 200,
             renderCell: (params) => (
                 <img src={params.value} alt={params.row.fullName} style={{ width: 'auto', height: '100%', padding: "7px" }} />
             ),
         },
         {
-            field: 'actionEdit',
-            headerName: 'Editar',
-            flex: 1,
+            field: 'ver',
+            headerName: '',
+            width: 120,
             renderCell: (params) => (
-                <Button
-                    variant="contained"
-                    color="warning"
-                    onClick={() => handleButtonClick(params.row.id)}
-                >
-                    Editar
-                </Button>
+                <div className='buttonDashboardContainer'>
+                    <Button
+                        variant="contained"
+                        color="info"
+                        onClick={() => handleButtonDetail(params.row.id)}
+                    >
+                        Ver
+                    </Button>
+                </div>
+            ),
+        },
+        {
+            field: 'actionEdit',
+            headerName: '',
+            width: 120,
+            renderCell: (params) => (
+                <div className='buttonDashboardContainer'>
+                    <Button
+                        variant="contained"
+                        color="success"
+                        onClick={() => handleButtonEdit(params.row.id)}
+                    >
+                        Editar
+                    </Button>
+                </div>
             ),
         },
         {
             field: 'actionDelete',
-            headerName: 'Eliminar',
-            flex: 1,
+            headerName: '',
+            width: 120,
             renderCell: (params) => (
-                <Button
-                    variant="contained"
-                    color="error"
-                    onClick={() => handleButtonClick(params.row.id)}
-                >
-                    Eliminar
-                </Button>
+                <div className='buttonDashboardContainer'>
+                    <Button
+                        variant="contained"
+                        color="error"
+                        onClick={() => handleButtonClick(params.row.id)}
+                    >
+                        Eliminar
+                    </Button>
+                </div>
             ),
         }
     ];

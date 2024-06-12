@@ -158,6 +158,103 @@
     object-fit: contain;
 }
 
+/* CARD DE CAROUSEL SWIPER */
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.clean-product-swiper {
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0px;
+    width: 97vw;
+    height: 350px;
+    background-color: white;
+    border: 1px solid rgb(201 194 194);
+}
+
+.img-container-swiper {
+    width: 100%;
+    height: 63%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px
+}
+
+.img-container-swiper img {
+    height: 90%;
+    width: auto;
+}
+
+.description-container-swiper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-top: solid 1px rgb(201 194 194);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.clean-product-swiper p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: initial;
+    color: var(--azulFont);
+}
+
+.clean-product-swiper a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.clean-product-swiper h2 {
+    padding: 5px;
+    margin: initial;
+    color: var(--azulFont);
+    font-size: 24px;
+}
+
+.clean-product-swiper h3 {
+    margin: initial;
+    color: var(--azulFont);
+    font-weight: bold;
+}
+
+#cart-action-swiper {
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    background-color: var(--turquesa);
+    width: 70%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+
+#cart-action-swiper:hover {
+    background-color: var(--azulOscuro);
+}
+
+
+@media (min-width: 769px) {
+    .swiper-slide {
+        padding: 15px;
+    }
+}
+
 @media (min-width: 1024px) {
 
     .nav-categories {
@@ -206,7 +303,7 @@
     .swiper {
         border-radius: 8px;
         border: solid 1px lightgray;
-
+        overflow: hidden;
     }
 
 }
