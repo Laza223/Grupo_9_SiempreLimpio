@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from '../pages/Root'
 import Dashboard from "../pages/Dashboard";
+import Products from "../pages/Products";
 
 const router = createBrowserRouter([
     {
@@ -8,12 +9,12 @@ const router = createBrowserRouter([
         element: <Root/>,
         children: [
             {
-                path: "/",
+                path: "/dashboard",
                 element: <Dashboard/>
             },
             {
-                // path: "/", colocar direccion de ruta (parte de "/")
-                // element: </> colocar componente a enviar a <Outlet/>
+                path: "/products",
+                element: <Products/>
             },
             {
                 // path: "/", colocar direccion de ruta (parte de "/")
@@ -24,8 +25,8 @@ const router = createBrowserRouter([
                 // element: </> colocar componente a enviar a <Outlet/>
             },
             {
-               // path: "/", colocar direccion de ruta (parte de "/")
-                // element: </> colocar componente a enviar a <Outlet/>
+            //    path: "/", colocar direccion de ruta (parte de "/")
+            //     element: </> colocar componente a enviar a <Outlet/>
             }
         ]
     }
