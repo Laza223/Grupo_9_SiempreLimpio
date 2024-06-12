@@ -38,12 +38,8 @@
           <table class="table table-borderless table-hover" id="table-search-admin">
             <thead class=" table-dark">
               <tr>
-<<<<<<< HEAD
                 <th scope="col">id</th>
                 <th scope="col">Img</th>
-=======
-                <th scope="col"></th>
->>>>>>> 62af926c307599b4ca28f13851dc939359be8352
                 <th scope="col">Nombre</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Stock</th>
@@ -55,14 +51,7 @@
             </thead>
             <tbody >
               <% products.forEach(producto=> { %>
-<<<<<<< HEAD
-                <tr class="records">
-                  <td>
-                    <img height="55px" object-fit="contain" src="/images/products/<%= producto.image %>" alt="">
-                  </td>
-=======
                 <tr class="clickable-row" data-url="/admin/dashboard/editar/<%= producto.id %>">
->>>>>>> 62af926c307599b4ca28f13851dc939359be8352
                   <th scope="row">
                     <img src="/images/products/<%= producto.image %>" alt="" width="30px">
                   </th>
