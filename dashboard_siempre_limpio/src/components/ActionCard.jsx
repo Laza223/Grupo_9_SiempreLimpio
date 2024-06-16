@@ -5,7 +5,7 @@ function ActionCard({name, href, icon }) {
     return (
         <li className="nav-item">
             <Link className="nav-link collapsed" to={href}>
-                <i className={icon}></i>
+                <i className={icon}/>
                 <span>{name}</span>
             </Link>
         </li>

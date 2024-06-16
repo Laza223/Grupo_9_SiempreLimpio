@@ -8,22 +8,17 @@ function Sidebar(props) {
 		{
 			name: "Dashboard",
 			href: "/dashboard",
+			icon: "fa-solid fa-table-columns"
 		},
 		{
 			name: "Productos",
-			href: "/products"
+			href: "/products",
+			icon: "fa-solid fa-box-open"
 		},
 		{
 			name: "Usuarios",
-			href: "/"
-		},
-		{
-			name: "Editar Productos",
-			href: "/"
-		},
-		{
-			name: "Eliminar Producto",
-			href: "/"
+			href: "/",
+			icon: "fa-solid fa-users"
 		}
 	]
 
@@ -46,7 +41,7 @@ function Sidebar(props) {
 			<hr className="sidebar-divider" />
 
 			{metrics.map((m) => {
-				return <ActionCard name={m.name} href={m.href} key={m.name + 1} />
+				return <ActionCard name={m.name} href={m.href} icon={m.icon} key={m.name + 1} />
 			})}
 
 			<hr className="sidebar-divider d-none d-md-block" />

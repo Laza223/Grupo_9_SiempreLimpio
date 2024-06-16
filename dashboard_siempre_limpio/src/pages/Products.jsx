@@ -3,10 +3,29 @@ import { DataGrid } from '@mui/x-data-grid';
 import { useEffect, useState } from 'react';
 import '../assets/css/products.css'
 import { Button } from '@mui/material';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { useNavigate } from 'react-router-dom';
 
 function Products() {
 
+    const navigate = useNavigate()
+
     let [products, setProducts] = useState([])
+
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
 
     const urlApiProducts = 'http://localhost:3030/api/products'
     const urlApiImage = 'http://localhost:3030/api/products/image/'
@@ -19,14 +38,22 @@ function Products() {
 
     const prods = products.products || []
 
-    const handleButtonDetail = (id) => {
+    function handleButtonDetail(id) {
         const url = 'http://localhost:3030/productos/detalle/' + id
         window.open(url, '_blank')
     }
 
-    const handleButtonEdit = (id) => {
-        const url = 'http://localhost:3030/admin/dashboard/editar/' + id
-        window.open(url, '_blank')
+
+    const handleButtonEdit = () => {
+        navigate('/products/edit')
+    }
+    // function handleButtonEdit(id) {
+    //     const navigate = useNavigate()
+    //     navigate('/products/edit')
+    // }
+
+    function handleButtonDelete(id) {
+
     }
 
 
@@ -57,7 +84,7 @@ function Products() {
             headerName: 'Imagen',
             width: 200,
             renderCell: (params) => (
-                <img src={params.value} alt={params.row.fullName} style={{ width: 'auto', height: '100%', padding: "7px" }} />
+                <img src={params.value.toString()} alt={params.row.fullName} style={{ width: 'auto', height: '100%', padding: "7px" }} />
             ),
         },
         {
@@ -85,7 +112,7 @@ function Products() {
                     <Button
                         variant="contained"
                         color="success"
-                        onClick={() => handleButtonEdit(params.row.id)}
+                        onClick={handleButtonEdit}
                     >
                         Editar
                     </Button>
@@ -101,7 +128,7 @@ function Products() {
                     <Button
                         variant="contained"
                         color="error"
-                        onClick={() => handleButtonClick(params.row.id)}
+                        onClick={() => handleClickOpen()}
                     >
                         Eliminar
                     </Button>
@@ -109,6 +136,7 @@ function Products() {
             ),
         }
     ];
+
 
 
     return (
@@ -125,6 +153,33 @@ function Products() {
                     }}
                 />
             </div>
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+                sx={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+            >
+                <DialogTitle id="alert-dialog-title">
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Estas Seguro que deseas eliminar este producto?
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button
+                        variant="contained"
+                        color="info"
+                        onClick={handleClose}>Cancelar</Button>
+                    <Button
+                        variant="contained"
+                        color="error"
+                        onClick={handleClose} autoFocus>
+                        Confirmar
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </div>
     )
 }
