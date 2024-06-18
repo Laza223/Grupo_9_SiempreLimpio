@@ -7,17 +7,17 @@ function Sidebar(props) {
 	const metrics = [
 		{
 			name: "Dashboard",
-			href: "/dashboard",
+			href: "/admin",
 			icon: "fa-solid fa-table-columns"
 		},
 		{
 			name: "Productos",
-			href: "/products",
+			href: "/admin/products",
 			icon: "fa-solid fa-box-open"
 		},
 		{
 			name: "Usuarios",
-			href: "/",
+			href: "/admin",
 			icon: "fa-solid fa-users"
 		}
 	]

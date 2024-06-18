@@ -6,19 +6,19 @@ import EditProduct from '../pages/EditProduct'
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/admin",
         element: <Root/>,
         children: [
             {
-                path: "/dashboard",
+                path: "",
                 element: <Dashboard/>
             },
             {
-                path: "/products",
+                path: "products",
                 element: <Products/>
             },
             {
-                path: "/products/edit",
+                path: "products/edit/:id",
                 element: <EditProduct/> 
             },
             {

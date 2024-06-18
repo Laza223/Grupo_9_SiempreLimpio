@@ -15,11 +15,11 @@ module.exports = (sequelize, DataTypes) => {
       Product.hasMany(
         models.Order, {
         as: "orders",
-        foreignKeys: "product_id"
+        foreignKey: "product_id"
       }
       )
       Product.belongsTo(models.Category, {
-        foreignKeys: "categoryid",
+        foreignKey: "categoryId",
         as: "category"
       })
     }
@@ -34,8 +34,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Product',
-   /*  onDelete: "CASCADE",
-    onUpdate: "CASCADE", */
+    onDelete: "CASCADE",
+    onUpdate: "CASCADE",
     paranoid: true
   });
 

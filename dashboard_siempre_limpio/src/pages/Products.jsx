@@ -8,7 +8,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function Products() {
 
@@ -44,13 +44,9 @@ function Products() {
     }
 
 
-    const handleButtonEdit = () => {
-        navigate('/products/edit')
+    const handleButtonEdit = (id) => {
+        navigate(`/admin/products/edit/${id}`)
     }
-    // function handleButtonEdit(id) {
-    //     const navigate = useNavigate()
-    //     navigate('/products/edit')
-    // }
 
     function handleButtonDelete(id) {
 
@@ -96,7 +92,7 @@ function Products() {
                     <Button
                         variant="contained"
                         color="info"
-                        onClick={() => handleButtonDetail(params.row.id)}
+                        onClick={() => handleButtonDetail}
                     >
                         Ver
                     </Button>
@@ -112,7 +108,7 @@ function Products() {
                     <Button
                         variant="contained"
                         color="success"
-                        onClick={handleButtonEdit}
+                        onClick={() => handleButtonEdit(params.row.id)}
                     >
                         Editar
                     </Button>

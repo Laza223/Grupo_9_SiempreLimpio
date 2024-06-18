@@ -12264,3 +12264,11 @@ body.sidebar-toggled footer.sticky-footer {
     bottom: 30%;
     right: 20px;
 }
+
+.editProductImg {
+    height: 180px;
+    margin: auto;
+    padding: 20px;
+    border: solid lightgray 1px;
+    border-radius: 10px;
+}
