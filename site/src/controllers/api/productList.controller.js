@@ -37,7 +37,8 @@ module.exports = async (req, res) => {
                         [sequelize.fn("CONCAT", "http://localhost:3030/api/products/", sequelize.col("product.id")), "detail"]],
                     include: "category",
                     page: offset,
-                    paginate: 100
+                    paginate: 100,
+                    order: [['createdAt']]
                 },)
 
         //Una consulta. Usar reduce?
@@ -59,6 +60,8 @@ module.exports = async (req, res) => {
                 count: categoryCounts[categoryName]
             }
         }));
+
+      
 
         return res.status(200).json({
             count: total,
