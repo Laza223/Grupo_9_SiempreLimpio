@@ -22,6 +22,10 @@ const router = createBrowserRouter([
                 element: <EditProduct/> 
             },
             {
+               /*  path:"api/usuarios/:id",
+                element: <viewUser/> */
+            },
+            {
                // path: "/", colocar direccion de ruta (parte de "/")
                 // element: </> colocar componente a enviar a <Outlet/>
             },
