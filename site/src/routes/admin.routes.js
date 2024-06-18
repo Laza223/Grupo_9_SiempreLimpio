@@ -21,7 +21,7 @@ router.put("/dashboard/editar/:id", checkAdmin, uploadProducts.single( "imagePro
 router.get("/dashboard/crear", checkAdmin, adminController.create);
 router.post("/dashboard/crear", checkAdmin, uploadProducts.single( "imageProduct"), productsValidation,   adminController.store);
 
-router.get("/dashboard/eliminar/:id", checkAdmin, adminController.delete);
+/* router.get("/dashboard/eliminar/:id", checkAdmin, adminController.delete); */
 router.delete("/dashboard/eliminar/:id", checkAdmin, adminController.destroy);
 
 router.put("/dashboard/restaurar/:id", checkAdmin, adminController.restore)
