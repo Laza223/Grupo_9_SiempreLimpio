@@ -1,10 +1,13 @@
 const db = require("../../db/models");
+const fs = require('fs')
+const path = require('path')
 
 module.exports = async (req, res) => {
     try {
 
-        const { name, price, categoryId, stock, description, id } = req.body
-        const image = req.file ? req.file.filename : "product-default.jpg";
+        const { name, price, categoryId, stock, description, id, image } = req.body
+        const imageUpdate = req.file ? req.file.filename : "product-default.jpg";
+        console.log(image);
 
         await db.Product.update(
             {
@@ -12,14 +15,22 @@ module.exports = async (req, res) => {
                 price: price,
                 categoryId: categoryId,
                 stock: stock,
-                image: image,
+                image: imageUpdate != "product-default.jpg" ? imageUpdate : image,
                 description: description
             },
             {
                 where: { id: id }
             })
-        console.log({imageName: image});
-        console.log(req.body);
+
+        const pathImage = path.join(__dirname, '../../../public/images/products/', image)
+        console.log(pathImage);
+
+        if (imageUpdate != "product-default.jpg" && image != "product-default.jpg") {
+            if (fs.existsSync(pathImage)) {
+                fs.unlinkSync(pathImage)
+                console.log("imagen eliminada correctamente");
+            }
+        }
 
         return res.status(200).json({
             msg: 'Success Upload'

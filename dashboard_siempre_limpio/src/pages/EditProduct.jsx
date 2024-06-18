@@ -50,6 +50,7 @@ function EditProduct() {
         formData.append('stock', product?.stock)
         formData.append('categoryId', product?.categoryId)
         formData.append('description', product?.description)
+        formData.append('image', product?.image)
         if(fileImgSelected){
             formData.append('imageProduct', fileImgSelected)
         }
