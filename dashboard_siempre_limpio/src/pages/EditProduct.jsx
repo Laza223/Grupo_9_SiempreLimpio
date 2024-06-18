@@ -16,8 +16,10 @@ function EditProduct() {
     const { id } = useParams()
 
 
-    let [product, setProduct] = useState([])
-    let [categorys, setCategorys] = useState([])
+    const [product, setProduct] = useState([])
+    const [categorys, setCategorys] = useState([])
+    const [preview, setPreview] = useState("")
+    const [fileImgSelected, setFileImgSelected ] = useState()
 
 
     const urlApiCategorys = 'http://localhost:3030/api/categorys'
@@ -27,7 +29,10 @@ function EditProduct() {
     useEffect(() => {
         fetch(urlApiProductDetail + id)
             .then(response => response.json())
-            .then(data => setProduct(data.product))
+            .then(data => {
+                setProduct(data.product)
+                setPreview(urlApiImage + data.product.image)
+            })
     }, [])
 
     useEffect(() => {
@@ -45,9 +50,9 @@ function EditProduct() {
         formData.append('stock', product?.stock)
         formData.append('categoryId', product?.categoryId)
         formData.append('description', product?.description)
-
-        console.log(formData.get('name'));
-
+        if(fileImgSelected){
+            formData.append('imageProduct', fileImgSelected)
+        }
         fetch('http://localhost:3030/api/products/edit', {
             method: 'POST',
             body: formData
@@ -66,6 +71,15 @@ function EditProduct() {
         setProduct({ ...product, [name]: value });
     };
 
+    const handleChangueInputImg = (e) => {
+        const file = e.target.files[0]
+
+        if (file) {
+            setPreview(URL.createObjectURL(file))
+            setFileImgSelected(file)
+        }
+    }
+
 
     console.log(product);
 
@@ -81,7 +95,7 @@ function EditProduct() {
             <Box
                 sx={{ width: '90%', maxWidth: '700px', display: 'flex', flexWrap: 'wrap', margin: '50px auto' }}>
                 <h1 style={{ width: '100%', textAlign: 'center' }}> {`Editar Producto`} </h1>
-                <img src={urlApiImage + product.image} alt="img-product" className='editProductImg' />
+                <img src={preview} alt="img-product" className='editProductImg' />
                 <TextField
                     id="outlined-required"
                     label="Nombre del producto"
@@ -127,7 +141,8 @@ function EditProduct() {
                 <Input
                     id="file-upload"
                     type="file"
-                    // onChange={handleFileChange}
+                    name='imageProduct'
+                    onChange={handleChangueInputImg}
                     inputProps={{ accept: 'image/*' }}
                     sx={{ width: 230, height: 70, margin: '10px' }}
                 />

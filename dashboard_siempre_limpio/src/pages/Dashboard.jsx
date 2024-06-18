@@ -73,46 +73,48 @@ function Dashboard() {
             return <TotalsCards key={m.title} color={m.color} title={m.title} count={m.count} icon={m.icon} />;
           })}
         </div>
-        <ContainCategoryCards />
-        <div className="row">
-          <div className="col-lg-6 mb-4">
-            <div className="card shadow mb-4">
-              <div className="card-header py-3">
-                <h5 className="m-0 font-weight-bold text-gray-800">Último usuario creado</h5>
-              </div>
-              <div className="card-body">
-                <div className="text-center">
-                
-                  <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '10rem' }} src={`http://localhost:3030/images/users/${lastUser.avatar}`} alt="Usuario" />
+
+        <div style={{ display: 'flex', width: '100%', flexWrap: 'wrap' }}>
+          <div className="row" style={{ display: 'flex', flexDirection: 'column', width: '45%', margin: '20px' }}>
+            <div className="col-lg-6 mb-4">
+              <div className="card shadow mb-4">
+                <div className="card-header py-3">
+                  <h5 className="m-0 font-weight-bold text-gray-800">Último usuario creado</h5>
                 </div>
-                <p><strong>id:</strong> {lastUser.id}</p>
-                <p><strong>Nombre:</strong> {lastUser.name}</p>
-                <p><strong>Apellido:</strong> {lastUser.surname}</p>
-               {/*  <a className="btn btn-primary" target="_blank" rel="nofollow" href={`http://localhost:3030/api/usuarios/${lastUser.id}`} >Ver detalles del usuario</a> */}
+                <div className="card-body">
+                  <div className="text-center">
+
+                    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '10rem' }} src={`http://localhost:3030/images/users/${lastUser.avatar}`} alt="Usuario" />
+                  </div>
+                  <p><strong>id:</strong> {lastUser.id}</p>
+                  <p><strong>Nombre:</strong> {lastUser.name}</p>
+                  <p><strong>Apellido:</strong> {lastUser.surname}</p>
+                  {/*  <a className="btn btn-primary" target="_blank" rel="nofollow" href={`http://localhost:3030/api/usuarios/${lastUser.id}`} >Ver detalles del usuario</a> */}
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-6 mb-4">
+              <div className="card shadow mb-4">
+                <div className="card-header py-3">
+                  <h5 className="m-0 font-weight-bold text-gray-800">Último producto creado</h5>
+                </div>
+                <div className="card-body">
+                  <div className="text-center">
+                    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '10rem' }} src={`http://localhost:3030/images/products/${lastProduct.image}`} alt="Producto" />
+                  </div>
+                  <p><strong>id:</strong> {lastProduct.id}</p>
+                  <p><strong>Nombre:</strong> {lastProduct.name}</p>
+                  <p><strong>Precio:</strong> {lastProduct.price}</p>
+                  <p><strong>Stock:</strong> {lastProduct.stock}</p>
+                  {/*   <a className="btn btn-primary" target="_blank" rel="nofollow"  href={`http://localhost:3030/api/products/${lastProduct.id}` }  >Ver detalles del producto</a> */}
+                </div>
               </div>
             </div>
           </div>
-
-          <div className="col-lg-6 mb-4">
-            <div className="card shadow mb-4">
-              <div className="card-header py-3">
-                <h5 className="m-0 font-weight-bold text-gray-800">Último producto creado</h5>
-              </div>
-              <div className="card-body">
-                <div className="text-center">
-                  <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '10rem' }} src={`http://localhost:3030/images/products/${lastProduct.image}`} alt="Producto" />
-                </div>
-                <p><strong>id:</strong> {lastProduct.id}</p>
-                <p><strong>Nombre:</strong> {lastProduct.name}</p>
-                <p><strong>Precio:</strong> {lastProduct.price}</p>
-                <p><strong>Stock:</strong> {lastProduct.stock}</p>
-              {/*   <a className="btn btn-primary" target="_blank" rel="nofollow"  href={`http://localhost:3030/api/products/${lastProduct.id}` }  >Ver detalles del producto</a> */}
-              </div>
-            </div>
-          </div>
-
-       
+          <ContainCategoryCards />
         </div>
+
       </div>
     );
   }
