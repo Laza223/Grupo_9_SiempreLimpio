@@ -1,6 +1,8 @@
 import React from 'react'
 import adminImg from '../assets/images/adminImg.png'
 import logo from '../assets/images/logo.svg'
+import { Link } from 'react-router-dom'
+
 
 
 function TopBar() {
@@ -15,10 +17,10 @@ function TopBar() {
 			<ul className="navbar-nav ml-auto">
 				<div className="topbar-divider d-none d-sm-block"></div>
 				<li className="nav-item dropdown no-arrow">
-					<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
+					<Link className="nav-link dropdown-toggle" to="/admin" id="userDropdown">
 						<span className="mr-2 d-none d-lg-inline text-gray-600 small">Perfil Admin</span>
 						<img className="img-profile rounded-circle" src={adminImg} alt="Jordan Walke - Creador de React" width="60" />
-					</a>
+					</Link>
 				</li>
 			</ul>
 		</nav>

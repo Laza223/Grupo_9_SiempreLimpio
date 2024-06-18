@@ -17,7 +17,7 @@ function Sidebar(props) {
 		},
 		{
 			name: "Usuarios",
-			href: "/admin",
+			href: "/admin/users",
 			icon: "fa-solid fa-users"
 		}
 	]

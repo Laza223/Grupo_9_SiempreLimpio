@@ -15,6 +15,7 @@ module.exports = async (req, res) => {
                         "name",
                         "surname",
                         "avatar",
+                        "email",
                         [sequelize.fn("CONCAT", "http://localhost:3030/api/users/", sequelize.col("id")), "detail"] ],
                     page: offset,
                     paginate: 10,
