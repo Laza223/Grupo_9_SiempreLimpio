@@ -92,7 +92,7 @@ function Products() {
                     <Button
                         variant="contained"
                         color="info"
-                        onClick={() => handleButtonDetail}
+                        onClick={() => handleButtonDetail(params.row.id)}
                     >
                         Ver
                     </Button>
@@ -137,6 +137,7 @@ function Products() {
 
     return (
         <div className='DataGridContainer'>
+            <h1 style={{textAlign: 'center'}}>Productos</h1>
             <div style={{ height: '600', width: '100%', overflow: 'scroll' }}>
                 <DataGrid
                     rows={rows}
