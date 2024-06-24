@@ -1,4 +1,4 @@
-const db = require('../../db/models')
+const db = require('../../../db/models')
 const sequelize = require("sequelize")
 
 
@@ -32,7 +32,7 @@ module.exports = async (req, res) => {
                         "name",
                         "description",
                         "price",
-                        "stock",
+                        "quantity",
                         "image",
                         [sequelize.fn("CONCAT", "http://localhost:3030/api/products/", sequelize.col("product.id")), "detail"]],
                     include: "category",

@@ -1,47 +1,40 @@
-module.exports = async (req, res) => {
-    try {
-        const { id } = req.params;
-        let [order, isCreate] = await getOrderPending(req);
+const { Op, where } = require('sequelize')
+const db = require('../../../db/models')
+const { getOrderPending } = require('../../utils')
 
-        const record = await db.orderproduct.findOne({
+module.exports = async (req, res) => {
+
+    try {
+        const { id } = req.params
+        const [order, isCreate] = await getOrderPending(req)
+
+        const record = await db.Orderproduct.findOne({
             where: {
                 [Op.and]: [
                     {
                         orderId: order.id
                     },
                     {
-                        productId: id
+                      productId: id  
                     }
-                ],
-            },
-        });
+                ]
+            }
+        })
+
         record.quantity++;
-        await record.save();
 
-        order = await order.reload({
-            include: [
-                {
-                    association: "products",
-                    through: {
-                        attributes: ["quantity"]
-                    },
-                },
-            ],
-        });
-        const total = getTotalOrder(order.products);
-        order.total = total;
+        await record.save()
 
-        await order.save()
 
         res.status(200).json({
             ok: true,
             msg: "Cantidad aumentada con éxito"
         })
 
-    } catch (err) {
+    } catch (error) {
         res.status(500).json({
             ok: false,
-            msg: err.message
-        });
+            msg: error.message
+        })
     }
-};
+}

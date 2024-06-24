@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const apiController = require("../controllers/api");
+const apiController = require("../controllers/api/products");
 const multer = require('multer')
-const renderImgController = require('../controllers/api/products/renderImg.controller')
+const renderImgController = require('../controllers/api/renderImg.controller')
 const { uploadProducts } = require('../middlewares/uploads');
 
 

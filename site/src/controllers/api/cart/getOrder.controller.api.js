@@ -1,33 +1,49 @@
-const {literal}=require("sequelize")
-const{getOrderPending,getTotalOrder}= require("../../utils/")
-module.exports = async (req, res) => {
-    
-    try {
-        const [order, isCreate] = await getOrderPending(req);
+const { Op } = require('sequelize')
+const db = require('../../../db/models')
+const { getOrderPending } = require("../../utils")
 
-        const statusCode = isCreate ? 201 : 200;
+module.exports = async (req, res) => {
+
+    try {
+
+        const [order, isCreate] = await getOrderPending(req)
+
+        let total = 0;
+
+        order.products.forEach((product) => {
+            const price = product.dataValues.price
+            const quantity = product.dataValues.Orderproducts.dataValues.quantity
+            total += price * quantity
+        }
+        );
+
+        order.total = total
+        await order.save()
+
+        const statusCode = isCreate ? 201 : 200
         res.status(statusCode).json({
             ok: true,
-            isCreate,
+            isCreate: isCreate,
             data: await order.reload({
                 include: [
                     {
-                        association: 'products',
-                        attributes: {
-                            include: [[literal(`CONCAT('${getOriginUrl(req)}/api/products/', imagePrincipal)`),"imagePrincipal"]],
-                        },
+                        association: "products",
                         through: {
-                            attributes: ["quantity"],
-                        },
-                    },
-                ],
-            }),
-        });
-    } catch (err) {
+                            attributes: ["quantity"]
+                        }
+                    }
+                ]
+            })
+        })
+
+
+
+
+    } catch (error) {
         res.status(500).json({
             ok: false,
-            msg: err.message,
-        });
+            msg: error.message
+        })
     }
-};
 
+}

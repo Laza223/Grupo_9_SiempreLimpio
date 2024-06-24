@@ -1,4 +1,4 @@
-const db = require("../../db/models");
+const db = require('../../../db/models')
 const fs = require('fs')
 const path = require('path')
 

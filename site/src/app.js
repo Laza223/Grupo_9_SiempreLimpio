@@ -62,7 +62,7 @@ app.use("/carrito", cartRoutes);
 app.use("/productos", productRoutes);
 app.use("/admin", adminRoutes);
 app.use("/api", apiRoutes);
-app.use("./api/cart", cartApiRoutes)
+app.use("/api/cart", cartApiRoutes)
 
 app.use((req,res, next) => {
   res.status(404).render("error")

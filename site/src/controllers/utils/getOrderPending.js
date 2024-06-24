@@ -1,30 +1,32 @@
-const db = require('../../database/models');
-const { Op } = require('sequelize');
+const { Op } = require('sequelize')
+const db = require('../../db/models')
 
-module.exports = async (req, res) => {
-   const dataOrder = await db.order.findOrCreate({
-    where: {
-        [Op.and]: [
+module.exports = async (req) => {
+
+    const { userId } = req.query
+
+    const dataOrder = await db.Order.findOrCreate({
+        where: {
+            [Op.and]: [
+                {
+                    userId: userId
+                },
+                {
+                    state: "pending"
+                }
+            ]
+        },
+        defaults: {
+            userId: userId
+        },
+        include: [
             {
-                userId: req.query.userId
-            },
-            {
-                state: "pending"
+                association: "products",
+                through: {
+                    attributes: ["quantity"]
+                }
             }
         ]
-    },
-    defaults: {
-        userId: req.query.userId,
-        state: 'pending',
-    },
-    include: [
-        {
-            association: 'products',
-            through: {
-                attributes: ['quantity']
-            }
-        }
-    ]
-   });
-   return dataOrder
-};
+    });
+    return dataOrder
+}

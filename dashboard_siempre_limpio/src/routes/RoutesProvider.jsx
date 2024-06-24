@@ -4,6 +4,10 @@ import Dashboard from "../pages/Dashboard";
 import Products from "../pages/Products";
 import EditProduct from '../pages/EditProduct'
 import Users from "../pages/Users";
+import Home from "../pages/Home"
+import Cart from "../pages/Cart";
+
+
 
 const router = createBrowserRouter([
     {
@@ -34,8 +38,17 @@ const router = createBrowserRouter([
                 //    path: "/", colocar direccion de ruta (parte de "/")
                 //     element: </> colocar componente a enviar a <Outlet/>
             }
-        ]
+        ],
+    },
+    {
+        path: "/home",
+        element: <Home />
+    },
+    {
+        path: "/carrito",
+        element: <Cart />,
     }
+
 ])
 
-export const Router_Provider = () => <RouterProvider router={router} />;
+export const Router_Provider = () => <RouterProvider router={router}/>

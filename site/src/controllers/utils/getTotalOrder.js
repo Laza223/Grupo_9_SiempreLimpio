@@ -1,16 +1,13 @@
 const getTotalOrder = (data = []) => {
     let total = 0;
-    data.forEach(
-        ({
-            price,
-            order_item: {
-                dataValues: { quantity },
-            },
-        }) => {
-            total += price * quantity;
-        }
+    data.forEach((product) => {
+        const price = product.dataValues.price
+        const quantity = product.dataValues.Orderproducts.dataValues.quantity
+        total += price * quantity
+    }
     );
-    return total;
-};
+    return total
+}
 
-module.exports = getTotalOrder ;
+
+module.exports = { getTotalOrder }

@@ -1,5 +1,4 @@
-const db = require("../../db/models");
-
+const db = require('../../../db/models')
 module.exports = async (req, res) => {
     try {
         

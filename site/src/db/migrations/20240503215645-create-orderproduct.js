@@ -1,40 +1,41 @@
 'use strict';
-
-const { toDefaultValue } = require('sequelize/lib/utils');
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Products', {
+    await queryInterface.createTable('Orderproducts', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
-      },
-      price: {
-        type: Sequelize.DOUBLE
-      },
-      categoryId: {
+      orderId: {
         type: Sequelize.INTEGER,
+        allowNull:false,
         references: {
-          model: {
-            tableName: "Categories"
+          model:{
+            tableName:'Orders'
           },
-          key: "id"
-        }
+          key:'id'
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      },
+      productId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+
+        references:{
+          model:{
+            tableName:'Products'
+          },
+          key:'id'
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       },
       quantity: {
         type: Sequelize.INTEGER
-      },
-      image: {
-        type: Sequelize.STRING
-      },
-      description: {
-        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
@@ -45,14 +46,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: new Date()
-      },
-      deletedAt: {
-        allowNull: true,
-        type: Sequelize.DATE
-      },
+      }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Products');
+    await queryInterface.dropTable('Orderproducts');
   }
 };

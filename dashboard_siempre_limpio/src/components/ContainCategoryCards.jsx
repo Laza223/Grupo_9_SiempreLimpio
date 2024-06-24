@@ -16,31 +16,6 @@ function ContainCategoryCards() {
 }, [])
 
 
-
-  const metrics = [
-    {
-      title: "Detergentes"
-    },
-    {
-      title: "Limpiadores líquidos"
-    },
-    {
-      title: "Accesorios"
-    },
-    {
-      title: "Aerosoles"
-    },
-    {
-      title: "Geles"
-    },
-    {
-      title: "Jabones"
-    },
-    {
-      title: "Limpiadores"
-    }
-  ]
-
   return (
     <div className="col-lg-6 containerCategoryCards mb-4">
     <div className="card shadow mb-4">
