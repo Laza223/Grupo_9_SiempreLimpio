@@ -8,7 +8,7 @@ const { uploadProducts } = require('../middlewares/uploads');
 
 const upload = multer()
 
-// /api
+// api
 router.get("/users", apiController.userList)
 router.get("/usuarios/:id", apiController.userDetail)
 
@@ -16,6 +16,8 @@ router.get('/products', apiController.productList);
 router.get('/products/:id', apiController.productDetail);
 
 router.post('/products/edit', uploadProducts.single("imageProduct"),apiController.editProduct)
+
+router.delete('/products/:id', apiController.deleteProduct);
 
 router.get('/categorys', apiController.categorysList)
 

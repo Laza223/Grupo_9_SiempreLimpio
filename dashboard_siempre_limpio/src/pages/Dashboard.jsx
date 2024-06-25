@@ -3,6 +3,7 @@ import ContainCategoryCards from '../components/ContainCategoryCards';
 import TotalsCards from '../components/TotalsCards';
 import { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
+import DeleteProduct from '../components/DeleteProduct';
 
 function Dashboard() {
   let [totalProducts, setTotalProducts] = useState({ count: 0, products: [] });

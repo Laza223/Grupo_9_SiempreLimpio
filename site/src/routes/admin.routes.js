@@ -33,4 +33,3 @@ router.put("/dashboard/restaurar/:id", checkAdmin, adminController.restore)
 
 
 module.exports = router;
-  

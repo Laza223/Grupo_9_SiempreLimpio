@@ -11,14 +11,17 @@ import DialogTitle from '@mui/material/DialogTitle';
 import { useNavigate, useParams } from 'react-router-dom';
 
 function Products() {
-
+    
+    const [productIdToDelete, setProductIdToDelete] = useState(null)
+    
     const navigate = useNavigate()
 
     let [products, setProducts] = useState([])
 
     const [open, setOpen] = useState(false);
 
-    const handleClickOpen = () => {
+    const handleClickOpen = (id) => {
+        setProductIdToDelete(id);
         setOpen(true);
     };
 
@@ -48,9 +51,15 @@ function Products() {
         navigate(`/admin/products/edit/${id}`)
     }
 
-    function handleButtonDelete(id) {
-
-    }
+    const handleButtonDelete = () => {
+        fetch(`http://localhost:3030/api/products/${productIdToDelete}`, { method: 'DELETE' })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                setOpen(false);
+            })
+            .catch(err => console.log(err));
+    };
 
 
     let rows = prods.map(p => ({
@@ -124,7 +133,7 @@ function Products() {
                     <Button
                         variant="contained"
                         color="error"
-                        onClick={() => handleClickOpen()}
+                        onClick={() => handleClickOpen(params.row.id)}
                     >
                         Eliminar
                     </Button>
@@ -137,7 +146,7 @@ function Products() {
 
     return (
         <div className='DataGridContainer'>
-            <h1 style={{textAlign: 'center'}}>Productos</h1>
+            <h1 style={{ textAlign: 'center' }}>Productos</h1>
             <div style={{ height: '600', width: '100%', overflow: 'scroll' }}>
                 <DataGrid
                     rows={rows}
@@ -161,7 +170,7 @@ function Products() {
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        Estas Seguro que deseas eliminar este producto?
+                        ¿Estas Seguro que deseas eliminar este producto?
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
@@ -172,7 +181,7 @@ function Products() {
                     <Button
                         variant="contained"
                         color="error"
-                        onClick={handleClose} autoFocus>
+                        onClick={handleButtonDelete} autoFocus>
                         Confirmar
                     </Button>
                 </DialogActions>
