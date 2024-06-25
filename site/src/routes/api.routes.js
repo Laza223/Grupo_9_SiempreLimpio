@@ -17,6 +17,8 @@ router.get('/products/:id', apiController.productDetail);
 
 router.post('/products/edit', uploadProducts.single("imageProduct"),apiController.editProduct)
 
+router.post('/products/create', uploadProducts.single("imageProduct"), apiController.createProduct)
+
 router.delete('/products/:id', apiController.deleteProduct);
 
 router.get('/categorys', apiController.categorysList)

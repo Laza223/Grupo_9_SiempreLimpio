@@ -11,9 +11,10 @@ import DialogTitle from '@mui/material/DialogTitle';
 import { useNavigate, useParams } from 'react-router-dom';
 
 function Products() {
-    
+
     const [productIdToDelete, setProductIdToDelete] = useState(null)
-    
+    const [shouldRefreshProducts, setShouldRefreshProducts] = useState(false);
+
     const navigate = useNavigate()
 
     let [products, setProducts] = useState([])
@@ -36,8 +37,11 @@ function Products() {
     useEffect(() => {
         fetch(urlApiProducts)
             .then(response => response.json())
-            .then(data => setProducts(data))
-    }, [])
+            .then(data => {
+                setProducts(data);
+                setShouldRefreshProducts(false);
+            })
+    }, [shouldRefreshProducts]);
 
     const prods = products.products || []
 
@@ -51,12 +55,18 @@ function Products() {
         navigate(`/admin/products/edit/${id}`)
     }
 
+    const handleCreateProduct = () => {
+        navigate('/admin/products/create');
+    }
+
+
     const handleButtonDelete = () => {
         fetch(`http://localhost:3030/api/products/${productIdToDelete}`, { method: 'DELETE' })
             .then(response => response.json())
             .then(data => {
                 console.log(data);
                 setOpen(false);
+                setShouldRefreshProducts(true);
             })
             .catch(err => console.log(err));
     };
@@ -142,11 +152,19 @@ function Products() {
         }
     ];
 
-
-
     return (
         <div className='DataGridContainer'>
-            <h1 style={{ textAlign: 'center' }}>Productos</h1>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                <h1>Productos</h1>
+
+                <Button
+                    variant="contained"
+                    color="warning"
+                    onClick={handleCreateProduct}
+                >
+                    Crear producto
+                </Button>
+            </div>
             <div style={{ height: '600', width: '100%', overflow: 'scroll' }}>
                 <DataGrid
                     rows={rows}
