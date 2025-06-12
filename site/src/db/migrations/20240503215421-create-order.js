@@ -18,7 +18,7 @@ module.exports = {
 
         references:{
           model:{
-            tableName:'users'
+            tableName:'Users'
           },
           key:'id'
         },
